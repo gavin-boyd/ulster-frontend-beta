@@ -1,0 +1,207 @@
+/**
+ *
+ * =======================================================================
+	 Transitions
+ * =======================================================================
+ */
+
+@mixin transition-color
+{
+	-webkit-transition: color 0.4s linear;
+	-moz-transition: color 0.4s linear;
+	-o-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+}
+
+@mixin transition-background
+{
+	-webkit-transition: background-color 0.1s linear;
+	-moz-transition: background-color 0.1s linear;
+	-o-transition: background-color 0.1s linear;
+	transition: background-color 0.1s linear;
+}
+
+@mixin transition-background-slow
+{
+	-webkit-transition: background-color 0.5s linear;
+	-moz-transition: background-color 0.5s linear;
+	-o-transition: background-color 0.5s linear;
+	transition: background-color 0.5s linear;
+}
+
+@mixin transition-width
+{
+	-webkit-transition: width 0.5s linear;
+	-moz-transition: width 0.5s linear;
+	-o-transition: width 0.5s linear;
+	transition: width 0.5s linear;
+}
+
+@mixin transition-filter
+{
+	-webkit-transition: 1s;
+	-moz-transition: filter 1s linear;
+	-o-transition: filter 1s linear;
+	transition: filter 1s linear;
+}
+
+@mixin transition-all
+{
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-none
+{
+	-webkit-transition: all 0s ease-in-out;
+	-moz-transition: all 0s ease-in-out;
+	-o-transition: all 0s ease-in-out;
+	-ms-transition: all 0s ease-in-out;
+	transition: all 0s ease-in-out;
+}
+
+@mixin border-radius( $radius: 3px ){
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin outline-radius( $radius: 3px ){
+	-webkit-outline-radius: $radius;
+	   -moz-outline-radius: $radius;
+	        outline-radius: $radius;
+}
+
+@mixin box-shadow(
+	$x : 2px,
+	$y : 2px,
+	$blur : 5px,
+	$spread : 0,
+	$color : rgba(0,0,0,.6)
+) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	   -moz-box-shadow: $x $y $blur $spread $color;
+			box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin transition(
+	$what : all,
+	$length : 1s,
+	$easing : ease-in-out
+) {
+	-webkit-transition: $what $length $easing;
+	   -moz-transition: $what $length $easing;
+	     -o-transition: $what $length $easing;
+		  	transition: $what $length $easing;
+}
+
+@mixin transform(
+	$params
+) {
+	-webkit-transform: $params;
+  	   -moz-transform: $params;
+  	        transform: $params;
+}
+
+@mixin box(
+	$orient : horizontal,
+	$pack : center,
+	$align : center
+) {
+	display: -webkit-box;
+	   display: -moz-box;
+	        display: box;
+
+	-webkit-box-orient: $orient;
+	   -moz-box-orient: $orient;
+	   		box-orient: $orient;
+
+	-webkit-box-pack: $pack;
+	   -moz-box-pack: $pack;
+	        box-pack: $pack;
+
+	-webkit-box-align: $align;
+	   -moz-box-align: $align;
+			box-align: $align;
+}
+
+@mixin flex( $val : 1 ){
+	-webkit-box-flex: $val;
+	   -moz-box-flex: $val;
+	        box-flex: $val;
+}
+
+@mixin resize( $direction ){
+	-webkit-resize: $direction;
+	   -moz-resize: $direction;
+	        resize: $direction;
+}
+
+//https://github.com/ryanburgess/SASS-Useful-Mixins/blob/master/mixins/_linear-gradient.scss
+@mixin linear-gradient($top, $bottom) {
+  background: #{$top}; /* Old browsers */
+  background:    -moz-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* FF3.6+ */
+  background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%, #{$top}), color-stop(100%, #{$bottom})); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* Chrome10+,Safari5.1+ */
+  background:      -o-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* Opera 11.10+ */
+  background:     -ms-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* IE10+ */
+  background:         linear-gradient(to bottom, #{$top} 0%, #{$bottom} 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0 ); /* IE6-9 */
+}
+
+@mixin double-borders(
+	$colorOne : green,
+	$colorTwo : red,
+	$radius : 0
+) {
+	border: 1px solid $colorOne;
+
+	-webkit-box-shadow: 0 0 0 1px $colorTwo;
+	   -moz-box-shadow: 0 0 0 1px $colorTwo;
+	   		box-shadow: 0 0 0 1px $colorTwo;
+
+	@include border-radius( $radius );
+}
+
+@mixin triple-borders(
+	$colorOne : green,
+	$colorTwo : red,
+	$colorThree : blue,
+	$radius : 0
+) {
+	border: 1px solid $colorOne;
+
+	@include border-radius( $radius );
+
+	-webkit-box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+	   -moz-box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+	   		box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+}
+
+@mixin columns(
+	$count : 3,
+	$gap : 10
+) {
+	-webkit-column-count: $count;
+	   -moz-column-count: $count;
+	        column-count: $count;
+
+	-webkit-column-gap: $gap;
+	   -moz-column-gap: $gap;
+	        column-gap: $gap;
+}
+
+@mixin box-sizing( $type : border-box ){
+	-webkit-box-sizing: $type;
+	   -moz-box-sizing: $type;
+	        box-sizing: $type;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

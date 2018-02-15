@@ -1,0 +1,20 @@
+//video overides
+div.video-promo .content
+{
+  padding: 0;
+  text-align: center;
+}
+
+div.video-promo .content a.cta
+{
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: calc(50% - 23px);
+  background: none;
+
+  &:hover
+  {
+    background: rgba(0,0,0,.2);
+  }
+}

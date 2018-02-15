@@ -1,0 +1,144 @@
+<div class="row header">
+  <div class="large-3 columns">
+    <a href="#">
+      <img src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg" alt="Ulster University" width="164" height="91">
+    </a>
+  </div>
+  <div class="large-9 columns search">
+    <h2>Search for courses</h2>
+    <form action="#">
+      <div class="input">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Search for courses</label>
+        </div>
+      </div>
+      <div class="check">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__label">Undergraduate</span>
+        </label>
+      </div>
+      <div class="check">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__label">Postgraduate</span>
+        </label>
+      </div>
+      <div class="submit">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><i class="material-icons">search</i></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<nav class="hover-underline-menu" data-menu-underline-from-center>
+  <div class="row">
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Study</a></li>
+      <li><a href="#">Research &amp; Impact</a></li>
+      <li><a href="#">Business</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="marketing-site-content-section">
+  <div class="marketing-site-content-section-img small-order-1 medium-order-2">
+    <img src="https://www.ulster.ac.uk/__data/assets/image/0004/74569/RS434_UUIntern-505-scr.jpg" alt="" />
+  </div>
+  <div class="marketing-site-content-section-block small-order-2 medium-order-1">
+    <div>
+      <h3 class="marketing-site-content-section-block-header">Accounting and Management <span class="mdl-badge" data-badge="♥">&nbsp;</span></h3>
+      <p class="marketing-site-content-section-block-subheader subheader">Part-time Undergraduate course at Jordanstown</p>
+      <p>This course starts in September 2018 and lasts for 4 years / UCAS Code: 410</p>
+    </div>
+  </div>
+</div>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+
+  {{> tabs}}
+
+  <main class="mdl-layout__content">
+    <div class="mdl-layout__tab-panel is-active" id="overview">
+      {{> overview}}
+    </div>
+
+    <div class="mdl-layout__tab-panel" id="modules">
+      {{> text-content}}
+    </div>
+
+    <div class="mdl-layout__tab-panel" id="entry">
+      {{> text-content}}
+    </div>
+
+    <div class="mdl-layout__tab-panel" id="careers">
+      {{> text-content}}
+    </div>
+
+    <div class="mdl-layout__tab-panel" id="fees-and-funding">
+      {{> text-content}}
+    </div>
+
+    <!-- related courses -->
+    <section class="marketing-site-three-up">
+      <h2 class="marketing-site-three-up-headline no-margin">People also viewed</h2>
+    </section>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Accounting Pathways - BSc Hons</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Accounting Pathways - BSc Hons</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Accounting Pathways - BSc Hons</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- related courses -->
+  </main>
+
+  {{> drawer}}
+
+</div>

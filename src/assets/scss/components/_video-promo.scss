@@ -1,0 +1,223 @@
+div.video-promo
+{
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+
+  @include breakpoint(medium)
+	{
+		margin-bottom: 30px;
+	}
+
+	@include breakpoint(small only)
+	{
+		height: auto;
+		margin-bottom: 60px;
+	}
+
+	&.fixed-back
+	{
+		position: absolute;
+		z-index: 9999;
+		left: 0;
+		right: 0;
+		height: 100%;
+	}
+
+	iframe.video
+	{
+		position: absolute;
+		z-index: 1;
+
+		@include breakpoint(small only)
+		{
+			display: none;
+		}
+	}
+
+	a.cta
+	{
+		position: absolute;
+		top: 50%;
+		margin-top: -30px;
+		left: 40%;
+		z-index: 9999;
+		color: #fff !important;
+		@include transition-background();
+
+		&::after
+		{
+			font-family: FontAwesome;
+			content: "\f144";
+			margin-left: 10px;
+		}
+
+		@include breakpoint(medium down)
+		{
+			left: 50%;
+			margin-left: -64px;
+		}
+
+		&:hover
+		{
+			text-decoration: none;
+		}
+
+		@include breakpoint(small only)
+		{
+			display: none;
+		}
+	}
+
+	iframe.mobilevideo
+	{
+		display: none;
+
+		@include breakpoint(small only)
+		{
+			display: block;
+		}
+	}
+
+	.content
+	{
+		position: absolute;
+		z-index: 5;
+		width: 100%;
+		height: 100%;
+
+		@include breakpoint(small only)
+		{
+			position: relative;
+			padding: 0;
+		}
+
+		div.fluid-width-video-wrapper
+		{
+			height: 300px;
+			padding-top: 0 !important;
+		}
+
+		h2
+		{
+			color: #fff;
+			font-size: 38px;
+			line-height: 42px;
+			margin-bottom: 10px;
+			max-width: 70%;
+
+			@include breakpoint(small only)
+			{
+				color: #000;
+				font-size: 28px;
+				line-height: 32px;
+				margin-bottom: 0;
+				max-width: none;
+			}
+		}
+
+		p
+		{
+			color: #fff;
+			margin-bottom: 40px;
+			font-size: 22px;
+			line-height: 26px;
+			max-width: 70%;
+
+			@include breakpoint(small only)
+			{
+				color: #000;
+				margin-bottom: 10px;
+				font-size: 16px;
+				line-height: 20px;
+				max-width: none;
+			}
+		}
+
+		a.cta
+		{
+			color: #000;
+			padding: 0 20px;
+			margin-top: -40px;
+			line-height: 50px;
+			height: 55px;
+			position: relative;
+			font-size: 22px;
+			display: inline-block;
+			text-align: center;
+
+			@include breakpoint(small only)
+			{
+				display: none;
+			}
+
+			&:hover
+			{
+				background: none;
+			}
+
+			.fa
+			{
+				color: #fff !important;
+				font-size: 28px !important;
+				position: relative;
+				top: 4px;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.mask
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		@include opacity(.7);
+		z-index: 2;
+
+		@include breakpoint(small only)
+		{
+			display: none;
+		}
+	}
+
+	div.backstretch
+	{
+		@include breakpoint(small only)
+		{
+			display: none;
+		}
+	}
+}
+
+.careersin
+{
+	div.video-promo
+	{
+		.content
+		{
+			h2
+			{
+				max-width: 90%;
+				font-size: 32px;
+				line-height: 36px;
+			}
+
+			p
+			{
+				margin-bottom: 10px;
+			}
+
+			a.cta
+			{
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.mfp-bg
+{
+	opacity:1 !important;
+}
