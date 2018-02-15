@@ -51,10 +51,9 @@
 @include motion-ui-animations;
 
 //custom
-@import '../../../../../../ulster-frontend/app/scss/components/variables';
-@import '../../../../../app/scss/components/variables';
-@import '../../../../../app/scss/components/colours';
-@import '../../../../../app/scss/components/magnific-popup-custom';
-@import '../../../../../app/scss/components/video-promo';
-@import '../../../../../app/scss/components/videowall';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/variables';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/colours';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/video-promo';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/videowall';
 @import 'components/custom';
