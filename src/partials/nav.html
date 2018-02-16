@@ -1,27 +1,131 @@
-<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-  <div class="title-bar-title">Menu</div>
+<div class="multilevel-offcanvas off-canvas position-right" id="offCanvasRight" data-off-canvas>
+  <ul class="vertical menu" data-accordion-menu>
+    <img class="logo" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university-reverse.svg" alt="Ulster University">
+    <li><a href="#">SECTION</a>
+      <ul class="menu vertical nested">
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+       </ul>
+    </li>
+    <li><a href="#">SECTION</a>
+      <ul class="menu vertical nested">
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+       </ul>
+     </li>
+    <li><a href="#">SECTION</a>
+      <ul class="menu vertical nested">
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+       </ul>
+    </li>
+   </ul>
+  <ul class="vertical menu">
+    <li class="off-canvas-menu-item"><a href="#">Tour</a></li>
+    <li><a href="#">Utility Link</a></li>
+    <li><a href="#">Utility Link</a></li>
+    <li><a href="#">Utility Link</a></li>
+    <li><a href="#">Utility Link</a></li>
+  </ul>
+  <ul class="vertical menu">
+     <li><a href="#">Utility Link</a></li>
+     <li><a href="#">Utility Link</a></li>
+     <li><a href="#">Utility Link</a></li>
+     <li><a href="#">Utility Link</a></li>
+     <li><a href="#">Utility Link</a></li>
+   </ul>
+  <ul class="menu simple social-links">
+    <li><a href="https://twitter.com/StudyAtUlster"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+    <li><a href="https://www.facebook.com/studyatulster"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+    <li><a href="https://www.flickr.com/photos/universityofulster"><i class="fab fa-flickr"></i> Flickr</a></li>
+    <li><a href="https://www.youtube.com/user/StudyAtUlster"><i class="fab fa-youtube-square"></i> YouTube</a></li>
+  </ul>
 </div>
 
-<div class="top-bar" id="example-menu">
+<div class="off-canvas-content" data-off-canvas-content>
+  <div class="nav-bar">
+      <div class="nav-bar-left">
+        <a href="https://www.ulster.ac.uk" class="nav-bar-logo">
+          <img class="logo" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university-reverse.svg" alt="Ulster University">
+        </a>
+      </div>
+      <div class="nav-bar-right">
+        <ul class="menu">
+          <li>
+          <li>
+            <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
+              <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
+              <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </button>
+          </li>
+        </ul>
+    </div>
+  </div>
+ </div>
+
+
+
+
+
+
+
+<!--<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+  <div class="title-bar-title">Menu</div>
+</div>-->
+
+<!--<div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li>
-        <a href="#">Study</a>
-        <ul class="menu vertical">
-          <li><a href="#">Study</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">Business</a></li>
-        </ul>
+      <li><a href="https://www.ulster.ac.uk">Home</a></li>
+      <li class="mega-menu">
+        <a data-toggle="mega-menu" href="#">Courses</a>
+        <div class="dropdown-pane bottom" id="mega-menu" data-dropdown data-options="closeOnClick:true; hover: true; hoverPane: true; vOffset:0">
+          <div class="row expanded">
+            <div class="column">
+              <ul class="menu vertical">
+                <li><a href="https://www.ulster.ac.uk/courses">Search for courses</a></li>
+                <li><a href="https://www.ulster.ac.uk/courses/201920">A to Z for 2019 / 2020</a></li>
+                <li><a href="https://www.ulster.ac.uk/courses/201819">A to Z for 2018 / 2019</a></li>
+                <li><a href="https://www.ulster.ac.uk/courses/201718">A to Z for 2017 / 2018</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="menu vertical">
+                <li class="menu-text">Mode and Level</li>
+                <li><a href="#"><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201920&amp;f.Level|Y=Undergraduate" tabindex="-1">Undergraduate</a></a></li>
+                <li><a href="#"><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201819&amp;f.Level|Y=Postgraduate" tabindex="-1">Postgraduate</a></a></li>
+                <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research" tabindex="-1">Postgraduate Research</a></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </li>
-      <li><a href="#">Research</a></li>
-      <li><a href="#">Business</a></li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
+      <li class="menu-text">Find a course</li>
       <li><input type="search" placeholder="Search"></li>
       <li><button type="button" class="button">Search</button></li>
     </ul>
   </div>
-</div>
+</div>-->

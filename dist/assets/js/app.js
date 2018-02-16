@@ -14586,7 +14586,9 @@ window.$ = _jquery2.default;
 //import './lib/foundation-explicit-pieces';
 
 
-(0, _jquery2.default)(document).foundation();
+(0, _jquery2.default)(document).ready(function () {
+  (0, _jquery2.default)(document).foundation();
+});
 
 /***/ }),
 /* 21 */

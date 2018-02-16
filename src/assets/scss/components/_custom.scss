@@ -2,6 +2,10 @@
 div.video-promo
 {
   height: 100%;
+
+  @include breakpoint(large) {
+    min-height: 400px;
+  }
 }
 
 div.video-promo .content
@@ -40,5 +44,21 @@ a.brand
 //breadcrumb
 .breadcrumbs
 {
-  margin: 0 !important;
+  margin: 20px 0 0 0 !important;
+}
+
+//navigation
+#global-menu
+{
+  position: relative;
+  z-index: 9999;
+}
+
+//cards
+.card
+{
+  img
+  {
+    width: 100%;
+  }
 }

@@ -11,4 +11,6 @@ import Foundation from 'foundation-sites';
 
 import Video from './video';
 
-$(document).foundation();
+$(document).ready(function() {
+  $(document).foundation();
+});
