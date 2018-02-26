@@ -20,6 +20,7 @@
  * 11. footer
  * 12. search box button in header
  * 13. utility (alpha)
+ * 14 main-content spacing fix for ulster-alpha
 */
 
 //video overides
@@ -139,6 +140,13 @@ i.fas,
 {
   border-top: 10px solid lighten(#ccc, 10%);
 }
+//legacy footer remove padding top and border top
+footer
+{
+  padding-top: 0;
+  border-top: 0;
+  background: #fff;
+}
 
 //search box button in header
 button
@@ -165,4 +173,17 @@ button
       color: #000;
     }
   }
+}
+//main-content spacing fix for ulster-alpha
+body .main-content
+{
+  margin-top: 0;
+
+  @include breakpoint(small down) {
+    top: 0 !important;
+  }
+}
+.resp-pull-left
+{
+  position: relative;
 }

@@ -80,10 +80,12 @@ $offcanvas-padding: 20px;
   }
 }
 
-.multilevel-offcanvas {
+.multilevel-offcanvas
+{
   background: darken($nav-background, 5%);
   padding: 20px;
   color: $white;
+  z-index: 9999 !important; //ulster-alpha fix - remove when alpha is phased out
 
   > .menu {
     margin-bottom: 1rem;
