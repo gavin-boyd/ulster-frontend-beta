@@ -22346,18 +22346,15 @@ var _foundationSites2 = _interopRequireDefault(_foundationSites);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+(0, _jquery2.default)(document).ready(function () {
+  (0, _jquery2.default)(document).foundation();
+});
+//window.$ = $;
 /*
  * Description: created for applying necessary js for header and footer to pages which still use ulster-frontend-alpha
  * Date: 22/2/18
  * Created by: Gavin Boyd
  */
-
-console.log('legacy app js init');
-//window.$ = $;
-
-(0, _jquery2.default)(document).ready(function () {
-  (0, _jquery2.default)(document).foundation();
-});
 
 /***/ }),
 /* 40 */,

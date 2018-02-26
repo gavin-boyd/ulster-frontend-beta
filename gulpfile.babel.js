@@ -29,7 +29,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, legacysass, javascript, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -79,6 +79,25 @@ function styleGuide(done) {
 // In production, the CSS is compressed
 function sass() {
   return gulp.src('src/assets/scss/app.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+
+//added for legacy-app.scss
+function legacysass() {
+  return gulp.src('src/assets/scss/legacy-app.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
@@ -153,6 +172,7 @@ function watch() {
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
+  gulp.watch('src/assets/scss/legacy-app.scss').on('all', legacysass);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));

@@ -66,7 +66,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1140); //apha change, beta should be 1200
+$global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
@@ -81,7 +81,8 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: $white;
+//$body-background: $white;
+$body-background: #f4f4f4;
 $body-font-color: #0b0c0c;
 $body-font-family: 'FS Matthew Web Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;

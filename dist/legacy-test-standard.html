@@ -147,20 +147,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- new foundation css -->
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/legacy-app.css">
 
 </head>
 <!--[if lt IE 9]><body id="top" class="lte-ie8"><![endif]-->
 <!--[if IE 9]><body id="top" class="ie9"><![endif]-->
 <!--[if gt IE 9]><!--><body id="top" ><!--<![endif]-->
-    <noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MGFFD8" style="display:none;visibility:hidden" width="0"></iframe></noscript> <!-- noindex -->
-     <a class="visually-hidden" href="#navigation">Skip to navigation</a> <a class="visually-hidden" href="#main-content">Skip to content</a>
+    
     <!--
       Foundation Building Block: https://foundation.zurb.com/building-blocks/blocks/topbar-mega-menu-dropdown.html
       Date: 26/2/18
     -->
     <div class="grid-container hide-for-small-only">
-      <div class="grid-x grid-padding-x">
+      <div class="grid-x">
         <div class="cell medium-3 large-3">
           <a href="https://www.ulster.ac.uk" class="brand">
             <img class="logo" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg" alt="Ulster University">
@@ -199,14 +198,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      <div class="grid-x grid-padding-x">
+      <div class="grid-x">
         <ul class="menu global-nav">
-          <li class="cell large-1"><a href="#">Home</a></li>
-          <li class="cell large-2">
+          <li class="cell medium-1 large-1"><a href="#">Home</a></li>
+          <li class="cell medium-2 large-2">
             <a href="#" data-toggle="courses-menu">Courses</a>
             <div class="dropdown-pane full" id="courses-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x grid-padding-x">
-                <div class="cell large-3">
+              <div class="grid-x">
+                <div class="cell large-4">
                   <ul>
     					  		<li class="h5"><a href="https://www.ulster.ac.uk/courses">Courses</a></li>
     					  		<li><a href="https://www.ulster.ac.uk/courses">Search for courses</a></li>
@@ -217,7 +216,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="cell large-4">
                   <ul>
-    			  				<li class="h5"><a><strong>Mode and Level</strong></a></li>
+    			  				<li class="h5 menu-text">Mode and Level</li>
     			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201920&amp;f.Level|Y=Undergraduate" tabindex="-1">Undergraduate</a></li>
     			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201819&amp;f.Level|Y=Postgraduate" tabindex="-1">Postgraduate</a></li>
     			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research" tabindex="-1">Postgraduate Research</a></li>
@@ -228,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="cell large-4">
                   <ul>
-    			  				<li class="h5"><a><strong>Information for...</strong></a></li>
+    			  				<li class="h5 menu-text">Information for...</li>
     			  				<li><a href="https://www.ulster.ac.uk/apply">Applying</a></li>
     			  				<li><a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and Funding</a></li>
     			  				<li><a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance Requirements</a></li>
@@ -239,10 +238,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </li>
-          <li class="cell large-2">
+          <li class="cell medium-2 large-2">
             <a href="#" data-toggle="apply-menu">Apply</a>
             <div class="dropdown-pane full" id="apply-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x grid-padding-x">
+              <div class="grid-x">
                 <div class="cell large-4">
                   <ul>
     			          <li class="h5"><a href="https://www.ulster.ac.uk/apply" tabindex="-1">Apply</a></li>
@@ -272,10 +271,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </li>
-          <li class="cell large-2">
+          <li class="cell medium-2 large-2">
             <a href="#" data-toggle="ulster-life-menu">Ulster Life</a>
             <div class="dropdown-pane full" id="ulster-life-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x grid-padding-x">
+              <div class="grid-x">
                 <div class="cell large-4">
                   <ul>
     			          <li class="h5"><a href="https://www.ulster.ac.uk/ulster-life" tabindex="-1">Ulster Life</a></li>
@@ -302,7 +301,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="cell large-4">
                   <ul>
-    			          <li class="h5"><strong>Information for...</strong></li>
+    			          <li class="h5 menu-text">Information for...</li>
     			          <li><a href="https://www.ulster.ac.uk/ulster-life/parents-and-families" tabindex="-1">Parents and families</a></li>
     			          <li><a href="https://www.ulster.ac.uk/ulster-life/teachers-and-advisers" tabindex="-1">Teachers and Advisers</a></li>
     			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/fe-students" tabindex="-1">Further Education students</a></li>
@@ -317,7 +316,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li class="cell auto">
             <a href="#" data-toggle="research-menu">Research &amp; Impact</a>
             <div class="dropdown-pane full" id="research-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x grid-padding-x">
+              <div class="grid-x">
                 <div class="cell large-4">
                   <ul>
     			          <li class="h5"><a href="https://www.ulster.ac.uk/research" tabindex="-1">Research &amp; Impact</a></li>
@@ -340,7 +339,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="cell large-4">
                   <ul>
-    			          <li class="h5"><strong>More information</strong></li>
+    			          <li class="h5 menu-text">More information</li>
     			          <li><a href="http://www.ulster.ac.uk/ref/" tabindex="-1">REF 2021</a></li>
     			          <li><a href="https://www.ulster.ac.uk/research/work-with-us/business/access-ulster" tabindex="-1">Access Ulster</a></li>
     			        </ul>
@@ -348,10 +347,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </li>
-          <li class="cell large-2">
+          <li class="cell medium-2 large-2">
             <a href="#" data-toggle="business-menu">Business</a>
             <div class="dropdown-pane full" id="business-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x grid-padding-x">
+              <div class="grid-x">
                 <div class="cell large-4">
                   <ul>
     			          <li class="h5"><a href="https://www.ulster.ac.uk/business" tabindex="-1">Business</a></li>
@@ -361,7 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     			          <li><a href="https://www.ulster.ac.uk/business/employers/recruit-students" tabindex="-1">Recruit our students</a></li>
     			        </ul>
                 </div>
-                <div class="cell large-4">
+                <div class="cell auto">
                   <ul>
     			          <li class="h5"><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school" tabindex="-1">Ulster University Business School</a></li>
     			          <li><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school/about" tabindex="-1">About</a></li>
@@ -432,210 +431,199 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
        </div>
     </div>
+    
+    
     <div class="main-content resp-pull-left" id="main-content" role="main">
-    	<!-- endnoindex -->
-    	<div class="inner">
-    		<h1>Apply</h1>
-    		<p></p>
-    		<div class="slidecontainer sub-slider">
-    			<ul class="slider" data-forceminheight="300" data-nextprev="on" data-thumbs="on">
-    				<li class="standardslide">
-    					<div class="light icon-curve spot-five">
-    						<div>
-    							<div class="spot-five">
-    								<h2 data-title="Students from England, Scotland and Wales" title="Students from England, Scotland and Wales">Students from England, Scotland and Wales</h2>
-    								<p>Find out what Ulster has to offer and discount packages available</p><a class="btn" href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students">Find out more</a>
-    							</div>
-    						</div>
-    					</div><span class="wash-out spot-five"></span> <img alt="Students from England, Scotland and Wales" class="image-replace-slider" data-alt="Students from England, Scotland and Wales" data-src="https://www.ulster.ac.uk/__data/assets/image/0015/104244/RS1017_UU-BELFAST-Oct2014-2457-lpr-2.jpg" data-thumb="uulogo.gif" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/placeholder.png" title="Writing">
-    				</li>
-    				<li class="standardslide">
-    					<div class="light icon-curve spot-five">
-    						<div>
-    							<div class="spot-five">
-    								<h2 data-title="PhD/Research degrees" title="PhD/Research degrees">PhD/Research degrees</h2>
-    								<p>Opportunities to study at Ulster University.</p><a class="btn" href="https://www.ulster.ac.uk/_test/phdresearch-degrees">View listings</a>
-    							</div>
-    						</div>
-    					</div><span class="wash-out spot-five"></span> <img alt="PhD/Research degrees" class="image-replace-slider" data-alt="PhD/Research degrees" data-src="https://www.ulster.ac.uk/__data/assets/image/0003/35805/research-studentship-slp.jpg" data-thumb="uulogo.gif" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/placeholder.png" title="Research studentships">
-    				</li>
-    				<li class="standardslide">
-    					<div class="light icon-curve spot-red">
-    						<div>
-    							<div class="spot-red">
-    								<h2 data-title="Postgraduate and Undergraduate Part-time Tuition Fee Loans" title="Postgraduate and Undergraduate Part-time Tuition Fee Loans">Postgraduate and Undergraduate Part-time Tuition Fee Loans</h2>
-    								<p>Available for 2017/18 entry</p><a class="btn" href="https://www.ulster.ac.uk/apply/fees-and-finance/postgraduate-and-part-time-tuition-fee-loans">Find out more</a>
-    							</div>
-    						</div>
-    					</div><span class="wash-out spot-red"></span> <img alt="Postgraduate and Undergraduate Part-time Tuition Fee Loans" class="image-replace-slider" data-alt="Postgraduate and Undergraduate Part-time Tuition Fee Loans" data-src="https://www.ulster.ac.uk/__data/assets/image/0007/63727/clearing-banner.jpg" data-thumb="uulogo.gif" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/placeholder.png" title="Clearing 2015">
-    				</li>
-    			</ul>
+    	<nav class="breadcrumb" role="navigation">
+    		<ol>
+    			<li>
+    				<a href="/">Home</a>
+    			</li>
+    			<li class="fa fa-caret-right">
+    				<a href="https://www.ulster.ac.uk/apply">Apply</a>
+    			</li>
+    			<li class="fa fa-caret-right">
+    				<a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and finance</a>
+    			</li>
+    			<li class="fa fa-caret-right">
+    				<a href="https://www.ulster.ac.uk/apply/fees-and-finance/undergraduate">Undergraduate full-time</a>
+    			</li>
+    		</ol>
+    	</nav>
+    	<div class="inner content">
+    		<div class="col2">
+    			<!-- endnoindex -->
+    			<div class="main">
+    				<div>
+    					<h1 class="sub-image-title" style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0014/40064/RS318__DSC6593-2-scr.jpg'); background-position: centre center;"><span>Undergraduate full-time</span></h1>
+    					<div class="wysiwyg">
+    						<h2>Tuition fees (2018/19 entry)</h2>
+    						<p><strong>£4,160</strong>* per year for full-time students from <strong>Northern Ireland, Republic of Ireland and EU countries</strong> (excluding England, Scotland and Wales) for undergraduate degrees, integrated master's and equivalent. £2,070* for a placement year or study abroad year.</p>
+    						<p>Full-time undergraduate fees for home and EU students (excluding England, Scotland and Wales) are determined by the Department for the Economy and are normally increased annually.</p>
+    						<p><strong>£9,250*&nbsp;</strong>per year for students from <strong>England, Scotland and Wales</strong> (including Channel Islands and Isle of Man) for undergraduate degrees, integrated master's and equivalent (2018/2019 entry). Discounts are available and can be viewed <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students/discounts-for-gb-students" target="_blank">here</a>.</p>
+    						<p>Some courses are fully funded by the Department of Health. These are highlighted in the course information.</p>
+    						<p>Find out about <a href="https://www.ulster.ac.uk/apply/fees-and-finance/part-time">part-time undergraduate tuition fees</a> at Ulster.</p>
+    						<p>Find out about <a href="http://www.ulster.ac.uk/international/apply/fees-and-finance" title="International Tuition Fees">international tuition fees</a> at Ulster.</p>
+    						<h2>Funding</h2>
+    						<p>Fees do not have to be paid up-front. A tuition fees loan can be taken out and you can defer payment until you have graduated and are in employment. Northern Ireland students can apply for maintenance loans and University bursaries to help with living costs. Means-tested maintenance grants are also available.</p>
+    						<p>Funding arrangements for students from England, Scotland and Wales vary. As a Republic of Ireland student, you can transfer your maintenance awards to Northern Ireland.</p>
+    						<p>Find out more:</p>
+    						<p><a href="http://www.studentfinanceni.co.uk" target="_blank" title="Student Finance NI">Student Finance Northern Ireland</a></p>
+    						<p><a href="http://www.studentfinance.ie" target="_blank" title="Student Finance Ireland">Student Finance Ireland</a></p>
+    						<p><a href="http://www.gov.uk/student-finance" target="_blank" title="Student Finance England">Student Finance England</a></p>
+    						<p><a href="http://www.saas.gov.uk" target="_blank" title="Student Awards Agency Scotland">Student Awards Agency for Scotland (SAAS)</a></p>
+    						<p><a href="http://www.studentfinancewales.co.uk" target="_blank" title="Student Finance Wales">Student Finance Wales</a></p>
+    						<p>*Correct at the time of publishing. Fees illustrated are based on 18/19 entry and&nbsp;are&nbsp;subject to an annual increase. Find out&nbsp;<a href="https://www.ulster.ac.uk/finance/student/tuition-fees-rates/tuition-fees-201819">more</a>.</p>
+    						<p>Read our <a href="http://www.ulster.ac.uk/finance/fees/payment_policy_1718.pdf">Tuition Fees Payment Policy</a>.</p>
+    						<p>Find out more about <a href="http://www.ulster.ac.uk/finance/fees/2016-17/">Tuition and Miscellaneous Fees</a>.</p>
+    					</div>
+    				</div>
+    			</div><!-- noindex -->
+    			<nav class="multilevel" role="navigation">
+    				<ul>
+    					<!--1st level-->
+    					<li>
+    						<a href="https://www.ulster.ac.uk/apply">Apply</a>
+    						<ul>
+    							<!--2nd level-->
+    							<li>
+    								<a href="https://www.ulster.ac.uk/apply/how-to-apply">How to apply</a>
+    							</li>
+    							<li>
+    								<a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance requirements</a>
+    							</li>
+    							<li class="active">
+    								<a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and finance</a>
+    								<ul>
+    									<!--3rd level-->
+    									<li class="active">
+    										<a href="https://www.ulster.ac.uk/apply/fees-and-finance/undergraduate">Undergraduate full-time</a>
+    									</li>
+    									<li>
+    										<a href="https://www.ulster.ac.uk/apply/fees-and-finance/part-time">Undergraduate part-time</a>
+    									</li>
+    									<li>
+    										<a href="https://www.ulster.ac.uk/apply/fees-and-finance/postgraduate">Postgraduate</a>
+    									</li>
+    									<li>
+    										<a href="https://www.ulster.ac.uk/apply/fees-and-finance/bursaries">Bursaries</a>
+    									</li>
+    									<li>
+    										<a href="https://www.ulster.ac.uk/apply/fees-and-finance/scholarships">Scholarships</a>
+    									</li>
+    									<li>
+    										<a href="https://www.ulster.ac.uk/apply/fees-and-finance/postgraduate-and-part-time-tuition-fee-loans">Postgraduate and Part-time Tuition Fee Loans</a>
+    									</li>
+    									<li>
+    										<a href="https://www.ulster.ac.uk/__data/assets/pdf_file/0009/203976/2013sep_dhssps_student_incentive_scheme.pdf">Social work incentive scheme</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li>
+    								<a href="https://www.ulster.ac.uk/apply/your-rights-and-obligations">Your rights, obligations and complaints</a>
+    							</li>
+    						</ul>
+    					</li>
+    				</ul>
+    			</nav>
     		</div>
     	</div>
-    	<div class="module-light mob-promo">
-    		<div class="inner">
-    			<section aria-hidden="true">
-    				<div class="col">
-    					<header class="phd/research-degrees">
-    						<h2>PhD/Research degrees</h2><img alt="Research studentships" src="https://www.ulster.ac.uk/__data/assets/image/0003/35805/research-studentship-slp.jpg">
-    						<p>Opportunities to study at Ulster University.</p><a class="btn" href="https://www.ulster.ac.uk/_test/phdresearch-degrees">View listings</a>
-    					</header>
-    				</div>
-    			</section>
-    		</div>
-    	</div>
-    	<div class="module-light">
-    		<div class="inner">
-    			<section class="three-column">
-    				<div class="col">
-    					<header class="how-to-apply-to-ulster-university">
-    						<a href="https://www.ulster.ac.uk/apply/how-to-apply"><img alt="" src="https://www.ulster.ac.uk/__data/assets/image/0006/35574/varieties/thumb-larger.jpg"></a>
-    						<h2><a href="https://www.ulster.ac.uk/apply/how-to-apply">How to apply to Ulster University</a></h2>
-    						<p>Find out how you can apply to Ulster University.</p>
-    					</header>
-    				</div>
-    				<div class="col">
-    					<header class="entrance-requirements">
-    						<a href="https://www.ulster.ac.uk/apply/entrance-requirements"><img alt="Girl student at desk" src="https://www.ulster.ac.uk/__data/assets/image/0018/7515/varieties/thumb-larger.jpg"></a>
-    						<h2><a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance requirements</a></h2>
-    						<p>Found the Ulster University course for you? Find out what entry requirements apply.</p>
-    					</header>
-    				</div>
-    				<div class="col">
-    					<header class="fees-and-finance">
-    						<a href="https://www.ulster.ac.uk/apply/fees-and-finance"><img alt="Student finance" src="https://www.ulster.ac.uk/__data/assets/image/0003/7518/varieties/thumb-larger.jpg"></a>
-    						<h2><a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and finance</a></h2>
-    						<p>Find out more about tuition fees at Ulster University.</p>
-    					</header>
-    				</div>
-    				<div class="col">
-    					<header class="your-rights,-obligations-and-complaints">
-    						<a href="https://www.ulster.ac.uk/apply/your-rights-and-obligations"><img alt="" src="https://www.ulster.ac.uk/__data/assets/image/0011/40016/varieties/thumb-larger.jpg"></a>
-    						<h2><a href="https://www.ulster.ac.uk/apply/your-rights-and-obligations">Your rights, obligations and complaints</a></h2>
-    						<p>Rights and obligations of the university and students - terms and conditions</p>
-    					</header>
-    				</div>
-    			</section>
-    		</div>
-    	</div><!-- noindex -->
-    	<footer>
-    	  <div class="footer bg-light-grey">
-    	    <div class="grid-container">
-    	      <div class="grid-x grid-padding-y grid-padding-x">
-    	        <div class="cell medium-3 large-3">
-    	          <h3 class="h6">Courses</h3>
-    	          <ul>
-    	            <li><a href="https://www.ulster.ac.uk/courses/course-finder">Course finder</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Entry_year|entryyear=201920&amp;f.Level|Y=Undergraduate">Undergraduate</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Entry_year|entryyear=201819&amp;f.Level|Y=Postgraduate">Postgraduate</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Attendance|modept=Part-time">Part-time</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Entry_year|entryyear=201718&amp;f.Level|coursetype=Short+courses+and+CPD">Short courses</a></li>
-    	          </ul>
-    	        </div>
-    	        <div class="cell medium-3 large-3">
-    	          <h3 class="h6">Faculties</h3>
-    	          <ul>
-    	            <li><a href="https://www.ulster.ac.uk/faculties/arts-humanities-and-social-sciences">Arts, Humanities &amp; Social Sciences</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/faculties/computing-engineering-and-the-built-environment">Computing, Engineering and the Built Environment </a></li>
-    	            <li><a href="https://www.ulster.ac.uk/faculties/life-and-health-sciences">Life and Health Sciences</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school">Ulster University Business School</a></li>
-    	          </ul>
-    	        </div>
-    	        <div class="cell medium-3 large-3">
-    	          <h3 class="h6">Campuses</h3>
-    	          <ul>
-    	            <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/belfast">Belfast</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/coleraine">Coleraine</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/jordanstown">Jordanstown</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/magee">Magee</a></li>
-    	            <li><a href="//qa.ulster.ac.uk">London and Birmingham</a></li>
-    	          </ul>
-    	        </div>
-    	        <div class="cell medium-3 large-3">
-    	          <h3 class="h6">Quick links</h3>
-    	          <ul>
-    	            <li><a href="http://www.ulster.ac.uk/jobs">Job opportunities</a></li>
-    	            <li><a href="http://www.ulster.ac.uk/aboutus">About Ulster University</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/news">News</a></li>
-    	            <li><a href="https://www.ulster.ac.uk/staff-links">Staff</a></li>
-    	            <li><a href="https://portal.ulster.ac.uk/">Current students</a></li>
-    	          </ul>
-    	        </div>
-    	      </div>
-    	    </div>
-    	  </div>
-    	  <div class="grid-container">
-    	    <div class="grid-x grid-padding-y grid-padding-x">
-    	      <div class="cell medium-6 large-6">
-    	        <div class="grid-x grid-padding-y grid-padding-x">
-    	          <div class="cell medium-6 large-6">
-    	            <h3 class="h5 separator-left"><a href="https://twitter.com/StudyAtUlster"><i class="fab fa-twitter-square"></i> Twitter</a></h3>
-    	          </div>
-    	          <div class="cell medium-6 large-6">
-    	            <h3 class="h5 separator-left"><a href="https://www.facebook.com/studyatulster"><i class="fab fa-facebook-square"></i> Facebook</a></h3>
-    	          </div>
-    	          <div class="cell medium-6 large-6">
-    	            <h3 class="h5 separator-left"><a href="https://www.flickr.com/photos/universityofulster"><i class="fab fa-flickr"></i> Flickr</a></h3>
-    	          </div>
-    	          <div class="cell medium-6 large-6">
-    	            <h3 class="h5 separator-left"><a href="https://www.youtube.com/user/StudyAtUlster"><i class="fab fa-youtube-square"></i> YouTube</a></h3>
-    	          </div>
-    	        </div>
-    	      </div>
-    	      <div class="cell medium-6 large-6">
-    	        <div class="grid-x grid-padding-y grid-padding-x">
-    	          <div class="cell medium-6 large-6 text-center">
-    	            <img src="//cdn.ulster.ac.uk/home/ulster-frontend/img/the-young-2017.jpg" alt="THE Awards 2017 Top 150" width="228" height="112" class="thumbnail">
-    	          </div>
-    	          <div class="cell medium-6 large-6 text-center">
-    	            <img src="//cdn.ulster.ac.uk/home/ulster-frontend/img/the-awards-2016.jpg" alt="THE Awards 2016 Most Improved Student Experience" width="160" height="112" class="thumbnail">
-    	          </div>
-    	        </div>
-    	      </div>
-    	    </div>
-    	  </div>
-    	  <div class="bg-light-grey">
-    	    <div class="grid-container">
-    	      <div class="grix-x grid-padding-y grid-padding-x">
-    	        <div class="cell medium-12 large-12">
-    	          <ul class="menu">
-    	            <li><a href="#"><a href="https://www.ulster.ac.uk/aboutus/cookies">Cookies &amp; Privacy</a></a></li>
-    	            <li><a href="#"><a href="https://www.ulster.ac.uk/aboutus/copyright">Copyright</a></a></li>
-    	            <li><a href="#"><a href="http://www.ulster.ac.uk/secretary/policyimplementation/foi.html">Freedom of Information</a></a></li>
-    	            <li><a href="#"><a href="https://www.ulster.ac.uk/aboutus/contact-us">Contact Us</a></a></li>
-    	          </ul>
-    	        </div>
-    	        <hr>
-    	        <div class="cell medium-12 large-12">
-    	          <p>© Copyright 2018 Ulster University <br>Ulster University is a registered charity (registered with the Charity Commission for Northern Ireland NIC100166).</p>
-    	        </div>
-    	      </div>
-    	    </div>
-    	  </div>
-    	</footer>
+      <footer>
+        <div class="footer bg-light-grey">
+          <div class="grid-container">
+            <div class="grid-x grid-padding-y grid-padding-x">
+              <div class="cell medium-3 large-3">
+                <h3 class="h6">Courses</h3>
+                <ul>
+                  <li><a href="https://www.ulster.ac.uk/courses/course-finder">Course finder</a></li>
+                  <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Entry_year|entryyear=201920&amp;f.Level|Y=Undergraduate">Undergraduate</a></li>
+                  <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Entry_year|entryyear=201819&amp;f.Level|Y=Postgraduate">Postgraduate</a></li>
+                  <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Attendance|modept=Part-time">Part-time</a></li>
+                  <li><a href="https://www.ulster.ac.uk/courses/course-finder?query=&amp;f.Entry_year|entryyear=201718&amp;f.Level|coursetype=Short+courses+and+CPD">Short courses</a></li>
+                </ul>
+              </div>
+              <div class="cell medium-3 large-3">
+                <h3 class="h6">Faculties</h3>
+                <ul>
+                  <li><a href="https://www.ulster.ac.uk/faculties/arts-humanities-and-social-sciences">Arts, Humanities &amp; Social Sciences</a></li>
+                  <li><a href="https://www.ulster.ac.uk/faculties/computing-engineering-and-the-built-environment">Computing, Engineering and the Built Environment </a></li>
+                  <li><a href="https://www.ulster.ac.uk/faculties/life-and-health-sciences">Life and Health Sciences</a></li>
+                  <li><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school">Ulster University Business School</a></li>
+                </ul>
+              </div>
+              <div class="cell medium-3 large-3">
+                <h3 class="h6">Campuses</h3>
+                <ul>
+                  <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/belfast">Belfast</a></li>
+                  <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/coleraine">Coleraine</a></li>
+                  <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/jordanstown">Jordanstown</a></li>
+                  <li><a href="https://www.ulster.ac.uk/ulster-life/campuses/magee">Magee</a></li>
+                  <li><a href="//qa.ulster.ac.uk">London and Birmingham</a></li>
+                </ul>
+              </div>
+              <div class="cell medium-3 large-3">
+                <h3 class="h6">Quick links</h3>
+                <ul>
+                  <li><a href="http://www.ulster.ac.uk/jobs">Job opportunities</a></li>
+                  <li><a href="http://www.ulster.ac.uk/aboutus">About Ulster University</a></li>
+                  <li><a href="https://www.ulster.ac.uk/news">News</a></li>
+                  <li><a href="https://www.ulster.ac.uk/staff-links">Staff</a></li>
+                  <li><a href="https://portal.ulster.ac.uk/">Current students</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="grid-x grid-padding-y grid-padding-x">
+            <div class="cell medium-6 large-6">
+              <div class="grid-x grid-padding-y grid-padding-x">
+                <div class="cell medium-6 large-6">
+                  <h3 class="h5 separator-left"><a href="https://twitter.com/StudyAtUlster"><i class="fab fa-twitter-square"></i> Twitter</a></h3>
+                </div>
+                <div class="cell medium-6 large-6">
+                  <h3 class="h5 separator-left"><a href="https://www.facebook.com/studyatulster"><i class="fab fa-facebook-square"></i> Facebook</a></h3>
+                </div>
+                <div class="cell medium-6 large-6">
+                  <h3 class="h5 separator-left"><a href="https://www.flickr.com/photos/universityofulster"><i class="fab fa-flickr"></i> Flickr</a></h3>
+                </div>
+                <div class="cell medium-6 large-6">
+                  <h3 class="h5 separator-left"><a href="https://www.youtube.com/user/StudyAtUlster"><i class="fab fa-youtube-square"></i> YouTube</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="cell medium-6 large-6">
+              <div class="grid-x grid-padding-y grid-padding-x">
+                <div class="cell medium-6 large-6 text-center">
+                  <img src="//cdn.ulster.ac.uk/home/ulster-frontend/img/the-young-2017.jpg" alt="THE Awards 2017 Top 150" width="228" height="112" class="thumbnail">
+                </div>
+                <div class="cell medium-6 large-6 text-center">
+                  <img src="//cdn.ulster.ac.uk/home/ulster-frontend/img/the-awards-2016.jpg" alt="THE Awards 2016 Most Improved Student Experience" width="160" height="112" class="thumbnail">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-light-grey">
+          <div class="grid-container">
+            <div class="grix-x grid-padding-y grid-padding-x">
+              <div class="cell medium-12 large-12">
+                <ul class="menu">
+                  <li><a href="#"><a href="https://www.ulster.ac.uk/aboutus/cookies">Cookies &amp; Privacy</a></a></li>
+                  <li><a href="#"><a href="https://www.ulster.ac.uk/aboutus/copyright">Copyright</a></a></li>
+                  <li><a href="#"><a href="http://www.ulster.ac.uk/secretary/policyimplementation/foi.html">Freedom of Information</a></a></li>
+                  <li><a href="#"><a href="https://www.ulster.ac.uk/aboutus/contact-us">Contact Us</a></a></li>
+                </ul>
+              </div>
+              <hr>
+              <div class="cell medium-12 large-12">
+                <p>© Copyright 2018 Ulster University <br>Ulster University is a registered charity (registered with the Charity Commission for Northern Ireland NIC100166).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <script type="application/ld+json">
-    // <![CDATA[
-    {
-      "@context": "http://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "url": "https://www.ulster.ac.uk",
-          "logo": "https://www.ulster.ac.uk/__data/assets/image/0013/265/logo-uu-dark.png"
-        },
-        {
-          "@type": "WebSite",
-          "url": "https://www.ulster.ac.uk",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.ulster.ac.uk/search?query={search_term_string}",
-            "query-input": "required name=search_term_string"
-           }
-        }]
-    }
-    // ]]>
-    </script>
     
     <script src="assets/js/legacy-app.js" async></script>
     <!-- legacy js -->

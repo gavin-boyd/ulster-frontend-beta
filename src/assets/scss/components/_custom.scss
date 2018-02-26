@@ -146,6 +146,11 @@ footer
   padding-top: 0;
   border-top: 0;
   background: #fff;
+
+  a
+  {
+    font-family: "FS Matthew Web Regular";
+  }
 }
 
 //search box button in header
@@ -171,6 +176,7 @@ button
     a
     {
       color: #000;
+      font-family: "FS Matthew Web Regular";
     }
   }
 }
@@ -178,10 +184,7 @@ button
 body .main-content
 {
   margin-top: 0;
-
-  @include breakpoint(small down) {
-    top: 0 !important;
-  }
+  top: 0 !important;
 }
 .resp-pull-left
 {

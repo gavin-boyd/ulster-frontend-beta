@@ -20,7 +20,6 @@
 
   > li
   {
-    width: 20%;
     border-right: 1px solid #f2f2ec;
 
     &:last-child
@@ -35,6 +34,7 @@
       display: block;
       color: $corp-navy;
       font-size: 18px;
+      font-family: "FS Matthew Web Regular";
 
       &:hover
       {
@@ -49,7 +49,8 @@
 
     .dropdown-pane
     {
-      border: 0;
+      background: #fff;
+      border: 1px;
       z-index: 9999;
       @include box-shadow(
         $x : 2px,

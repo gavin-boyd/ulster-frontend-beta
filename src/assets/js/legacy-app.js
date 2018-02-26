@@ -3,8 +3,6 @@
  * Date: 22/2/18
  * Created by: Gavin Boyd
  */
-
-console.log('legacy app js init');
 import $ from 'jquery';
 import whatInput from 'what-input';
 //window.$ = $;
