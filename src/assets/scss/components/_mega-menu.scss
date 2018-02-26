@@ -1,0 +1,70 @@
+/*
+ * Type: Custom
+ * Partial: header.html
+ * Scope: global-nav
+ * Description: this is custom styling for the mega menu, to make it look like ulster-alpha
+ * Created by: Gavin Boyd
+ * Date: 26/2/18
+*/
+.global-nav
+{
+  @include linear-gradient($top: #f4f4f4, $bottom: #ddd);
+  @include box-shadow(
+    $x : 2px,
+    $y : 2px,
+    $blur : 5px,
+    $spread : 0,
+    $color : rgba(0,0,0,0.2)
+  );
+  width: 100%;
+
+  > li
+  {
+    width: 20%;
+    border-right: 1px solid #f2f2ec;
+
+    &:last-child
+    {
+      border-right:none;
+    }
+
+    > a
+    {
+      text-align: center;
+      padding: 15px 0;
+      display: block;
+      color: $corp-navy;
+      font-size: 18px;
+
+      &:hover
+      {
+        background: #eee;
+      }
+
+      &.hover
+      {
+        background: #fff;
+      }
+    }
+
+    .dropdown-pane
+    {
+      border: 0;
+      @include box-shadow(
+        $x : 2px,
+        $y : 2px,
+        $blur : 1px,
+        $spread : 0,
+        $color : rgba(0,0,0,.6)
+      );
+
+      ul
+      {
+        li
+        {
+          list-style: none;
+        }
+      }
+    }
+  }
+}

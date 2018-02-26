@@ -18,7 +18,9 @@
             <br />
             ${s.result.metaData["starttimefrontend"]!} - ${s.result.metaData["endtimefrontend"]!}
           </div>
-          <img src="${s.result.metaData["thumbnailurl"]!}" alt="${s.result.metaData["t"]!}">
+          <a href="${s.result.metaData["url"]!}">
+            <img src="${s.result.metaData["thumbnailurl"]!}" alt="${s.result.metaData["t"]!}">
+          </a>
           <div class="card-section" data-equalizer-watch>
             <h4 class="h6"><a href="${s.result.metaData["url"]!}">${s.result.metaData["t"]!}</a></h4>
             <p>${s.result.metaData["description"]!}</p>

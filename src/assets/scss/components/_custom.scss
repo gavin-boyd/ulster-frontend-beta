@@ -1,3 +1,27 @@
+/*
+ * Type: Custom
+ * Partial: All
+ * Scope: n/a
+ * Description: this is custom styling for the site for various fixes to ulster-frontend-alpha dependencies
+ * Created by: Gavin Boyd
+ * Date: 26/2/18
+ *
+ * Contents:
+ * 1. video-promo
+ * 2. brand
+ * 3. backgrounds
+ * 4. breadcrumb
+ * 5. navigation
+ * 6. cards
+ * 7. icons and seperator
+ * 8. global search box
+ * 9. megamenu
+ * 10. tabs
+ * 11. footer
+ * 12. search box button in header
+ * 13. utility (alpha)
+*/
+
 //video overides
 div.video-promo
 {
@@ -6,21 +30,35 @@ div.video-promo
   @include breakpoint(large) {
     min-height: 400px;
   }
+
+  @include breakpoint(small down)
+  {
+    margin-bottom: 0;
+  }
 }
 
 div.video-promo .content
 {
   padding: 0;
   text-align: center;
+  display: table;
 }
 
 div.video-promo .content a.cta
 {
   margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: calc(50% - 23px);
+  left: auto;
+  right: auto;
+  top: auto;
+  display: table-cell;
+  vertical-align: middle;
   background: none;
+  border: none !important;
+
+  @include breakpoint(small down)
+  {
+    display: none;
+  }
 
   &:hover
   {
@@ -31,7 +69,7 @@ div.video-promo .content a.cta
 //brand
 a.brand
 {
-  margin-bottom: 20px;
+  margin: 30px 0;
   display: block;
 }
 
@@ -67,4 +105,64 @@ a.brand
 i.fas,
 {
   color: $corp-gold;
+}
+
+//global search box
+#searchform
+{
+  margin-top: 20px;
+}
+
+//megamenu
+.dropdown-pane.full
+{
+  width: 100% !important;
+  left: 0 !important;
+}
+
+//tabs
+.tabs
+{
+  a
+  {
+    font-size: 18px;
+
+    @include breakpoint(small down)
+    {
+      font-size: 14px;
+    }
+  }
+}
+
+//footer
+.footer
+{
+  border-top: 10px solid lighten(#ccc, 10%);
+}
+
+//search box button in header
+button
+{
+  i
+  {
+    color: #fff !important;
+  }
+}
+
+//utility (alpha)
+.utility
+{
+  padding: 10px 0;
+
+  li
+  {
+    list-style: none;
+    float: right;
+    margin-left: 10px;
+
+    a
+    {
+      color: #000;
+    }
+  }
 }

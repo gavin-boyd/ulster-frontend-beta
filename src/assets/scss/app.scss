@@ -56,5 +56,7 @@
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/video-promo';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/videowall';
-@import 'components/topbar-mega-menu-dropdown';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
+@import 'components/mega-menu';
+@import 'components/multilevel-offcanvas-menu';
 @import 'components/custom';

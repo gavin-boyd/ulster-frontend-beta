@@ -1,10 +1,19 @@
-//https://foundation.zurb.com/building-blocks/blocks/multilevel-offcanvas-menu.html
+/*
+ * Type: Custom
+ * Partial: mob-nav.html
+ * Scope: nav-bar
+ * Building Block: https://foundation.zurb.com/building-blocks/blocks/multilevel-offcanvas-menu.html
+ * Description: this is custom styling for the off screen mobile menu
+ * Created by: Gavin Boyd
+ * Date: 26/2/18
+*/
 $nav-text-color: $white;
-$nav-height: 75px;
+$nav-height: 120px;
 $nav-background: $corp-navy;
 $offcanvas-padding: 20px;
 
-.nav-bar {
+.nav-bar
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +21,9 @@ $offcanvas-padding: 20px;
   height: $nav-height;
   margin-bottom: 0;
 
-  .nav-bar-logo {
-    padding: 1.8rem;
+  .nav-bar-logo
+  {
+    padding: 0 10px;
   }
 
   .logo
@@ -21,15 +31,18 @@ $offcanvas-padding: 20px;
     width: 100px;
   }
 
-  li {
+  li
+  {
      background: $nav-background;
   }
 
-  a {
+  a
+  {
     color: $nav-text-color;
     transition: color 0.2s ease-in;
 
-    &:hover {
+    &:hover
+    {
       color: lighten($nav-background, 50%);
     }
   }
@@ -38,7 +51,8 @@ $offcanvas-padding: 20px;
     height: $nav-height/1.4;
   }
 
-  .offcanvas-trigger {
+  .offcanvas-trigger
+  {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,12 +63,14 @@ $offcanvas-padding: 20px;
     transition: background-color 0.2s ease-in;
     cursor: pointer;
 
-    .offcanvas-trigger-text {
+    .offcanvas-trigger-text
+    {
       margin-right: 0.25rem;
       margin-top: 0.25rem;
     }
 
-    &:hover {
+    &:hover
+    {
       background-color: lighten($nav-background, 30%);
     }
 
