@@ -20,7 +20,8 @@
  * 11. footer
  * 12. search box button in header
  * 13. utility (alpha)
- * 14 main-content spacing fix for ulster-alpha
+ * 14. main-content spacing fix for ulster-alpha
+ * 15. angle right list style Type
 */
 
 //video overides
@@ -189,4 +190,25 @@ body .main-content
 .resp-pull-left
 {
   position: relative;
+}
+
+//angle right list style Type
+ul.angle-right
+{
+  margin-left: 0;
+
+  li
+  {
+    position: relative;
+    padding-left: 15px;
+
+    &::before
+    {
+      font-family: FontAwesome;
+      content: "\f105";
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+  }
 }

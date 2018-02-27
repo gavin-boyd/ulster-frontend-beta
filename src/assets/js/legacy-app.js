@@ -9,4 +9,7 @@ import whatInput from 'what-input';
 import Foundation from 'foundation-sites';
 $(document).ready(function() {
   $(document).foundation();
+  $('.mega-menu-link').click(function(e) {
+    e.preventDefault();
+  });
 });
