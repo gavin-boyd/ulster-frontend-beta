@@ -1,0 +1,63 @@
+/*
+ * useful guidance: https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
+ */
+$opacity: .7;
+
+$c-pink: #D81B7A;
+$c-pink-trans: rgba($c-pink, $opacity);
+
+.pink-title-seperator
+{
+  &::after
+  {
+    border-bottom-color: $c-pink;
+  }
+}
+
+.white-title-seperator
+{
+  &::after
+  {
+    border-bottom-color: #fff;
+  }
+}
+$c-teal: #6ABCAB;
+.teal-title-seperator
+{
+  &::after
+  {
+    border-bottom-color: $c-teal;
+  }
+}
+
+$c-green: #68A021;
+
+$c-navy: #151E3E;
+$c-navy-dark: #0C0013;
+
+
+
+$c-purple: #3F0F52;
+$c-purple-trans: rgba($c-purple, $opacity);
+$c-purple-trans-shade: rgba($c-purple, $opacity);
+
+//backgrounds
+.bg-purple-trans
+{
+  background: $c-purple-trans;
+}
+
+.bg-pink-trans
+{
+  background: $c-pink-trans;
+}
+
+.bg-light-grey
+{
+  background: #F3F2F3;
+}
+
+.bg-navy
+{
+  background: $corp-navy-trans;
+}

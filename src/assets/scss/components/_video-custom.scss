@@ -1,0 +1,52 @@
+/*
+ * Type: Custom
+ * Partial: All
+ * Scope: n/a
+ * Description: this is custom styling for the site for various fixes to ulster-frontend-alpha video component dependencies
+ * Created by: Gavin Boyd
+ * Date: 27/2/18
+*/
+
+//video overides
+div.video-promo
+{
+  height: 100%;
+
+  @include breakpoint(large) {
+    min-height: 400px;
+  }
+
+  @include breakpoint(small down)
+  {
+    margin-bottom: 0;
+  }
+}
+
+div.video-promo .content
+{
+  padding: 0;
+  text-align: center;
+  display: table;
+}
+
+div.video-promo .content a.cta
+{
+  margin: 0 auto;
+  left: auto;
+  right: auto;
+  top: auto;
+  display: table-cell;
+  vertical-align: middle;
+  background: none;
+  border: none !important;
+
+  @include breakpoint(small down)
+  {
+    display: none;
+  }
+
+  &:hover
+  {
+    background: rgba(0,0,0,.2);
+  }
+}

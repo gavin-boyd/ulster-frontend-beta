@@ -9,8 +9,11 @@ import Foundation from 'foundation-sites';
 //import './lib/foundation-explicit-pieces';
 
 
-import Video from './video';
+//import Video from './video';
 
 $(document).ready(function() {
   $(document).foundation();
+  $('.mega-menu-link').click(function(e) {
+    e.preventDefault();
+  });
 });

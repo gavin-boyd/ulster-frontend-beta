@@ -21,10 +21,27 @@
   > li
   {
     border-right: 1px solid #f2f2ec;
+    display: inline-block
 
     &:last-child
     {
       border-right:none;
+    }
+
+    &.menu-item
+    {
+      width: 16.66%;
+      width: calc(68% / 4);
+
+      &.small
+      {
+        width: 10%;
+      }
+
+      &.large
+      {
+        width: 22%;
+      }
     }
 
     > a

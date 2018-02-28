@@ -81,8 +81,8 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-//$body-background: $white;
-$body-background: #f4f4f4;
+$body-background: $white;
+//$body-background: #f4f4f4; //legacy background
 $body-font-color: #0b0c0c;
 $body-font-family: 'FS Matthew Web Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
@@ -149,11 +149,11 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 28),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 18),
-    'h4': ('font-size': 16),
-    'h5': ('font-size': 16),
+    'h1': ('font-size': 34),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
     'h6': ('font-size': 16),
   ),
 );
@@ -204,7 +204,7 @@ $abbr-underline: 1px dotted $black;
 $lead-font-size: $global-font-size * 1.25;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
-$subheader-color: $dark-gray;
+$subheader-color: #fff;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;

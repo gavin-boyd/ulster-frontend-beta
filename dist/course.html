@@ -17,18 +17,20 @@
           </a>
         </div>
         <div class="cell medium-9 large-6 large-offset-3">
-          <div class="grid-y">
+          <div class="grid-x">
             <div class="cell large-12">
               <ul class="utility">
                 <li><a href="https://www.ulster.ac.uk/atoz">A-Z Index</a></li>
-                <li><a href="https://www.ulster.ac.uk/staff">Staff</a></li>
+                <li><a href="https://www.ulster.ac.uk/staff-links">Staff</a></li>
                 <li><a href="https://portal.ulster.ac.uk">Current Students</a></li>
                 <li><a href="https://www.ulster.ac.uk/international">International</a></li>
                 <li><a href="https://www.ulster.ac.uk/graduates">Graduates</a></li>
               </ul>
             </div>
+          </div>
+          <div class="grid-x">
             <div class="cell large-12">
-              <form id="searchform" method="get" action="https://www.ulster.ac.uk/search">
+              <form method="get" action="https://www.ulster.ac.uk/search">
                 <div class="grid-x">
                   <div class="small-3 cell">
                     <label for="middle-label" class="text-right middle hide">Search</label>
@@ -49,181 +51,179 @@
           </div>
         </div>
       </div>
-      <div class="grid-x">
-        <ul class="menu global-nav">
-          <li class="cell medium-1 large-1"><a href="https://www.ulster.ac.uk">Home</a></li>
-          <li class="cell medium-2 large-2">
-            <a href="https://www.ulster.ac.uk/courses" data-toggle="courses-menu" class="mega-menu-link">Courses</a>
-            <div class="dropdown-pane full" id="courses-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x">
-                <div class="cell large-4">
-                  <ul>
-    					  		<li class="h5"><a href="https://www.ulster.ac.uk/courses">Courses</a></li>
-    					  		<li><a href="https://www.ulster.ac.uk/courses">Search for courses</a></li>
-    					  		<li><a href="https://www.ulster.ac.uk/courses/201920">A to Z for 2019 / 2020</a></li>
-    					  		<li><a href="https://www.ulster.ac.uk/courses/201819">A to Z for 2018 / 2019</a></li>
-    					  		<li><a href="https://www.ulster.ac.uk/courses/201718">A to Z for 2017 / 2018</a></li>
-    					  	</ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			  				<li class="h5 menu-text">Mode and Level</li>
-    			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201920&amp;f.Level|Y=Undergraduate">Undergraduate</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201819&amp;f.Level|Y=Postgraduate">Postgraduate</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research">Postgraduate Research</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201718&amp;f.Level|coursetype=Short+courses+and+CPD">Short courses and CPD</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Attendance|modept=Part-time">Part-time courses</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Level|elearning=eLearning">eLearning</a></li>
-    			  			</ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			  				<li class="h5 menu-text">Information for...</li>
-    			  				<li><a href="https://www.ulster.ac.uk/apply">Applying</a></li>
-    			  				<li><a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and Funding</a></li>
-    			  				<li><a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance Requirements</a></li>
-    			  				<li><a href="https://www.ulster.ac.uk/international">International Students</a></li>
-    			  				<li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students">Students from England, Scotland and Wales</a></li>
-    			  			</ul>
-                </div>
+      <ul class="menu global-nav">
+        <li class="menu-item small"><a href="https://www.ulster.ac.uk">Home</a></li>
+        <li class="menu-item">
+          <a href="https://www.ulster.ac.uk/courses" data-toggle="courses-menu" class="mega-menu-link">Courses</a>
+          <div class="dropdown-pane full" id="courses-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+            <div class="grid-x">
+              <div class="cell large-4">
+                <ul>
+    				  		<li class="h5"><a href="https://www.ulster.ac.uk/courses">Courses</a></li>
+    				  		<li><a href="https://www.ulster.ac.uk/courses">Search for courses</a></li>
+    				  		<li><a href="https://www.ulster.ac.uk/courses/201920">A to Z for 2019 / 2020</a></li>
+    				  		<li><a href="https://www.ulster.ac.uk/courses/201819">A to Z for 2018 / 2019</a></li>
+    				  		<li><a href="https://www.ulster.ac.uk/courses/201718">A to Z for 2017 / 2018</a></li>
+    				  	</ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		  				<li class="h5 menu-text">Mode and Level</li>
+    		          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201920&amp;f.Level|Y=Undergraduate">Undergraduate</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201819&amp;f.Level|Y=Postgraduate">Postgraduate</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research">Postgraduate Research</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Entry_year|entryyear=201718&amp;f.Level|coursetype=Short+courses+and+CPD">Short courses and CPD</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Attendance|modept=Part-time">Part-time courses</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/courses?query=&amp;f.Level|elearning=eLearning">eLearning</a></li>
+    		  			</ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		  				<li class="h5 menu-text">Information for...</li>
+    		  				<li><a href="https://www.ulster.ac.uk/apply">Applying</a></li>
+    		  				<li><a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and Funding</a></li>
+    		  				<li><a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance Requirements</a></li>
+    		  				<li><a href="https://www.ulster.ac.uk/international">International Students</a></li>
+    		  				<li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students">Students from England, Scotland and Wales</a></li>
+    		  			</ul>
               </div>
             </div>
-          </li>
-          <li class="cell medium-2 large-2">
-            <a href="https://www.ulster.ac.uk/apply" data-toggle="apply-menu" class="mega-menu-link">Apply</a>
-            <div class="dropdown-pane full" id="apply-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x">
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/apply">Apply</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/how-to-apply">How to apply</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/apply">Research students</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/international">International students</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/your-rights-and-obligations">Your rights and obligations</a></li>
-    			        </ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and finance</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/undergraduate">Undergraduate</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/postgraduate">Postgraduate</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/part-time">Part-time</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/bursaries">Bursaries</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/scholarships">Scholarships</a></li>
-    			        </ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance requirements</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/apply/entrance-requirements/equivalence">Equivalence of qualifications</a></li>
-    			        </ul>
-                </div>
+          </div>
+        </li>
+        <li class="menu-item">
+          <a href="https://www.ulster.ac.uk/apply" data-toggle="apply-menu" class="mega-menu-link">Apply</a>
+          <div class="dropdown-pane full" id="apply-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+            <div class="grid-x">
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/apply">Apply</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/how-to-apply">How to apply</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/apply">Research students</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/international">International students</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/your-rights-and-obligations">Your rights and obligations</a></li>
+    		        </ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/apply/fees-and-finance">Fees and finance</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/undergraduate">Undergraduate</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/postgraduate">Postgraduate</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/part-time">Part-time</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/bursaries">Bursaries</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/fees-and-finance/scholarships">Scholarships</a></li>
+    		        </ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/apply/entrance-requirements">Entrance requirements</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/apply/entrance-requirements/equivalence">Equivalence of qualifications</a></li>
+    		        </ul>
               </div>
             </div>
-          </li>
-          <li class="cell medium-2 large-2">
-            <a href="https://www.ulster.ac.uk/ulster-life" data-toggle="ulster-life-menu" class="mega-menu-link">Ulster Life</a>
-            <div class="dropdown-pane full" id="ulster-life-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x">
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/ulster-life">Ulster Life</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/accommodation">Accommodation</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/campuses">Campuses</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/careers">Careers</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/key-facts">Key facts</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/sport">Sport</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/students-union">Students' Union</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/student-support">Student Support</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/events">Events</a></li>
-    			        </ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster">Study at Ulster</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/undergraduate">Undergraduate</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate">Postgraduate</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/part-time">Part-time</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/elearning">eLearning</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/short-courses">Short courses</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/international">International</a></li>
-    			        </ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5 menu-text">Information for...</li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/parents-and-families">Parents and families</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/teachers-and-advisers">Teachers and Advisers</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/fe-students">Further Education students</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/associate-students">Associate students</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students">Students from England, Scotland and Wales</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/eu">EU students</a></li>
-    			        </ul>
-                </div>
+          </div>
+        </li>
+        <li class="menu-item">
+          <a href="https://www.ulster.ac.uk/ulster-life" data-toggle="ulster-life-menu" class="mega-menu-link">Ulster Life</a>
+          <div class="dropdown-pane full" id="ulster-life-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+            <div class="grid-x">
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/ulster-life">Ulster Life</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/accommodation">Accommodation</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/campuses">Campuses</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/careers">Careers</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/key-facts">Key facts</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/sport">Sport</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/students-union">Students' Union</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/student-support">Student Support</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/events">Events</a></li>
+    		        </ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster">Study at Ulster</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/undergraduate">Undergraduate</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate">Postgraduate</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/part-time">Part-time</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/elearning">eLearning</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/short-courses">Short courses</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/international">International</a></li>
+    		        </ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5 menu-text">Information for...</li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/parents-and-families">Parents and families</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/teachers-and-advisers">Teachers and Advisers</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/fe-students">Further Education students</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/associate-students">Associate students</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students">Students from England, Scotland and Wales</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/eu">EU students</a></li>
+    		        </ul>
               </div>
             </div>
-          </li>
-          <li class="cell auto">
-            <a href="https://www.ulster.ac.uk/research" data-toggle="research-menu" class="mega-menu-link">Research &amp; Impact</a>
-            <div class="dropdown-pane full" id="research-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x">
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/research">Research &amp; Impact</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/research/our-research">Our research</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/research/work-with-us">Work with us</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/research/innovation">Innovation</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/research/institutes">Research Institutes</a></li>
-    			        </ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/doctoralcollege">PhD/Research degrees</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/find-a-phd">Funded PhDs</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/other-studentships">Other studentships</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/how-to-apply">How to apply</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/fees-and-funding">Funding</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/contact">Contact</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/phd-opportunities">Postgraduate Research Programmes</a></li>
-    			        </ul>
-                </div>
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5 menu-text">More information</li>
-    			          <li><a href="http://www.ulster.ac.uk/ref/">REF 2021</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/research/work-with-us/business/access-ulster">Access Ulster</a></li>
-    			        </ul>
-                </div>
+          </div>
+        </li>
+        <li class="menu-item large">
+          <a href="https://www.ulster.ac.uk/research" data-toggle="research-menu" class="mega-menu-link">Research &amp; Impact</a>
+          <div class="dropdown-pane full" id="research-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+            <div class="grid-x">
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/research">Research &amp; Impact</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/research/our-research">Our research</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/research/work-with-us">Work with us</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/research/innovation">Innovation</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/research/institutes">Research Institutes</a></li>
+    		        </ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/doctoralcollege">PhD/Research degrees</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/find-a-phd">Funded PhDs</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/other-studentships">Other studentships</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/how-to-apply">How to apply</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/fees-and-funding">Funding</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/contact">Contact</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/phd-opportunities">Postgraduate Research Programmes</a></li>
+    		        </ul>
+              </div>
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5 menu-text">More information</li>
+    		          <li><a href="http://www.ulster.ac.uk/ref/">REF 2021</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/research/work-with-us/business/access-ulster">Access Ulster</a></li>
+    		        </ul>
               </div>
             </div>
-          </li>
-          <li class="cell medium-2 large-2">
-            <a href="https://www.ulster.ac.uk/business" data-toggle="business-menu" class="mega-menu-link">Business</a>
-            <div class="dropdown-pane full" id="business-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
-              <div class="grid-x">
-                <div class="cell large-4">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/business">Business</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/business/employers">Information for Employers</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/business/work-with-us">Work with us</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/business/venue-hire">Venue hire</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/business/employers/recruit-students">Recruit our students</a></li>
-    			        </ul>
-                </div>
-                <div class="cell auto">
-                  <ul>
-    			          <li class="h5"><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school">Ulster University Business School</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school/about">About</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/theacademy">Academy Restaurant</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/business/business-institute">Business Institute</a></li>
-    			          <li><a href="https://www.ulster.ac.uk/business/epc">Economic Policy Centre</a></li>
-    			        </ul>
-                </div>
+          </div>
+        </li>
+        <li class="menu-item">
+          <a href="https://www.ulster.ac.uk/business" data-toggle="business-menu" class="mega-menu-link">Business</a>
+          <div class="dropdown-pane full" id="business-menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+            <div class="grid-x">
+              <div class="cell large-4">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/business">Business</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/business/employers">Information for Employers</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/business/work-with-us">Work with us</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/business/venue-hire">Venue hire</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/business/employers/recruit-students">Recruit our students</a></li>
+    		        </ul>
+              </div>
+              <div class="cell auto">
+                <ul>
+    		          <li class="h5"><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school">Ulster University Business School</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/faculties/ulster-university-business-school/about">About</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/theacademy">Academy Restaurant</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/business/business-institute">Business Institute</a></li>
+    		          <li><a href="https://www.ulster.ac.uk/business/epc">Economic Policy Centre</a></li>
+    		        </ul>
               </div>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="show-for-small-only">
       <div class="multilevel-offcanvas off-canvas position-right" id="offCanvasRight" data-off-canvas>
@@ -244,7 +244,7 @@
             <ul class="menu vertical nested">
               <li class="h4"><a href="https://www.ulster.ac.uk/graduates">Graduates</a></li>
               <li class="h4"><a href="https://portal.ulster.ac.uk">Current Students</a></li>
-              <li class="h4"><a href="https://www.ulster.ac.uk/staff">Staff</a></li>
+              <li class="h4"><a href="https://www.ulster.ac.uk/staff-links">Staff</a></li>
               <li class="h4"><a href="https://www.ulster.ac.uk/atoz">A-Z index</a></li>
             </ul>
           </li>
@@ -312,108 +312,103 @@
     	</form>
     </div>
     
-    <div class="grid-container full">
+    <div class="grid-container">
     	<div class="grid-x grid-padding-y grid-padding-x">
         <div class="cell medium-6 large-6">
-    		  <h1 class="h3 separator-left">Accounting and Management - BSc (Hons)</h1>
+    		  <h1 class="h1 separator-left">Accounting and Management - BSc (Hons)</h1>
     			<p class="lead">Part-time Undergraduate course at Jordanstown</p>
     			<p>This course starts in September 2018 and lasts for 4 years / UCAS Code: 410</p>
           <a href="#" class="button">Apply now</a>
           <a href="#" class="button">Contact us</a>
     		</div>
     		<div class="cell medium-6 large-6">
-    			<div class="video-promo">
-    				<div class="content">
-    					<a class="ulsterpopup cta button large" data-video-id="JFUrfasaQQo" href="https://www.youtube.com/watch?v=JFUrfasaQQo">Watch</a>
-    					<iframe allowfullscreen="1" class="mobilevideo" frameborder="0" height="300" src="https://www.youtube.com/embed/JFUrfasaQQo" width="100%"></iframe>
-    				</div>
-    				<div class="mask" style="background-color:#000;"></div>
-    				<div class="video ulstervideopromo" data-video-id="JFUrfasaQQo" id="onevid"></div>
-    			</div>
+    			 <iframe width="560" height="315" src="https://www.youtube.com/embed/JFUrfasaQQo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     	  </div>
       </div>
     </div>
-    <div class="grid-container full bg-light-grey">
-      <div class="grid-x grid-padding-y grid-padding-x">
-        <div class="cell large-7">
-          <ul class="tabs" data-tabs id="example-tabs">
-            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Overview</a></li>
-            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Modules</a></li>
-            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Entry</a></li>
-            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Careers</a></li>
-            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Fees and Funding</a></li>
-          </ul>
-          <div class="tabs-content" data-tabs-content="example-tabs">
-            <div class="tabs-panel is-active" id="panel1">
-              <p class="lead">Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ip</p>
-              <div class="responsive-embed">
-                <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ip</p>
-            </div>
-            <div class="tabs-panel" id="panel2">
-              <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-            </div>
-          </div>
-        </div>
-        <div class="cell large-5">
-          <h2 class="h5 separator-left">People also viewed</h2>
-          <div class="grid-x grid-padding-x">
-            <div class="cell small-12 large-6">
-              <div class="radius bordered shadow card">
-                <div class="card-divider">
-                  This is a header
-                </div>
-                <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
-                <div class="card-section">
-                  <h4 class="h6"><a href="#">This is a card</a></h4>
-                  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                </div>
-              </div>
-            </div>
-            <div class="cell small-12 large-6">
-              <div class="radius bordered shadow card">
-                <div class="card-divider">
-                  This is a header
-                </div>
-                <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
-                <div class="card-section">
-                  <h4 class="h6"><a href="#">This is a card</a></h4>
-                  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h2 class="h5 separator-left">Events</h2>
-          <div class="grid-x grid-padding-x">
-            <div class="cell small-12 large-6">
-              <div class="radius bordered shadow card">
-                <div class="card-divider">
-                  This is a header
-                </div>
-                <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
-                <div class="card-section">
-                  <h4 class="h6"><a href="#">This is a card</a></h4>
-                  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                </div>
-              </div>
-            </div>
-            <div class="cell small-12 large-6">
-              <div class="radius bordered shadow card">
-                <div class="card-divider">
-                  This is a header
-                </div>
-                <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
-                <div class="card-section">
-                  <h4 class="h6"><a href="#">This is a card</a></h4>
-                  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="bg-light-grey">
+    	<div class="grid-container">
+    	  <div class="grid-x grid-padding-y grid-padding-x">
+    	    <div class="cell large-7">
+    	      <ul class="tabs" data-tabs id="example-tabs">
+    	        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Overview</a></li>
+    	        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Modules</a></li>
+    	        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Entry</a></li>
+    	        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Careers</a></li>
+    	        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Fees and Funding</a></li>
+    	      </ul>
+    	      <div class="tabs-content" data-tabs-content="example-tabs">
+    	        <div class="tabs-panel is-active" id="panel1">
+    	          <p class="lead">Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+    	          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ip</p>
+    	          <div class="responsive-embed">
+    	            <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4" frameborder="0" allowfullscreen></iframe>
+    	          </div>
+    	          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ip</p>
+    	        </div>
+    	        <div class="tabs-panel" id="panel2">
+    	          <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+    	        </div>
+    	      </div>
+    	    </div>
+    	    <div class="cell large-5">
+    	      <h2 class="h5 separator-left">People also viewed</h2>
+    	      <div class="grid-x grid-padding-x">
+    	        <div class="cell small-12 large-6">
+    	          <div class="radius bordered shadow card">
+    	            <div class="card-divider">
+    	              This is a header
+    	            </div>
+    	            <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
+    	            <div class="card-section">
+    	              <h4 class="h6"><a href="#">This is a card</a></h4>
+    	              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    	            </div>
+    	          </div>
+    	        </div>
+    	        <div class="cell small-12 large-6">
+    	          <div class="radius bordered shadow card">
+    	            <div class="card-divider">
+    	              This is a header
+    	            </div>
+    	            <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
+    	            <div class="card-section">
+    	              <h4 class="h6"><a href="#">This is a card</a></h4>
+    	              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    	            </div>
+    	          </div>
+    	        </div>
+    	      </div>
+    	      <h2 class="h5 separator-left">Events</h2>
+    	      <div class="grid-x grid-padding-x">
+    	        <div class="cell small-12 large-6">
+    	          <div class="radius bordered shadow card">
+    	            <div class="card-divider">
+    	              This is a header
+    	            </div>
+    	            <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
+    	            <div class="card-section">
+    	              <h4 class="h6"><a href="#">This is a card</a></h4>
+    	              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    	            </div>
+    	          </div>
+    	        </div>
+    	        <div class="cell small-12 large-6">
+    	          <div class="radius bordered shadow card">
+    	            <div class="card-divider">
+    	              This is a header
+    	            </div>
+    	            <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-larger.jpg">
+    	            <div class="card-section">
+    	              <h4 class="h6"><a href="#">This is a card</a></h4>
+    	              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    	            </div>
+    	          </div>
+    	        </div>
+    	      </div>
+    	    </div>
+    	  </div>
+    	</div>
     </div>
     <footer>
       <div class="footer bg-light-grey">

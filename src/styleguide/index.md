@@ -10,6 +10,60 @@ The grid is built around two key elements: grid-x and cells. grid-container crea
 
 ---
 
+# Card
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid **expedita!** [Non dicta](zurb.com), autem obcaecati error, id ab voluptate unde culpa nulla.
+
+```html_example
+<div class="grid-x grid-padding-y grid-padding-x" data-equalizer data-equalize-on>
+  <div class="cell medium-3 large-3">
+    <div class="radius bordered shadow card" data-equalizer-watch>
+      <div class="card-image">
+        <img src="https://www.ulster.ac.uk/__data/assets/image/0011/257816/varieties/thumb-large.jpg">
+      </div>
+      <div class="card-section">
+        <h4 class="h6"><a href="#">Accommodation</a></h4>
+        <p>It has an easy to override visual style, and is appropriately subdued, It has an easy to override visual style, and is appropriately subdued, It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cell medium-3 large-3">
+    <div class="radius bordered shadow card" data-equalizer-watch>
+      <div class="card-image">
+        <img src="https://www.ulster.ac.uk/__data/assets/image/0019/258031/varieties/thumb-large.jpeg">
+      </div>
+      <div class="card-section">
+        <h4 class="h6"><a href="#">Student Support</a></h4>
+        <p>Ulster University's international reputation for research excellence has received world-wide recognition.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cell medium-3 large-3">
+    <div class="radius bordered shadow card" data-equalizer-watch>
+      <div class="card-image">
+        <img src="https://www.ulster.ac.uk/__data/assets/image/0006/257748/varieties/thumb-large.jpeg">
+      </div>
+      <div class="card-section">
+        <h4 class="h6"><a href="#">Sports Facilities Long Title</a></h4>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cell medium-3 large-3">
+    <div class="radius bordered shadow card" data-equalizer-watch>
+      <div class="card-image">
+        <img src="https://www.ulster.ac.uk/__data/assets/image/0017/106172/varieties/thumb-larger.jpg">
+      </div>
+      <div class="card-section">
+        <h4 class="h5"><a href="#">Courses</a></h4>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+---
+
 ## Nesting
 
 In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
@@ -168,7 +222,7 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 # Typography
 
-<p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+<p class="lead">This design uses FS Matthew for headings and paragraph text.</p>
 
 ---
 
@@ -340,16 +394,4 @@ Form elements in Foundation are styled based on their type attribute rather than
     </div>
   </div>
 </form>
-```
-
-
-
-# New Section
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid **expedita!** [Non dicta](zurb.com), autem obcaecati error, id ab voluptate unde culpa nulla.
-
-```html_example
-<a href="#" class="button">Button</a>
-<a href="#" class="button">Button</a>
-<a href="#" class="button">Button</a>
 ```
