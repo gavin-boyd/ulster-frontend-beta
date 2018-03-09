@@ -34,7 +34,8 @@ $c-green: #68A021;
 
 $c-navy: #151E3E;
 $c-navy-dark: #0C0013;
-
+$c-dark-grey: #1B1C1E;
+$c-off-white: #f5f4f3;
 
 
 $c-purple: #3F0F52;
@@ -60,4 +61,57 @@ $c-purple-trans-shade: rgba($c-purple, $opacity);
 .bg-navy
 {
   background: $corp-navy-trans;
+}
+
+//background with white text
+.white-text
+{
+  *
+  {
+    color: #fff;
+  }
+
+  .separator-left
+  {
+    &::after
+    {
+      border-bottom-color: rgba(255,255,255,.5);
+    }
+  }
+}
+
+.green-bg
+{
+  background-color: $c-green;
+}
+
+.purple-bg
+{
+  background-color: $c-purple;
+}
+
+.navy-bg
+{
+  background: $c-navy;
+}
+
+.dark-grey-bg
+{
+  background: $c-dark-grey;
+}
+
+.off-white-bg
+{
+  background-color: $c-off-white;
+}
+
+.icon
+{
+  opacity:.2;
+  width: 100px;
+
+  svg path
+  {
+    fill: #000;
+  }
 }
