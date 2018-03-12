@@ -17,3 +17,7 @@ $(document).ready(function() {
     e.preventDefault();
   });
 });
+
+import jquery from 'jquery';
+window.$ = window.jQuery = jquery;
+require('./fancybox');

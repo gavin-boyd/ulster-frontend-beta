@@ -1,14 +1,14 @@
 <div class="cover-background" style="background-image:url('//cdn.ulster.ac.uk/home/ulster-frontend/img/belfastcampus/ulster-university-belfast-campus.png');">
 	{{> header}}
 	<div class="grid-container">
-		<div class="grid-x grid-padding-y grid-padding-x" data-equalizer data-equalize-on="large">
+		<div class="grid-x grid-padding-y grid-padding-x" data-equalize-on="large" data-equalizer="">
 			<div class="cell medium-12 large-6">
-			  <h1 class="separator-left">Belfast campus</h1>
+				<h1 class="separator-left">Belfast campus</h1>
 				<p class="lead">Belfast campus is situated in the artistic and cultural centre of the city; the Cathedral Quarter.</p>
 				<p>Although traditionally associated with Art, the campus spans an increasing and exciting range of subjects including architecture, hospitality, event management, photography and digital animation.</p>
 				<p>Although traditionally associated with Art, the campus spans an increasing and exciting range of subjects including architecture, hospitality, event management, photography and digital animation.</p>
 			</div>
-	  </div>
+		</div>
 	</div>
 	<div class="bg-purple-trans angled-title-purple">
 		<div class="grid-container">
@@ -21,164 +21,229 @@
 		<div class="grid-container">
 			<div class="grid-x grid-padding-y grid-padding-x">
 				<div class="cell medium-12 large-6">
-					<iframe width="100%" height="360" src="https://www.youtube.com/embed/JFUrfasaQQo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe allowfullscreen frameborder="0" height="360" src="https://www.youtube.com/embed/JFUrfasaQQo?rel=0&amp;showinfo=0" width="100%"></iframe>
 				</div>
 				<div class="cell large-6">
-				  {{> image-slider}}
+					<!-- Belfast gallery start -->
+					<div class="grid-x grid-padding-y grid-padding-x">
+						<div class="cell large-6">
+							<a data-fancybox="gallery" href="https://www.ulster.ac.uk/__data/assets/image/0004/135472/RS6147_UU-Belfast-Oct2015-CH-1767-scr.jpg">
+								<img src="https://www.ulster.ac.uk/__data/assets/image/0004/135472/varieties/thumb-larger.jpg">
+							</a>
+						</div>
+						<div class="cell large-6">
+							<a data-fancybox="gallery" href="https://www.ulster.ac.uk/__data/assets/image/0004/35563/RS1258_UU-BELFAST-Oct2014-0063-scr.jpg">
+								<img src="https://www.ulster.ac.uk/__data/assets/image/0004/35563/varieties/thumb-larger.jpg">
+							</a>
+						</div>
+						<div class="cell large-4">
+							<a data-fancybox="gallery" href="https://www.ulster.ac.uk/__data/assets/image/0014/40262/RS1120_UU-BELFAST-Oct2014-0352-lpr.jpg">
+								<img src="https://www.ulster.ac.uk/__data/assets/image/0014/40262/varieties/thumb-larger.jpg">
+							</a>
+						</div>
+						<div class="cell large-4">
+							<a data-fancybox="gallery" href="https://www.ulster.ac.uk/__data/assets/image/0014/40262/RS1120_UU-BELFAST-Oct2014-0352-lpr.jpg">
+								<img src="https://www.ulster.ac.uk/__data/assets/image/0014/40262/varieties/thumb-larger.jpg">
+							</a>
+						</div>
+						<div class="cell large-4">
+							<a data-fancybox="gallery" href="https://www.ulster.ac.uk/__data/assets/image/0014/40262/RS1120_UU-BELFAST-Oct2014-0352-lpr.jpg">
+								<img src="https://www.ulster.ac.uk/__data/assets/image/0014/40262/varieties/thumb-larger.jpg">
+							</a>
+						</div>
+					</div>
+					<!-- Belfast gallery end -->
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
+</div><!-- cover background end -->
+<!-- angled white section start -->
 <div class="angled-white-section">
+
 	<div class="grid-container">
 		<div class="grid-x grid-padding-y grid-padding-x">
-		<div class="cell large-4">
-			<h2 class="h2 separator-left"><i class="fa fa-map-marker" aria-hidden="true"></i> Location info</h2>
-		</div>
-		<div class="cell large-2">
-			<h3 class="h6">Address</h2>
+			<div class="cell large-4">
+				<h2 class="h2 separator-left"><i aria-hidden="true" class="fa fa-map-marker"></i> Location info</h2>
+			</div>
+			<div class="cell large-2">
+				<h3 class="h6">Address</h3>
 				<p>Ulster University<br>
-					 York Street<br>
-					 Belfast<br>
-					 County Antrim<br>
-					 BT15 1ED</p>
-		</div>
-		<div class="cell large-4">
-			<h3 class="h6">Campus maps</h2>
+				York Street<br>
+				Belfast<br>
+				County Antrim<br>
+				BT15 1ED</p>
+			</div>
+			<div class="cell large-4">
+				<h3 class="h6">Campus maps</h3>
 				<div class="grid-x grid-padding-x">
 					<div class="cell small-12 large-6">
-						<a href="#" class="thumbnail">
-							<img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/google-map.png" alt="Google Map" />
-						</a>
-						<a href="#" class="button expanded">Google Maps</a>
-				  </div>
+						<a class="thumbnail" href="#"><img alt="Google Map" src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/google-map.png"></a> <a class="button expanded" href="#">Google Maps</a>
+					</div>
 					<div class="cell small-12 large-6">
-						<a href="#" class="thumbnail">
-							<img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/diagram-map.png" alt="Google Map" />
-						</a>
-						<button class="button expanded" data-toggle="campus-map">Map Diagram</button>
-				  </div>
+						<a class="thumbnail" href="#"><img alt="Google Map" src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/diagram-map.png"></a> <button class="button expanded" data-toggle="campus-map">Map Diagram</button>
+					</div>
 				</div>
+			</div>
 		</div>
 	</div>
-		<hr>
+
+	<!-- provost start -->
+<div class="grid-container full white-text dark-grey-bg">
+  <div class="grid-x grid-padding-x grid-padding-y">
+    <div class="cell large-7">
+      <div class="pad-60">
+        <div class="grid-x grid-padding-x grid-padding-y">
+          <div class="cell medium-4 large-4 text-center">
+            <img src="https://www.ulster.ac.uk/__data/assets/image/0006/129561/varieties/thumb-newsletter.jpg" alt="" class="circle" />
+            <h3>Professor Raffaella Folli</h3>
+            <p>Provost (Jordanstown and Belfast) <br> Ulster University</p>
+            <p><a href="https://www.ulster.ac.uk/staff/r-folli" class="button">Get in touch</a></p>
+          </div>
+          <div class="cell medium-8 large-8">
+            <h2 class="separator-left">Provost quote</h2>
+            <blockquote>
+							<p>Our new Belfast campus – one of the largest higher education capital builds in Europe – is transforming higher education in the city, creating a dynamic teaching and learning environment. When complete, it will include an assortment of modern, state-of-the-art facilities for the wide range of different learning, teaching, innovation and research activities that our staff and students undertake.</p>
+							<p>Alongside programmes like art, architecture and business, academic provision will be greatly expanded and this campus will, over the next few years, become home to a wide range of new courses which are currently delivered in Jordanstown, including disciplines as varied as law, computing, engineering and social science among many others.</p>
+						</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cell large-5 cover-background"
+      style="background-image:url('//cdn.ulster.ac.uk/home/ulster-frontend/img/belfastcampus/ulster-university-belfast-campus-parallax.jpg');">
+    </div>
+  </div>
+</div>
+	<!-- provost end -->
+
+  <div class="grid-container">
 		<div class="grid-x grid-padding-y grid-padding-x">
-		<div class="cell large-12">
-			<h2 class="h2 separator-left"><i class="fa fa-info-circle" aria-hidden="true"></i> Campus links</h2>
-		</div>
-	</div>
+			<div class="cell large-12">
+				<h2 class="h2 separator-left"><i aria-hidden="true" class="fa fa-info-circle"></i> Campus links</h2>
+			</div>
+		</div><!-- angled white section end -->
+		<!-- campus links cards start -->
 		<div class="grid-x grid-padding-y grid-padding-x" data-equalizer="card-text">
-		<div class="cell medium-6 large-3">
-			<div class="radius bordered shadow card" data-equalizer-watch="card-text">
-				<div class="card-image">
-				  <a href="#">
-						<img src="https://www.ulster.ac.uk/__data/assets/image/0011/257816/varieties/thumb-newsletter.jpg" alt="useful alt text">
-					</a>
+			<div class="cell medium-6 large-3">
+				<div class="radius bordered shadow card" data-equalizer-watch="card-text">
+					<div class="card-image">
+						<a href="#"><img alt="useful alt text" src="https://www.ulster.ac.uk/__data/assets/image/0011/257816/varieties/thumb-newsletter.jpg"></a>
+					</div>
+					<div class="card-section">
+						<h4 class="h6"><a href="#">Accommodation</a></h4>
+						<p>It has an easy to override visual style, and is appropriately subdued, It has an easy to override visual style, and is appropriately subdued, It has an easy to override visual style, and is appropriately subdued.</p>
+					</div>
 				</div>
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">Accommodation</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued, It has an easy to override visual style, and is appropriately subdued, It has an easy to override visual style, and is appropriately subdued.</p>
-			  </div>
 			</div>
-		</div>
-		<div class="cell medium-6 large-3">
-			<div class="radius bordered shadow card" data-equalizer-watch="card-text">
-				<div class="card-image">
-					<a href="#" data-equalizer-watch="image-container">
-				    <img src="https://www.ulster.ac.uk/__data/assets/image/0019/258031/varieties/thumb-newsletter.jpeg" alt="useful alt text">
-					</a>
+			<div class="cell medium-6 large-3">
+				<div class="radius bordered shadow card" data-equalizer-watch="card-text">
+					<div class="card-image">
+						<a data-equalizer-watch="image-container" href="#"><img alt="useful alt text" src="https://www.ulster.ac.uk/__data/assets/image/0019/258031/varieties/thumb-newsletter.jpeg"></a>
+					</div>
+					<div class="card-section">
+						<h4 class="h6"><a href="#">Student Support</a></h4>
+						<p>Ulster University's international reputation for research excellence has received world-wide recognition.</p>
+					</div>
 				</div>
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">Student Support</a></h4>
-			    <p>Ulster University's international reputation for research excellence has received world-wide recognition.</p>
-			  </div>
 			</div>
-		</div>
-		<div class="cell medium-6 large-3">
-			<div class="radius bordered shadow card" data-equalizer-watch="card-text">
-				<div class="card-image">
-					<a href="#">
-					  <img src="https://www.ulster.ac.uk/__data/assets/image/0006/257748/varieties/thumb-newsletter.jpeg" alt="useful alt text">
-					</a>
+			<div class="cell medium-6 large-3">
+				<div class="radius bordered shadow card" data-equalizer-watch="card-text">
+					<div class="card-image">
+						<a href="#"><img alt="useful alt text" src="https://www.ulster.ac.uk/__data/assets/image/0006/257748/varieties/thumb-newsletter.jpeg"></a>
+					</div>
+					<div class="card-section">
+						<h4 class="h6"><a href="#">Sports Facilities Long Title</a></h4>
+						<p>It has an easy to override visual style, and is appropriately subdued.</p>
+					</div>
 				</div>
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">Sports Facilities Long Title</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			  </div>
 			</div>
-		</div>
-		<div class="cell medium-6 large-3">
-			<div class="radius bordered shadow card" data-equalizer-watch="card-text">
-				<div class="card-image">
-					<a href="#">
-					  <img src="https://www.ulster.ac.uk/__data/assets/image/0017/106172/varieties/thumb-newsletter.jpg">
-					</a>
+			<div class="cell medium-6 large-3">
+				<div class="radius bordered shadow card" data-equalizer-watch="card-text">
+					<div class="card-image">
+						<a href="#"><img src="https://www.ulster.ac.uk/__data/assets/image/0017/106172/varieties/thumb-newsletter.jpg"></a>
+					</div>
+					<div class="card-section">
+						<h4 class="h5"><a href="#">Courses</a></h4>
+						<p>It has an easy to override visual style, and is appropriately subdued.</p>
+					</div>
 				</div>
-			  <div class="card-section">
-			    <h4 class="h5"><a href="#">Courses</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			  </div>
 			</div>
-		</div>
+		</div><!-- campus links cards end -->
 	</div>
-	</div>
+
+
+
+</div>
+
+<div class="grid-container full white-text dark-grey-bg">
+  <div class="grid-x grid-padding-x grid-padding-y">
+    <div class="cell large-5 cover-background"
+      style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0004/39730/RS385__DSC7940-2-scr.jpg');">
+    </div>
+    <div class="cell large-7">
+      <div class="pad-60">
+        <h2 class="h1 separator-left">Unique</h2>
+        <p class="lead">Visit. See. Buy. Commission.</p>
+        <p>This unique art and design shop, based on Ulster University’s Belfast campus, will be both educational and recreational – home to the emerging talent of our students, but also an innovative gateway for the public, connecting the University with the city and Belfast’s vibrant artistic community.</p>
+				<p><a href="https://www.ulster.ac.uk/artshop" class="button large">Find out more</a></p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="grid-container">
-	<div class="grid-x grid-padding-y grid-padding-x" data-equalizer data-equalize-on>
+	<div class="grid-x grid-padding-y grid-padding-x" data-equalize-on="" data-equalizer="">
 		<div class="cell large-12">
-			<h2 class="h2 separator-left"><i class="fa fa-map-marker" aria-hidden="true"></i> News</h2>
+			<h2 class="h2 separator-left"><i aria-hidden="true" class="fa fa-map-marker"></i> News</h2>
 		</div>
 	</div>
 	<div class="grid-x grid-padding-y grid-padding-x">
 		<div class="cell medium-4 large-4">
 			<div class="radius bordered shadow card">
-			  <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">This is a card</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			  </div>
+				<img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
+				<div class="card-section">
+					<h4 class="h6"><a href="#">This is a card</a></h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+				</div>
 			</div>
 		</div>
 		<div class="cell medium-4 large-4">
 			<div class="radius bordered shadow card">
-			  <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">This is a card</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			  </div>
+				<img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
+				<div class="card-section">
+					<h4 class="h6"><a href="#">This is a card</a></h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+				</div>
 			</div>
 		</div>
 		<div class="cell medium-4 large-4">
 			<div class="radius bordered shadow card">
-			  <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">This is a card</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			  </div>
+				<img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
+				<div class="card-section">
+					<h4 class="h6"><a href="#">This is a card</a></h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="grid-x grid-padding-y grid-padding-x">
 		<div class="cell large-12">
-			<h2 class="h2 separator-left"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Events at XXX campus</h2>
+			<h2 class="h2 separator-left"><i aria-hidden="true" class="fa fa-calendar-check-o"></i> Events at XXX campus</h2>
 		</div>
 	</div>
-	<div class="grid-x grid-padding-y grid-padding-x" data-equalizer data-equalize-on>
+	<div class="grid-x grid-padding-y grid-padding-x" data-equalize-on="" data-equalizer="">
 		<div class="cell medium-4 large-4">
 			<div class="radius bordered shadow card">
-			  <div class="card-divider">
+				<div class="card-divider">
 					Saturday 17 February 2018<br>
 					10:00AM - 4:00PM
-			  </div>
-			  <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">This is a card</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-					<p><a href="#" class="button">Find out more</a></p>
-			  </div>
+				</div><img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
+				<div class="card-section">
+					<h4 class="h6"><a href="#">This is a card</a></h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+					<p><a class="button" href="#">Find out more</a></p>
+				</div>
 			</div>
 		</div>
 		<div class="cell medium-4 large-4">
@@ -186,13 +251,12 @@
 				<div class="card-divider">
 					Saturday 17 February 2018<br>
 					10:00AM - 4:00PM
-			  </div>
-			  <img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">This is a card</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-					<p><a href="#" class="button">Find out more</a></p>
-			  </div>
+				</div><img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg">
+				<div class="card-section">
+					<h4 class="h6"><a href="#">This is a card</a></h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+					<p><a class="button" href="#">Find out more</a></p>
+				</div>
 			</div>
 		</div>
 		<div class="cell medium-4 large-4">
@@ -200,23 +264,17 @@
 				<div class="card-divider">
 					Saturday 17 February 2018<br>
 					10:00AM - 4:00PM
-			  </div>
-			  <a href="#"><img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg"></a>
-			  <div class="card-section">
-			    <h4 class="h6"><a href="#">This is a card</a></h4>
-			    <p>It has an easy to override visual style, and is appropriately subdued.</p>
-					<p><a href="#" class="button">Find out more</a></p>
-			  </div>
+				</div><a href="#"><img src="https://www.ulster.ac.uk/__data/assets/image/0003/55695/varieties/thumb-newsletter.jpg"></a>
+				<div class="card-section">
+					<h4 class="h6"><a href="#">This is a card</a></h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+					<p><a class="button" href="#">Find out more</a></p>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div class="large reveal" id="campus-map" data-reveal>
-  <p><span class="h2">Belfast campus map</span> &nbsp;&nbsp;<a href="#" class="button"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download PDF</a></p>
-  <img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/belfast-campus-map.png" alt="Ulster University Belfast Campus Map" class="thumbnail">
-  <button class="close-button h1" data-close aria-label="Close reveal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
+<div class="large reveal" data-reveal="" id="campus-map">
+	<p><span class="h2">Belfast campus map</span> &nbsp;&nbsp;<a class="button" href="#"><i aria-hidden="true" class="fa fa-cloud-download"></i> Download PDF</a></p><img alt="Ulster University Belfast Campus Map" class="thumbnail" src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/belfast-campus-map.png"> <button aria-label="Close reveal" class="close-button h1" data-close="" type="button"><span aria-hidden="true">&times;</span></button>
 </div>
 {{> footer}}
