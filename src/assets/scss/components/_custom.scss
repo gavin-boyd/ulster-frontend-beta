@@ -50,12 +50,6 @@ a.brand
   }
 }
 
-//icons and seperator
-i.fas,
-{
-  color: $corp-gold;
-}
-
 //global search box
 #searchform
 {
@@ -162,29 +156,6 @@ ul.angle-right
   }
 }
 
-.card-image
-{
-  a
-  {
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-align: center;
-  }
-}
-
-//card image hover animation
-.card-image
-{
-  > a
-  {
-    &:hover
-    {
-      @include mui-animation(slide, fade, spin(120deg));
-    }
-  }
-}
-
 //angled edges effects
 .angle-pad
 {
@@ -234,6 +205,13 @@ ul.angle-right
     min-height: 200px;
     margin-bottom: 30px;
   }
+}
+
+.center-background
+{
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-size: 1120px;
 }
 
 .circle
