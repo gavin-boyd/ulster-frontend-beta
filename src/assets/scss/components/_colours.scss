@@ -78,6 +78,17 @@ $c-purple-trans-shade: rgba($c-purple, $opacity);
       border-bottom-color: rgba(255,255,255,.5);
     }
   }
+
+  a:focus
+  {
+    color: #fff;
+  }
+
+  a:hover
+  {
+    color: #fff;
+    text-decoration: underline;
+  }
 }
 
 .green-bg
@@ -100,6 +111,12 @@ $c-purple-trans-shade: rgba($c-purple, $opacity);
   background: $c-dark-grey;
 }
 
+.dark-grey-bg-trans
+{
+  background: rgba(0,0,0,.8);
+}
+
+
 .off-white-bg
 {
   background-color: $c-off-white;
@@ -113,5 +130,13 @@ $c-purple-trans-shade: rgba($c-purple, $opacity);
   svg path
   {
     fill: #000;
+  }
+}
+
+.menu
+{
+  a.is-active
+  {
+    background: $corp-gold;
   }
 }

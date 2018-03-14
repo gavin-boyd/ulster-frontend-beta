@@ -1,0 +1,80 @@
+%begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:1%
+<div class="cell large-12">
+<div class="radius bordered shadow card">
+%else_begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:2%
+<div class="cell large-6">
+<div class="radius bordered shadow card">
+%else_begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:3%
+<div class="cell large-4">
+<div class="radius bordered shadow card">
+%else_begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:4%
+%begin_asset_position^eq:1%
+<div class="cell large-6">
+<div class="radius bordered shadow card">
+%else_begin_asset_position^eq:2%
+<div class="cell large-6">
+<div class="media-object">
+%else_asset%
+<div class="media-object">
+%end_asset%
+%end_globals%
+
+<!--Begin content-->
+
+%begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^neq:4%
+<div class="card-image">
+    <a href="%redirect_url%">
+        <img alt="%asset_name%" src="%asset_thumbnail_url%">
+    </a>
+</div>
+<div class="card-section">
+    <h2 class="h4"><a href="%asset_url%">%asset_short_name%</a></h2>
+    <p>%asset_metadata_Ulster.Three.Panel.Description%</p>
+    <a href="%redirect_url%" class="button">%asset_metadata_Ulster.Three.Panel.Call.To.Action%</a>
+</div>
+%else_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^neq:4%
+%begin_asset_position^eq:1%
+<div class="card-image">
+    <a href="%redirect_url%">
+        <img alt="%asset_name%" src="%asset_thumbnail_url%">
+    </a>
+</div>
+<div class="card-section">
+    <h2><a href="%asset_url%">%asset_short_name%</a></h2>
+    <p>%asset_metadata_Ulster.Three.Panel.Description%</p>
+    <a href="%redirect_url%" class="button">%asset_metadata_Ulster.Three.Panel.Call.To.Action%</a>
+</div>
+%else_asset_position^eq:1%
+ <div class="media-object">
+      <div class="media-object-section">
+        <a href="%redirect_url%">
+          <img src="%asset_thumbnail_v_thumb-small_url%">
+        </a>
+      </div>
+      <div class="media-object-section">
+        <h4><a href="%redirect_url%">%asset_short_name%</a></h4>
+        <p>%asset_metadata_Ulster.Three.Panel.Description%</p>
+        <a href="%redirect_url%" class="button">%asset_metadata_Ulster.Three.Panel.Call.To.Action%</a>
+      </div>
+    </div>
+%end_asset_position^eq:1%
+
+
+%end_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^neq:4%
+
+<!--End content-->
+
+%begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:4%
+%begin_asset_position^eq:1%
+</div>
+</div>
+%else_begin_asset_position^eq:4%
+</div>
+</div>
+%else_asset%
+</div>
+%end_asset%
+%else_globals%
+</div>
+</div>
+%end_globals%
