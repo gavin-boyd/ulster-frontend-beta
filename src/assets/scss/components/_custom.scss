@@ -212,6 +212,22 @@ ul.angle-right
   }
 }
 
+.hide-bg-on-medium
+{
+  @include breakpoint(medium down)
+  {
+    background-image: none !important;
+  }
+}
+
+.hide-bg-on-small
+{
+  @include breakpoint(small down)
+  {
+    background-image: none !important;
+  }
+}
+
 .center-background
 {
   background-repeat: no-repeat;
