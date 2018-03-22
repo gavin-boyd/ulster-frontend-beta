@@ -21,3 +21,8 @@ $(document).ready(function() {
 import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
 require('./fancybox');
+jQuery('[data-fancybox]').fancybox({
+	iframe : {
+		preload : false
+	}
+});
