@@ -1,7 +1,7 @@
 /*
  * useful guidance: https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
  */
-$opacity: .7;
+$opacity: .8;
 
 $c-pink: #D81B7A;
 $c-pink-trans: rgba($c-pink, $opacity);
@@ -33,6 +33,7 @@ $c-teal: #6ABCAB;
 $c-green: #68A021;
 
 $c-navy: #151E3E;
+$c-navy-trans: rgba($c-navy, $opacity);
 $c-navy-dark: #0C0013;
 $c-dark-grey: #1B1C1E;
 $c-off-white: #f5f4f3;
@@ -48,6 +49,11 @@ $c-purple-trans-shade: rgba($c-purple, $opacity);
   background: $c-purple-trans;
 }
 
+.bg-navy-trans
+{
+  background: $c-navy-trans;
+}
+
 .bg-pink-trans
 {
   background: $c-pink-trans;
@@ -60,7 +66,7 @@ $c-purple-trans-shade: rgba($c-purple, $opacity);
 
 .bg-navy
 {
-  background: $corp-navy-trans;
+  background: $c-navy;
 }
 
 //background with white text
