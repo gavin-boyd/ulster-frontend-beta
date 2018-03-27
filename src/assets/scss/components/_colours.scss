@@ -1,7 +1,109 @@
 /*
+ * Ulster.Colours
  * useful guidance: https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
  */
+
+//## Global vars
 $opacity: .8;
+
+
+/*
+ * Colours
+ * 1. Purple
+ * 2. Navy
+*/
+
+//############ 1. Purple - START
+  $c-purple: #3F0F52;
+  $c-purple-trans: rgba($c-purple, $opacity);
+  $c-purple-accent: darken(#6ABCAB, 15%);
+  $c-purple-trans-accent: rgba($c-purple-accent, $opacity);
+  $c-purple-trans-shade: rgba($c-purple, $opacity);
+  .bg-purple
+  {
+    background: $c-purple;
+  }
+  .bg-purple-trans
+  {
+    background: $c-purple-trans;
+  }
+  .bg-purple-trans-accent
+  {
+    background: $c-purple-trans-accent;
+  }
+  .angled-purple-top
+  {
+    margin-top: 60px;
+    @include angled-edge('outside top', 'upper left', $c-purple);
+    padding-bottom: 100px;
+  }
+  .separator-left.purple,
+  .title.purple .separator-left
+  {
+    &::after
+    {
+      border-bottom-color: $c-purple-accent;
+    }
+
+    .fa
+    {
+      &::before
+      {
+        color: $c-purple;
+      }
+    }
+  }
+//############ 1. Purple - END
+
+//############ 2. Navy - START
+  $c-navy: #151E3E;
+  $c-navy-trans: rgba($c-navy, $opacity);
+  $c-navy-accent: darken(#D81B7A, 15%);
+  $c-navy-trans-accent: rgba($c-navy-accent, $opacity);
+  $c-navy-trans-shade: rgba($c-navy, $opacity);
+  .bg-navy
+  {
+    background: $c-navy;
+  }
+  .bg-navy-trans
+  {
+    background: $c-navy-trans;
+  }
+  .bg-navy-trans-accent
+  {
+    background: $c-navy-trans-accent;
+  }
+  .angled-navy-top
+  {
+    margin-top: 60px;
+    @include angled-edge('outside top', 'upper left', $c-navy);
+    padding-bottom: 100px;
+  }
+  .separator-left.navy,
+  .title.navy .separator-left
+  {
+    &::after
+    {
+      border-bottom-color: $c-navy-accent;
+    }
+
+    .fa
+    {
+      &::before
+      {
+        color: $c-navy;
+      }
+    }
+  }
+//############ 2. Navy - END
+
+
+
+
+
+
+
+//########################### Refactor
 
 $c-pink: #D81B7A;
 $c-pink-trans: rgba($c-pink, $opacity);
@@ -32,27 +134,14 @@ $c-teal: #6ABCAB;
 
 $c-green: #68A021;
 
-$c-navy: #151E3E;
-$c-navy-trans: rgba($c-navy, $opacity);
-$c-navy-dark: #0C0013;
+
 $c-dark-grey: #1B1C1E;
 $c-off-white: #f5f4f3;
 
 
-$c-purple: #3F0F52;
-$c-purple-trans: rgba($c-purple, $opacity);
-$c-purple-trans-shade: rgba($c-purple, $opacity);
+
 
 //backgrounds
-.bg-purple-trans
-{
-  background: $c-purple-trans;
-}
-
-.bg-navy-trans
-{
-  background: $c-navy-trans;
-}
 
 .bg-pink-trans
 {

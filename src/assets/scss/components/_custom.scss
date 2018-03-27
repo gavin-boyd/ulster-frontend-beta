@@ -183,13 +183,6 @@ ul.columns
   padding-bottom: 100px;
 }
 
-.angled-navy-top
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-navy);
-  padding-bottom: 100px;
-}
-
 .angled-navy-left-trans
 {
   margin-top: 60px;
