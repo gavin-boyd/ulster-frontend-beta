@@ -1,80 +1,177 @@
-%begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:1%
-<div class="cell large-12">
-<div class="radius bordered shadow card">
-%else_begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:2%
-<div class="cell large-6">
-<div class="radius bordered shadow card">
-%else_begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:3%
-<div class="cell large-4">
-<div class="radius bordered shadow card">
-%else_begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:4%
-%begin_asset_position^eq:1%
-<div class="cell large-6">
-<div class="radius bordered shadow card">
-%else_begin_asset_position^eq:2%
-<div class="cell large-6">
-<div class="media-object">
-%else_asset%
-<div class="media-object">
-%end_asset%
-%end_globals%
+%begin_nested_get_one^neq:%
+  %begin_nested_get_two^eq:%
+    %begin_nested_get_three^eq:%
+      %begin_nested_get_four^eq:%
+        <div class="grid-x" data-equalizer>
+          <div class="cell large-6">
+            <img src="%nested_get_one^as_asset:asset_thumbnail_url%" alt="%nested_get_one^as_asset:asset_name%" />
+          </div>
+          <div class="cell large-6 off-white-bg">
+            <div class="pad-60">
+              <h2 class="h1"><a href="%nested_get_one^as_asset:redirect_url%">%nested_get_one^as_asset:asset_name%</a></h2>
+              <p class="lead">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+              <p><a href="%nested_get_one^as_asset:redirect_url%" class="button large">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+            </div>
+          </div>
+        </div>
+      %end_nested_get_four^eq:%
+    %end_nested_get_three^eq:%
+  %end_nested_get_two^eq:%
+%end_nested_get_one^neq:%
 
-<!--Begin content-->
+%begin_nested_get_one^neq:%
+  %begin_nested_get_two^neq:%
+    %begin_nested_get_three^eq:%
+      %begin_nested_get_four^eq:%
+        <div class="grid-x grid-padding-x" data-equalizer>
+          <div class="cell large-6">
+            <div class="grid-x">
+              <div class="cell large-6">
+                <img src="%nested_get_one^as_asset:asset_thumbnail_v_square-640_url%" alt="%nested_get_one^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-6 off-white-bg">
+                <div class="card-section">
+                  <h2><a href="%nested_get_one^as_asset:redirect_url%">%nested_get_one^as_asset:asset_name%</a></h2>
+                  <p class="lead">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_one^as_asset:redirect_url%" class="button">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-6">
+            <div class="grid-x">
+              <div class="cell large-6">
+                <img src="%nested_get_two^as_asset:asset_thumbnail_v_square-640_url%" alt="%nested_get_two^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-6 off-white-bg">
+                <div class="card-section">
+                  <h2 class="h3"><a href="%nested_get_two^as_asset:redirect_url%">%nested_get_two^as_asset:asset_name%</a></h2>
+                  <p>%nested_get_two^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_two^as_asset:redirect_url%" class="button">%nested_get_two^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      %end_nested_get_four^eq:%
+    %end_nested_get_three^eq:%
+  %end_nested_get_two^neq:%
+%end_nested_get_one^neq:%
 
-%begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^neq:4%
-<div class="card-image">
-    <a href="%redirect_url%">
-        <img alt="%asset_name%" src="%asset_thumbnail_url%">
-    </a>
-</div>
-<div class="card-section">
-    <h2 class="h4"><a href="%asset_url%">%asset_short_name%</a></h2>
-    <p>%asset_metadata_Ulster.Three.Panel.Description%</p>
-    <a href="%redirect_url%" class="button">%asset_metadata_Ulster.Three.Panel.Call.To.Action%</a>
-</div>
-%else_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^neq:4%
-%begin_asset_position^eq:1%
-<div class="card-image">
-    <a href="%redirect_url%">
-        <img alt="%asset_name%" src="%asset_thumbnail_url%">
-    </a>
-</div>
-<div class="card-section">
-    <h2><a href="%asset_url%">%asset_short_name%</a></h2>
-    <p>%asset_metadata_Ulster.Three.Panel.Description%</p>
-    <a href="%redirect_url%" class="button">%asset_metadata_Ulster.Three.Panel.Call.To.Action%</a>
-</div>
-%else_asset_position^eq:1%
- <div class="media-object">
-      <div class="media-object-section">
-        <a href="%redirect_url%">
-          <img src="%asset_thumbnail_v_thumb-small_url%">
-        </a>
-      </div>
-      <div class="media-object-section">
-        <h4><a href="%redirect_url%">%asset_short_name%</a></h4>
-        <p>%asset_metadata_Ulster.Three.Panel.Description%</p>
-        <a href="%redirect_url%" class="button">%asset_metadata_Ulster.Three.Panel.Call.To.Action%</a>
-      </div>
-    </div>
-%end_asset_position^eq:1%
+%begin_nested_get_one^neq:%
+  %begin_nested_get_two^neq:%
+    %begin_nested_get_three^neq:%
+      %begin_nested_get_four^eq:%
+        <div class="grid-x" data-equalizer>
+          <div class="cell large-4">
+            <img src="%nested_get_one^as_asset:asset_thumbnail_v_square-640_url%" alt="%nested_get_one^as_asset:asset_name%" />
+          </div>
+          <div class="cell large-8 off-white-bg">
+            <div class="pad-60">
+              <h2 class="h1"><a href="%nested_get_one^as_asset:redirect_url%">%nested_get_one^as_asset:asset_name%</a></h2>
+              <p class="lead">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+              <p><a href="%nested_get_one^as_asset:redirect_url%" class="button large">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="grid-x grid-padding-x" data-equalizer>
+          <div class="cell large-6">
+            <div class="grid-x">
+              <div class="cell large-6">
+                <img src="%nested_get_two^as_asset:asset_thumbnail_v_square-640_url%" alt="%nested_get_two^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-6 off-white-bg">
+                <div class="card-section">
+                  <h2><a href="%nested_get_two^as_asset:redirect_url%">%nested_get_two^as_asset:asset_name%</a></h2>
+                  <p>%nested_get_two^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_two^as_asset:redirect_url%" class="button">%nested_get_two^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-6">
+            <div class="grid-x">
+              <div class="cell large-6">
+                <img src="%nested_get_three^as_asset:asset_thumbnail_v_square-640_url%" alt="%nested_get_three^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-6 off-white-bg">
+                <div class="card-section">
+                  <h2><a href="%nested_get_three^as_asset:redirect_url%">%nested_get_three^as_asset:asset_name%</a></h2>
+                  <p>%nested_get_three^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_three^as_asset:redirect_url%" class="button">%nested_get_three^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      %end_nested_get_four^eq:%
+    %end_nested_get_three^neq:%
+  %end_nested_get_two^neq:%
+%end_nested_get_one^neq:%
 
-
-%end_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^neq:4%
-
-<!--End content-->
-
-%begin_globals_asset_metadata_Ulster.Nested.Content.Promo.Count^eq:4%
-%begin_asset_position^eq:1%
-</div>
-</div>
-%else_begin_asset_position^eq:4%
-</div>
-</div>
-%else_asset%
-</div>
-%end_asset%
-%else_globals%
-</div>
-</div>
-%end_globals%
+%begin_nested_get_one^neq:%
+  %begin_nested_get_two^neq:%
+    %begin_nested_get_three^neq:%
+      %begin_nested_get_four^neq:%
+        <div class="grid-x" data-equalizer>
+          <div class="cell large-4 cover-background">
+            <img src="%nested_get_one^as_asset:asset_thumbnail_v_square-640_url%" alt="%nested_get_one^as_asset:asset_name%" />
+          </div>
+          <div class="cell large-8 off-white-bg">
+            <div class="pad-60">
+              <h2 class="h1"><a href="%nested_get_one^as_asset:redirect_url%">%nested_get_one^as_asset:asset_name%</a></h2>
+              <p class="lead">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+              <p><a href="%nested_get_one^as_asset:redirect_url%" class="button large">%nested_get_one^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="grid-x grid-padding-x" data-equalizer>
+          <div class="cell large-4">
+            <div class="grid-x">
+              <div class="cell large-12">
+                <img src="%nested_get_two^as_asset:asset_thumbnail_v_width-800_url%" alt="%nested_get_two^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-12 off-white-bg">
+                <div class="card-section" data-equalizer-watch>
+                  <h2 class="h3"><a href="%nested_get_two^as_asset:redirect_url%">%nested_get_two^as_asset:asset_name%</a></h2>
+                  <p>%nested_get_two^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_two^as_asset:redirect_url%" class="button">%nested_get_two^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="grid-x">
+              <div class="cell large-12">
+                <img src="%nested_get_three^as_asset:asset_thumbnail_v_width-800_url%" alt="%nested_get_three^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-12 off-white-bg">
+                <div class="card-section" data-equalizer-watch>
+                  <h2 class="h3"><a href="%nested_get_three^as_asset:redirect_url%">%nested_get_three^as_asset:asset_name%</a></h2>
+                  <p>%nested_get_three^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_three^as_asset:redirect_url%" class="button">%nested_get_three^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="grid-x">
+              <div class="cell large-12">
+                <img src="%nested_get_four^as_asset:asset_thumbnail_v_width-800_url%" alt="%nested_get_four^as_asset:asset_name%" />
+              </div>
+              <div class="cell large-12 off-white-bg">
+                <div class="card-section" data-equalizer-watch>
+                  <h2 class="h3"><a href="%nested_get_four^as_asset:redirect_url%">%nested_get_four^as_asset:asset_name%</a></h2>
+                  <p>%nested_get_four^as_asset:asset_metadata_Ulster.Three.Panel.Description%</p>
+                  <p><a href="%nested_get_four^as_asset:redirect_url%" class="button">%nested_get_four^as_asset:asset_metadata_Ulster.Three.Panel.Call.To.Action%</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      %end_nested_get_four^neq:%
+    %end_nested_get_three^neq:%
+  %end_nested_get_two^neq:%
+%end_nested_get_one^neq:%
