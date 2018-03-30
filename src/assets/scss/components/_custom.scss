@@ -80,14 +80,15 @@ a.brand
 //footer
 .footer
 {
-  border-top: 10px solid lighten(#ccc, 10%);
+  border-top: 10px solid $corp-gold;
 }
+
 //legacy footer remove padding top and border top
 footer
 {
   padding-top: 0;
   border-top: 0;
-  background: #fff;
+  background: lighten(#000, 10%);
 
   a
   {
@@ -288,4 +289,9 @@ ul.columns
 .no-top
 {
   padding-top: 0;
+}
+
+.no-margin-bottom
+{
+  margin-bottom: 0;
 }
