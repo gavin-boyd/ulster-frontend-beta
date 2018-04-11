@@ -59,6 +59,7 @@ $opacity: .9;
   $c-navy: #151E3E;
   $c-navy-trans: rgba($c-navy, $opacity);
   $c-navy-accent: darken(#D81B7A, 15%);
+  $c-navy-accent-light: lighten(#D81B7A, 25%);
   $c-navy-trans-accent: rgba($c-navy-accent, $opacity);
   $c-navy-trans-shade: rgba($c-navy, $opacity);
   .bg-navy
@@ -76,6 +77,10 @@ $opacity: .9;
   .bg-navy-accent
   {
     background: $c-navy-accent;
+  }
+  .colour-navy-accent
+  {
+    color: $c-navy-accent-light;
   }
   .angled-navy-top
   {
