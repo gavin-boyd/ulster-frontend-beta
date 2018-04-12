@@ -1,4 +1,4 @@
-<MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html> <MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>
+<MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>
 
 %globals_asset_contents_raw:256435%
 %globals_asset_contents_raw:258323%
@@ -17,54 +17,53 @@
     </ul>
   </nav>
   <div class="grid-x grid-padding-x grid-padding-y">
-    <div class="cell large-8">
+    <div class="cell large-9">
       <MySource_AREA id_name="body" design_area="body" />
     </div>
-    <div class="cell large-4">
-      <div class="radius bordered shadow card">
-        <div class="card-section">
-          <MySource_AREA id_name="menu" design_area="menu_normal">
-            <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
-            <MySource_SET name="level" value="top"/>
-            <MySource_SET name="settings.class.normal" value="" />
-            <MySource_SET name="settings.class.current" value="is-active" />
-            <MySource_SET name="show_subs" value="always"/>
-              <ul class="vertical menu">
-                <MySource_ASSET>
-                  <li class="<MySource_PRINT var="settings.class" />">
-                    <MySource_PRINT var="asset_short_name_linked" />
-                    <MySource_SUB design_area="menu_normal">
-                      <MySource_SET name="settings.class.normal" value="" />
-                      <MySource_SET name="settings.class.current" value="is-active" />
-                      <MySource_SET name="show_subs" value="always"/>
-                        <ul class="menu vertical nested">
-                          <MySource_ASSET>
-                            <li class="<MySource_PRINT var="settings.class" />">
-                              <MySource_PRINT var="asset_short_name_linked"/>
-                              <MySource_SUB design_area="menu_normal">
-                                <MySource_SET name="settings.class.normal" value="" />
-                                <MySource_SET name="settings.class.current" value="is-active" />
-                                <ul class="menu vertical nested">
-                                  <MySource_ASSET>
-                                    <li class="<MySource_PRINT var="settings.class" />">
-                                      <MySource_PRINT var="asset_short_name_linked"/>
-                                    </li>
-                                  </MySource_ASSET>
-                                </ul>
-                              </MySource_SUB>
-                            </li>
-                          </MySource_ASSET>
-                        </ul>
-                      </MySource_SUB>
-                    </li>
-                  </MySource_ASSET>
-                </ul>
-              </MySource_AREA>
-            </div>
+    <MySource_AREA id_name="menu" design_area="menu_normal">
+      <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
+      <MySource_SET name="level" value="top"/>
+      <MySource_SET name="settings.class.normal" value="" />
+      <MySource_SET name="settings.class.current" value="is-active" />
+      <MySource_SET name="show_subs" value="always"/>
+      <div class="cell large-3">
+        <div class="radius bordered shadow card">
+          <div class="card-section">
+            <h4>Related content</h4>
+            <ul class="vertical menu">
+              <MySource_ASSET>
+                <li class="<MySource_PRINT var="settings.class" />">
+                  <MySource_PRINT var="asset_short_name_linked" />
+                  <MySource_SUB design_area="menu_normal">
+                    <MySource_SET name="settings.class.normal" value="" />
+                    <MySource_SET name="settings.class.current" value="is-active" />
+                    <MySource_SET name="show_subs" value="always"/>
+                      <ul class="menu vertical nested">
+                        <MySource_ASSET>
+                          <li class="<MySource_PRINT var="settings.class" />">
+                            <MySource_PRINT var="asset_short_name_linked"/>
+                            <MySource_SUB design_area="menu_normal">
+                              <MySource_SET name="settings.class.normal" value="" />
+                              <MySource_SET name="settings.class.current" value="is-active" />
+                              <ul class="menu vertical nested">
+                                <MySource_ASSET>
+                                  <li class="<MySource_PRINT var="settings.class" />">
+                                    <MySource_PRINT var="asset_short_name_linked"/>
+                                  </li>
+                                </MySource_ASSET>
+                              </ul>
+                            </MySource_SUB>
+                          </li>
+                        </MySource_ASSET>
+                      </ul>
+                    </MySource_SUB>
+                  </li>
+                </MySource_ASSET>
+              </ul>
           </div>
         </div>
       </div>
-    </div>
+    </MySource_AREA>
   </div>
 </div>
 %globals_asset_contents_raw:256526%
