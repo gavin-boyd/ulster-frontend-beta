@@ -165,6 +165,13 @@ ul.columns
   -moz-columns: 3;
 }
 
+ul.columns-2
+{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
 //angled edges effects
 .angle-pad
 {
