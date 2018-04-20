@@ -60,6 +60,12 @@ $timeline-item-card-radius: $global-radius;
     @extend %clearfix;
 
     .timeline-icon {
+
+      .fa
+      {
+        color: #000;
+      }
+
       background: $timeline-color;
       border-radius: 50%;
       height: 50px;
@@ -71,7 +77,8 @@ $timeline-item-card-radius: $global-radius;
       width: 50px;
 
       img,
-      svg {
+      svg,
+      .fa {
         left: 14px;
         position: relative;
         top: 11px;
