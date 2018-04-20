@@ -59,12 +59,8 @@ $timeline-item-card-radius: $global-radius;
     position: relative;
     @extend %clearfix;
 
-    .timeline-icon {
-
-      .fa
-      {
-        color: #000;
-      }
+    .timeline-icon
+    {
 
       background: $timeline-color;
       border-radius: 50%;
@@ -75,13 +71,20 @@ $timeline-item-card-radius: $global-radius;
       position: absolute;
       top: 0;
       width: 50px;
+      display: table;     
+
+      .fa
+      {
+        color: #000;
+        font-size: 24px;
+      }
 
       img,
       svg,
       .fa {
-        left: 14px;
-        position: relative;
-        top: 11px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
       }
 
       svg {
