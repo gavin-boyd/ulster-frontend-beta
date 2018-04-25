@@ -11,7 +11,7 @@ if (res) {
                     'width="600" ' +
                     'height="450" ' +
                     'frameborder="0" style="border:0" ' +
-                    'src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD7oMxxt8TeWQIvmbu9mPmTEefkYF1Bp80&origin=' + capital_city + '&destination=Belfast&mode=flying" allowfullscreen>' +
+                    'src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD7oMxxt8TeWQIvmbu9mPmTEefkYF1Bp80&origin=' + capital_city + '+' + country + '&destination=Belfast&mode=flying" allowfullscreen>' +
                     '</iframe>';
           output += '<br><p><a href="https://www.ulster.ac.uk/digital-prospectus/_web_services/country" class="button large" target="_blank"><i class="fa fa-code" aria-hidden="true"></i> View Country API</a></p>';
           output += '</div>';
