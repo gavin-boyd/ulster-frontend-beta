@@ -70,8 +70,7 @@ $global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  //primary: #005ea5,
-  primary: $corp-gold,
+  primary: #005ea5,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -285,7 +284,7 @@ $button-font-family: inherit;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $corp-gold;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
