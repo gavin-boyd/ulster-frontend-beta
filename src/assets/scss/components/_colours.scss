@@ -219,7 +219,10 @@ $c-off-white: #f5f4f3;
     text-decoration: underline;
   }
 
-  input
+  input[type=text],
+  input[type=date],
+  input[type=tel],
+  textarea,
   {
     color: #000;
   }
