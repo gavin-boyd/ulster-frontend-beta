@@ -70,7 +70,8 @@ $global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #005ea5,
+  //primary: #005ea5,
+  primary: $corp-gold,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,

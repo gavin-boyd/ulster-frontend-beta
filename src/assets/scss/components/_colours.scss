@@ -123,6 +123,12 @@ $c-grey-trans-light: rgba(#111, .45);
   background: $c-grey-trans-light;
 }
 
+$c-corp-gold-trans: rgba($corp-gold, .85);
+.bg-corp-gold-trans
+{
+  background: $c-corp-gold-trans;
+}
+
 
 
 
@@ -232,6 +238,12 @@ $c-off-white: #f5f4f3;
 .dark-grey-bg
 {
   background: $c-dark-grey;
+}
+.angled-dark-grey-top
+{
+  margin-top: 60px;
+  @include angled-edge('outside top', 'upper left', $c-dark-grey);
+  padding-bottom: 100px;
 }
 
 .dark-grey-bg-trans
