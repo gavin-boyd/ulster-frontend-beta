@@ -110,11 +110,16 @@ $opacity: .9;
   }
 //############ 2. Navy - END
 
+.no-bg
+{
+  background-color: transparent !important;
+}
+
 
 $c-grey-trans: rgba(#111, .85);
 .bg-grey-trans
 {
-  background: $c-grey-trans;
+  background: $c-grey-trans !important;
 }
 
 $c-grey-trans-light: rgba(#111, .45);
