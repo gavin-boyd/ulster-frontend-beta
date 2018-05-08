@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulster University</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/css/intlTelInput.css?v=1.3">
+  </head>
+<body>
+<div class="grid-container grid-padding-y grid-padding-x">
+  <div class="cell large-12">
+    <input type="tel" class="phone">
+  </div>
+</div>
+<script src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/js/app.js?v=1.2"></script>
+<script src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/js/intlTelInput.min.js?v=1.2"></script>
+<script>
+jQuery('input.phone').each(function() {
+  jQuery(this).intlTelInput();
+});
+</script>
+</body>
+</html>
+
