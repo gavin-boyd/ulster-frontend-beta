@@ -39,6 +39,9 @@ if (res) {
                       if (res[i].email !== '') {
                         output += '<a href="mailto:' + res[i].email + '" class="button large expanded"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>';
                       }
+                      if (res[i].facebook !== '') {
+                        output += '<a href="https://m.me/' + res[i].facebook + '" class="button large expanded" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>';
+                      }
                     output += '</div>';
                   output += '</div>';
                 output += '</div>';
