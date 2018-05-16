@@ -30,11 +30,6 @@
   z-index: 9999;
   color: #ddd;
 
-  @include breakpoint(small)
-  {
-    display: none !important;
-  }
-
   &:hover
   {
     color: $primary-color;
@@ -56,7 +51,7 @@
   {
     display: block !important;
 
-    @include breakpoint(small)
+    @include breakpoint(small down)
     {
       display: none !important;
     }
