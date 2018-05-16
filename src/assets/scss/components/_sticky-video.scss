@@ -54,7 +54,7 @@
 
   @include breakpoint(small)
   {
-    display: none;
+    display: none !important;
   }
 }
 /** Use .sticky */
