@@ -51,6 +51,11 @@
   {
     display: block;
   }
+
+  @include breakpoint(small)
+  {
+    display: none;
+  }
 }
 /** Use .sticky */
 #featured-video.is-sticky
