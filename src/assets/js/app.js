@@ -88,6 +88,15 @@ jQuery(document).ready(function() {
        offset = Math.floor(top + ( featuredMedia.outerHeight() / 2 ) );
     }).on("scroll", function() {
        featuredVideo.toggleClass("is-sticky", thewindow.scrollTop() > offset);
+       jQuery('#close-featured-video').toggleClass("show", thewindow.scrollTop() > offset);
+    });
+
+    jQuery('#close-featured-video').click(function(e) {
+      e.preventDefault();
+      jQuery('#featured-video').addClass('is-not-sticky');
+      //jQuery('#featured-video').addClass('hide');
+      jQuery(this).addClass('hide');
+      player.stopVideo();
     });
   }
 });
