@@ -30,6 +30,11 @@
   z-index: 9999;
   color: #ddd;
 
+  @include breakpoint(small)
+  {
+    display: none !important;
+  }
+
   &:hover
   {
     color: $primary-color;
@@ -49,12 +54,12 @@
 
   &.show
   {
-    display: block;
-  }
+    display: block !important;
 
-  @include breakpoint(small)
-  {
-    display: none !important;
+    @include breakpoint(small)
+    {
+      display: none !important;
+    }
   }
 }
 /** Use .sticky */
