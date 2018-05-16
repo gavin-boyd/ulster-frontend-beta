@@ -49,7 +49,7 @@
 
   &.show
   {
-    display: block !important;
+    display: block;
 
     @include breakpoint(medium down)
     {
