@@ -51,7 +51,7 @@
   {
     display: block !important;
 
-    @include breakpoint(small down)
+    @include breakpoint(medium down)
     {
       display: none !important;
     }
