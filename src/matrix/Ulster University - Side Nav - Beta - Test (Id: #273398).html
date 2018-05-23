@@ -1,0 +1,95 @@
+<MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>
+
+%globals_asset_contents_raw:256435%
+%globals_asset_contents_raw:258323%
+<div class="grid-container">
+  <nav aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs">
+      <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
+        <MySource_SET name="levels_to_print" value="0" />
+        <MySource_SET name="start_at_level" value="0" />
+        <MySource_SET name="suffix_with_current_link" value="true" />
+        <MySource_ASSET>
+          <li><MySource_PRINT var="asset_short_name_linked" /></li>
+        </MySource_ASSET>
+        <MySource_DIVIDER></MySource_DIVIDER>
+      </MySource_AREA>
+    </ul>
+  </nav>
+  <div class="grid-x grid-padding-x grid-padding-y">
+    <div class="cell large-3">
+      <div class="radius bordered shadow card">
+        <div class="card-section">
+          <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
+            <MySource_SET name="levels_to_print" value="1" />
+            <MySource_SET name="start_at_level" value="1" />
+            <MySource_SET name="suffix_with_current_link" value="false" />
+            <MySource_SET name="prefix_with_divider" value="false" />
+            <MySource_SET name="suffix_with_divider" value="false" />
+            <h2 class="h4 separator-left">
+              <MySource_ASSET>
+                <a href="<MySource_PRINT var="asset_link" />">
+                  <MySource_PRINT var="asset_short_name" />
+                </a>
+              </MySource_ASSET>
+            </h2>
+          </MySource_AREA>
+          <MySource_AREA id_name="sub_section_link" design_area="asset_lineage" print="yes">
+            <MySource_SET name="levels_to_print" value="1" />
+            <MySource_SET name="start_at_level" value="2" />
+            <MySource_SET name="suffix_with_current_link" value="false" />
+            <MySource_SET name="prefix_with_divider" value="false" />
+            <MySource_SET name="suffix_with_divider" value="false" />
+            <p class="h5">
+              <MySource_ASSET>
+                <a href="<MySource_PRINT var="asset_link" />">
+                  <MySource_PRINT var="asset_short_name" />
+                </a>
+              </MySource_ASSET>
+            </p>
+          </MySource_AREA>
+          <MySource_AREA id_name="menu" design_area="menu_normal">
+            <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
+            <MySource_SET name="level" value="top"/>
+            <MySource_SET name="settings.class.normal" value="" />
+            <MySource_SET name="settings.class.current" value="is-active" />
+            <MySource_SET name="show_subs" value="always"/>
+                  <ul class="vertical menu">
+                    <MySource_ASSET>
+                      <li class="<MySource_PRINT var="settings.class" />">
+                        <MySource_PRINT var="asset_short_name_linked" />
+                        <MySource_SUB design_area="menu_normal">
+                          <MySource_SET name="settings.class.normal" value="" />
+                          <MySource_SET name="settings.class.current" value="is-active" />
+                          <MySource_SET name="show_subs" value="always"/>
+                            <ul class="menu vertical nested">
+                              <MySource_ASSET>
+                                <li class="<MySource_PRINT var="settings.class" />">
+                                  <MySource_PRINT var="asset_short_name_linked"/>
+                                  <MySource_SUB design_area="menu_normal">
+                                    <MySource_SET name="settings.class.normal" value="" />
+                                    <MySource_SET name="settings.class.current" value="is-active" />
+                                    <ul class="menu vertical nested">
+                                      <MySource_ASSET>
+                                        <li class="<MySource_PRINT var="settings.class" />">
+                                          <MySource_PRINT var="asset_short_name_linked"/>
+                                        </li>
+                                      </MySource_ASSET>
+                                    </ul>
+                                  </MySource_SUB>
+                                </li>
+                              </MySource_ASSET>
+                            </ul>
+                          </MySource_SUB>
+                        </li>
+                      </MySource_ASSET>
+                    </ul>
+          </MySource_AREA>
+        </div>
+      </div>
+    </div>
+    <MySource_AREA id_name="body" design_area="body" />
+  </div>
+</div>
+%globals_asset_contents_raw:256526%
+%globals_asset_contents_raw:256455%

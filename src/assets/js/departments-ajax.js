@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
           jQuery('.active').removeClass('active');
           jQuery(this).parent('li').addClass('active');
           jQuery("html, body").animate({ scrollTop: 0 }, "slow");
-          jQuery(this).parent('li').parent('ul').parent('ul').children('li').addClass('active');
+          //jQuery(this).parent('li').parent('ul').parent('ul').children('li').addClass('active');
           jQuery(this).parents('ul').addClass('active-ul');
           jQuery('.departments>ul>ul').each(function() {
             if (jQuery(this).hasClass('active-ul')) {
@@ -70,6 +70,8 @@ jQuery(document).ready(function() {
   jQuery('.departments>ul>ul>li>a').each(function() {
     jQuery(this).click(function(e) {
       e.preventDefault();
+      jQuery('.active').removeClass('active');
+      jQuery(this).parent('li').addClass('active');
       jQuery('.departments>ul>ul').each(function() {
         if (jQuery(this).hasClass('active-ul')) {
         } else {
@@ -81,6 +83,15 @@ jQuery(document).ready(function() {
       } else {
         jQuery(this).parent('li').parent('ul').addClass('hide-departments');
       }
+      ajaxRequest(jQuery(this).attr('href'), true);
+    });
+  });
+  jQuery('.departments>ul>li>a').each(function() {
+    jQuery(this).click(function(e) {
+      e.preventDefault();
+      jQuery('.active').removeClass('active');
+      jQuery(this).addClass('active');
+      ajaxRequest(jQuery(this).attr('href'), true);
     });
   });
 });
