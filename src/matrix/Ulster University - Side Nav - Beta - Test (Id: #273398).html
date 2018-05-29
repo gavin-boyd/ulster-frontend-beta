@@ -20,71 +20,105 @@
     <div class="cell large-3">
       <div class="radius bordered shadow card">
         <div class="card-section">
-          <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
-            <MySource_SET name="levels_to_print" value="1" />
-            <MySource_SET name="start_at_level" value="1" />
-            <MySource_SET name="suffix_with_current_link" value="false" />
-            <MySource_SET name="prefix_with_divider" value="false" />
-            <MySource_SET name="suffix_with_divider" value="false" />
-            <h2 class="h4 separator-left">
+          <ul class="vertical menu">
+            <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
+              <MySource_SET name="levels_to_print" value="1" />
+              <MySource_SET name="start_at_level" value="1" />
+              <MySource_SET name="suffix_with_current_link" value="false" />
+              <MySource_SET name="prefix_with_divider" value="false" />
+              <MySource_SET name="suffix_with_divider" value="false" />
               <MySource_ASSET>
-                <a href="<MySource_PRINT var="asset_link" />">
-                  <MySource_PRINT var="asset_short_name" />
-                </a>
+                <li>
+                  <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <script runat="server">
+                      var ulsLabel = '<MySource_PRINT var="asset_short_name" />';
+                      ulsLabel = ulsLabel.replace('(( ', '');
+                      ulsLabel = ulsLabel.replace(' ))', '');
+                      print(ulsLabel);
+                    </script>
+                  </a>
+                </li>
               </MySource_ASSET>
-            </h2>
-          </MySource_AREA>
-          <MySource_AREA id_name="sub_section_link" design_area="asset_lineage" print="yes">
-            <MySource_SET name="levels_to_print" value="1" />
-            <MySource_SET name="start_at_level" value="2" />
-            <MySource_SET name="suffix_with_current_link" value="false" />
-            <MySource_SET name="prefix_with_divider" value="false" />
-            <MySource_SET name="suffix_with_divider" value="false" />
-            <p class="h5">
+            </MySource_AREA>
+            <MySource_AREA id_name="sub_section_link" design_area="asset_lineage" print="yes">
+              <MySource_SET name="levels_to_print" value="1" />
+              <MySource_SET name="start_at_level" value="2" />
+              <MySource_SET name="suffix_with_current_link" value="true" />
+              <MySource_SET name="prefix_with_divider" value="false" />
+              <MySource_SET name="suffix_with_divider" value="false" />
               <MySource_ASSET>
-                <a href="<MySource_PRINT var="asset_link" />">
-                  <MySource_PRINT var="asset_short_name" />
-                </a>
+                <li>
+                  <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <script runat="server">
+                      var ulsLabel = '<MySource_PRINT var="asset_short_name" />';
+                      ulsLabel = ulsLabel.replace('(( ', '');
+                      ulsLabel = ulsLabel.replace(' ))', '');
+                      print(ulsLabel);
+                    </script>
+                  </a>
+                </li>
               </MySource_ASSET>
-            </p>
-          </MySource_AREA>
-          <MySource_AREA id_name="menu" design_area="menu_normal">
-            <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
-            <MySource_SET name="level" value="top"/>
-            <MySource_SET name="settings.class.normal" value="" />
-            <MySource_SET name="settings.class.current" value="is-active" />
-            <MySource_SET name="show_subs" value="always"/>
-                  <ul class="vertical menu">
-                    <MySource_ASSET>
-                      <li class="<MySource_PRINT var="settings.class" />">
-                        <MySource_PRINT var="asset_short_name_linked" />
-                        <MySource_SUB design_area="menu_normal">
-                          <MySource_SET name="settings.class.normal" value="" />
-                          <MySource_SET name="settings.class.current" value="is-active" />
-                          <MySource_SET name="show_subs" value="always"/>
-                            <ul class="menu vertical nested">
-                              <MySource_ASSET>
-                                <li class="<MySource_PRINT var="settings.class" />">
-                                  <MySource_PRINT var="asset_short_name_linked"/>
-                                  <MySource_SUB design_area="menu_normal">
-                                    <MySource_SET name="settings.class.normal" value="" />
-                                    <MySource_SET name="settings.class.current" value="is-active" />
-                                    <ul class="menu vertical nested">
-                                      <MySource_ASSET>
-                                        <li class="<MySource_PRINT var="settings.class" />">
-                                          <MySource_PRINT var="asset_short_name_linked"/>
-                                        </li>
-                                      </MySource_ASSET>
-                                    </ul>
-                                  </MySource_SUB>
-                                </li>
-                              </MySource_ASSET>
-                            </ul>
-                          </MySource_SUB>
-                        </li>
-                      </MySource_ASSET>
-                    </ul>
-          </MySource_AREA>
+            </MySource_AREA>
+            <MySource_AREA id_name="menu" design_area="menu_normal">
+              <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
+              <MySource_SET name="level" value="top"/>
+              <MySource_SET name="settings.class.normal" value="" />
+              <MySource_SET name="settings.class.current" value="is-active" />
+              <MySource_SET name="show_subs" value="always"/>
+              <MySource_ASSET>
+                <li>
+                  <a href="<MySource_PRINT var="asset_link" />" class="<MySource_PRINT var="settings.class" />">
+                    <script runat="server">
+                      var ulsLabel = '<MySource_PRINT var="asset_short_name" />';
+                      ulsLabel = ulsLabel.replace('(( ', '');
+                      ulsLabel = ulsLabel.replace(' ))', '');
+                      print(ulsLabel);
+                    </script>
+                  </a>
+                  <MySource_DIVIDER></MySource_DIVIDER>
+                  <MySource_SUB design_area="menu_normal">
+                    <MySource_SET name="settings.class.normal" value="" />
+                    <MySource_SET name="settings.class.current" value="is-active" />
+                    <MySource_SET name="show_subs" value="always"/>
+                      <ul class="menu vertical nested">
+                        <MySource_ASSET>
+                          <li>
+                            <a href="<MySource_PRINT var="asset_link" />" class="<MySource_PRINT var="settings.class" />">
+                              <script runat="server">
+                                var ulsLabel = '<MySource_PRINT var="asset_short_name" />';
+                                ulsLabel = ulsLabel.replace('(( ', '');
+                                ulsLabel = ulsLabel.replace(' ))', '');
+                                print(ulsLabel);
+                              </script>
+                            </a>
+                            <MySource_SUB design_area="menu_normal">
+                              <MySource_SET name="settings.class.normal" value="" />
+                              <MySource_SET name="settings.class.current" value="is-active" />
+                              <ul class="menu vertical nested">
+                                <MySource_ASSET>
+                                  <li>
+                                    <a href="<MySource_PRINT var="asset_link" />" class="<MySource_PRINT var="settings.class" />">
+                                      <script runat="server">
+                                        var ulsLabel = '<MySource_PRINT var="asset_short_name" />';
+                                        ulsLabel = ulsLabel.replace('(( ', '');
+                                        ulsLabel = ulsLabel.replace(' ))', '');
+                                        print(ulsLabel);
+                                      </script>
+                                    </a>
+                                  </li>
+                                </MySource_ASSET>
+                              </ul>
+                            </MySource_SUB>
+                          </li>
+                        </MySource_ASSET>
+                      </ul>
+                    </MySource_SUB>
+                  </li>
+                </MySource_ASSET>
+            </MySource_AREA>
+          </ul>
         </div>
       </div>
     </div>
