@@ -8,7 +8,7 @@
       {
         display: none;
       }
-      
+
       &.is-active
       {
           background: transparent;
@@ -35,7 +35,7 @@
             }
           }
 
-          ul
+          > ul
           {
             display: block;
           }
