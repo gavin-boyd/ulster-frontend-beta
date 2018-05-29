@@ -20,7 +20,6 @@
             background: transparent;
             border-bottom: 1px solid lighten($purple, 65%);
             color: $purple;
-            @include boldfont;
           }
 
           > a
@@ -79,7 +78,8 @@
           background: #eee;
         }
 
-        .fa
+        .fa-angle-left,
+        .fa-angle-right
         {
           position: absolute;
           left: 10px;
