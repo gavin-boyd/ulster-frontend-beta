@@ -4,6 +4,11 @@
   {
     > li
     {
+      ul
+      {
+        display: none;
+      }
+      
       &.is-active
       {
           background: transparent;
@@ -28,6 +33,11 @@
               color: #ccc;
               font-size: 28px;
             }
+          }
+
+          ul
+          {
+            display: block;
           }
       }
 
