@@ -19,6 +19,8 @@
           {
             background: transparent;
             border-bottom: 1px solid lighten($purple, 65%);
+            color: $purple;
+            @include boldfont;
           }
 
           > a
@@ -29,8 +31,8 @@
               content: "\f105";
               position: absolute;
               left: 10px;
-              top: 10px;
-              color: #ccc;
+              top: 12px;
+              color: lighten($purple, 65%);
               font-size: 28px;
             }
           }
