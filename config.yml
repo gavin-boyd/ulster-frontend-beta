@@ -32,3 +32,4 @@ PATHS:
   entries:
     - "src/assets/js/app.js"
     - "src/assets/js/legacy-app.js"
+    - "src/assets/js/myprospectus.js"

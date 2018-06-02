@@ -1,3 +1,9 @@
+Array.prototype.contains = function ( needle ) {
+   for (i in this) {
+       if (this[i] == needle) return true;
+   }
+   return false;
+}
 var res = eval('(' + _REST.response.body + ')');
 var country_code = "%globals_asset_metadata_Ulster.Capture.Country^escapequotes%";
 var output = '';
@@ -5,7 +11,9 @@ var showGeneric = [];
 if (res) {
   for (i = 0; i < res.length; i++) {
     var agent_country_code = res[i].country_code;
+    var agent_contact_types = res[i].contact_type;
     var agent_country_code_array = agent_country_code.split('; ');
+    var agent_country_contact_type_array = agent_contact_types.split('; ');
     for (x = 0; x < agent_country_code_array.length; x++) {
       var agent_code = agent_country_code_array[x];
       agent_code = String(agent_code);
@@ -22,7 +30,7 @@ if (res) {
                   output += '<div class="cell large-2">';
                     output += '<img src="' + res[i].image + '" alt="' + res[i].full_name + '" class="circle">';
                   output += '</div>';
-                output += '<div class="cell large-6">';
+                  output += '<div class="cell large-6">';
                   output += '<blockquote>';
                     output += '<cite>';
                       output += '<span class="h3">';
@@ -34,17 +42,21 @@ if (res) {
                   output += '</blockquote>';
                 output += '</div>';
                 output += '<div class="cell large-4">';
-                  if (res[i].phone !== '') {
+                  //WhatsApp
+                  if (res[i].phone !== '' && agent_country_contact_type_array.indexOf('whats-app')) {
                     var mobile = res[i].phone;
                     mobile = mobile.replace(/\s/g, '');
                     mobile = mobile.replace('+', '');
                     output += '<a href="https://api.whatsapp.com/send?phone=' + mobile + '" class="button large expanded"><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>';
                     //output += '<a href="#" class="button large expanded"><i class="fa fa-weixin" aria-hidden="true"></i> WeChat</a>';
                   }
-                  if (res[i].email !== '') {
-                    output += '<a href="mailto:' + res[i].email + '" class="button large expanded"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>';
+                  //Email
+                  if (res[i].email !== '' && agent_country_contact_type_array.indexOf('email')) {
+                    var email = res[i].email;
+                    output += '<a href="mailto:' + email + '" class="button large expanded"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>';
                   }
-                  if (res[i].facebook !== '') {
+                  //Facebook
+                  if (res[i].facebook !== '' && agent_country_contact_type_array.indexOf('facebook')) {
                     output += '<a href="https://m.me/' + res[i].facebook + '" class="button large expanded" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>';
                   }
                 output += '</div>';
@@ -69,7 +81,7 @@ if (res) {
             outputTwo += '<br>';
             outputTwo += '<div class="grid-x grid-padding-x grid-padding-y">';
               outputTwo += '<div class="cell large-2">';
-                outputTwo += '<img src="%globals_asset_assetid:284270^as_asset:asset_thumbnail_url%" alt="" class="circle">';
+                outputTwo += '<img src="%globals_asset_assetid:284270^as_asset:asset_thumbnail_v_agent-thumbnail_url%" alt="" class="circle">';
               outputTwo += '</div>';
             outputTwo += '<div class="cell large-6">';
               outputTwo += '<blockquote>';
