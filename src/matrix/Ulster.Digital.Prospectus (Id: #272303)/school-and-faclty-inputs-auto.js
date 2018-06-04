@@ -3,12 +3,13 @@ jQuery(document).ready(function() {
     var output = str.replace('&amp;', '&');
     return output;
   }
-  var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/faculties-and-schools';
+  var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/static/4-6-18/faculties-and-schools';
   jQuery.getJSON(schoolAPI, success);
   function success(data) {
     jQuery('input:radio').change(function() {
       jQuery('#metadata_field_text_281873_value').val();
       var selected = jQuery(this).val();
+      console.log(selected);
       jQuery.each(data, function(index) {
         if (data[index].school_name == selected) {
           var schoolOutput = sanitize(data[index].school_name);

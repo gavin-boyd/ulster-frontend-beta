@@ -1,0 +1,252 @@
+---
+
+layout: excludejs
+
+---
+
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="cell large-6">
+      <br><br>
+      <a class="brand" href="https://www.ulster.ac.uk">
+        <img alt="Ulster University" class="logo" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg">
+      </a>
+      <h1>Create your prospectus</h1>
+      <p class="lead">This is a short strapline</p>
+      <p><a href="#get-started" class="button large hollow" data-smooth-scroll>Get started <i class="fa fa-angle-down" aria-hidden="true"></i></a></p>
+    </div>
+    <div class="cell large-6">
+      <img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/devices.png" alt="" />
+    </div>
+  </div>
+</div>
+
+
+
+<div class="purple-bg bordered shadow radius" id="form">
+  <br><br>
+	<div class="grid-container white-bg" style="background:#fff;">
+		<div class="grid-x">
+			<div class="cell large-8">
+				<form action="https://www.ulster.ac.uk/digital-prospectus/capture?" enctype="multipart/form-data" id="page_asset_builder_272204" method="post" name="main_form" onsubmit="return form_on_submit()">
+					<input class="sq-form-field" id="AB_272204_ASSET_BUILDER_ACTION" name="AB_272204_ASSET_BUILDER_ACTION" type="hidden" value="create">
+					<script src="https://www.ulster.ac.uk/__lib/html_form/html_form.js" type="text/javascript">
+					</script>
+					<script src="https://www.ulster.ac.uk/__lib/js/general.js" type="text/javascript">
+					</script>
+					<script src="https://www.ulster.ac.uk/__lib/js/debug.js" type="text/javascript">
+					</script>
+					<script src="https://www.ulster.ac.uk/__lib/js/edit.js" type="text/javascript">
+					</script>
+					<script src="https://www.ulster.ac.uk/__lib/js/translation.js" type="text/javascript">
+					</script>
+					<script src="https://www.ulster.ac.uk/__data/system/core/js_strings.en.js" type="text/javascript">
+					</script>
+					<script type="text/javascript">
+					<!--
+					   //<![CDATA[
+
+					       // slip our own onLoad function into the onLoad event of the window
+					       var SQ_DOCUMENT_LOADED = false;
+
+					       function page_on_load()
+					       {
+
+					           // let everyone know the document is loaded
+					           SQ_DOCUMENT_LOADED = true;
+
+					       }// end page_on_load()
+
+					       function print_tooltip()
+					       {
+					           if (window.self.name == 'sq_main') {
+					               tooltip.print();
+					           }
+					       }
+
+					       function manual_release_locks_click() {
+					               document.getElementById('sq_lock_release_manual').value = 1;
+					               submit_form(this.form);
+					       }
+
+					       var SQ_FORM_SUBMITTED = false;
+
+					       function form_on_submit()
+					       {
+					           if (SQ_FORM_SUBMITTED) {
+					               alert(js_translate('The form has already been submitted, please wait ...'));
+
+					               return;
+					           }
+
+
+					           // basically if they get this far then we can submit
+					           SQ_FORM_SUBMITTED = true;
+					           return true;
+
+					       }//end form_on_submit()
+
+					   //]]> -->
+					</script> <input class="sq-form-field" id="AB_272204_ASSET_BUILDER_CREATE_TYPE" name="AB_272204_ASSET_BUILDER_CREATE_TYPE" type="hidden" value="page_standard"><input class="sq-form-field" id="asset_action" name="asset_action" type="hidden" value="create_custom">
+
+          <div class="sq-asset-builder-tab-content" id="page_asset_builder_272204_type_page_standard" style="display: block">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x">
+								<div class="cell medium-12">
+                  <br>
+									<h2 class="h1 separator-left" id="get-started">1. Your details</h2>
+									<p>We need to take some of your details so we can send you a prospectus.</p><br>
+								</div>
+								<div class="medium-4 cell">
+									<input class="sq-form-field" id="page_standard_0_636" name="page_standard_0_636" size="35" type="hidden" value="6010243"> <label>Name <input class="sq-form-field" id="metadata_field_text_272450_value" name="metadata_field_text_272450_value" size="30" type="text" value=""></label>
+								</div>
+								<div class="medium-4 cell">
+									<label>Email <!--<input type="text" name="metadata_field_text_272285_value" value="" size="30"  class="sq-form-field" id="metadata_field_text_272285_value" />-->
+									 <input class="sq-form-field" id="metadata_field_text_272285_value" name="metadata_field_text_272285_value" size="30" type="email" value=""></label>
+								</div>
+								<div class="medium-4 cell">
+									<label>Phone <!--<input type="text" name="metadata_field_text_272286_value" value="" size="30"  class="sq-form-field" id="metadata_field_text_272286_value" />-->
+									 <input class="sq-form-field" id="metadata_field_text_272286_value" name="metadata_field_text_272286_value" size="30" type="tel" value=""></label>
+								</div>
+							</div>
+              <br>
+							<hr>
+              <br>
+							<div class="grid-x grid-padding-x">
+								<div class="cell medium-12">
+									<h2 class="h1 separator-left">2. Courses</h2>
+									<p>We need to gather some information on your course requirements.</p>
+								</div>
+								<div class="medium-12 cell">
+									<label>Type</label> <input class="sq-form-field" id="metadata_field_select_272287_posted" name="metadata_field_select_272287_posted" type="hidden" value="1">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>&nbsp; <input checked="checked" class="sq-form-field" id="metadata_field_select_272287_" name="metadata_field_select_272287" type="radio" value=""><label for="metadata_field_select_272287_">-- Leave Empty --</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272287_Undergraduate" name="metadata_field_select_272287" type="radio" value="Undergraduate"><label for="metadata_field_select_272287_Undergraduate">Undergraduate</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272287_Postgraduate" name="metadata_field_select_272287" type="radio" value="Postgraduate"><label for="metadata_field_select_272287_Postgraduate">Postgraduate</label></td>
+										</tr>
+									</table>
+								</div>
+								<div class="medium-12 cell">
+									<label>Attendance</label> <input class="sq-form-field" id="metadata_field_select_272288_posted" name="metadata_field_select_272288_posted" type="hidden" value="1">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>&nbsp; <input checked="checked" class="sq-form-field" id="metadata_field_select_272288_" name="metadata_field_select_272288" type="radio" value=""><label for="metadata_field_select_272288_">-- Leave Empty --</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272288_Full-time" name="metadata_field_select_272288" type="radio" value="Full-time"><label for="metadata_field_select_272288_Full-time">Full-time</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272288_Part-time" name="metadata_field_select_272288" type="radio" value="Part-time"><label for="metadata_field_select_272288_Part-time">Part-time</label></td>
+										</tr>
+									</table>
+								</div>
+								<div class="medium-12 cell">
+									<label>Campus</label> <input class="sq-form-field" id="metadata_field_select_272289_posted" name="metadata_field_select_272289_posted" type="hidden" value="1">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>&nbsp; <input checked="checked" class="sq-form-field" id="metadata_field_select_272289_" name="metadata_field_select_272289" type="radio" value=""><label for="metadata_field_select_272289_">-- Leave Empty --</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272289_Belfast" name="metadata_field_select_272289" type="radio" value="Belfast"><label for="metadata_field_select_272289_Belfast">Belfast</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272289_Coleraine" name="metadata_field_select_272289" type="radio" value="Coleraine"><label for="metadata_field_select_272289_Coleraine">Coleraine</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272289_Jordanstown" name="metadata_field_select_272289" type="radio" value="Jordanstown"><label for="metadata_field_select_272289_Jordanstown">Jordanstown</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272289_Magee" name="metadata_field_select_272289" type="radio" value="Magee"><label for="metadata_field_select_272289_Magee">Magee</label></td>
+										</tr>
+									</table>
+								</div>
+								<div class="medium-12 cell">
+									<label>Subject</label> <input class="sq-form-field" id="metadata_field_select_272290_posted" name="metadata_field_select_272290_posted" type="hidden" value="1">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>&nbsp; <input checked="checked" class="sq-form-field" id="metadata_field_select_272290_" name="metadata_field_select_272290" type="radio" value=""><label for="metadata_field_select_272290_">-- Leave Empty --</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272290_Faculty+of+Arts,+Humanities+and+Social+Sciences" name="metadata_field_select_272290" type="radio" value="Faculty+of+Arts,+Humanities+and+Social+Sciences"><label for="metadata_field_select_272290_Faculty+of+Arts,+Humanities+and+Social+Sciences">Arts, Humanities and Social Sciences</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272290_Faculty+of+Computing,+Engineering+and+the+Built+Environment" name="metadata_field_select_272290" type="radio" value="Faculty+of+Computing,+Engineering+and+the+Built+Environment"><label for="metadata_field_select_272290_Faculty+of+Computing,+Engineering+and+the+Built+Environment">Computing, Engineering and the Built Environment</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272290_Faculty+of+Life+and+Health+Sciences" name="metadata_field_select_272290" type="radio" value="Faculty+of+Life+and+Health+Sciences"><label for="metadata_field_select_272290_Faculty+of+Life+and+Health+Sciences">Life and Health Sciences</label></td>
+										</tr>
+										<tr>
+											<td>&nbsp; <input class="sq-form-field" id="metadata_field_select_272290_Ulster+University+Business+School" name="metadata_field_select_272290" type="radio" value="Ulster+University+Business+School"><label for="metadata_field_select_272290_Ulster+University+Business+School">Business</label></td>
+										</tr>
+									</table>
+								</div>
+								<div class="medium-12 cell">
+									<hr>
+									<button class="button large expanded">Submit&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button><br>
+									<br>
+									<br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+					</script>
+				</form>
+			</div>
+      <div class="cell large-4">
+        <div class="sticky" data-sticky data-margin-top="0" data-top-anchor="form:top">
+          <br>
+          <div id="course-counter" class="card bordered radius shadow pad-60"></div>
+        </div>
+      </div>
+    </div>
+	</div>
+  <br><br>
+</div>
+<script src="{{root}}assets/js/app.js"></script>
+<script>
+  jQuery(document).ready(function() {
+    var urlPartOne = 'http://ulster.funnelback.co.uk/s/search.json?collection=ulster-dev&profile=_default';
+    var data;
+    var success;
+    jQuery('input:radio').change(function(){
+      var urlPartTwo = '';
+      jQuery('input:radio').each(function() {
+        if (jQuery(this).prop('checked')) {
+          var value = jQuery(this).val();
+          var name = jQuery(this).attr('name');
+          var param;
+          if (value) {
+            if (name == 'metadata_field_select_272287') {
+              param = '&f.Level|Y=';
+            }
+            if (name == 'metadata_field_select_272288') {
+              if (value == 'Full-time') {
+                param = '&f.Attendance|modeft';
+              }
+              if (value == 'Part-time') {
+                param = '&f.Attendance|modept=';
+              }
+            }
+            if (name == 'metadata_field_select_272289') {
+              param = '&f.Campus|campus=';
+            }
+            if (name == 'metadata_field_select_272290') {
+              param = '&f.Faculty|faculty=';
+            }
+            urlPartTwo += param + value;
+          }
+        }
+      });
+      jQuery.getJSON(urlPartOne + urlPartTwo, success);
+      function success(data) {
+        jQuery('#course-counter').html('<h2 class="h1 separator-left">' + data['response']['resultPacket']['resultsSummary']['totalMatching'] + ' courses available</h2>');
+      }
+    });
+  });
+</script>
