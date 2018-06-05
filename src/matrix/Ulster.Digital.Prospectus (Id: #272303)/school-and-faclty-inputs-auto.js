@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
     jQuery('input:radio').change(function() {
       jQuery('#metadata_field_text_281873_value').val();
       var selected = jQuery(this).val();
-      console.log(selected);
+      //console.log(selected);
       jQuery.each(data, function(index) {
         if (data[index].school_name == selected) {
           var schoolOutput = sanitize(data[index].school_name);
