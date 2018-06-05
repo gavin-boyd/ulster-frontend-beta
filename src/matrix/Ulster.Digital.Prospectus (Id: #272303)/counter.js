@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
   /*jQuery('#selections label').each(function() {
     jQuery(this).attr('id', 'id-' + convertToSlug(jQuery(this).text()));
   });*/
-  jQuery('#selections input:radio').change(function(){
+  jQuery('#selections input:radio').change(function() {
     var urlPartTwo = '';
     var labelHTML = '<ul class="angle-right">';
     jQuery('#selections input:radio').each(function() {
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
     labelHTML += '</ul>';
     jQuery.getJSON(urlPartOne + urlPartTwo, success);
     function success(data) {
-      console.log(urlPartOne + urlPartTwo);
+      //console.log(urlPartOne + urlPartTwo);
       var total = data['response']['resultPacket']['resultsSummary']['totalMatching'];
       var message = '';
       if (total == 1) {
@@ -67,32 +67,38 @@ jQuery(document).ready(function() {
       if (total == 0) {
         message = '<p class="callout warning" id="uls_validation">Please refine your search, try changing either type, attendance or campus.</p>';
       }
+      var cta = '<p><a href="#" id="build" class="button large expanded"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Build my prospectus</a></p>';
       jQuery('#course-counter').html('<div class="card bordered radius shadow card-section"' +
         '<p>We found</p>' +
         '<div class="stat">' + total + ' <small>' + coursesLabel + '</small></div><br><p>Matching your selections:</p>' +
         labelHTML +
         message +
-        '<p><a href="#" id="build" class="button large expanded"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Build my prospectus</a></p>' +
+        cta +
         '</div>');
       //add click event to build button
       if (total == 0) {
-        jQuery('#build').addClass('disabled');
+        jQuery('#build').addClass('uls-disabled');
         jQuery('#build').click(function(e) {
           e.preventDefault();
           jQuery('#uls_validation').css('border', '2px solid red');
         })
       } else {
         jQuery('#uls_validation').remove();
-        jQuery('#build').removeClass('disabled');
+        jQuery('#build').removeClass('uls-disabled');
         jQuery('#build').click(function(e) {
           e.preventDefault();
           //console.log('submit!');
-          if (jQuery(this).hasClass('disabled')) {
+          var valid = jQuery("#page_asset_builder_272204").valid();
+          if (jQuery(this).hasClass('uls-disabled')) {
           } else {
             jQuery('#page_asset_builder_272204').submit();
-            jQuery('button[type=submit], input[type=submit]').prop('disabled',true);
-            jQuery('button[type=submit], input[type=submit]').addClass('disabled');
-            jQuery(this).addClass('disabled');
+            if (valid === true) {
+              //console.log('form is valid');
+              jQuery('#page_asset_builder_272204').submit();
+              jQuery('button[type=submit], input[type=submit]').prop('disabled',true);
+              jQuery('button[type=submit], input[type=submit]').addClass('disabled');
+              jQuery(this).addClass('disabled');
+            }
           }
         });
       }

@@ -16,6 +16,7 @@
     "foundation-sites": "~6.4.1",
     "intl-tel-input": "^12.1.15",
     "jquery": ">=3.0.0",
+    "jquery-validation": "^1.17.0",
     "magnific-popup": "^1.1.0",
     "motion-ui": "~1.2.2",
     "svg-country-flags": "^1.2.1",

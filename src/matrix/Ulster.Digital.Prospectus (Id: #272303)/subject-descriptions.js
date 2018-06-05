@@ -10,7 +10,8 @@ jQuery(document).ready(function() {
       jQuery.each(data, function(index) {
         if (data[index].school_name == inputValue) {
           var schoolDescription = data[index].school_description;
-          output = '<span><strong>' + text + '</strong></span><br><span>' + schoolDescription + '</span>';
+          var schoolImage = data[index].school_image_url;
+          output = '<span style="background:url(' + schoolImage + ') no-repeat 0 0; background-size:cover;"><span><span><strong>' + text + '</strong></span><br><span>' + schoolDescription + '</span></span></span>';
         }
       });
       jQuery(this).html(output);
