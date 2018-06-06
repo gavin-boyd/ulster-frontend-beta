@@ -3,7 +3,6 @@ jQuery(document).ready(function() {
   jQuery("#page_asset_builder_272204").validate();
   //remove onsubmit from form
   jQuery('#page_asset_builder_272204').attr('onsubmit', '');
-  jQuery('#page_asset_builder_272204').attr('onsubmit', '');
   function processForm(e) {
     e.preventDefault();
     var valid = jQuery("#page_asset_builder_272204").valid();
