@@ -14,7 +14,7 @@ if (res) {
           output += '<div class="cell large-8">';
           output += '<h2 class="h1"><a href="%globals_asset_assetid:' + res[i].school_asset_id + '^as_asset:asset_url%">' + res[i].school_name + '</a></h2>';
           output += '<p class="lead">%globals_asset_assetid:' + res[i].school_asset_id + '^as_asset:asset_metadata_Description%</p>';
-          output += '<p><a href="%globals_asset_assetid:' + res[i].school_asset_id + '^as_asset:asset_url%" class="button large">Find out more</a></h2>';
+          output += '<p><a href="%globals_asset_assetid:' + res[i].school_asset_id + '^as_asset:asset_url%" class="button large">Find out more&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a></h2>';
           output += '</div>';
           output += '</div>';
         }

@@ -15,7 +15,7 @@ if (res) {
           output += '<div class="cell large-8">';
           output += '<h2 class="h1"><a href="%globals_asset_assetid:' + res[i].faculty_asset_id + '^as_asset:asset_url%">' + res[i].faculty_name + '</a></h2>';
           output += '<p class="lead">%globals_asset_assetid:' + res[i].faculty_asset_id + '^as_asset:asset_metadata_Description%</p>';
-          output += '<p><a href="%globals_asset_assetid:' + res[i].faculty_asset_id + '^as_asset:asset_url%" class="button large">Find out more</a></h2>';
+          output += '<p><a href="%globals_asset_assetid:' + res[i].faculty_asset_id + '^as_asset:asset_url%" class="button large">Find out more&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a></h2>';
           output += '<p>We have other schools within the faculty too...</p>';
           output += '<ul class="angle-right">';
           for (x = 0; x < res.length; x++) {
