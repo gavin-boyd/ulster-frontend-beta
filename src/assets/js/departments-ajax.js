@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
             //debug
             //console.log('finished');
         });
-        jQuery('#content-view').prepend('<div class="preloader-container"><div class="preloader"><span class="hide">Loading search results</span> <img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/cool-preloader.gif" width="100" alt="Loading results"/></div></div>');
+        jQuery('#content-view').prepend('<div class="preloader-container"><div class="preloader"><span class="hide">Loading search results</span> <img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/></div></div>');
       }
   }
   window.onpopstate = function(event) {
@@ -52,7 +52,7 @@ jQuery(document).ready(function() {
           ajaxRequest(jQuery(this).attr('href'), true);
           jQuery('.active').removeClass('active');
           jQuery(this).parent('li').addClass('active');
-          jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+          jQuery('html, body').animate({ scrollTop: 0 }, "slow");
           //jQuery(this).parent('li').parent('ul').parent('ul').children('li').addClass('active');
           jQuery(this).parents('ul').addClass('active-ul');
           jQuery('.departments>ul>ul').each(function() {
@@ -70,6 +70,9 @@ jQuery(document).ready(function() {
   jQuery('.departments>ul>ul>li>a').each(function() {
     jQuery(this).click(function(e) {
       e.preventDefault();
+      jQuery('html, body').animate({ scrollTop: 0 }, "slow");
+      jQuery('ul').removeClass('active-ul');
+      jQuery('.departments>ul>ul').addClass('hide-departments');
       jQuery('.active').removeClass('active');
       jQuery(this).parent('li').addClass('active');
       jQuery('.departments>ul>ul').each(function() {
@@ -82,6 +85,11 @@ jQuery(document).ready(function() {
         jQuery(this).parent('li').parent('ul').removeClass('hide-departments');
       } else {
         jQuery(this).parent('li').parent('ul').addClass('hide-departments');
+      }
+      if (jQuery(this).parent('li').parent('ul').hasClass('active-ul')) {
+        jQuery(this).parent('li').parent('ul').addClass('hide-departments');
+      } else {
+        jQuery(this).parent('li').parent('ul').removeClass('hide-departments');
       }
       ajaxRequest(jQuery(this).attr('href'), true);
     });
