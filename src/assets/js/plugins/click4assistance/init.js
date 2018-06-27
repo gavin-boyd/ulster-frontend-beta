@@ -13,44 +13,39 @@ jQuery(document).ready(function() {
         oC4AW_Widget.setIdentity("Embedded Chat");
         oC4AW_Widget.Initilize();
     }
-    var apiURL = "https://www.ulster.ac.uk/_web_services/purechat.json/_nocache";
-    jQuery.getJSON(apiURL, function(data) {
-            var check = data.click4assistance.urls;
-            var currentURL;
-            //debug
-            //console.log(JSON.stringify(check) + ' found! ' + check.length);
-            for (i = 0; i < check.length; i++) {
-                var obj = check[i]
-                var url = obj[0];
-                var guid = obj[1];
-                var wfguid = obj[2];
-                if (url) {
-                    if (url.indexOf('?') != -1) {
-                        currentURL = window.location.href;
-                    } else {
-                        currentURL = location.protocol + '//' + location.host + location.pathname;
-                    }
-                }
-                currentURL = currentURL.replace('/_recache', '');
-                currentURL = currentURL.replace('/_nocache', '');
-                if (url == currentURL) {
-                    //debug
-                    /*console.log('init script');
-                    console.log(url);
-                    console.log(guid);
-                    console.log(wfguid);*/
-                    //click4assistance code init
-                    C4AWJSLoaded(guid, wfguid);
+    var apiURL = 'https://www.ulster.ac.uk/_web_services/purechat.json/_nocache';
+    jQuery.ajax({
+      type: 'GET',
+      url: apiURL,
+      success: function (data) {
+        var check = data.click4assistance.urls;
+        var currentURL;
+        //debug
+        //console.log(JSON.stringify(check) + ' found! ' + check.length);
+        for (i = 0; i < check.length; i++) {
+            var obj = check[i]
+            var url = obj[0];
+            var guid = obj[1];
+            var wfguid = obj[2];
+            if (url) {
+                if (url.indexOf('?') != -1) {
+                    currentURL = window.location.href;
+                } else {
+                    currentURL = location.protocol + '//' + location.host + location.pathname;
                 }
             }
-        }).success(function() {
-            //console.log("second success");
-        })
-        .error(function(jqXHR, textStatus, errorThrown) {
-            //console.log("error " + textStatus);
-            //console.log("incoming Text " + jqXHR.responseText);
-        })
-        .complete(function() {
-            //console.log("complete");
-        });
+            currentURL = currentURL.replace('/_recache', '');
+            currentURL = currentURL.replace('/_nocache', '');
+            if (url == currentURL) {
+                //debug
+                /*console.log('init script');
+                console.log(url);
+                console.log(guid);
+                console.log(wfguid);*/
+                //click4assistance code init
+                C4AWJSLoaded(guid, wfguid);
+            }
+        }
+      }
+    });
 });
