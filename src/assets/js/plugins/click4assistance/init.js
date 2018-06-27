@@ -1,8 +1,6 @@
 /*
  * This plugin adds click4assistance js async if the url is found in the url json file
  */
-require('./click4assistance.js');
-
 jQuery(document).ready(function() {
     function C4AWJSLoaded(guid, wfguid) {
         oC4AW_Widget = new oC4AW_Widget();

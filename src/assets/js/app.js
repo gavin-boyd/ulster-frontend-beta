@@ -40,4 +40,5 @@ require('./plugins/stickyvideo/init');
 require('./plugins/megamenu/init');
 
 //Click4Assistance
+require('./plugins/click4assistance/dist');
 require('./plugins/click4assistance/init');
