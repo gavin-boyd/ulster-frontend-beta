@@ -490,13 +490,22 @@ ul.columns-2
     {
       background: transparent;
     }
+
+    a
+    {
+      &.active
+      {
+        background: $corp-gold;
+        color:#fff;
+      }
+    }
   }
 
   &.is-stuck
   {
     padding: 10px 5px;
     background: rgba(255,255,255,.95);
-    border-bottom: 5px solid #000;
+    border-top: 5px solid #000;
   }
 }
 

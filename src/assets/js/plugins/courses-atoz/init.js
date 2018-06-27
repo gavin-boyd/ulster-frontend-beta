@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
   function coursesAlphabetical() {
       jQuery('.courses-az').each(function() {
           jQuery('.page_letters').remove();
-          var lettersHTML = '<div data-sticky-container class="page_letters_container"><div class="page_letters sticky" data-sticky data-top-anchor="wysiwyg:top" data-margin-top="0"><p><strong>Course A-Z navigation</strong></p>';
+          var lettersHTML = '<div data-sticky-container class="page_letters_container"><div class="page_letters sticky" data-sticky data-top-anchor="wysiwyg:top" data-margin-top="30px"><p><strong>Course A-Z navigation</strong></p>';
           var lettersArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
           var currentLettersArray = [];
           jQuery(this).children('div').each(function(index, value) {
@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
               if (jQuery(this).next('div').length !== 0) {
                   var nextLetter = jQuery(this).next('div').data('letter');
                   if (letter != nextLetter) {
-                      jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
+                      jQuery('<a id="' + nextLetter + '"></a><div class="callout primary"><h2 class="h1">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
                       currentLettersArray.push(nextLetter);
                       //lettersHTML += '<a href="#' + nextLetter + '" data-letter="' + nextLetter + '">' + nextLetter + '</a>';
                       //debug
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
                   }
               }
               if (index == 0) {
-                  jQuery('<div class="callout primary"><h2 class="h1" id="' + letter + '">' + letter + '</h2></div>').insertBefore(jQuery(this));
+                  jQuery('<a id="' + nextLetter + '"></a><div class="callout primary"><h2 class="h1">' + letter + '</h2></div>').insertBefore(jQuery(this));
                   currentLettersArray.push(letter);
                   //lettersHTML += '<a href="#' + letter + '" data-letter="' + letter + '">' + letter + '</a>';
                   //debug
@@ -40,6 +40,8 @@ jQuery(document).ready(function() {
           lettersHTML += '</div></div>';
           jQuery(lettersHTML).insertBefore(jQuery(this));
           jQuery('.page_letters a').click(function(event) {
+              jQuery('.page_letters a').removeClass('active');
+              jQuery(this).addClass('active');
               if (
                   location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
                   location.hostname == this.hostname
