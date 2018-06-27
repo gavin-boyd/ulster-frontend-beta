@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
         var currentURL;
         //debug
         //console.log(JSON.stringify(check) + ' found! ' + check.length);
-        for (i = 0; i < check.length; i++) {
+        for (var i = 0; i < check.length; i++) {
             var obj = check[i]
             var url = obj[0];
             var guid = obj[1];
