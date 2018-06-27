@@ -452,3 +452,55 @@ ul.columns-2
     position: relative !important;
   }
 }
+
+/*
+ * courses atoz
+ */
+.courses-az
+{
+
+}
+
+.page_letters
+{
+  margin-bottom: 20px;
+  @include clearfix;
+
+  > p
+  {
+    margin-bottom: 5px;
+  }
+
+  > div
+  {
+    width: 3.6%;
+    min-width: 25px;
+    margin: 1px;
+    float:left;
+
+    > a,
+    > span
+    {
+      background: #eee;
+      display: block;
+      padding: 10px;
+    }
+
+    > span
+    {
+      background: transparent;
+    }
+  }
+
+  &.is-stuck
+  {
+    padding: 10px 5px;
+    background: rgba(255,255,255,.95);
+    border-bottom: 5px solid #000;
+  }
+}
+
+.page_letters_container
+{
+  margin-bottom: 20px;
+}
