@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
               if (jQuery(this).next('div').length !== 0) {
                   var nextLetter = jQuery(this).next('div').data('letter');
                   if (letter != nextLetter) {
-                      jQuery('<a id="' + nextLetter + '"></a><div class="callout primary"><h2 class="h1">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
+                      jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
                       currentLettersArray.push(nextLetter);
                       //lettersHTML += '<a href="#' + nextLetter + '" data-letter="' + nextLetter + '">' + nextLetter + '</a>';
                       //debug
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
                   }
               }
               if (index == 0) {
-                  jQuery('<a id="' + nextLetter + '"></a><div class="callout primary"><h2 class="h1">' + letter + '</h2></div>').insertBefore(jQuery(this));
+                  jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + letter + '</h2></div>').insertBefore(jQuery(this));
                   currentLettersArray.push(letter);
                   //lettersHTML += '<a href="#' + letter + '" data-letter="' + letter + '">' + letter + '</a>';
                   //debug
