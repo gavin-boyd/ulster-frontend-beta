@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
             currentURL = currentURL.replace('/_recache', '');
             currentURL = currentURL.replace('/_nocache', '');
             if (url == currentURL) {
-              
+
                 function C4AW_UTC(){this.UTCGetNow=function(){try{var d=new Date;return Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),d.getUTCHours(),d.getUTCMinutes(),d.getUTCSeconds())}catch(c){oC4AW_Widget.SendJSError("UTCGetNow",c)}};this.UTCIsValid=function(d){try{return!isNaN(d)&&2147483647<=parseInt(d,10)?!0:!1}catch(c){oC4AW_Widget.SendJSError("UTCIsValid",c)}};this.UTCDiffernce=function(d){try{var c=0;if(!this.UTCIsValid(d))return 99999999;var c=parseInt(d,10),h=this.UTCGetNow();return h<c?
                 99999999:h-c}catch(l){oC4AW_Widget.SendJSError("UTCDiffernce",l)}}}function C4AW_WidgetProactive(d,c,h,l,b,e,p){this.Workflow=d;d=c.toLowerCase();d=d.replace("https://","");d=d.replace("http://","");this.URLContains=d=d.replace("www.","");this.ExactMatch=h;this.DelayOpen=l;this.DelayException=b;this.ShowWhenUnavailable=1==e?"Y":"N";this.Identity=p}
                 function C4AW_Widget(){function d(b){var e=b.getAutoProactiveCollection().length;if(0!=e){var c=new C4AW_Cookie;c.LoadData();if(c.IsEnabled()&&!c.getContDisplayed()&&!(new C4AW_Browser).getIsSmallMobile())for(var g=!1,a=0;a<e;a++){var f=b.getAutoProactiveCollection(),d=window.location.href.toLowerCase(),d=d.replace("https://",""),d=d.replace("http://",""),d=d.replace("www.",""),g=!1;1==f[a].ExactMatch?d==f[a].URLContains&&(g=!0):-1!=d.indexOf(f[a].URLContains)&&(g=!0);if(g){var h=f[a].Workflow,g=
