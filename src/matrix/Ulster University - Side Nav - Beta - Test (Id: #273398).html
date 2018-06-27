@@ -15,7 +15,8 @@
     }
   }
 </script>
-%globals_asset_thumbnail%
+%globals_asset_contents_raw:292663%
+<MySource_AREA id_name="additional_content" design_area="nest_content" print="no" />
 <div class="grid-container">
   <nav aria-label="You are here:" role="navigation">
     <ul class="breadcrumbs">
@@ -44,7 +45,7 @@
               <li>
                 <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  <script runat="server">ulsMenuLink('<MySource_PRINT var="asset_short_name" />', '<MySource_PRINT var="asset_type" />');</script>
+                  <MySource_PRINT var="asset_short_name" />
                 </a>
               </li>
             </MySource_ASSET>
@@ -59,7 +60,7 @@
               <li>
                 <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  <script runat="server">ulsMenuLink('<MySource_PRINT var="asset_short_name" />', '<MySource_PRINT var="asset_type" />');</script>
+                  <MySource_PRINT var="asset_short_name" />
                 </a>
               </li>
             </MySource_ASSET>
@@ -73,7 +74,7 @@
             <MySource_ASSET>
               <li class="<MySource_PRINT var="settings.class" />">
                 <a href="<MySource_PRINT var="asset_link" />">
-                  <script runat="server">ulsMenuLink('<MySource_PRINT var="asset_short_name" />', '<MySource_PRINT var="asset_type" />');</script>
+                  <MySource_PRINT var="asset_short_name" />
                 </a>
                 <MySource_DIVIDER></MySource_DIVIDER>
                 <MySource_SUB design_area="menu_normal">
@@ -84,7 +85,7 @@
                       <MySource_ASSET>
                         <li class="<MySource_PRINT var="settings.class" />">
                           <a href="<MySource_PRINT var="asset_link" />">
-                            <script runat="server">ulsMenuLink('<MySource_PRINT var="asset_short_name" />', '<MySource_PRINT var="asset_type" />');</script>
+                            <MySource_PRINT var="asset_short_name" />
                           </a>
                           <MySource_SUB design_area="menu_normal">
                             <MySource_SET name="settings.class.normal" value="" />
@@ -93,7 +94,7 @@
                               <MySource_ASSET>
                                 <li class="<MySource_PRINT var="settings.class" />">
                                   <a href="<MySource_PRINT var="asset_link" />">
-                                    <script runat="server">ulsMenuLink('<MySource_PRINT var="asset_short_name" />', '<MySource_PRINT var="asset_type" />');</script>
+                                    <MySource_PRINT var="asset_short_name" />
                                   </a>
                                 </li>
                               </MySource_ASSET>
