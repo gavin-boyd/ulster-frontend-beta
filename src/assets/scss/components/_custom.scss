@@ -382,7 +382,7 @@ ul.columns-2
   text-align: center;
   width: 30px;
   height: 30px;
-  font-size: 17px;
+  font-size: inherit;
   border-radius: 50%;
   background: #cca92c;
   cursor: pointer;
@@ -427,4 +427,28 @@ ul.columns-2
      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
  }
+}
+
+/*
+ * top bar background color
+ */
+.top-bar
+{
+  background: none repeat scroll 0 0 transparent;
+
+  ul
+  {
+    background: none repeat scroll 0 0 transparent;
+  }
+}
+
+/*
+ * no sticky magellan menus on medium size screens
+ */
+.sticky.is-stuck
+{
+  @include breakpoint(medium down)
+  {
+    position: relative !important;
+  }
 }
