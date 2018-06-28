@@ -44,6 +44,11 @@ jQuery(document).ready(function() {
                 console.log(wfguid);*/
                 //click4assistance code init
                 C4AWJSLoaded(guid, wfguid);
+
+                jQuery('#openchat').click(function() {
+                  jQuery('#divC4AWButton').css('display', 'none');
+                  jQuery('#divC4AWButton').click();
+                });
             }
         }
       }
