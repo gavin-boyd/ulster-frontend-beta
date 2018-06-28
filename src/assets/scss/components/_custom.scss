@@ -478,11 +478,17 @@ ul.columns-2
 /*
  * courses atoz
  */
-.courses-az
+.back-to-top
 {
-
+  display: none;
 }
-
+.is-stuck
+{
+  .back-to-top
+  {
+    display: block;
+  }
+}
 .page_letters
 {
   margin-bottom: 20px;
@@ -503,7 +509,7 @@ ul.columns-2
     > a,
     > span
     {
-      background: #eee;
+      background: #fff;
       display: block;
       padding: 10px;
     }
@@ -523,21 +529,27 @@ ul.columns-2
     }
   }
 
+  .back-to-top
+  {
+    display: none;
+  }
+
   &.is-stuck
   {
     padding: 10px 5px;
     background: rgba(255,255,255,.95);
     border-top: 5px solid #000;
-  }
-}
 
-.page_letters
-{
+    .back-to-top
+    {
+      display: block;
+    }
+  }
+
   span
   {
-    padding: 0.4rem 1rem;
     display: block;
-    color: #ddd;
+    color: lighten(#555, 20%);
   }
 
   a,
@@ -545,17 +557,26 @@ ul.columns-2
   {
     width: 40px;
     height: 40px;
+    padding: 0;
+    padding-top: 10px;
+    text-align: center;
 
     @include breakpoint(large) {
       width: 39px;
     }
   }
 
+  span
+  {
+    width: 22px;
+    padding-top: 8px;
+  }
+
   a
   {
     background: #eee;
     display: block;
-    outline: 1px solid #fff;
+    outline: 1px solid #555;
     @include transition-all;
 
     &:hover
