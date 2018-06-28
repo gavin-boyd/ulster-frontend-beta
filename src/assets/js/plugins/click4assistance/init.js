@@ -45,9 +45,12 @@ jQuery(document).ready(function() {
                 //click4assistance code init
                 C4AWJSLoaded(guid, wfguid);
 
-                jQuery('.openchat').each(function(e) {
-                  e.preventDefault();
-                  jQuery('#divC4AWButton').click();
+                /* opens chat window using remote button, just add class .openchat */
+                jQuery('.openchat').each(function() {
+                  jQuery(this).click(function(e) {
+                    e.preventDefault();
+                    jQuery('#divC4AWButton').click();
+                  });
                 });
             }
         }
