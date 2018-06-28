@@ -1,9 +1,8 @@
 jQuery(document).ready(function() {
-  console.log('init atoz');
   function coursesAlphabetical() {
       jQuery('.courses-az').each(function() {
           jQuery('.page_letters').remove();
-          var lettersHTML = '<div class="page_letters"><ul class="menu" data-magellan>';
+          var lettersHTML = '<div class="page_letters"><ul class="menu" data-magellan data-offset="200">';
           var lettersArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
           var currentLettersArray = [];
           jQuery(this).children('div').each(function(index, value) {
@@ -16,8 +15,6 @@ jQuery(document).ready(function() {
                       //lettersHTML += '<a href="#' + nextLetter + '" data-letter="' + nextLetter + '">' + nextLetter + '</a>';
                       //debug
                       //console.log('1');
-                  } else {
-
                   }
               }
               if (index == 0) {
