@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
   function coursesAlphabetical() {
       jQuery('.courses-az').each(function() {
           jQuery('.page_letters').remove();
-          var lettersHTML = '<div class="page_letters"><ul class="menu" data-magellan data-offset="200">';
+          var lettersHTML = '<div class="page_letters"><ul class="menu" data-magellan data-offset="300" data-deep-linking="true">';
           var lettersArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
           var currentLettersArray = [];
           jQuery(this).children('div').each(function(index, value) {
