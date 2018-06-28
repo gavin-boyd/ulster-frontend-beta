@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
   function coursesAlphabetical() {
       jQuery('.courses-az').each(function() {
           jQuery('.page_letters').remove();
-          var lettersHTML = '<div data-sticky-container class="page_letters_container"><div class="page_letters sticky" data-sticky data-top-anchor="wysiwyg:top" data-margin-top="30px"><p><strong>Course A-Z navigation</strong></p>';
+          var lettersHTML = '<div class="page_letters_container"><div class="page_letters"><p><strong>Course A-Z navigation</strong></p>';
           var lettersArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
           var currentLettersArray = [];
           jQuery(this).children('div').each(function(index, value) {
