@@ -554,17 +554,13 @@ function C4AW_WidgetData() {
 
 function C4AW_WidgetInterface(d) {
 
-    //custom
-    //var ulsterChatButtonID = 'divC4AWButton';
-    var ulsterChatButtonID = 'openchat';
-
     function c(a, b) {
         oC4AW_Widget.SendJSError(a, b)
     }
 
     function h() {
         try {
-            n = document.getElementById(ulsterChatButtonID), n || (n = document.createElement("img"), n.id = ulsterChatButtonID, n.style.zIndex = 2147483645, n.style.cssText = f.getBtnStyle(), n.setAttribute("onmouseover", "this.style.cursor='pointer';"), n.setAttribute("onmouseout", "this.style.cursor='default';"), n.title = "Click here to start a chat using Live Chat Software by Click4Assistance", n.setAttribute("alt", "Click here to start a chat using Live Chat Software by Click4Assistance"),
+            n = document.getElementById("divC4AWButton"), n || (n = document.createElement("img"), n.id = "divC4AWButton", n.style.zIndex = 2147483645, n.style.cssText = f.getBtnStyle(), n.setAttribute("onmouseover", "this.style.cursor='pointer';"), n.setAttribute("onmouseout", "this.style.cursor='default';"), n.title = "Click here to start a chat using Live Chat Software by Click4Assistance", n.setAttribute("alt", "Click here to start a chat using Live Chat Software by Click4Assistance"),
                 n.setAttribute("role", "button"), n.setAttribute("tabindex", "999"), n.onkeypress = function() {
                     p()
                 }, n.onclick = function() {
@@ -573,7 +569,7 @@ function C4AW_WidgetInterface(d) {
                 var a = !1;
                 2 == n.height && 2 == n.width && (a = !0);
                 for (var b = document.getElementsByClassName(f.getBtnWrapperClass()), c = 0; c < b.length; c++) b[c].style.display = a ? "block" : "none"
-            }), document.body.insertBefore(n, null)
+            }), document.body.insertBefore(document.getElementById("openchat"), null)
         } catch (v) {
             c("BuildChatButton", v)
         }

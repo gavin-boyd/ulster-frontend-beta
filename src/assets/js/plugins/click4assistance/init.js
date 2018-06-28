@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
         oC4AW_Widget.setWFGUID(guid);
         oC4AW_Widget.setPopupWindowWFGUID(wfguid);
         oC4AW_Widget.setDockPosition("BOTTOM");
-        oC4AW_Widget.setBtnStyle("position:fixed; border:none; bottom:0; right:auto; left:1em; z-index:9999; display:none;");
+        oC4AW_Widget.setBtnStyle("position:relative; border:none; bottom:0; right:auto; left:1em; z-index:9999;");
         oC4AW_Widget.setIdentity("Embedded Chat");
         oC4AW_Widget.Initilize();
     }
