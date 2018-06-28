@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
   function coursesAlphabetical() {
       jQuery('.courses-az').each(function() {
           jQuery('.page_letters').remove();
-          var lettersHTML = '<div class="page_letters_container"><div class="page_letters"><p><strong>Course A-Z navigation</strong></p>';
+          var lettersHTML = '<div class="page_letters"><ul class="menu" data-magellan>';
           var lettersArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
           var currentLettersArray = [];
           jQuery(this).children('div').each(function(index, value) {
@@ -11,15 +11,17 @@ jQuery(document).ready(function() {
               if (jQuery(this).next('div').length !== 0) {
                   var nextLetter = jQuery(this).next('div').data('letter');
                   if (letter != nextLetter) {
-                      jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
+                      jQuery('<div class="callout primary" data-magellan-target="' + nextLetter + '" id="' + nextLetter + '"><h2 class="h1">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
                       currentLettersArray.push(nextLetter);
                       //lettersHTML += '<a href="#' + nextLetter + '" data-letter="' + nextLetter + '">' + nextLetter + '</a>';
                       //debug
                       //console.log('1');
+                  } else {
+
                   }
               }
               if (index == 0) {
-                  jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + letter + '</h2></div>').insertBefore(jQuery(this));
+                  jQuery('<div class="callout primary" data-magellan-target="' + nextLetter + '" id="' + nextLetter + '"><h2 class="h1">' + letter + '</h2></div>').insertBefore(jQuery(this));
                   currentLettersArray.push(letter);
                   //lettersHTML += '<a href="#' + letter + '" data-letter="' + letter + '">' + letter + '</a>';
                   //debug
@@ -32,13 +34,15 @@ jQuery(document).ready(function() {
               //debug
               var check = jQuery.inArray(letter, currentLettersArray);
               if (check !== -1) {
-                  lettersHTML += '<div data-letter="' + letter + '"><a href=#' + letter + ' data-letter="' + letter + '" class="page-letter-' + letter + '">' + letter + '</a></div>';
+                  lettersHTML += '<li data-letter="' + letter + '"><a href=#' + letter + ' data-letter="' + letter + '" class="page-letter-' + letter + '">' + letter + '</a></li>';
               } else {
-                  lettersHTML += '<div data-letter="' + letter + '"><span>' + letter + '</span></div>';
+                  lettersHTML += '<li data-letter="' + letter + '"><span>' + letter + '</span></li>';
               }
           }
-          lettersHTML += '</div></div>';
-          jQuery(lettersHTML).insertBefore(jQuery('#nav-courses-page-letters'));
+          lettersHTML += '</ul></div>';
+          jQuery('.nav-courses-page-letters').each(function() {
+            jQuery(lettersHTML).insertBefore(jQuery(this));
+          });
           jQuery('.page_letters a').click(function(event) {
               jQuery('.page_letters a').removeClass('active');
               jQuery(this).addClass('active');

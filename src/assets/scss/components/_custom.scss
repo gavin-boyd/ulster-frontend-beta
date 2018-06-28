@@ -376,7 +376,7 @@ ul.columns-2
 /*
  * custom pulse animation
  */
-.pulse
+@mixin pulse($background, $icon-color, $r, $g, $b)
 {
   display: inline-table;
   text-align: center;
@@ -384,49 +384,66 @@ ul.columns-2
   height: 30px;
   font-size: inherit;
   border-radius: 50%;
-  background: #cca92c;
+  background: $background;
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  box-shadow: 0 0 0 rgba($r,$g,$b, 0.4);
   animation: pulse 2s infinite;
 
   .fa
   {
-    color: #fff;
+    color: $icon-color;
     display: table-cell;
     vertical-align: middle;
   }
+
+  @-webkit-keyframes pulse {
+     0% {
+       -webkit-box-shadow: 0 0 0 0 rgba($r,$g,$b, 0.4);
+     }
+     70% {
+         -webkit-box-shadow: 0 0 0 10px rgba($r,$g,$b, 0);
+     }
+     100% {
+         -webkit-box-shadow: 0 0 0 0 rgba($r,$g,$b, 0);
+     }
+  }
+
+  @keyframes pulse {
+    0% {
+     -moz-box-shadow: 0 0 0 0 rgba($r,$g,$b, 0.4);
+     box-shadow: 0 0 0 0 rgba($r,$g,$b, 0.4);
+    }
+    70% {
+       -moz-box-shadow: 0 0 0 10px rgba($r,$g,$b, 0);
+       box-shadow: 0 0 0 10px rgba($r,$g,$b, 0);
+    }
+    100% {
+       -moz-box-shadow: 0 0 0 0 rgba($r,$g,$b, 0);
+       box-shadow: 0 0 0 0 rgba($r,$g,$b, 0);
+    }
+  }
+
+  &:hover
+  {
+    animation: none;
+  }
 }
 
-.pulse:hover
+//#cca92c, 204,169,44
+
+.pulse
 {
- animation: none;
+  @include pulse(#cca92c,#fff,204,169,44);
 }
 
-@-webkit-keyframes pulse {
- 0% {
-   -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
- }
- 70% {
-     -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
- }
- 100% {
-     -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
- }
+.pulse-gold
+{
+  @include pulse(#cca92c,#fff,204,169,44);
 }
 
-@keyframes pulse {
- 0% {
-   -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-   box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
- }
- 70% {
-     -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-     box-shadow: 0 0 0 10px rgba(204,169,44, 0);
- }
- 100% {
-     -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-     box-shadow: 0 0 0 0 rgba(204,169,44, 0);
- }
+.pulse-white
+{
+  @include pulse(#fff,$corp-gold,255,255,255);
 }
 
 /*
@@ -509,7 +526,34 @@ ul.columns-2
   }
 }
 
-.page_letters_container
+.page_letters
 {
-  margin-bottom: 20px;
+  span
+  {
+    padding: 0.4rem 1rem;
+    display: block;
+    color: #ddd;
+  }
+
+  a
+  {
+    background: #eee;
+    outline: 1px solid #fff;
+    @include transition-all;
+
+    &:hover
+    {
+      background: darken(#eee,5%);
+    }
+
+    &.active
+    {
+      background: $corp-gold;
+      color: #fff;
+    }
+  }
 }
+
+/*
+ * fixed pos for small - mainly for cta's
+ */

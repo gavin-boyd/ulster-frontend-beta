@@ -47,8 +47,8 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-// @include foundation-float-classes;
-//@include foundation-flex-classes;
+//@include foundation-float-classes;
+@include foundation-flex-classes;
 @include foundation-prototype-classes;
 @include motion-ui-transitions;
 @include motion-ui-animations;
@@ -72,6 +72,7 @@
 @import 'components/sticky-video';
 @import 'components/image-link';
 @import 'components/side-nav';
+@import 'components/mobile-action-sheet';
 //@import 'components/hero-full-screen';
 //@import 'components/clean-hero-slider';
 //@import 'components/video-custom';
