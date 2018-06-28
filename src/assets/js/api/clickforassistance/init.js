@@ -6,4 +6,4 @@ function script(url) {
   var x = document.getElementsByTagName('head')[0];
   x.appendChild(s);
 }
-script('//cdn.ulster.ac.uk/home/ulster-frontend/js/click4assistance.js');
+script('//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/js/click4assistance-pretty.js');
