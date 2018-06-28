@@ -553,7 +553,6 @@ function C4AW_WidgetData() {
 }
 
 function C4AW_WidgetInterface(d) {
-
     function c(a, b) {
         oC4AW_Widget.SendJSError(a, b)
     }
@@ -569,11 +568,15 @@ function C4AW_WidgetInterface(d) {
                 var a = !1;
                 2 == n.height && 2 == n.width && (a = !0);
                 for (var b = document.getElementsByClassName(f.getBtnWrapperClass()), c = 0; c < b.length; c++) b[c].style.display = a ? "block" : "none"
-            }), document.body.insertBefore(document.getElementById("openchat"), null)
+            }), document.body.insertBefore(n, null)
         } catch (v) {
             c("BuildChatButton", v)
         }
     }
+
+    document.getElementById("openchat").onClick(function() {
+      p();
+    });
 
     function l() {
         try {
