@@ -45,8 +45,8 @@ jQuery(document).ready(function() {
                 //click4assistance code init
                 C4AWJSLoaded(guid, wfguid);
 
-                jQuery('#openchat').click(function() {
-                  jQuery('#divC4AWButton').css('display', 'none');
+                jQuery('.openchat').each(function(e) {
+                  e.preventDefault();
                   jQuery('#divC4AWButton').click();
                 });
             }

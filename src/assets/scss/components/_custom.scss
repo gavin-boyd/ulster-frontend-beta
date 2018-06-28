@@ -619,3 +619,11 @@ ul.columns-2
     }
   }
 }
+
+/*
+ * hide native click4assistance button
+ */
+#divC4AWButton
+{
+  display: none !important;
+}
