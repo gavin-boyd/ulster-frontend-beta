@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
               if (jQuery(this).next('div').length !== 0) {
                   var nextLetter = jQuery(this).next('div').data('letter');
                   if (letter != nextLetter) {
-                      jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + nextLetter + '</h2></div>').insertAfter(jQuery('#nav-courses-page-letters'));
+                      jQuery('<div class="callout primary"><h2 class="h1" id="' + nextLetter + '">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
                       currentLettersArray.push(nextLetter);
                       //lettersHTML += '<a href="#' + nextLetter + '" data-letter="' + nextLetter + '">' + nextLetter + '</a>';
                       //debug
@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
               }
           }
           lettersHTML += '</div></div>';
-          jQuery(lettersHTML).insertBefore(jQuery(this));
+          jQuery(lettersHTML).insertBefore(jQuery('#nav-courses-page-letters'));
           jQuery('.page_letters a').click(function(event) {
               jQuery('.page_letters a').removeClass('active');
               jQuery(this).addClass('active');
