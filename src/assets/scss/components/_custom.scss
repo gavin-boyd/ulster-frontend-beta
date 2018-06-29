@@ -488,13 +488,20 @@ ul.columns-2
 /*
  * courses atoz
  */
-.back-to-top
+.back-to-top,
+.toggler,
+#open
 {
   display: none;
 }
 .is-stuck
 {
   .back-to-top
+  {
+    display: block;
+  }
+
+  .toggler
   {
     display: block;
   }

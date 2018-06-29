@@ -1,139 +1,156 @@
-<div class="shadow off-white-bg sticky show-for-large" data-margin-bottom="0" data-stick-to="bottom" data-sticky="" data-top-anchor="wysiwyg:top">
-	<div class="grid-container">
-		<br>
-		<div class="grid-x grid-padding-x">
-      <div class="cell large-2">
-        <p class="h3 separator-left">Global Students</p>
-      </div>
-      <div class="cell large-10">
-        <form>
-          <div class="input-group">
-            <span class="input-group-label">Find a course</span>
-            <input class="input-group-field" type="text" placeholder="e.g. Art">
-            <div class="input-group-button">
-              <input type="submit" class="button" value="Submit">
-            </div>
-          </div>
-        </form>
-      </div>
-		</div>
-	</div>
-  <div class="navy-bg white-text">
-    <div class="grid-container">
-      <div class="grid-x grid-padding-x grid-padding-y">
+<div class="sticky show-for-large" data-margin-bottom="0" data-stick-to="bottom" data-sticky="" data-top-anchor="wysiwyg:top">
 
-        <!-- student reviews -->
-        <div class="cell large-6">
-          <div class="featured-testimonials-section">
-            <div class="featured-testimonials">
-              <div class="testimonial">
-                <img class="profile-pic hide-for-small-only" src="https://unsplash.it/201/?random">
-                <p class="featured-testimonials-quotation">
-                  This is a student testimonial, this text will need to be truncated to avoid too much text being displayed here.
-                  <cite>Name of person</cite>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- student reviews -->
-
-        <!-- create your prospectus -->
-        <div class="cell large-3">
-          <a href="#" class="button hollow rounded expanded">
-            <div class="pulse-gold">
-              <i class="fa fa-book" aria-hidden="true"></i>
-            </div>
-            &nbsp;&nbsp;
-            Create your prospectus
-          </a>
-          <a href="#" class="button hollow secondary rounded expanded">
-            <div class="no-pulse-navy">
-              <i class="fa fa-users" aria-hidden="true"></i>
-            </div>
-            &nbsp;&nbsp;
-            Student reviews
-          </a>
-        </div>
-        <!-- create your prospectus -->
-
-        <div class="cell large-3">
-          <div class="grid-x grid-padding-x">
-            <div class="cell large-12">
-              <div class="grid-x grid-padding-x">
-                <div class="cell large-12">
-                  <cite>Contact</cite>
-                </div>
-                <div class="cell large-1">
-                  <a href="#">
-                    <div class="no-pulse-teal">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <span class="show-for-sr">email</span></a>
-                </div>
-                <div class="cell large-1">
-                  <a href="#">
-                    <div class="no-pulse-teal">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <span class="show-for-sr">Phone</span></a>
-                </div>
-                <div class="cell large-1">
-                  <a href="#">
-                    <div class="no-pulse-teal">
-                      <i class="fa fa-comments" aria-hidden="true"></i>
-                    </div>
-                    <span class="show-for-sr">Chat</span></a>
-                </div>
-                <div class="cell large-1">
-                  <a href="#">
-                    <div class="no-pulse-teal">
-                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                    </div>
-                    <span class="show-for-sr">WhatsApp</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="grid-x grid-padding-x">
-            <div class="cell large-12">
-              <cite>Social</cite>
-            </div>
-            <div class="cell large-1">
-              <a href="#">
-                <div class="no-pulse-navy">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </div>
-                <span class="show-for-sr">Facebook</span></a>
-            </div>
-            <div class="cell large-1">
-              <a href="#">
-                <div class="no-pulse-navy">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </div>
-                <span class="show-for-sr">Facebook</span></a>
-            </div>
-            <div class="cell large-1">
-              <a href="#">
-                <div class="no-pulse-navy">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </div>
-                <span class="show-for-sr">Facebook</span></a>
-            </div>
-            <div class="cell large-1">
-              <a href="#">
-                <div class="no-pulse-navy">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </div>
-                <span class="show-for-sr">Facebook</span></a>
-            </div>
-          </div>
-        </div>
-
+  <div class="grid-container toggler">
+    <div class="grid-x">
+      <div class="cell large-1 large-offset-11">
+        <a data-toggle="panel close open" data-toggler="is-hidden" class="button secondary no-margin-bottom">
+          <i class="fa fa-angle-down" id="close" aria-hidden="true"></i>
+          <i class="fa fa-angle-up" id="open" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </div>
+
+  <div id="panel" data-toggler="is-hidden">
+    <div class="off-white-bg shadow">
+      <div class="grid-container">
+    		<br>
+    		<div class="grid-x grid-padding-x">
+          <div class="cell large-2">
+            <p class="h3 separator-left">Global Students</p>
+          </div>
+          <div class="cell large-10">
+            <form>
+              <div class="input-group">
+                <span class="input-group-label">Find a course</span>
+                <input class="input-group-field" type="text" placeholder="e.g. Art">
+                <div class="input-group-button">
+                  <input type="submit" class="button" value="Submit">
+                </div>
+              </div>
+            </form>
+          </div>
+    		</div>
+    	</div>
+    </div>
+    <div class="navy-bg white-text shadow">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x grid-padding-y">
+
+          <!-- student reviews -->
+          <div class="cell large-6">
+            <div class="featured-testimonials-section">
+              <div class="featured-testimonials">
+                <div class="testimonial">
+                  <img class="profile-pic hide-for-small-only" src="https://unsplash.it/201/?random">
+                  <p class="featured-testimonials-quotation">
+                    This is a student testimonial, this text will need to be truncated to avoid too much text being displayed here.
+                    <cite>Name of person</cite>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- student reviews -->
+
+          <!-- create your prospectus -->
+          <div class="cell large-3">
+            <a href="#" class="button hollow rounded expanded">
+              <div class="pulse-gold">
+                <i class="fa fa-book" aria-hidden="true"></i>
+              </div>
+              &nbsp;&nbsp;
+              Create your prospectus
+            </a>
+            <a href="#" class="button hollow secondary rounded expanded">
+              <div class="no-pulse-navy">
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </div>
+              &nbsp;&nbsp;
+              Student reviews
+            </a>
+          </div>
+          <!-- create your prospectus -->
+
+          <div class="cell large-3">
+            <div class="grid-x grid-padding-x">
+              <div class="cell large-12">
+                <div class="grid-x grid-padding-x">
+                  <div class="cell large-12">
+                    <cite>Contact</cite>
+                  </div>
+                  <div class="cell large-1">
+                    <a href="#">
+                      <div class="no-pulse-teal">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                      </div>
+                      <span class="show-for-sr">email</span></a>
+                  </div>
+                  <div class="cell large-1">
+                    <a href="#">
+                      <div class="no-pulse-teal">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <span class="show-for-sr">Phone</span></a>
+                  </div>
+                  <div class="cell large-1">
+                    <a href="#">
+                      <div class="no-pulse-teal">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </div>
+                      <span class="show-for-sr">Chat</span></a>
+                  </div>
+                  <div class="cell large-1">
+                    <a href="#">
+                      <div class="no-pulse-teal">
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </div>
+                      <span class="show-for-sr">WhatsApp</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="grid-x grid-padding-x">
+              <div class="cell large-12">
+                <cite>Social</cite>
+              </div>
+              <div class="cell large-1">
+                <a href="#">
+                  <div class="no-pulse-navy">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </div>
+                  <span class="show-for-sr">Facebook</span></a>
+              </div>
+              <div class="cell large-1">
+                <a href="#">
+                  <div class="no-pulse-navy">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </div>
+                  <span class="show-for-sr">Facebook</span></a>
+              </div>
+              <div class="cell large-1">
+                <a href="#">
+                  <div class="no-pulse-navy">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </div>
+                  <span class="show-for-sr">Facebook</span></a>
+              </div>
+              <div class="cell large-1">
+                <a href="#">
+                  <div class="no-pulse-navy">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </div>
+                  <span class="show-for-sr">Facebook</span></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- Mobile -->
