@@ -436,6 +436,16 @@ ul.columns-2
   @include pulse(darken($corp-gold,5%),#fff,0,0,0,0,none);
 }
 
+.no-pulse-teal
+{
+  @include pulse(darken($c-teal,5%),#fff,0,0,0,0,none);
+}
+
+.no-pulse-navy
+{
+  @include pulse(lighten($corp-navy,10%),#fff,0,0,0,0,none);
+}
+
 .pulse
 {
   @include pulse(#cca92c,#fff,204,169,44,.4,pulse 2s infinite);
