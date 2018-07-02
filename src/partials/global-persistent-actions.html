@@ -9,29 +9,22 @@
       <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
 
-          <!-- student reviews -->
-          <div class="cell large-6">
-            <div class="featured-testimonials-section">
-              <div class="featured-testimonials">
-                <div class="testimonial"> <img class="profile-pic hide-for-small-only" src="https://unsplash.it/201/?random">
-                  <p class="featured-testimonials-quotation"> This is a student testimonial, this text will need to be truncated to avoid too much text being displayed here. <cite>Name of person</cite> </p>
-                </div>
-              </div>
-            </div>
+          <div class="cell large-4">
+            <a href="#" class="button hollow rounded expanded no-margin-bottom">
+              <div class="pulse-gold"><i class="fa fa-book" aria-hidden="true"></i></div>
+              &nbsp;&nbsp;
+              Create your prospectus</a>
           </div>
-          <!-- student reviews -->
-
-          <!-- create your prospectus -->
-          <div class="cell large-3"> <a href="#" class="button hollow rounded expanded">
-            <div class="pulse-gold"> <i class="fa fa-book" aria-hidden="true"></i> </div>
-            &nbsp;&nbsp;
-            Create your prospectus </a> <a href="#" class="button hollow secondary rounded expanded">
-            <div class="no-pulse-navy"> <i class="fa fa-users" aria-hidden="true"></i> </div>
-            &nbsp;&nbsp;
-            Student reviews </a> </div>
-          <!-- create your prospectus -->
 
           <div class="cell large-3">
+            <a href="#" class="button hollow secondary rounded expanded no-margin-bottom">
+              <div class="no-pulse-navy"><i class="fa fa-users" aria-hidden="true"></i></div>
+              &nbsp;&nbsp;
+              Student reviews
+            </a>
+          </div>
+
+          <div class="cell large-2">
             <div class="grid-x grid-padding-x">
               <div class="cell large-12">
                 <div class="grid-x grid-padding-x">
@@ -51,7 +44,9 @@
                 </div>
               </div>
             </div>
-            <br>
+          </div>
+
+          <div class="cell auto">
             <div class="grid-x grid-padding-x">
               <div class="cell large-12"> <cite>Social</cite> </div>
               <div class="cell large-1"> <a href="#">
@@ -77,24 +72,92 @@
 <!-- Mobile -->
 <div class="action-sheet hide-for-large navy-bg">
   <div class="grid-x grid-padding-x grid-padding-y">
-    <div class="cell small-3"> <a class="button expanded secondary hollow" data-toggle="az-off-canvas" href="#">
-      <div class="pulse-align-container"> <i aria-hidden="true" class="fa fa-graduation-cap"></i> </div>
-      <span class="show-for-sr">Search for a course – A-Z navigation</span></a> </div>
-    <div class="cell small-3"> <a class="button expanded alert" href="tel:+442890366565">
-      <div class="pulse-white"> <i aria-hidden="true" class="fa fa-phone"></i> </div>
-      <span class="show-for-sr">Call 028 9036 6565</span></a> </div>
-    <div class="cell small-3"> <a class="button expanded secondary hollow" href="mailto:study@ulster.ac.uk?subject=clearing 2018">
-      <div class="pulse-align-container"> <i aria-hidden="true" class="fa fa-envelope"></i> </div>
-      <span class="show-for-sr">You can also Email us at study@ulster.ac.uk</span></a> </div>
-    <div class="cell small-3"> <a class="button expanded secondary hollow openchat" href="#">
-      <div class="pulse-align-container"> <i aria-hidden="true" class="fa fa-comments"></i> </div>
-      <span class="show-for-sr">Chat with us</span> </a> </div>
+    <div class="cell small-3">
+      <a class="button expanded secondary hollow"href="#">
+        <div class="pulse-align-container"><i aria-hidden="true" class="fa fa-book"></i></div>
+         <span class="show-for-sr">Create your prospectus</span>
+       </a>
+     </div>
+    <div class="cell small-3">
+      <a class="button expanded secondary hollow" href="#">
+        <div class="pulse-align-container"><i aria-hidden="true" class="fa fa-users"></i></div>
+        <span class="show-for-sr">Student reviews</span>
+      </a>
+    </div>
+    <div class="cell small-3">
+      <a class="button expanded secondary hollow" href="#" data-toggle="contact-off-canvas">
+        <div class="pulse-align-container"><i aria-hidden="true" class="fa fa-phone"></i></div>
+        <span class="show-for-sr">Contact us</span>
+      </a>
+    </div>
+    <div class="cell small-3">
+      <a class="button expanded secondary hollow openchat" href="#" data-toggle="social-off-canvas">
+        <div class="pulse-align-container"><i aria-hidden="true" class="fa fa-plus"></i></div>
+        <span class="show-for-sr">Social</span>
+      </a>
+    </div>
   </div>
 </div>
-<div class="off-canvas position-top hide-for-large off-white-bg" data-off-canvas="" id="az-off-canvas">
+
+<div class="off-canvas position-top hide-for-large off-white-bg" data-off-canvas="" id="contact-off-canvas">
   <div class="card-section">
-    <p class="separator-left"><i aria-hidden="true" class="fa fa-sort-alpha-asc"></i>&nbsp;&nbsp;Search for a course – A-Z navigation</p>
-    <div class="nav-courses-page-letters"></div>
-    <p class="back-to-top"><a data-smooth-scroll="" href="#wysiwyg"><i aria-hidden="true" class="fa fa-angle-up"></i>&nbsp;&nbsp;Back to top</a></p>
+    <p class="separator-left">Contact us</p>
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-teal"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+          <span class="show-for-sr">email</span></a>
+      </div>
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-teal"><i class="fa fa-phone" aria-hidden="true"></i></div>
+          <span class="show-for-sr">Phone</span>
+        </a>
+      </div>
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-teal"><i class="fa fa-comments" aria-hidden="true"></i></div>
+          <span class="show-for-sr">Chat</span>
+        </a>
+      </div>
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-teal"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+          <span class="show-for-sr">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="off-canvas position-top hide-for-large off-white-bg" data-off-canvas="" id="social-off-canvas">
+  <div class="card-section">
+    <p class="separator-left">Social</p>
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-navy"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+          <span class="show-for-sr">Facebook</span>
+        </a>
+      </div>
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+        <div class="no-pulse-navy"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+          <span class="show-for-sr">Facebook</span>
+        </a>
+      </div>
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-navy"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+            <span class="show-for-sr">Facebook</span>
+        </a>
+      </div>
+      <div class="cell small-3 medium-3">
+        <a href="#" class="button hollow">
+          <div class="no-pulse-navy"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+          <span class="show-for-sr">Facebook</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
