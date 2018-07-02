@@ -388,6 +388,12 @@ ul.columns-2
   cursor: pointer;
   box-shadow: 0 0 0 rgba($r, $g, $b, $transparency);
   animation: $animation;
+  @include transition-background();
+
+  &:hover
+  {
+    background: darken($background, 10%);
+  }
 
   .fa
   {
@@ -643,4 +649,15 @@ ul.columns-2
 #divC4AWButton
 {
   display: none !important;
+}
+
+/*
+ * remove underlines from all button hover states
+ */
+a.button
+{
+  &:hover
+  {
+    text-decoration: none;
+  }
 }
