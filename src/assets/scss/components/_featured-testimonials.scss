@@ -5,6 +5,16 @@
   align-items: center;
 }
 
+.testimonials
+{
+  margin-bottom: 60px;
+
+  @include breakpoint(small)
+  {
+    margin-bottom: 0;
+  }
+}
+
 .profile-pic
 {
   max-width: 100px;
@@ -13,29 +23,28 @@
 
 .featured-testimonials-quotation
 {
-  margin-left: 3rem;
-  margin-bottom: 0rem;
-  padding: 1rem;
   position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
 
   &::before
   {
     content: "“";
-    font-size: 5rem;
+    font-size: 120px;
+    line-height: 30px;
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-left: -20px;
     color: lighten($black, 80%);
-    position: absolute;
-    top: -30px;
-    left: -30px;
 
     @include breakpoint(small)
     {
-      position: relative;
-      top: auto;
-      left:auto;
+      margin: 0;
     }
   }
 
-  &::after
+  /*&::after
   {
     content: "”";
     font-size: 5rem;
@@ -48,7 +57,7 @@
     {
       display:none;
     }
-  }
+  }*/
 
   @include breakpoint(small only)
   {
