@@ -661,3 +661,14 @@ a.button
     text-decoration: none;
   }
 }
+
+/*
+ * if guide has persistent actions add top margin of 100px
+ */
+.include-actions
+{
+  &.is-stuck
+  {
+    margin-top: 100px !important;
+  }
+}
