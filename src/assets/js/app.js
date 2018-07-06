@@ -39,10 +39,13 @@ require('./plugins/stickyvideo/init');
 require('./plugins/megamenu/init');
 
 //Click4Assistance
-require('./plugins/click4assistance/init');
+//require('./plugins/click4assistance/init');
 
 //Courses atoz
 require('./plugins/courses-atoz/init');
 
 //Regions map
 require('./plugins/regions-map/init');
+
+//jQuery Background Video
+require('./plugins/jquery-background-video/init');
