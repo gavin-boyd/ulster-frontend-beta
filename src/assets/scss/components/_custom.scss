@@ -394,7 +394,7 @@ ul.columns-2
 
 .no-pulse-teal
 {
-  @include pulse(darken($c-teal,5%),#fff,0,0,0,0,none);
+  @include pulse(darken(#6ABCAB,5%),#fff,0,0,0,0,none);
 }
 
 .no-pulse-navy
