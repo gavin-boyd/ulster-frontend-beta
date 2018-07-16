@@ -52,4 +52,4 @@ require('./plugins/jquery-background-video/init');
 
 //
 require('./plugins/cookie/init');
-require('./plugins/ww/init');
+require('./plugins/ww/init-min');
