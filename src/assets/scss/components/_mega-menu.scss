@@ -18,6 +18,29 @@
   );
   width: 100%;
 
+  &.new
+  {
+    background: transparent;
+    @include box-shadow(
+      $x : 2px,
+      $y : 2px,
+      $blur : 5px,
+      $spread : 0,
+      $color : rgba(0,0,0,0)
+    );
+
+    > li
+    {
+      border:none !important;
+
+      > a
+      {
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+  }
+
   > li
   {
     border-right: 1px solid #f2f2ec;
@@ -31,7 +54,7 @@
     &.menu-item
     {
       width: 16.66%;
-      width: calc(68% / 4);
+      width: calc(68% / 5);
 
       &.small
       {
@@ -56,6 +79,7 @@
       &:hover
       {
         background: #eee;
+        @include transition-background();
       }
 
       &.hover

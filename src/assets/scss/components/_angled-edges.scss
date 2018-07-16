@@ -1,0 +1,62 @@
+.angle-pad
+{
+  margin-bottom: 60px;
+}
+
+.angled-title-purple
+{
+  margin-top: 60px;
+  @include angled-edge('outside top', 'upper left', $c-purple-trans-shade);
+  padding-bottom: 100px;
+}
+
+.angled-navy-top-trans
+{
+  margin-top: 60px;
+  @include angled-edge('outside top', 'upper left', $c-navy-trans);
+  padding-bottom: 100px;
+}
+
+.angled-teal-top
+{
+  @include angled-edge('outside top', 'upper left', $c-teal);
+  padding-bottom: 100px;
+}
+
+.angled-navy-left-trans
+{
+  margin-top: 60px;
+  @include angled-edge('outside top', 'upper left', $c-navy);
+  padding-bottom: 100px;
+}
+
+.angled-white-section
+{
+  position: relative;
+  z-index: 4;
+  @include angled-edge('outside top', 'upper left', #fff);
+}
+
+.angled-white-section-bottom-trans
+{
+  position: relative;
+  z-index: 4;
+  @include angled-edge('outside bottom', 'lower left', rgba(255,255,255,.6));
+}
+
+.angled-purple-section
+{
+  @include angled-edge('outside top', 'upper left', $c-purple);
+}
+
+.angled-purple-bottom-trans
+{
+  @include angled-edge('outside bottom', 'lower right', $c-purple-trans);
+  padding-bottom: 150px;
+  margin-bottom: 100px;
+}
+
+.angled-off-white-section
+{
+  @include angled-edge('outside top', 'upper left', $c-off-white);
+}

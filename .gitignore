@@ -3,5 +3,6 @@ node_modules
 npm-debug.log
 bower_components
 *.swp
-
+src/assets/js/plugins/ww
+src/assets/js/plugins/cookie
 backup/campus-images/jtown/gallery/duf2-h3L_400x400.jpg

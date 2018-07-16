@@ -23,9 +23,25 @@ $opacity: .9;
   {
     background: $c-purple;
   }
+
   .bg-purple-trans
   {
     background: $c-purple-trans;
+  }
+
+  .bg-purple-trans-gradient-one
+  {
+    @include linear-gradient(rgba($c-purple, .8), rgba($c-purple, .1));
+  }
+
+  .bg-purple-trans-gradient-two
+  {
+    @include linear-gradient(rgba($c-purple, .95), rgba($c-purple, .7));
+  }
+
+  .home-bg-purple-trans
+  {
+    background: rgba($c-purple, .8);
   }
   .bg-purple-accent
   {
@@ -73,6 +89,18 @@ $opacity: .9;
   .bg-navy-trans
   {
     background: $c-navy-trans;
+  }
+  .bg-navy-trans-gradient-one
+  {
+    @include linear-gradient(rgba($c-navy, .9), rgba($c-navy, .3));
+  }
+  .bg-navy-trans-gradient-two
+  {
+    @include linear-gradient(darken($c-navy, 10%), $c-navy);
+  }
+  .bg-gold-trans-gradient-one
+  {
+    @include linear-gradient(rgba(#000, .6), rgba($corp-gold, .1));
   }
   .bg-navy-trans-accent
   {
@@ -175,6 +203,11 @@ $c-teal: #6ABCAB;
   background: #fff;
 }
 
+.white-bg-trans
+{
+  background: rgba(255,255,255,.8);
+}
+
 $c-green: #68A021;
 
 
@@ -265,7 +298,7 @@ $c-off-white: #f5f4f3;
 
 .dark-grey-bg-trans
 {
-  background: rgba(0,0,0,.8);
+  background: rgba(0,0,0,.6);
 }
 
 
@@ -291,4 +324,29 @@ $c-off-white: #f5f4f3;
   {
     background: $corp-gold;
   }
+}
+
+.bg-teal-gradient
+{
+  @include linear-gradient($c-teal, darken($c-teal, 20%));
+}
+
+.desaturate
+{
+  @include desaturate;
+}
+
+.hue
+{
+  @include hue;
+}
+
+.sepia
+{
+  @include sepia;
+}
+
+.brightness
+{
+  @include brightness;
 }
