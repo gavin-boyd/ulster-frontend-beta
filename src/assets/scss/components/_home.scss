@@ -1,0 +1,99 @@
+$hero-height: 80vh;
+$animated-gradient-seconds: 15s;
+
+.full-viewport-height
+{
+  height: $hero-height;
+
+  @include breakpoint(small down)
+  {
+    height: auto;
+  }
+}
+
+.course-finder
+{
+  border-top: 1px solid lighten($corp-navy, 25%);
+
+  &.is-stuck
+  {
+    border-top: 0;
+    border-bottom: 1px solid $corp-gold;
+  }
+
+  input[type=text],
+  select
+  {
+    &:focus
+    {
+      outline: 3px solid $corp-gold;
+    }
+  }
+}
+
+.animated-gradient
+{
+  &::before
+  {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity:1;
+    background: linear-gradient(270deg, rgba($corp-navy, .2), rgba($corp-navy,1));
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName $animated-gradient-seconds ease infinite;
+    -moz-animation: AnimationName $animated-gradient-seconds ease infinite;
+    animation: AnimationName $animated-gradient-seconds ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 31%}
+        50%{background-position:100% 70%}
+        100%{background-position:0% 31%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 31%}
+        50%{background-position:100% 70%}
+        100%{background-position:0% 31%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 31%}
+        50%{background-position:100% 70%}
+        100%{background-position:0% 31%}
+    }
+  }
+}
+
+.scroll-fixed
+{
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: $hero-height;
+
+  @include breakpoint(small down)
+  {
+    height: auto;
+    position: relative;
+  }
+}
+
+.scroll-section
+{
+  background-size: contain;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  top: 80vh;
+  z-index: 4;
+  display: block;
+
+  @include breakpoint(small down)
+  {
+    height: auto;
+    top: auto;
+  }
+}

@@ -15,6 +15,7 @@ $offcanvas-padding: 20px;
 .nav-bar
 {
   display: flex;
+  z-index: 9999;
   justify-content: space-between;
   align-items: center;
   background: $nav-background;

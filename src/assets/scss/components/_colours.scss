@@ -92,7 +92,7 @@ $opacity: .9;
   }
   .bg-navy-trans-gradient-one
   {
-    @include linear-gradient(rgba($c-navy, .9), rgba($c-navy, .3));
+    @include linear-gradient(rgba($c-navy, .8), rgba($c-navy, .1));
   }
   .bg-navy-trans-gradient-two
   {
