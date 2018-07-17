@@ -35,6 +35,11 @@
   position: relative;
   z-index: 4;
   @include angled-edge('outside top', 'upper left', #fff);
+
+  @include breakpoint(small down)
+  {
+    @include angled-edge('outside top', 'upper left', transparent);
+  }
 }
 
 .angled-white-section-bottom-trans

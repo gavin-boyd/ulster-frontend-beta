@@ -350,3 +350,8 @@ $c-off-white: #f5f4f3;
 {
   @include brightness;
 }
+
+.white-gradient-one
+{
+  @include linear-gradient(#fff, #eee);
+}

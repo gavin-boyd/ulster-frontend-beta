@@ -710,23 +710,30 @@ a.button
   }
 }
 
+.text-right-large
+{
+  @include breakpoint(large) {
+    text-align: right !important;
+  }
+}
+
 .text-center-large
 {
   @include breakpoint(large) {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
 .text-center-medium
 {
   @include breakpoint(medium) {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
 .text-left-small
 {
   @include breakpoint(small down) {
-    text-align: left;
+    text-align: left !important;
   }
 }
