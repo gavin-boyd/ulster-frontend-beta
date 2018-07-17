@@ -28,6 +28,19 @@ $animated-gradient-seconds: 15s;
     {
       outline: 3px solid $corp-gold;
     }
+
+    @include breakpoint(small down) {
+      width: 100%;
+    }
+  }
+
+  select
+  {
+    max-width: 400px;
+
+    @include breakpoint(small down) {
+      max-width: none;
+    }
   }
 }
 
@@ -88,7 +101,7 @@ $animated-gradient-seconds: 15s;
   background-position: top center;
   position: relative;
   top: 80vh;
-  z-index: 4;
+  z-index: 2;
   display: block;
 
   @include breakpoint(small down)

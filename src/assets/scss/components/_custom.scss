@@ -709,3 +709,24 @@ a.button
     left: 0;
   }
 }
+
+.text-center-large
+{
+  @include breakpoint(large) {
+    text-align: center;
+  }
+}
+
+.text-center-medium
+{
+  @include breakpoint(medium) {
+    text-align: center;
+  }
+}
+
+.text-left-small
+{
+  @include breakpoint(small down) {
+    text-align: left;
+  }
+}
