@@ -26,7 +26,7 @@
 .angled-navy-left-trans
 {
   margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-navy);
+  @include angled-edge('outside top', 'upper left', rgba($c-navy,$opacity));
   padding-bottom: 100px;
 }
 

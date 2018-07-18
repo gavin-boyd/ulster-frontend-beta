@@ -13,12 +13,12 @@ $animated-gradient-seconds: 15s;
 
 .course-finder
 {
-  border-top: 1px solid lighten($corp-navy, 25%);
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
 
   &.is-stuck
   {
     border-top: 0;
-    border-bottom: 1px solid $corp-gold;
   }
 
   input[type=text],
@@ -100,7 +100,7 @@ $animated-gradient-seconds: 15s;
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
-  top: 80vh;
+  top: $hero-height;
   z-index: 2;
   display: block;
 
