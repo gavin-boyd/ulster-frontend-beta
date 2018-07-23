@@ -23,8 +23,6 @@ layout: welcomeweek
               <button type="submit" class="button"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
           </div>
-          <p>Browse A-Z</p>
-          <div class="nav-courses-page-letters"></div>
           <hr>
         </div>
       </div>
@@ -33,22 +31,43 @@ layout: welcomeweek
           <p>Filter by campus:</p>
         </div>
         <div class="cell large-3">
-          <input type="checkbox" name="campus" value="Belfast" />&nbsp;&nbsp;Belfast campus
+          <label class="button expanded hollow rounded">
+            <input type="radio" name="campus" value="Belfast" class="no-margin-bottom" />
+            &nbsp;&nbsp;Belfast campus
+          </label>
         </div>
         <div class="cell large-3">
-          <input type="checkbox" name="campus" value="Coleraine" />&nbsp;&nbsp;Coleraine campus
+          <label class="button expanded hollow rounded">
+            <input type="radio" name="campus" value="Coleraine" class="no-margin-bottom" />
+            &nbsp;&nbsp;Coleraine campus
+          </label>
         </div>
         <div class="cell large-3">
-          <input type="checkbox" name="campus" value="Jordanstown" />&nbsp;&nbsp;Jordanstown campus
+          <label class="button expanded hollow rounded">
+            <input type="radio" name="campus" value="Jordanstown" class="no-margin-bottom" />
+            &nbsp;&nbsp;Jordanstown campus
+          </label>
         </div>
         <div class="cell large-3">
-          <input type="checkbox" name="campus" value="Magee" />&nbsp;&nbsp;Magee campus
+          <label class="button expanded hollow rounded">
+            <input type="radio" name="campus" value="Magee" class="no-margin-bottom" />
+            &nbsp;&nbsp;Magee campus
+          </label>
         </div>
       </div>
     </div>
     </form>
     <br>
     <br>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell large-12">
+        <p>Courses A-Z</p>
+        <div class="nav-courses-page-letters"></div>
+      </div>
+    </div>
   </div>
 
   <div class="grid-container courses-az" id="course_list">
