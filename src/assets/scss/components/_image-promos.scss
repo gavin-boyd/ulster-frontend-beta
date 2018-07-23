@@ -1,0 +1,85 @@
+$image-promo-uls-opacity: .5;
+$colour-one: rgba(#C21047, $image-promo-uls-opacity);
+$colour-two: rgba(#192546, $image-promo-uls-opacity);
+$colour-three: rgba(#40264A, $image-promo-uls-opacity);
+$colour-four: rgba(#2B481A, $image-promo-uls-opacity);
+$colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
+
+.bg-generic-pink-opacity
+{
+  background: $colour-one;
+}
+
+.bg-generic-navy-opacity
+{
+  background: $colour-two;
+}
+
+.bg-generic-dark-purple-opacity
+{
+  background: $colour-three;
+}
+
+.bg-generic-dark-green-opacity
+{
+  background: $colour-four;
+}
+
+.bg-generic-light-blue-opacity
+{
+  background: $colour-five;
+}
+
+//used on global homepage
+.image-promos-uls
+{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 200px;
+
+  > div
+  {
+    position: relative;
+    z-index: 9000;
+
+    &.pull-up
+    {
+      position: relative;
+      top: -100px;
+      display: block;
+      padding-top:20px;
+
+      > div
+      {
+        > div
+        {
+          > div
+          {
+            > div
+            {
+              padding: 30px 15px;
+              @include transition-all();
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .column
+  {
+    padding: 0;
+
+    @include breakpoint(medium down)
+    {
+      width: 50%;
+    }
+  }
+
+  .button
+  {
+    background: #fff;
+    color: $corp-navy;
+  }
+}
