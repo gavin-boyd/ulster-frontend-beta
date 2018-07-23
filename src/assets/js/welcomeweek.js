@@ -43,5 +43,4 @@ require('./plugins/cookie/init');
 require('./plugins/ww/init-min');
 
 //welcome week additional plugins
-require('./plugins/welcomeweek-az/init');
 require('./plugins/welcomeweek-search/init');
