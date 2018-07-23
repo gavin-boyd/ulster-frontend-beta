@@ -7,33 +7,6 @@ jQuery(document).ready(function() {
             }
             jQuery_GET[decode(arguments[1])] = decode(arguments[2]);
         });
-        if (!jQuery_GET["query"]) {
-            /*jQuery('#clear-last-search').click(function() {
-                var url = window.location.href;
-                var value = url.substring(url.lastIndexOf('=') + 1);
-                jQuery('#filters input:checkbox:checked[value="' + value + '"]').siblings('a').click();
-            });
-            jQuery('#clear-last-search-two').click(function() {
-                var url = window.location.href;
-                var value = url.substring(url.lastIndexOf('=') + 1);
-                jQuery('#filters input:checkbox:checked[value="' + value + '"]').siblings('a').click();
-            });*/
-        } else {
-            /*jQuery('#clear-last-search').click(function() {
-                var url = window.location.href;
-                var value = url.substring(url.lastIndexOf('&') + 1);
-                url = url.replace(value, '');
-                jQuery('#query').val('');
-                jQuery('#course-finder-new').submit();
-            });
-            jQuery('#clear-last-search-two').click(function() {
-                var url = window.location.href;
-                var value = url.substring(url.lastIndexOf('&') + 1);
-                url = url.replace(value, '');
-                jQuery('#query').val('');
-                jQuery('#course-finder-new').submit();
-            });*/
-        }
     }
     clearLastSearch();
 
@@ -114,19 +87,16 @@ jQuery(document).ready(function() {
                 if (ajax && ajax.readyState != 4) {
                     ajax.abort();
                 }
+                coursesAlphabetical();
                 ajax = jQuery.get(searchURL, function(data) {
                     updatePageAndHistory(data, this.url, pushState);
                     //clearLastSearch();
                     //showMoreCoursesAjax();
                 });
                 //preloader
-                if (!jQuery('#course_list').hasClass('search-opacity')) {
-                    jQuery('#course_list').addClass('search-opacity');
-                    jQuery('#filters').addClass('search-opacity');
-                    jQuery('body').prepend('<div class="preloader" style="left:0;right:0;margin:0 auto;position:fixed;z-index:9999;">Loading search results</div>');
-                    jQuery('body').prepend('<div class="mfp-bg" style="z-index:9999;position:fixed;"></div>');
-                    jQuery('input#query').blur();
-                }
+                jQuery('body').prepend('<div class="preloader-container"><div class="preloader"><span class="hide">Loading search results</span> <img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/></div></div>');
+                //focus on search box
+                jQuery('input#query').blur();
             }
         }
 
@@ -138,18 +108,8 @@ jQuery(document).ready(function() {
             var results = jQuery(data).find('#course_list');
             jQuery('#course_list').replaceWith(results);
 
-            // If the #filters element doesn't exist, add it
-            /*if (!jQuery('#course-finder-new #filters').length) {
-                jQuery('#course_list').after('<div id="filters"></div>');
-            }*/
-
-            // Update #filters
-            //var filters = jQuery(data).find('#course-finder-new #filters');
-            //jQuery('#course-finder-new #filters').replaceWith(filters);
-
             //remove preloader
-            jQuery('body .preloader').remove();
-            jQuery('body .mfp-bg').remove();
+            jQuery('body .preloader-container').remove();
         }
         // If back is clicked after an AJAX request, load the previous search
         window.onpopstate = function(event) {
@@ -159,13 +119,6 @@ jQuery(document).ready(function() {
         jQuery('#courses').on('change', 'input[type=checkbox], input:radio', function() {
             jQuery('#course-finder-new').submit();
         });
-        // Override the remove filter link and update the sidebar filters which will, in turn, submit the form
-        /*jQuery('#course-finder-new').on('click', 'p.filters a', function(event) {
-            //Get the filter value from the link that was clicked
-            var filter = jQuery(this).attr('data-label');
-            jQuery('#course-finder-new #filters input:checkbox:checked[value="' + filter + '"]').siblings('a').click();
-            event.preventDefault();
-        });*/
     }
     //init
     if (jQuery('#course_list').length) {
