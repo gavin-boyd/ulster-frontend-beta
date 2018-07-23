@@ -21,8 +21,7 @@ window.$ = window.jQuery = jquery;
 /*
  * APIs
  */
-//require('./api/youtube/init');
-//require('./api/clickforassistance/init');
+
 
 /*
  * Plugins
@@ -32,15 +31,11 @@ window.$ = window.jQuery = jquery;
 require('./plugins/fancybox/dist');
 require('./plugins/fancybox/init');
 
-//sticky video
-require('./plugins/stickyvideo/init');
+//Courses atoz
+require('./plugins/courses-atoz/init');
 
-//jQuery Background Video
-require('./plugins/jquery-background-video/init');
-
-//
+//Cookies
 require('./plugins/cookie/init');
-require('./plugins/ww/init-min');
 
 //welcome week additional plugins
 require('./plugins/welcomeweek-search/init');
