@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
                   }
               }
               if (index == 0) {
-                  jQuery('<div class="callout primary" data-magellan-target="' + nextLetter + '" id="' + nextLetter + '"><h2 class="h1">' + letter + '</h2></div>').insertBefore(jQuery(this));
+                  jQuery('<div class="callout primary" data-magellan-target="' + letter + '" id="' + letter + '"><h2 class="h1">' + letter + '</h2></div>').insertBefore(jQuery(this));
                   currentLettersArray.push(letter);
                   //lettersHTML += '<a href="#' + letter + '" data-letter="' + letter + '">' + letter + '</a>';
                   //debug
@@ -71,9 +71,6 @@ jQuery(document).ready(function() {
                   }
               }
           });
-          /*jQuery('.page_letters div').tsort({
-              attr: 'data-letter'
-          });​*/
       });
     }
     if (jQuery('.courses-az').length !== 0) {
