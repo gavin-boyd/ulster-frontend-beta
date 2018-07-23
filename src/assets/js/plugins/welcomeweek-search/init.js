@@ -80,9 +80,6 @@ jQuery(document).ready(function() {
         });​*/
     });
   }
-  if (jQuery('.courses-az').length !== 0) {
-      coursesAlphabetical();
-  }
 
   function clearLastSearch() {
     var jQuery_GET = {};
@@ -200,15 +197,16 @@ jQuery(document).ready(function() {
       }
       // If back is clicked after an AJAX request, load the previous search
       window.onpopstate = function(event) {
-          ajaxRequest(document.location, false);
+        ajaxRequest(document.location, false);
       };
       // Change target filter checkboxes only
       jQuery('#courses').on('change', 'input[type=checkbox], input:radio', function() {
-          //jQuery('#course-finder-new').submit();
+        jQuery('#course-finder-new').submit();
       });
   }
   //init
   if (jQuery('#course_list').length) {
-      olpAjaxCourseSearch();
+    olpAjaxCourseSearch();
+    coursesAlphabetical();
   }
 });
