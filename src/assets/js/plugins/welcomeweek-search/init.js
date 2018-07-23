@@ -59,7 +59,6 @@ jQuery(document).ready(function() {
 
         // Generate the search URL by taking values from the inputs
         function generateSearchURL() {
-            var pageURL = "http://localhost:8000/welcome-week-search.html";
             //update this
             var searchURL = pageURL + '?query=' + jQuery('#query').val();
             jQuery('#course-finder-new #filters input:checkbox:checked, #course-finder-new #filters input:radio:checked').each(function() {
