@@ -32,7 +32,7 @@ require('./plugins/fancybox/dist');
 require('./plugins/fancybox/init');
 
 //Courses atoz
-require('./plugins/courses-atoz/init');
+require('./plugins/welcomeweek-atoz/init');
 
 //Cookies
 require('./plugins/cookie/init');
