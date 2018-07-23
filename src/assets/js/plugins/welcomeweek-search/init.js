@@ -204,7 +204,7 @@ jQuery(document).ready(function() {
       };
       // Change target filter checkboxes only
       jQuery('#courses').on('change', 'input[type=checkbox], input:radio', function() {
-          jQuery('#course-finder-new').submit();
+          //jQuery('#course-finder-new').submit();
       });
   }
   //init
