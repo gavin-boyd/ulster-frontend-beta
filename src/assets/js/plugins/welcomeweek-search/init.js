@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
                     var end = jQuery('#num_ranks').val();
                     if (increment) {
                         var numRanks = parseInt(end) + increment;
-                        console.log(numRanks);
+                        //console.log(numRanks);
                     } else {
                         var numRanks = parseInt(end) + 10;
                     }
@@ -115,24 +115,11 @@ jQuery(document).ready(function() {
                     ajax.abort();
                 }
                 ajax = jQuery.get(searchURL, function(data) {
-                    //refire functions after ajax request
-                    //filters modal
-                    var resizeHeight = jQuery(window).height();
                     updatePageAndHistory(data, this.url, pushState);
-                    clearLastSearch();
-                    showMoreCoursesAjax();
-                    //fix pagination li padding when no link present
-                    jQuery('.pagination ul li:not(:has(> a))').addClass("current");
-                    //remove showModal class
-                    jQuery('body').removeClass('showModal');
-                    jQuery('html').removeClass('showModal');
-                    if (jQuery('a.ulsterpopup').length !== 0) {
-                        jQuery('a.ulsterpopup').ulsterPopup();
-                    }
-                    jQuery('.embed-course-listing section.course').each(function() {
-                        ulsterCoursesClickableArea(jQuery(this));
-                    });
+                    //clearLastSearch();
+                    //showMoreCoursesAjax();
                 });
+                //preloader
                 if (!jQuery('#course_list').hasClass('search-opacity')) {
                     jQuery('#course_list').addClass('search-opacity');
                     jQuery('#filters').addClass('search-opacity');
@@ -150,13 +137,17 @@ jQuery(document).ready(function() {
             // Update #courseresults
             var results = jQuery(data).find('#course_list');
             jQuery('#course_list').replaceWith(results);
+
             // If the #filters element doesn't exist, add it
-            if (!jQuery('#course-finder-new #filters').length) {
+            /*if (!jQuery('#course-finder-new #filters').length) {
                 jQuery('#course_list').after('<div id="filters"></div>');
-            }
+            }*/
+
             // Update #filters
-            var filters = jQuery(data).find('#course-finder-new #filters');
-            jQuery('#course-finder-new #filters').replaceWith(filters);
+            //var filters = jQuery(data).find('#course-finder-new #filters');
+            //jQuery('#course-finder-new #filters').replaceWith(filters);
+
+            //remove preloader
             jQuery('body .preloader').remove();
             jQuery('body .mfp-bg').remove();
         }
@@ -178,7 +169,6 @@ jQuery(document).ready(function() {
     }
     //init
     if (jQuery('#course_list').length) {
-        console.log('init');
         olpAjaxCourseSearch();
     }
 });
