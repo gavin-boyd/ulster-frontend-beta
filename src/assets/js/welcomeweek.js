@@ -39,6 +39,6 @@ require('./plugins/cookie/init');
 
 //welcome week additional plugins
 require('./plugins/welcomeweek-search/init');
-require('./plugins/welcomeweek-search/jquery-ui-1-10-4-custom-min');
+require('./plugins/welcomeweek-search/jquery-ui');
 require('./plugins/welcomeweek-search/funnelback-completion');
 require('./plugins/welcomeweek-search/funnelback-completion-init');

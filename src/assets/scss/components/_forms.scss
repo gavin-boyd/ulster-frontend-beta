@@ -1,0 +1,7 @@
+input#query
+{
+  &:focus
+  {
+    outline: 3px solid $corp-gold;
+  }
+}
