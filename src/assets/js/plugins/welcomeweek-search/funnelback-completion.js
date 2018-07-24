@@ -348,7 +348,8 @@
                                     case '':
                                     case 'S':
                                         $(targetElement).val(ui.item.value);
-                                        $(targetElement).context.form.submit();
+                                        //$(targetElement).context.form.submit();
+                                        $(targetElement).parents('form').submit();
                                         break;
                                     case 'E':
                                         $(targetElement).val(ui.item.extra.action);
@@ -359,12 +360,14 @@
                                     case 'Q':
                                     default:
                                         $(targetElement).val(ui.item.extra.action);
-                                        $(targetElement).context.form.submit();
+                                        //$(targetElement).context.form.submit();
+                                        $(targetElement).parents('form').submit();
                                 }
                             } else {
                                 // Submit the form on select
                                 $(targetElement).val(ui.item.value);
-                                $(targetElement).context.form.submit();
+                                //$(targetElement).context.form.submit();
+                                $(targetElement).parents('form').submit();
                             }
                         }
                     );
