@@ -8,39 +8,42 @@ layout: welcomeweek
 
 <div id="courses">
 
-  <div class="off-white-bg">
+  <div class="navy-bg">
     <br>
     <br>
     <form method="GET" action="%globals_asset_url%" id="course-finder-new">
       <div class="grid-container" id="search">
       <div class="grid-x grid-padding-x">
         <div class="cell large-12">
-          <h2>Find your course</h2>
+          <div class="white-text">
+            <h2>Find your course</h2>
+          </div>
           <input type="hidden" id="num_ranks" value="1000" />
           <div class="input-group">
             <input class="input-group-field" id="query" name="query" type="text" value="%globals_get_query%" placeholder="e.g. Computing, Art, History">
             <div class="input-group-button">
-              <input type="submit" value="Search">
+              <input type="submit" value="Search" class="button">
             </div>
           </div>
           <hr>
         </div>
       </div>
-      <div class="grid-x grid-padding-x">
+      <div class="grid-x grid-padding-x white-text">
         <div class="cell large-12">
-          <p>Select your campus:</p>
+          <h2>Can't find what you are looking for?</h2>
+          <p class="lead">Try the A-Z listings of all courses on the campus pages</p>
         </div>
         <div class="cell large-3">
-          <a href="%globals_asset_url:296079%" class="button large expanded hollow rounded">Belfast</a>
+          <a href="%globals_asset_url:296079%" class="button large expanded hollow rounded">Belfast&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
         <div class="cell large-3">
-          <a href="%globals_asset_url:296087%" class="button large expanded hollow rounded">Coleraine</a>
+          <a href="%globals_asset_url:296087%" class="button large expanded hollow rounded">Coleraine&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
         <div class="cell large-3">
-          <a href="%globals_asset_url:296073%" class="button large expanded hollow rounded">Jordanstown</a>
+          <a href="%globals_asset_url:296083%" class="button large expanded hollow rounded">Jordanstown&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
         <div class="cell large-3">
-          <a href="%globals_asset_url:296091%" class="button large expanded hollow rounded">Magee</a>
+          <a href="%globals_asset_url:296091%" class="button large expanded hollow rounded">Magee&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
