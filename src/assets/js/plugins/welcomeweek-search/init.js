@@ -40,6 +40,7 @@ jQuery(document).ready(function() {
       jQuery('#course-finder-new').submit(function(event) {
           var searchURL = generateSearchURL();
           ajaxRequest(searchURL, true);
+          jQuery('#query').focus();
           event.preventDefault();
       });
 
