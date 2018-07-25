@@ -4,6 +4,8 @@ layout: welcomeweek
 
 ---
 
+<div class="preloader-container"><div class="preloader"><span class="hide">Loading search results</span> <img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"></div></div>
+
 {{> header}}
 
 <div id="courses">
@@ -20,7 +22,7 @@ layout: welcomeweek
           <form method="GET" action="%globals_asset_url%" id="course-finder-new">
             <input type="hidden" id="num_ranks" value="1000" />
             <div class="input-group">
-              <input class="input-group-field" id="query" name="query" type="text" value="%globals_get_query%" placeholder="e.g. Computing, Art, History">
+              <input class="input-group-field" id="query" name="query" type="text" value="%globals_get_query%" placeholder="e.g. Computing, Art, History" auto-complete="off">
               <div class="input-group-button">
                 <input type="submit" value="Search" class="button">
               </div>

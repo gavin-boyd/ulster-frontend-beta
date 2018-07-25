@@ -737,3 +737,15 @@ a.button
     text-align: left !important;
   }
 }
+
+//jquery ui autocmplete
+a.ui-menu-item-wrapper
+{
+  font-weight: bold !important;
+  color: #000 !important;
+
+  strong
+  {
+    font-weight: normal !important;
+  }
+}
