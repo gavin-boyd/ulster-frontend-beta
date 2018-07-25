@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
       // Generate the search URL by taking values from the inputs
       function generateSearchURL() {
         //debug for localhost
-        var pageURL = "http://localhost:8000/welcome-week-search.html";
+        //var pageURL = "http://localhost:8000/welcome-week-search.html";
         //update this
         var selectedLetter = jQuery('.page_letters .active').data('letter'); //left off here
         var searchURL = pageURL + '?query=' + jQuery('#query').val() + '&meta_t=' + jQuery('#query').val();
