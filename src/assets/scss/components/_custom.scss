@@ -738,14 +738,30 @@ a.button
   }
 }
 
-//jquery ui autocmplete
-a.ui-menu-item-wrapper
+//auto suggest
+ul.ui-autocomplete
 {
-  font-weight: bold !important;
-  color: #000 !important;
+	li
+	{
+		a
+		{
+			padding: 5px 10px;
+			font-family: FS Matthew Web Medium;
+			cursor: pointer;
+			color: #000;
+			@include transition-background;
 
-  strong
-  {
-    font-weight: normal !important;
-  }
+			strong
+			{
+				font-family: FS Matthew Web Light;
+				font-weight: normal;
+			}
+
+			&:hover
+			{
+				background: #eee;
+				text-decoration: none;
+			}
+		}
+	}
 }
