@@ -10,6 +10,19 @@ jQuery(document).ready(function() {
   }
   clearLastSearch();*/
 
+  function typeAhead() {
+    var timer;
+    var delay = 1000;
+    jQuery('#query').bind('input', function() {
+        window.clearTimeout(timer);
+        timer = window.setTimeout(function(){
+          //insert delayed input change action/event here
+          jQuery('#course-finder-new').submit();
+        }, delay);
+    })
+  }
+  typeAhead();
+
   function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -33,7 +46,7 @@ jQuery(document).ready(function() {
       // Generate the search URL by taking values from the inputs
       function generateSearchURL() {
         //debug for localhost
-        //var pageURL = "http://localhost:8000/welcome-week-search.html";
+        var pageURL = "http://localhost:8000/welcome-week-search.html";
         //update this
         var selectedLetter = jQuery('.page_letters .active').data('letter'); //left off here
         var searchURL = pageURL + '?query=' + jQuery('#query').val() + '&meta_t=' + jQuery('#query').val();
@@ -92,6 +105,7 @@ jQuery(document).ready(function() {
               }
               ajax = jQuery.get(searchURL, function(data) {
                   updatePageAndHistory(data, this.url, pushState);
+                  typeAhead();
                   //clearLastSearch();
                   //showMoreCoursesAjax();
               });
