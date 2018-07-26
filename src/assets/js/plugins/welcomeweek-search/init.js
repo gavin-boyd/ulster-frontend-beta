@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
   }
   clearLastSearch();*/
 
-  function typeAhead() {
+  /*function typeAhead() {
     var timer;
     var delay = 1000;
     jQuery('#query').bind('input', function() {
@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
         }, delay);
     })
   }
-  typeAhead();
+  typeAhead();*/
 
   function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -106,7 +106,7 @@ jQuery(document).ready(function() {
               }
               ajax = jQuery.get(searchURL, function(data) {
                   updatePageAndHistory(data, this.url, pushState);
-                  typeAhead();
+                  //typeAhead();
                   //clearLastSearch();
                   //showMoreCoursesAjax();
               });
