@@ -765,3 +765,23 @@ ul.ui-autocomplete
 		}
 	}
 }
+
+.svg-graphic-device
+{
+  position: relative;
+  overflow: hidden;
+
+  svg
+  {
+    min-width: 900px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .9;
+
+    path
+    {
+      fill: $c-purple !important;
+    }
+  }
+}
