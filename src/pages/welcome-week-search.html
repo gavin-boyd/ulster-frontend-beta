@@ -6,40 +6,46 @@ layout: welcomeweek
 
 <!--<div class="preloader-container"><div class="preloader"><span class="hide">Loading search results</span> <img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"></div></div>-->
 
-<div class="grid-container">
-  <hr>
-  <div class="grid-x grid-padding-x">
-    <div class="cell large-8" id="courses">
-      <div id="search">
-        <div class="grid-x grid-padding-x">
-          <div class="cell large-12">
-          <h2 class="h1 separator-left">Find your course</h2>
-          <p class="lead">Enter the name of the course you are studying at Ulster University</p>
-          <br>
-          <form method="GET" action="%globals_asset_url%" id="course-finder-new">
-            <input type="hidden" id="num_ranks" value="1000" />
-            <div class="input-group">
-              <!--<span class="input-group-label">What course are you studying?</span>-->
-              <input class="input-group-field h2" id="query" name="query" type="text" value="%globals_get_query%" placeholder="e.g. Computing, Art, History" autocomplete="off">
-              <div class="input-group-button">
-                <input type="submit" value="Search" class="button">
-              </div>
-            </div>
-          </form>
+<div id="courses">
+  <div id="search">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+      <div class="cell large-12">
+      <hr>
+      <h2 class="h1 separator-left">Find your course</h2>
+      <br>
+      <form method="GET" action="%globals_asset_url%" id="course-finder-new">
+        <input type="hidden" id="num_ranks" value="1000" />
+        <div class="input-group">
+          <!--<span class="input-group-label">What course are you studying?</span>-->
+          <input class="input-group-field h2" id="query" name="query" type="text" value="%globals_get_query%" placeholder="e.g. Computing, Art, History" autocomplete="off">
+          <div class="input-group-button">
+            <input type="submit" value="Search" class="button">
+          </div>
         </div>
-        </div>
-      </div>
-      {{> ww-courses}}
-    </div>
-    <div class="cell large-3 large-offset-1">
+      </form>
       <div class="off-white-bg shadow card-section radius brodered">
-        <h2 class="separator-left">Campus A-Z <br>course lists</h2>
-        <br>
-        <a href="%globals_asset_url:296079%" class="button large expanded hollow rounded">Belfast&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <a href="%globals_asset_url:296087%" class="button large expanded hollow rounded">Coleraine&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <a href="%globals_asset_url:296083%" class="button large expanded hollow rounded">Jordanstown&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <a href="%globals_asset_url:296091%" class="button large expanded hollow rounded">Magee&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        <h2>Can't find what you are looking for?</h2>
+        <p>Try the A-Z listings of all courses on the campus pages</p>
+        <div class="grid-x grid-padding-x">
+          <div class="cell large-3">
+            <a href="%globals_asset_url:296079%" class="button large expanded hollow rounded">Belfast&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="cell large-3">
+            <a href="%globals_asset_url:296087%" class="button large expanded hollow rounded">Coleraine&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="cell large-3">
+            <a href="%globals_asset_url:296083%" class="button large expanded hollow rounded">Jordanstown&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="cell large-3">
+            <a href="%globals_asset_url:296091%" class="button large expanded hollow rounded">Magee&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
     </div>
+    </div>
+  </div>
+  <div class="grid-container">
+  {{> ww-courses}}
   </div>
 </div>
