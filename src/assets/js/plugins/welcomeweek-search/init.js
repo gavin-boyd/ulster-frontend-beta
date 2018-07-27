@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
         //update this
         var selectedLetter = jQuery('.page_letters .active').data('letter'); //left off here
         //var searchURL = pageURL + '?query=' + jQuery('#query').val() + '&meta_t=' + jQuery('#query').val();
-        var searchURL = pageURL + '?query=t:' + jQuery('#query').val();
+        var searchURL = pageURL + '?query=' + jQuery('#query').val();
         jQuery('#course-finder-new #filters input:checkbox:checked, #course-finder-new #filters input:radio:checked').each(function() {
             // The input names are modified for Funnelback
             var name = jQuery(this).attr('name'),
