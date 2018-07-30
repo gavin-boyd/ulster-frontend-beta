@@ -1,7 +1,7 @@
 <MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>
 
 %globals_asset_contents_raw:256435%
-%globals_asset_contents_raw:258323%
+<MySource_AREA id_name="global_header" design_area="nest_content" print="yes" />
 <script runat="server">
   function ulsMenuLink(short_name, type) {
     var ulsLabel = short_name;
@@ -15,27 +15,28 @@
     }
   }
 </script>
-<MySource_AREA id_name="actions_menu" design_area="nest_content" print="no" />
 %globals_asset_contents_raw:292663%
 <MySource_AREA id_name="additional_content" design_area="nest_content" print="no" />
 <div class="grid-container">
-  <nav aria-label="You are here:" role="navigation">
-    <ul class="breadcrumbs">
-      <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
-        <MySource_SET name="levels_to_print" value="0" />
-        <MySource_SET name="start_at_level" value="0" />
-        <MySource_SET name="suffix_with_current_link" value="true" />
-        <MySource_ASSET>
-          <li><MySource_PRINT var="asset_short_name_linked" /></li>
-        </MySource_ASSET>
-        <MySource_DIVIDER></MySource_DIVIDER>
-      </MySource_AREA>
-    </ul>
-  </nav>
+  <div class="hide-for-small-only">
+    <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+        <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
+          <MySource_SET name="levels_to_print" value="0" />
+          <MySource_SET name="start_at_level" value="0" />
+          <MySource_SET name="suffix_with_current_link" value="true" />
+          <MySource_ASSET>
+            <li><MySource_PRINT var="asset_short_name_linked" /></li>
+          </MySource_ASSET>
+          <MySource_DIVIDER></MySource_DIVIDER>
+        </MySource_AREA>
+      </ul>
+    </nav>
+  </div>
   <div class="grid-x grid-padding-x grid-padding-y">
     <div class="cell large-3 small-order-2">
       <div class="radius bordered shadow card">
-        <ul class="uls-side vertical menu">
+        <ul class="uls-side vertical menu" id="section-nav">
           <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
             <MySource_SET name="levels_to_print" value="1" />
             <MySource_SET name="start_at_level" value="1" />
@@ -114,5 +115,6 @@
     <MySource_AREA id_name="body" design_area="body" />
   </div>
 </div>
+<MySource_AREA id_name="actions_menu" design_area="nest_content" print="no" />
 %globals_asset_contents_raw:256526%
 %globals_asset_contents_raw:256455%
