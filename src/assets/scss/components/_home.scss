@@ -56,7 +56,6 @@ $animated-gradient-seconds: 15s;
     opacity:1;
     background: linear-gradient(270deg, rgba($corp-navy, .1), rgba($corp-navy,.4));
     background-size: 400% 400%;
-
     -webkit-animation: AnimationName $animated-gradient-seconds ease infinite;
     -moz-animation: AnimationName $animated-gradient-seconds ease infinite;
     animation: AnimationName $animated-gradient-seconds ease infinite;
