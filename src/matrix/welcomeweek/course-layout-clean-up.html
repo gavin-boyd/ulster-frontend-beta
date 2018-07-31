@@ -1,0 +1,67 @@
+<div class="angled-white-section">
+  <br>
+  <br>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-12 large-12" id="section-events" data-magellan-target="section-events">
+        <h2 class="h1 separator-left"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Your induction sessions</h2>
+      </div>
+      <div class="cell large-8">
+        <p>You must bring photo identification and original certificates of ALL qualifications stated on your application (including GCSEs) with you to your Admissions Check-in session.</p>
+      </div>
+      <div class="cell medium-4 large-4">
+        <a href="#" class="button large primary hollow rounded expanded" data-toggle="reveal-bringchecklist"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;What to bring checklist</a>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x grid-margin-y">
+      <div class="cell large-12">
+        <br>
+        %begin_globals_asset_metadata_Welcome.Week.Induction.Campus_value^eq:Magee%
+          <div class="callout primary radius">
+            <p>
+              <i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;Please note, you are only required to attend one Welcome Event.
+            </p>
+          </div>
+        %end_globals_asset_metadata_Welcome.Week.Induction.Campus_value^eq:Magee%
+        <table class="stack unstriped">
+          <thead>
+            <tr class="navy-bg white-text">
+              <th class="h3">Event</th>
+              <th class="h3">Date</th>
+              <th class="h3">Time</th>
+              <th class="h3">Location</th>
+              <th class="h3">More info</th>
+            </tr>
+          </thead>
+          <tbody>
+            %begin_globals_asset_metadata_Welcome.Week.Induction.Campus_value^eq:Belfast%
+                %globals_asset_contents_raw:301458%
+                %else_begin_globals_asset_metadata_Welcome.Week.Induction.Campus_value^eq:Jordanstown%
+                %globals_asset_contents_raw:301466%
+                %else_begin_globals_asset_metadata_Welcome.Week.Induction.Campus_value^eq:Coleraine%
+                %globals_asset_contents_raw:301462%
+                %else_asset%
+                %globals_asset_contents_raw:301470%
+            %end_asset%
+            <tr>
+                <td><span data-th="Event"></span>Course Induction</td>
+                <td><span data-th="Date"></span>%asset_metadata_Welcome.Week.Induction.Date.Time^date_format:l j F%</td>
+                <td><span data-th="Time"></span>%asset_metadata_Welcome.Week.Induction.Date.Time^date_format:g.i a%</td>
+                <td><span data-th="Location"></span>%asset_metadata_Welcome.Week.Induction.Location%</td>
+                <td><span data-th="More info"></span><a href="#" class="button primary expanded hollow rounded" data-toggle="reveal-whyattendcourse"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;Why attend</a></td>
+            </tr>
+            <tr>
+                <td><span data-th="Event"></span>Admissions check-in</td>
+                <td><span data-th="Date"></span>%asset_metadata_Welcome.Week.Induction.Admissions.Date.Time^date_format:l j F Y%</td>
+                <td><span data-th="Time"></span>%asset_metadata_Welcome.Week.Induction.Admissions.Date.Time^date_format:g.i a%</td>
+                <td><span data-th="Location"></span>%asset_metadata_Welcome.Week.Induction.Admissions.Location%</td>
+                <td><span data-th="More info"></span><a  href="#" class="button primary expanded hollow rounded" data-toggle="reveal-whyattendcheckin"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;Why attend</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

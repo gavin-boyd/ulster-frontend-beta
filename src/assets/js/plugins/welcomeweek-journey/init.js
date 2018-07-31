@@ -122,6 +122,13 @@ jQuery(document).ready(function() {
      */
     var id = getParam('u');
 
+    jQuery('.reslife').each(function() {
+      jQuery(this).hide();
+    });
+    jQuery('.international').each(function() {
+      jQuery(this).hide();
+    });
+
     //set cookies
     if (id !== null || id !== '') {
       //set user cookie
