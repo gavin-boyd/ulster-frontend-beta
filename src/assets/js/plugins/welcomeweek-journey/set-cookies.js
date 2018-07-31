@@ -81,7 +81,7 @@ jQuery(document).ready(function() {
         });
       });
       //set course cookie
-      if (jQuery('#course-id').length !== -1) {
+      if (jQuery('#course-id').length > 0) {
         var courseUrl = jQuery('#course-id').data('url');
         welcomeWeekCourseCookie(courseUrl);
       }
