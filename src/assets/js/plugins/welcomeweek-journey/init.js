@@ -141,7 +141,8 @@ jQuery(document).ready(function() {
           if (jQuery.cookie('uls_welcome_week_u')) {
             welcomeWeekUserActions(jQuery.cookie('uls_welcome_week_u'));
           } else {
-            welcomeWeekUserActions([id, fname, sname, reslife, international]);
+            var values_array = [id, fname, sname, reslife, international];
+            welcomeWeekUserActions(values_array);
           }
         });
       });
