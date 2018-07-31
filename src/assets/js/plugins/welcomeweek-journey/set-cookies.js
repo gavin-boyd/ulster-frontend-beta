@@ -77,7 +77,11 @@ jQuery(document).ready(function() {
           var sname = key.sname;
           var reslife = key.reslife;
           var international = key.international;
-          welcomeWeekPersonCookie(id, fname, sname, reslife, international);
+          if (jQuery.cookie('uls_welcome_week_u')) {
+            welcomeWeekUserActions(jQuery.cookie('uls_welcome_week_u'));
+          } else {
+            welcomeWeekUserActions([id, fname, sname, reslife, international]);
+          }
         });
       });
       //set course cookie
