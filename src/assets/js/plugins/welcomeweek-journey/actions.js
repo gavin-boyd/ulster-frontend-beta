@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
         });
       }
 
-      if (reslife == 0) {
+      if (reslife == 1) {
         //debug
         console.log('hide for reslife');
 
