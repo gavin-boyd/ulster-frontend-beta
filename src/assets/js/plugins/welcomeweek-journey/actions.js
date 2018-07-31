@@ -33,12 +33,29 @@ jQuery(document).ready(function() {
         });
       }
 
+      if (reslife == 0) {
+        //debug
+        console.log('hide for reslife');
+
+        jQuery('.reslife').each(function() {
+          jQuery(this).show();
+        });
+
+        jQuery('.reslife-hidden').each(function() {
+          jQuery(this).hide();
+        });
+      }
+
       if (international == 1) {
         //debug
         console.log('show international events');
 
         jQuery('.international').each(function() {
           jQuery(this).show();
+        });
+
+        jQuery('.international-hidden').each(function() {
+          jQuery(this).hide();
         });
       }
     }
