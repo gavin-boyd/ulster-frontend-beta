@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
     //set cookies
     if (id !== null || id !== '') {
       //set user cookie
-      jQuery.getJSON('http://dct.ulster.ac.uk/welcomeweek/feeds/test.json', function(result) {
+      jQuery.getJSON('https://www.ulster.ac.uk/welcomeweek/_web_services/user', function(result) {
         var user = result.filter(function(item) {
           return item.id == id;
         });
