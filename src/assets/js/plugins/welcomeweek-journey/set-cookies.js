@@ -14,11 +14,11 @@ function welcomeWeekPersonCookie(personid, fname, sname, reslife, international)
   var cookie = jQuery.cookie('uls_welcome_week_u');
   var setCookieExpiry = 800;
   //Live
-  //var setCookieDomain = 'ulster.ac.uk';
-  //var setCookiePath = '/';
+  var setCookieDomain = 'ulster.ac.uk';
+  var setCookiePath = '/';
   //Test
-  var setCookieDomain = 'localhost';
-  var setCookiePath = '';
+  //var setCookieDomain = 'localhost';
+  //var setCookiePath = '';
   if (cookie) {
     //update cookie
     jQuery.removeCookie('uls_welcome_week_u', {
@@ -37,11 +37,11 @@ function welcomeWeekCourseCookie(url) {
   var cookie = jQuery.cookie('uls_welcome_week_c');
   var setCookieExpiry = 800;
   //Live
-  //var setCookieDomain = 'ulster.ac.uk';
-  //var setCookiePath = '/';
+  var setCookieDomain = 'ulster.ac.uk';
+  var setCookiePath = '/';
   //Test
-  var setCookieDomain = 'localhost';
-  var setCookiePath = '';
+  //var setCookieDomain = 'localhost';
+  //var setCookiePath = '';
   if (cookie) {
     //update cookie
     jQuery.removeCookie('uls_welcome_week_c', {
