@@ -144,12 +144,10 @@ jQuery(document).ready(function() {
           var international = key.international;
           welcomeWeekPersonCookie(id, fname, sname, reslife, international);
           if (jQuery.cookie('uls_welcome_week_u')) {
-            console.log('user cookie is present');
             var cookie = jQuery.cookie('uls_welcome_week_u');
             cookie = cookie.split(',');
             welcomeWeekUserActions(cookie);
           } else {
-            console.log('user cookie not found');
             var values_array = [id, fname, sname, reslife, international];
             welcomeWeekUserActions(values_array);
           }
@@ -160,6 +158,14 @@ jQuery(document).ready(function() {
         var courseUrl = jQuery('#course-id').data('url');
         welcomeWeekCourseCookie(courseUrl);
       }
+    }
+
+    //debug
+    if (jQuery.cookie('uls_welcome_week_u')) {
+      console.log('user cookie is present');
+      console.log(jQuery.cookie('uls_welcome_week_u'));
+    } else {
+      console.log('user cookie not found');
     }
   })();
 
