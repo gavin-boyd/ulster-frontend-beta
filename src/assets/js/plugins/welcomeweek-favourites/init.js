@@ -114,7 +114,7 @@ jQuery.fn.extend({
                 }
                 return false;
             });
-            favouriteBtn.css('display', 'block');
+            //favouriteBtn.css('display', 'block');
         });
 
         //re-select favourites
