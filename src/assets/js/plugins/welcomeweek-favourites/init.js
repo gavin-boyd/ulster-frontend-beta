@@ -25,7 +25,7 @@ jQuery.fn.extend({
             } else {
                 var eventsArray = [];
             }
-            jQuery('a.selected').each(function() {
+            jQuery('a.alert').each(function() {
                 var id = jQuery(this).data('id');
                 id = parseInt(id);
                 eventsArray.push(id);
@@ -77,8 +77,8 @@ jQuery.fn.extend({
                 var setCookiePath = ww_setCookiePath;
                 var favCookie = jQuery.cookie('uls_welcome_week_f');
                 var assetID = jQuery(this).data('id');
-                if (jQuery(this).hasClass('selected')) {
-                    jQuery(this).removeClass('selected');
+                if (jQuery(this).hasClass('alert')) {
+                    jQuery(this).removeClass('alert');
                     var favCookie = jQuery.cookie('uls_welcome_week_f');
                     var eventsArray = favCookie.split(',');
                     for (var i = 0; i < eventsArray.length; i++) {
@@ -109,7 +109,7 @@ jQuery.fn.extend({
                     jQuery(inputID).attr('value', '');
                     jQuery(inputID).attr('value', inputContent);*/
                 } else {
-                    jQuery(this).addClass('selected');
+                    jQuery(this).addClass('alert');
                     favourites();
                 }
                 return false;
@@ -125,7 +125,7 @@ jQuery.fn.extend({
             jQuery('.fav-count').text('(' + count + ')');
             jQuery.each(favouritesArray, function(i, val) {
                 var id = val;
-                jQuery('*[data-id="' + id + '"]').addClass('selected');
+                jQuery('*[data-id="' + id + '"]').addClass('alert');
             });
         }
 
