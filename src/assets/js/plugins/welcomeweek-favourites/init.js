@@ -113,9 +113,13 @@ jQuery.fn.extend({
                     });
                     jQuery(inputID).attr('value', '');
                     jQuery(inputID).attr('value', inputContent);*/
+                    //debug
+                    console.log('######remove fav');
                 } else {
                     jQuery(this).addClass('alert');
                     favourites();
+                    //debug
+                    console.log('######add fav');
                 }
                 //debug
                 console.log('Clicked favourite');
