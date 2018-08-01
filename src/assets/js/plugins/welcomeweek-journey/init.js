@@ -164,7 +164,7 @@ jQuery(document).ready(function() {
 
     //if course cookie is present the display button
     if (jQuery.cookie('uls_welcome_week_c')) {
-      jQuery('#app-toolbar-options').append('<div class="cell large-6" id="back-to-course"><a href="' + jQuery.cookie('uls_welcome_week_c') + '" class="button large expanded rounded hollow no-margin-bottom"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;View my course</a></div>');
+      jQuery('#app-toolbar-options').append('<a href="' + jQuery.cookie('uls_welcome_week_c') + '" class="button large expanded rounded no-margin-bottom shadow" id="back-to-course"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;View my course</a>');
 
       //debug
       console.log('show course button');
