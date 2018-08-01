@@ -21,7 +21,7 @@ jQuery.fn.extend({
                     eventsArray[i] = parseInt(eventsArray[i]);
                 }
                 //debug
-                console.log(eventsArray);
+                //console.log(eventsArray);
             } else {
                 var eventsArray = [];
             }
@@ -69,9 +69,6 @@ jQuery.fn.extend({
             var favouriteBtn = jQuery(this).find('a.ww_event_fav_btn');
             favouriteBtn.click(function(e) {
                 e.preventDefault();
-                //debug
-                console.log('Clicked favourite');
-
                 var setCookieExpiry = ww_setCookieExpiry;
                 var setCookieDomain = ww_setCookieDomain;
                 var setCookiePath = ww_setCookiePath;
@@ -82,9 +79,17 @@ jQuery.fn.extend({
                     var favCookie = jQuery.cookie('uls_welcome_week_f');
                     var eventsArray = favCookie.split(',');
                     for (var i = 0; i < eventsArray.length; i++) {
-                        eventsArray[i] = parseInt(eventsArray[i]);
+                      eventsArray[i] = parseInt(eventsArray[i]);
                     }
-                    eventsArray.pop();
+                    //eventsArray.pop();
+                    //either add or remove the assetid to array
+                    if(jQuery.inArray(assetID, eventsArray) !== -1) {
+                      //debug
+                      console.log('#######in array - FIND AND remove ' + assetID);
+                      eventsArray = jQuery.grep(eventsArray, function(value) {
+                        return value != assetID;
+                      });
+                    }
                     jQuery.removeCookie('uls_welcome_week_f', {
                         path: setCookiePath
                     });
@@ -112,6 +117,9 @@ jQuery.fn.extend({
                     jQuery(this).addClass('alert');
                     favourites();
                 }
+                //debug
+                console.log('Clicked favourite');
+                console.log(jQuery.cookie('uls_welcome_week_f'));
                 return false;
             });
             //favouriteBtn.css('display', 'block');
@@ -148,5 +156,7 @@ jQuery.fn.extend({
 
 //init
 jQuery(document).ready(function() {
-    jQuery('.ww_events').ulsterFavourites();
+  jQuery('.ww_events').ulsterFavourites();
+  //debug
+  console.log(jQuery.cookie('uls_welcome_week_f'));
 });
