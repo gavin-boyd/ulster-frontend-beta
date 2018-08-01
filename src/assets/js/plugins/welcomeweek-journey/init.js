@@ -128,9 +128,6 @@ jQuery(document).ready(function() {
       jQuery(this).hide();
     });
 
-    //on load hide the toolbar by default
-    jQuery('#app-toolbar').hide();
-
     //onload hide all reslife and international by default
     jQuery('.reslife').each(function() {
       jQuery(this).hide();
@@ -168,7 +165,7 @@ jQuery(document).ready(function() {
     //if course cookie is present the display button
     if (jQuery.cookie('uls_welcome_week_c')) {
       jQuery('#app-toolbar-options').append('<div class="cell large-6" id="back-to-course"><a href="' + jQuery.cookie('uls_welcome_week_c') + '" class="button large expanded rounded hollow no-margin-bottom"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;View my course</a></div>');
-      jQuery('#app-toolbar').show();
+
       //debug
       console.log('show course button');
       console.log('show toolbar');
