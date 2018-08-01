@@ -62,8 +62,10 @@ jQuery.fn.extend({
             jQuery(inputID).attr('value', '');
             jQuery(inputID).attr('value', inputContent);*/
         }
-        favourites();
 
+        if (jQuery('.ww_events').length > 0) {
+          favourites();
+        }
         //favourite button actions
         jQuery(this).find('.ww_event').each(function(e) {
             var favouriteBtn = jQuery(this).find('a.ww_event_fav_btn');
@@ -160,7 +162,9 @@ jQuery.fn.extend({
 
 //init
 jQuery(document).ready(function() {
-  jQuery('.ww_events').ulsterFavourites();
+  if (jQuery('.ww_events').length > 0) {
+    jQuery('.ww_events').ulsterFavourites();
+  }
   //debug
   console.log(jQuery.cookie('uls_welcome_week_f'));
 });
