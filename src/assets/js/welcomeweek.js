@@ -43,3 +43,4 @@ require('./plugins/welcomeweek-search/jquery-ui');
 require('./plugins/welcomeweek-search/funnelback-completion');
 require('./plugins/welcomeweek-search/funnelback-completion-init');
 require('./plugins/welcomeweek-journey/init');
+require('./plugins/welcomeweek-favourites/init');
