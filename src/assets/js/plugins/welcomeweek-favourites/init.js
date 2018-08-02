@@ -25,7 +25,7 @@ jQuery.fn.extend({
             } else {
                 var eventsArray = [];
             }
-            jQuery('a.ww_event_fav_btn').each(function() {
+            jQuery('a.ww_event_fav_btn.alert').each(function() {
                 var id = jQuery(this).data('id');
                 id = parseInt(id);
                 eventsArray.push(id);

@@ -1,8 +1,8 @@
 const ww_setCookieExpiry = 800;
 //Live
-////const ww_setCookieDomain = 'ulster.ac.uk';
-////const ww_setCookiePath = '/';
-////const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/user';
+const ww_setCookieDomain = 'ulster.ac.uk';
+const ww_setCookiePath = '/';
+const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/user';
 //Test
 ////const ww_setCookieDomain = 'localhost';
 ////const ww_setCookiePath = '';
