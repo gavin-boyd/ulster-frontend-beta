@@ -8,12 +8,36 @@ const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/user';
 ////const ww_setCookiePath = '';
 ////const ww_api = 'http://dct.ulster.ac.uk/welcomeweek/feeds/test.json';
 
+function hideEmptyEventRows() {
+  //debug
+  console.log('hideEmptyEventRows');
+  jQuery('.ww_events > .grid-x > .cell').each(function() {
+    //debug
+    console.log('Found a row!');
+    var checkArray = [];
+    jQuery(this).find('.ww_event').each(function() {
+      if (jQuery(this).parent('div').is(':hidden')) {
+        checkArray.push(1);
+      } else {
+        checkArray.push(0);
+      }
+    });
+    if (jQuery.inArray(0, checkArray) == -1) {
+      jQuery(this).hide();
+      //debug
+      console.log('Found a row with all events are hidden, so hide this row!');
+    }
+    //debug
+    console.log('Check Array: ' + checkArray);
+  });
+}
+
 function welcomeWeekUserActions(user_cookie) {
   //events logic
 
   //debug
-  jQuery('#debug-user h1 span').text(jQuery.cookie('uls_welcome_week_u'));
-  jQuery('#debug-course h1 span').text(jQuery.cookie('uls_welcome_week_c'));
+  //jQuery('#debug-user h1 span').text(jQuery.cookie('uls_welcome_week_u'));
+  //jQuery('#debug-course h1 span').text(jQuery.cookie('uls_welcome_week_c'));
 
   //cookie varsfor user
   var u_cookie = user_cookie;
@@ -191,6 +215,8 @@ jQuery(document).ready(function() {
     } else {
       console.log('user cookie not found');
     }
+
+    hideEmptyEventRows();
   })();
 
 });
