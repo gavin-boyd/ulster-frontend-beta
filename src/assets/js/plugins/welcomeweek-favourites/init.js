@@ -1,12 +1,12 @@
 const ww_setCookieExpiry = 800;
 //Live
-const ww_setCookieDomain = 'ulster.ac.uk';
-const ww_setCookiePath = '/';
-const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/user';
+////const ww_setCookieDomain = 'ulster.ac.uk';
+////const ww_setCookiePath = '/';
+////const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/user';
 //Test
-////const ww_setCookieDomain = 'localhost';
-////const ww_setCookiePath = '';
-////const ww_api = 'http://dct.ulster.ac.uk/welcomeweek/feeds/test.json';
+const ww_setCookieDomain = 'localhost';
+const ww_setCookiePath = '';
+const ww_api = 'http://dct.ulster.ac.uk/welcomeweek/feeds/test.json';
 
 jQuery.fn.extend({
     ulsterFavourites: function() {
@@ -21,7 +21,7 @@ jQuery.fn.extend({
                     eventsArray[i] = parseInt(eventsArray[i]);
                 }
                 //debug
-                //console.log(eventsArray);
+                console.log(eventsArray);
             } else {
                 var eventsArray = [];
             }
@@ -39,11 +39,13 @@ jQuery.fn.extend({
             //if cookie already exists reset it
             //reset cookie
             if (favCookie) {
-                jQuery.removeCookie('uls_welcome_week_f', {
-                    path: setCookiePath
-                });
+              jQuery.removeCookie('uls_welcome_week_f', {
+                  path: setCookiePath
+              });
             }
             //set cookie
+            //debug
+            console.log('uniqueEventsArray: ' + uniqueEventsArray);
             jQuery.cookie.raw = true;
             jQuery.cookie('uls_welcome_week_f', uniqueEventsArray, {
                 expires: setCookieExpiry,
