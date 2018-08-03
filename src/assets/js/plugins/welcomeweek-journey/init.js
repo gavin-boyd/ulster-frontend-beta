@@ -87,8 +87,6 @@ function welcomeWeekUserActions(user_cookie) {
         jQuery(this).hide();
       });
     }
-
-    hideEmptyEventRows();
   }
 }
 
@@ -184,6 +182,7 @@ jQuery(document).ready(function() {
             var values_array = [id, fname, sname, reslife, international];
             welcomeWeekUserActions(values_array);
           }
+          hideEmptyEventRows();
         });
       });
     }
