@@ -87,6 +87,8 @@ function welcomeWeekUserActions(user_cookie) {
         jQuery(this).hide();
       });
     }
+
+    hideEmptyEventRows();
   }
 }
 
