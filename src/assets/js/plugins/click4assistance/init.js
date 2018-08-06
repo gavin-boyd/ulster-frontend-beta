@@ -36,12 +36,12 @@ jQuery(document).ready(function() {
             }
             currentURL = currentURL.replace('/_recache', '');
             currentURL = currentURL.replace('/_nocache', '');
-            if (url == currentURL) {
+            if (url.indexOf(currentURL)) {
                 //debug
-                /*console.log('init script');
+                console.log('init script');
                 console.log(url);
                 console.log(guid);
-                console.log(wfguid);*/
+                console.log(wfguid);
                 //click4assistance code init
                 C4AWJSLoaded(guid, wfguid);
 

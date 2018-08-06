@@ -30,7 +30,7 @@ PATHS:
     - "node_modules/font-awesome/scss/font-awesome"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
-    - "src/assets/js/app.js"
+    #- "src/assets/js/app.js"
     - "src/assets/js/legacy-app.js"
     - "src/assets/js/myprospectus.js"
     - "src/assets/js/welcomeweek.js"
