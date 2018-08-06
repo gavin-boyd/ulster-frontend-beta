@@ -1,0 +1,14 @@
+ul.accordion
+{
+  margin-top: 20px;
+  
+  > li
+  {
+    padding-left: 0;
+
+    &::before
+    {
+      display: none;
+    }
+  }
+}
