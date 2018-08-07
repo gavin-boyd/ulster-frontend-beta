@@ -35,7 +35,7 @@ $colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
 {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 60px;
 
   @include breakpoint(small only)
   {
@@ -53,19 +53,15 @@ $colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
     {
       @include transition-all();
 
-      > div
-      {
-        height: 100%;
-      }
     }
+  }
 
-    &.pull-up
-    {
-      position: relative;
-      //top: -100px;
-      display: block;
-      padding-top:20px;
-    }
+  .pull-up
+  {
+    position: relative;
+    top: -160px;
+    display: block;
+    padding-top:20px;
   }
 
   .column
@@ -85,33 +81,46 @@ $colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
   }
 }
 
-.primary-links.is-stuck .white-bg
+.primary-links
 {
-    background:none;
-}
-.primary-links.is-stuck a.button
-{
-    display:none;
-}
-.primary-links.is-stuck .white-text
-{
-    height:auto !important;
-    min-height:60px;
-}
-.primary-links.is-stuck .white-text br
-{
-    display:none;
-}
-.primary-links .cover-background
-{
-    overflow:hidden;
-}
-.primary-links.is-stuck .cover-background
-{
-    background-image:none !important;
-    background-color:#333;
-}
-.primary-links .column-block .cover-background
-{
+  .cover-background
+  {
+    overflow: hidden;
     margin:5px;
+  }
+
+  &.is-stuck
+  {
+    .pull-up
+    {
+      top: auto;
+    }
+
+    .white-bg
+    {
+      background: none;
+    }
+
+    a.button
+    {
+      display:none;
+    }
+
+    .white-text
+    {
+      height:auto !important;
+      min-height:60px;
+
+      br
+      {
+        display: none;
+      }
+    }
+
+    .cover-background
+    {
+      background-image:none !important;
+      background-color:#333;
+    }
+  }
 }
