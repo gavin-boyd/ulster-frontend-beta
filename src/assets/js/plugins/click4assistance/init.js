@@ -44,12 +44,14 @@ jQuery(document).ready(function() {
             }
             currentURL = currentURL.replace('/_recache', '');
             currentURL = currentURL.replace('/_nocache', '');
+            console.log(url);
+            console.log(currentURL);
             if (url.indexOf(currentURL) !== -1) {
                 //debug
-                console.log('init script');
-                console.log(url);
-                console.log(guid);
-                console.log(wfguid);
+                //console.log('init script');
+                //console.log(url);
+                //console.log(guid);
+                //console.log(wfguid);
                 //click4assistance code init
                 C4AWJSLoaded(guid, wfguid);
 
