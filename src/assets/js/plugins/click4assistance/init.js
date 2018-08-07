@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
             }
             currentURL = currentURL.replace('/_recache', '');
             currentURL = currentURL.replace('/_nocache', '');
-            if (url == currentURL) {
+            if (url.indexOf(currentURL)) {
                 //debug
                 /*console.log('init script');
                 console.log(url);
