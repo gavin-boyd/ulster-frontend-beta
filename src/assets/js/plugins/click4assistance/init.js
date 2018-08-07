@@ -37,6 +37,15 @@ jQuery(document).ready(function() {
             currentURL = currentURL.replace('/_recache', '');
             currentURL = currentURL.replace('/_nocache', '');
             if (url.indexOf(currentURL)) {
+                var head = document.getElementsByTagName('head')[0];
+                var srcC4AW = document.createElement('script');
+                srcC4AW.type = 'text/javascript';
+                srcC4AW.charset = 'utf-8';
+                srcC4AW.id = 'srcC4AWidget'; 
+                srcC4AW.defer = true;
+                srcC4AW.async = true;
+                srcC4AW.src = 'https://prod3si.click4assistance.co.uk/JS/ChatWidget.js';
+                if (head) {head.appendChild(srcC4AW);}
                 //debug
                 /*console.log('init script');
                 console.log(url);
