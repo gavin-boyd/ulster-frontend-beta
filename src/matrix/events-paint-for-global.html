@@ -1,0 +1,428 @@
+<div class="cover-background" style="background-image:url('%globals_asset_thumbnail_url%');">
+  <br class="hide-for-small-only">
+  <br class="hide-for-small-only">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell medium-12 large-6">
+        <div class="white-text bg-navy-trans-accent">
+          <div class="pad-60">
+            %begin_instance_end_date^lte_date:globals_date%
+            <div class="callout radius">
+              <p>This event has ended</p>
+            </div>
+            %end_instance_end_date^lte_date:globals_date%
+            <h1 class="h2 separator-left">%asset_name%</h1>
+            <div class="colour-navy-accent">
+              <div class="grid-x">
+                <!-- Date -->
+                <div class="cell small-12 medium-3 large-3">
+                  <p>Date:</p>
+                </div>
+                <div class="cell small-12 medium-9 large-9">
+                  <time datetime="%event_start_datetime_Y-m-d%" itemprop="startDate">%event_start_datetime_j% %event_start_datetime_F% %event_start_datetime_Y%</time>
+                  %begin_diff_dates%
+                    to <time datetime="%event_end_datetime_Y-m-d%" itemprop="endDate">%event_end_datetime_j% %event_end_datetime_F% %event_end_datetime_Y%</time>
+                  %end_diff_dates%
+                </div>
+                <!-- Date -->
+                <!-- Time -->
+                %begin_event_start_time_24h%
+                  %begin_asset_assetid^eq:60258%
+                  %else_asset_assetid^eq:60258%
+                    <div class="cell small-12 medium-3 large-3">
+                      <p>Time:</p>
+                    </div>
+                    <div class="cell small-12 medium-9 large-9">
+                      <p>
+                        %event_start_time_24h%
+                        %begin_event_end_time_24h%
+                          to %event_end_time_24h%
+                        %end_event_end_time_24h%
+                      </p>
+                    </div>
+                  %end_asset_assetid^eq:60258%
+                %end_event_start_time_24h%
+                <!-- Time -->
+                <!-- Location -->
+                  %begin_asset_metadata_Event.Campus%
+                    <div class="cell small-12 medium-3 large-3">
+                      <p>Location:</p>
+                    </div>
+                    <div class="cell small-12 medium-9 large-9" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                      %begin_asset_metadata_Event.Campus_value^eq:Off campus%
+                        <!-- Off campus -->
+                        %begin_asset_metadata_Event.Custom.Location%
+                          <p itemprop="name">%asset_metadata_Event.Custom.Location%</p>
+                        %else_asset_metadata_Event.Custom.Location%
+                          <p itemprop="name">Off campus</p>
+                        %end_asset_metadata_Event.Custom.Location%
+                        <!-- Off campus -->
+                      %else_asset_metadata_Event.Campus_value^eq:Off campus%
+                        <!-- On Campus -->
+                        %begin_asset_metadata_Event.Campus_value^eq:Coleraine%
+                          <p><a href="./?a=256371"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <meta itemprop="streetAddress" content="Cromore Rd"/>
+                            <meta itemprop="addressRegion" content="Coleraine"/>
+                            <meta itemprop="postalCode" content="BT52 1SA"/>
+                          </div>
+                        %else_begin_asset_metadata_Event.Campus_value^eq:Jordanstown%
+                          <p><a href="./?a=256375"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <meta itemprop="streetAddress" content="Shore Rd"/>
+                            <meta itemprop="addressRegion" content="Newtownabbey"/>
+                            <meta itemprop="postalCode" content="BT37 0QB"/>
+                          </div>
+                        %else_begin_asset_metadata_Event.Campus_value^eq:Belfast%
+                          <p><a href="./?a=256367"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <meta itemprop="streetAddress" content="25-51 York St"/>
+                            <meta itemprop="addressRegion" content="Belfast"/>
+                            <meta itemprop="postalCode" content="BT15 1ED"/>
+                          </div>
+                        %else_begin_asset_metadata_Event.Campus_value^eq:Magee%
+                          <p><a href="./?a=256379"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <meta itemprop="streetAddress" content="Northland Rd"/>
+                            <meta itemprop="addressRegion" content="Londonderry"/>
+                            <meta itemprop="postalCode" content="BT48 7JL"/>
+                          </div>
+                        %end_asset_metadata_Event.Campus_value^eq:Magee%
+                        %begin_asset_metadata_Event.Room.Number%
+                          <p>%asset_metadata_Event.Room.Number%></p>
+                        %end_asset_metadata_Event.Room.Number%
+                        <!-- On Campus -->
+                      %end_asset_metadata_Event.Campus_value^eq:Off campus%
+                    </div>
+                  %end_asset_metadata_Event.Campus%
+                <!-- Location -->
+                <!-- Organiser -->
+                %begin_asset_metadata_Event.Organiser%
+                  <div class="cell small-12 medium-3 large-3">
+                    <p>Organiser:</p>
+                  </div>
+                  <div class="cell small-12 medium-9 large-9">
+                    <p>%asset_metadata_Event.Organiser%</p>
+                  </div>
+                %end_asset_metadata_Event.Organiser%
+                <!-- Organiser -->
+                <!-- Contact -->
+                %begin_contact%
+                  <div class="cell small-12 medium-3 large-3">
+                    <p>Contact:</p>
+                  </div>
+                  <div class="cell small-12 medium-9 large-9">
+                    <p>%asset_metadata_Event.ContactPhone%%asset_metadata_Event.ContactPhone^replace_keywords:notempty:{asset_metadata_Event.ContactEmail}^notempty:<br />%<a href="mailto:%asset_metadata_Event.ContactEmail%">%asset_metadata_Event.ContactEmail%</a></p>
+                  </div>
+                %end_contact%
+                <!-- Contact -->
+                <!-- Register CTA -->
+                %begin_asset_metadata_Event.Show.Embed.Code^neq:y%
+                  %begin_asset_metadata_Event.ShowRegisterButton_value^eq:Yes%
+                    %begin_asset_metadata_Event.RegisterURL%
+                      %begin_asset_metadata_Event.RegisterButtonText%
+                        <div class="cell small-12 medium-12 large-12">
+                          <hr>
+                          <p><a href="%asset_metadata_Event.RegisterURL^preg_match:6980:://^replace:1:%%asset_metadata_Event.RegisterURL%" class="button rounded shadow expanded">%asset_metadata_Event.RegisterButtonText%</a></p>
+                        </div>
+                      %else_asset%
+                        <div class="cell small-12 medium-12 large-12">
+                          <hr>
+                          <p><a href="%asset_metadata_Event.RegisterURL^preg_match:6980:://^replace:1:%%asset_metadata_Event.RegisterURL%" class="button rounded shadow expanded">Register</a></p>
+                        </div>
+                      %end_asset%
+                     %else_asset_metadata_Event.RegisterURL%
+                       <div class="cell small-12 medium-12 large-12">
+                         <hr>
+                         <p><a href="mailto:%asset_metadata_Event.ContactEmail%?subject=Register for %asset_name% event" class="button rounded shadow expanded">Register via email</a></p>
+                       </div>
+                     %end_asset_metadata_Event.RegisterURL%
+                   %end_asset_metadata_Event.ShowRegisterButton_value^eq:Yes%
+                 %end_asset_metadata_Event.Show.Embed.Code^neq:y%
+                 %begin_asset_metadata_Event.Show.Embed.Code^eq:y%
+                   <div class="cell small-12 medium-12 large-12">
+                     <hr>
+                     <p><a href="#register" class="button rounded shadow expanded" data-smooth-scroll>%asset_metadata_Event.Embed.Anchor.Button.Text^eq::Register:{asset_metadata_Event.Embed.Anchor.Button.Text}%</a></p>
+                   </div>
+                 %end_asset_metadata_Event.Show.Embed.Code^eq:y%
+                <!-- Register CTA -->
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="angled-white-section hide-for-small-only">&nbsp;</div>
+
+
+
+
+
+<div class="grid-container full">
+  <div class="grid-x">
+    <div class="cell small-12 medium-6 large-6">
+      <div class="bg-navy-accent white-text">
+        <div class="pad-60">
+          %begin_instance_end_date^lte_date:globals_date%
+          <div class="callout radius">
+            <p>This event has ended</p>
+          </div>
+          %end_instance_end_date^lte_date:globals_date%
+          <h1 class="h2 separator-left">%asset_name%</h1>
+          <div class="colour-navy-accent">
+            <div class="grid-x">
+              <!-- Date -->
+              <div class="cell small-12 medium-3 large-3">
+                <p>Date:</p>
+              </div>
+              <div class="cell small-12 medium-9 large-9">
+                <time datetime="%event_start_datetime_Y-m-d%" itemprop="startDate">%event_start_datetime_j% %event_start_datetime_F% %event_start_datetime_Y%</time>
+                %begin_diff_dates%
+                  to <time datetime="%event_end_datetime_Y-m-d%" itemprop="endDate">%event_end_datetime_j% %event_end_datetime_F% %event_end_datetime_Y%</time>
+                %end_diff_dates%
+              </div>
+              <!-- Date -->
+              <!-- Time -->
+              %begin_event_start_time_24h%
+                %begin_asset_assetid^eq:60258%
+                %else_asset_assetid^eq:60258%
+                  <div class="cell small-12 medium-3 large-3">
+                    <p>Time:</p>
+                  </div>
+                  <div class="cell small-12 medium-9 large-9">
+                    <p>
+                      %event_start_time_24h%
+                      %begin_event_end_time_24h%
+                        to %event_end_time_24h%
+                      %end_event_end_time_24h%
+                    </p>
+                  </div>
+                %end_asset_assetid^eq:60258%
+              %end_event_start_time_24h%
+              <!-- Time -->
+              <!-- Location -->
+                %begin_asset_metadata_Event.Campus%
+                  <div class="cell small-12 medium-3 large-3">
+                    <p>Location:</p>
+                  </div>
+                  <div class="cell small-12 medium-9 large-9" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                    %begin_asset_metadata_Event.Campus_value^eq:Off campus%
+                      <!-- Off campus -->
+                      %begin_asset_metadata_Event.Custom.Location%
+                        <p itemprop="name">%asset_metadata_Event.Custom.Location%</p>
+                      %else_asset_metadata_Event.Custom.Location%
+                        <p itemprop="name">Off campus</p>
+                      %end_asset_metadata_Event.Custom.Location%
+                      <!-- Off campus -->
+                    %else_asset_metadata_Event.Campus_value^eq:Off campus%
+                      <!-- On Campus -->
+                      %begin_asset_metadata_Event.Campus_value^eq:Coleraine%
+                        <p><a href="./?a=256371"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                          <meta itemprop="streetAddress" content="Cromore Rd"/>
+                          <meta itemprop="addressRegion" content="Coleraine"/>
+                          <meta itemprop="postalCode" content="BT52 1SA"/>
+                        </div>
+                      %else_begin_asset_metadata_Event.Campus_value^eq:Jordanstown%
+                        <p><a href="./?a=256375"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                          <meta itemprop="streetAddress" content="Shore Rd"/>
+                          <meta itemprop="addressRegion" content="Newtownabbey"/>
+                          <meta itemprop="postalCode" content="BT37 0QB"/>
+                        </div>
+                      %else_begin_asset_metadata_Event.Campus_value^eq:Belfast%
+                        <p><a href="./?a=256367"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                          <meta itemprop="streetAddress" content="25-51 York St"/>
+                          <meta itemprop="addressRegion" content="Belfast"/>
+                          <meta itemprop="postalCode" content="BT15 1ED"/>
+                        </div>
+                      %else_begin_asset_metadata_Event.Campus_value^eq:Magee%
+                        <p><a href="./?a=256379"><span itemprop="name">%asset_metadata_Event.Campus_value^replace: campus:% campus</span></a></p>
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                          <meta itemprop="streetAddress" content="Northland Rd"/>
+                          <meta itemprop="addressRegion" content="Londonderry"/>
+                          <meta itemprop="postalCode" content="BT48 7JL"/>
+                        </div>
+                      %end_asset_metadata_Event.Campus_value^eq:Magee%
+                      %begin_asset_metadata_Event.Room.Number%
+                        <p>%asset_metadata_Event.Room.Number%></p>
+                      %end_asset_metadata_Event.Room.Number%
+                      <!-- On Campus -->
+                    %end_asset_metadata_Event.Campus_value^eq:Off campus%
+                  </div>
+                %end_asset_metadata_Event.Campus%
+              <!-- Location -->
+              <!-- Organiser -->
+              %begin_asset_metadata_Event.Organiser%
+                <div class="cell small-12 medium-3 large-3">
+                  <p>Organiser:</p>
+                </div>
+                <div class="cell small-12 medium-9 large-9">
+                  <p>%asset_metadata_Event.Organiser%</p>
+                </div>
+              %end_asset_metadata_Event.Organiser%
+              <!-- Organiser -->
+              <!-- Contact -->
+              %begin_contact%
+                <div class="cell small-12 medium-3 large-3">
+                  <p>Contact:</p>
+                </div>
+                <div class="cell small-12 medium-9 large-9">
+                  <p>%asset_metadata_Event.ContactPhone%%asset_metadata_Event.ContactPhone^replace_keywords:notempty:{asset_metadata_Event.ContactEmail}^notempty:<br />%<a href="mailto:%asset_metadata_Event.ContactEmail%">%asset_metadata_Event.ContactEmail%</a></p>
+                </div>
+              %end_contact%
+              <!-- Contact -->
+              <!-- Register CTA -->
+              %begin_asset_metadata_Event.Show.Embed.Code^neq:y%
+                %begin_asset_metadata_Event.ShowRegisterButton_value^eq:Yes%
+                  %begin_asset_metadata_Event.RegisterURL%
+                    %begin_asset_metadata_Event.RegisterButtonText%
+                      <div class="cell small-12 medium-12 large-12">
+                        <hr>
+                        <p><a href="%asset_metadata_Event.RegisterURL^preg_match:6980:://^replace:1:%%asset_metadata_Event.RegisterURL%" class="button rounded shadow expanded">%asset_metadata_Event.RegisterButtonText%</a></p>
+                      </div>
+                    %else_asset%
+                      <div class="cell small-12 medium-12 large-12">
+                        <hr>
+                        <p><a href="%asset_metadata_Event.RegisterURL^preg_match:6980:://^replace:1:%%asset_metadata_Event.RegisterURL%" class="button rounded shadow expanded">Register</a></p>
+                      </div>
+                    %end_asset%
+                   %else_asset_metadata_Event.RegisterURL%
+                     <div class="cell small-12 medium-12 large-12">
+                       <hr>
+                       <p><a href="mailto:%asset_metadata_Event.ContactEmail%?subject=Register for %asset_name% event" class="button rounded shadow expanded">Register via email</a></p>
+                     </div>
+                   %end_asset_metadata_Event.RegisterURL%
+                 %end_asset_metadata_Event.ShowRegisterButton_value^eq:Yes%
+               %end_asset_metadata_Event.Show.Embed.Code^neq:y%
+               %begin_asset_metadata_Event.Show.Embed.Code^eq:y%
+                 <div class="cell small-12 medium-12 large-12">
+                   <hr>
+                   <p><a href="#register" class="button rounded shadow expanded" data-smooth-scroll>%asset_metadata_Event.Embed.Anchor.Button.Text^eq::Register:{asset_metadata_Event.Embed.Anchor.Button.Text}%</a></p>
+                 </div>
+               %end_asset_metadata_Event.Show.Embed.Code^eq:y%
+              <!-- Register CTA -->
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="cell small-12 medium-6 large-6 cover-background" style="background-image:url('%globals_asset_thumbnail_url%');">&nbsp;</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<br class="hide-for-small">
+<br class="hide-for-small">
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12 medium-12 large-8">
+      <div class="wysiwyg">
+        %begin_asset_metadata_Description%
+          <p class="lead">%asset_metadata_Description%</p>
+        %end_asset_metadata_Description%
+        %asset_attribute_description%
+      </div>
+      %begin_related%
+        <div class="grid-x grid-padding-x">
+          %begin_asset_metadata_Event.RelatedHeading%
+            <div class="cell large-12">
+              <h2 class="separtor-left">%asset_metadata_Event.RelatedHeading%</h2>
+            </div>
+          %end_asset_metadata_Event.RelatedHeading%
+          %begin_asset_metadata_Event.Related1%
+            <div class="cell small-12 medium-12 large-6">
+            	<div class="media-object">
+            		<div class="media-object-section">
+            			<div class="thumbnail shadow">
+            				<a href="%asset_metadata_Event.Related1^as_asset:asset_url%"><img src="%asset_metadata_Event.Related1^as_asset:asset_thumbnail_v_thumb-small_url%" alt="%asset_metadata_Event.Related1^as_asset:asset_thumbnail_alt%" width="120"></a>
+            			</div>
+            		</div>
+            		<div class="media-object-section main-section">
+            			<h3 class="h2"><a href="%asset_metadata_Event.Related1^as_asset:asset_url%">%asset_metadata_Event.Related1^as_asset:asset_name_linked%</a></h3>
+            			%asset_metadata_Event.Related1^as_asset:asset_metadata_Description^tagif:p%
+            		</div>
+            	</div>
+            </div>
+          %end_asset_metadata_Event.Related1%
+          %begin_asset_metadata_Event.Related2%
+            <div class="cell small-12 medium-12 large-6">
+            	<div class="media-object">
+            		<div class="media-object-section">
+            			<div class="thumbnail shadow">
+            				<a href="%asset_metadata_Event.Related2^as_asset:asset_url%"><img src="%asset_metadata_Event.Related2^as_asset:asset_thumbnail_v_thumb-small_url%" alt="%asset_metadata_Event.Related2^as_asset:asset_thumbnail_alt%" width="120"></a>
+            			</div>
+            		</div>
+            		<div class="media-object-section main-section">
+            			<h3 class="h2"><a href="%asset_metadata_Event.Related2^as_asset:asset_url%">%asset_metadata_Event.Related2^as_asset:asset_name_linked%</a></h3>
+            			%asset_metadata_Event.Related2^as_asset:asset_metadata_Description^tagif:p%
+            		</div>
+            	</div>
+            </div>
+          %end_asset_metadata_Event.Related2%
+          %begin_asset_metadata_Event.Related3%
+            <div class="cell small-12 medium-12 large-6">
+            	<div class="media-object">
+            		<div class="media-object-section">
+            			<div class="thumbnail shadow">
+            				<a href="%asset_metadata_Event.Related3^as_asset:asset_url%"><img src="%asset_metadata_Event.Related3^as_asset:asset_thumbnail_v_thumb-small_url%" alt="%asset_metadata_Event.Related3^as_asset:asset_thumbnail_alt%" width="120"></a>
+            			</div>
+            		</div>
+            		<div class="media-object-section main-section">
+            			<h3 class="h2"><a href="%asset_metadata_Event.Related3^as_asset:asset_url%">%asset_metadata_Event.Related3^as_asset:asset_name_linked%</a></h3>
+            			%asset_metadata_Event.Related3^as_asset:asset_metadata_Description^tagif:p%
+            		</div>
+            	</div>
+            </div>
+          %end_asset_metadata_Event.Related3%
+        </div>
+      %end_related%
+      %begin_asset_metadata_Event.Show.Embed.Code^neq:y%
+        %begin_asset_metadata_Event.ShowRegisterButton_value^eq:Yes%
+          %begin_asset_metadata_Event.RegisterURL%
+            %begin_asset_metadata_Event.RegisterButtonText%
+              <p><a href="%asset_metadata_Event.RegisterURL^preg_match:6980:://^replace:1:%%asset_metadata_Event.RegisterURL%" class="button large expaned">%asset_metadata_Event.RegisterButtonText%</a></p>
+            %else_asset%
+              <p><a href="%asset_metadata_Event.RegisterURL^preg_match:6980:://^replace:1:%%asset_metadata_Event.RegisterURL%" class="button large expanded">Register</a></p>
+            %end_asset%
+          %else_asset_metadata_Event.RegisterURL%
+            <p><a href="mailto:%asset_metadata_Event.ContactEmail%?subject=Register for %asset_name% event" class="button large expanded">Register via email</a></p>
+          %end_asset_metadata_Event.RegisterURL%
+        %end_asset_metadata_Event.ShowRegisterButton_value^eq:Yes%
+      %end_asset_metadata_Event.Show.Embed.Code^neq:y%
+      %begin_asset_metadata_Event.Show.Embed.Code^eq:y%
+        <hr />
+        <div id="register">
+          %asset_metadata_Event.Embed.Code.Intro%
+          %asset_metadata_Event.Embed.Code%
+        </div>
+      %end_asset_metadata_Event.Show.Embed.Code^eq:y%
+    </div>
+    <div class="cell small-12 medium-12 large-4">
+      <!-- Aside -->
+      %begin_asset_metadata_Content.Tagging.Group.Other^eq:coleraineatfifty%
+        %globals_asset_contents_raw:285732%
+      %end_asset_metadata_Content.Tagging.Group.Other^eq:coleraineatfifty%
+      <!--%begin_asset_metadata_Global.AsidePromo%
+        <p>
+          <a href="%asset_metadata_Global.AsidePromo^as_asset:asset_type^replace_keywords:eq:Link:{asset_metadata_Global.AsidePromo^as_asset:link_url}:{asset_metadata_Global.AsidePromo^as_asset:asset_url}%" title="%asset_metadata_Global.AsidePromo^as_asset:asset_name%" class="advert">
+            <span>%asset_metadata_Global.AsidePromo^as_asset:asset_name%</span>%asset_metadata_Global.AsidePromo^as_asset:asset_thumbnail^replace_keywords:notempty:<img src="{asset_metadata_Global.AsidePromo^as_asset:asset_thumbnail_v_thumb-large_url}" alt="{asset_metadata_Global.AsidePromo^as_asset:asset_thumbnail_alt}" />%
+          </a>
+        </p>
+      %end_asset_metadata_Global.AsidePromo%-->
+      <p><a href="%globals_asset_url:272948%" class="button hollow expanded rounded">View all events</a></p>
+    </div>
+  </div>
+</div>
+<br class="hide-for-small">
+<br class="hide-for-small">

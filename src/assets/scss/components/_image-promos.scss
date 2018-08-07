@@ -33,37 +33,38 @@ $colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
 //used on global homepage
 .image-promos-uls
 {
-  position: absolute;
+  position: relative;
   width: 100%;
-  bottom: 0;
   height: 200px;
+
+  @include breakpoint(small only)
+  {
+    position: relative;
+    height: auto;
+    margin-top: 15px;
+  }
 
   > div
   {
     position: relative;
     z-index: 9000;
 
-    &.pull-up
+    .shadow
     {
-      position: relative;
-      top: -100px;
-      display: block;
-      padding-top:20px;
+      @include transition-all();
 
       > div
       {
-        > div
-        {
-          > div
-          {
-            > div
-            {
-              padding: 30px 15px;
-              @include transition-all();
-            }
-          }
-        }
+        height: 100%;
       }
+    }
+
+    &.pull-up
+    {
+      position: relative;
+      //top: -100px;
+      display: block;
+      padding-top:20px;
     }
   }
 
@@ -82,4 +83,35 @@ $colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
     background: #fff;
     color: $corp-navy;
   }
+}
+
+.primary-links.is-stuck .white-bg
+{
+    background:none;
+}
+.primary-links.is-stuck a.button
+{
+    display:none;
+}
+.primary-links.is-stuck .white-text
+{
+    height:auto !important;
+    min-height:60px;
+}
+.primary-links.is-stuck .white-text br
+{
+    display:none;
+}
+.primary-links .cover-background
+{
+    overflow:hidden;
+}
+.primary-links.is-stuck .cover-background
+{
+    background-image:none !important;
+    background-color:#333;
+}
+.primary-links .column-block .cover-background
+{
+    margin:5px;
 }
