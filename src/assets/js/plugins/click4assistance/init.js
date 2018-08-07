@@ -44,9 +44,10 @@ jQuery(document).ready(function() {
             }
             currentURL = currentURL.replace('/_recache', '');
             currentURL = currentURL.replace('/_nocache', '');
+            console.log(url.indexOf(currentURL));
             if (url.indexOf(currentURL) >= 0) {
                 //debug
-                //console.log('init script');
+                console.log('init script');
                 //console.log(url);
                 //console.log(guid);
                 //console.log(wfguid);
