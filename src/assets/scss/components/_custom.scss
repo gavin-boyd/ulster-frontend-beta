@@ -717,6 +717,14 @@ a.button
   }
 }
 
+.text-right-medium
+{
+  @include breakpoint(medium) {
+    text-align: right !important;
+  }
+}
+
+
 .text-center-large
 {
   @include breakpoint(large) {
