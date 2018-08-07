@@ -87,6 +87,7 @@ $colour-five: rgba(#4CA5C2, $image-promo-uls-opacity);
   {
     overflow: hidden;
     margin:5px;
+    min-height:none;
   }
 
   &.is-stuck
