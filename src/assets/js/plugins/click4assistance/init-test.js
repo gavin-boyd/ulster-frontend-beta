@@ -2,6 +2,12 @@
  * This plugin adds click4assistance js async if the url is found in the url json file
  */
 jQuery(document).ready(function() {
+
+    var urltest = "https://www.ulster.ac.uk/global-dev/new";
+    if (urltest.indexOf("https://www.ulster.ac.uk/global-dev")) {
+      console.log('found');
+    }
+
     function C4AWJSLoaded(guid, wfguid) {
         oC4AW_Widget = new oC4AW_Widget();
         oC4AW_Widget.setAccGUID("CD44000A-B9CB-4689-BCDD-0A909F0F65CA");
@@ -14,7 +20,7 @@ jQuery(document).ready(function() {
         oC4AW_Widget.Initilize();
     }
     var apiURL = 'https://www.ulster.ac.uk/_web_services/purechat.json/_nocache';
-    jQuery.ajax({
+    /*jQuery.ajax({
       type: 'GET',
       url: apiURL,
       success: function (data) {
@@ -45,7 +51,7 @@ jQuery(document).ready(function() {
                 //click4assistance code init
                 C4AWJSLoaded(guid, wfguid);
 
-                /* opens chat window using remote button, just add class .openchat */
+                //opens chat window using remote button, just add class .openchat
                 jQuery('.openchat').each(function() {
                   jQuery(this).click(function(e) {
                     e.preventDefault();
@@ -55,5 +61,5 @@ jQuery(document).ready(function() {
             }
         }
       }
-    });
+    });*/
 });
