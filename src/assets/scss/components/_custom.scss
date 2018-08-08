@@ -162,6 +162,13 @@ ul.columns
   columns: 3;
   -webkit-columns: 3;
   -moz-columns: 3;
+
+  @include breakpoint(small down)
+  {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
 }
 
 ul.columns-2
@@ -169,6 +176,13 @@ ul.columns-2
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
+
+  @include breakpoint(small down)
+  {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
 }
 
 //background images
