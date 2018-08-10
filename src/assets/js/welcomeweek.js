@@ -34,6 +34,9 @@ require('./plugins/fancybox/init');
 //Courses atoz
 require('./plugins/welcomeweek-atoz/init');
 
+//Cookies
+require('./plugins/cookie/init');
+
 //welcome week additional plugins
 require('./plugins/welcomeweek-search/init');
 require('./plugins/welcomeweek-search/jquery-ui');
