@@ -88,51 +88,6 @@ if (res) {
     if (total > 0) {
       print('<style>#regional-agent-menu-item{display:block !important;}</style>');
     }
-    /*if (showGeneric.indexOf('true') == -1) {
-      var outputTwo = '';
-      outputTwo += '<div class="">';
-        outputTwo += '<div class="grid-container">';
-          outputTwo += '<div class="grid-x grid-padding-x grid-padding-y">';
-            outputTwo += '<div class="cell medium-12">';
-              outputTwo += '<br><br>';
-              outputTwo += '<h2 class="h1">Hi %globals_asset_metadata_Ulster.Capture.First.Name^escapequotes%, welcome to Ulster University</h2>';
-              outputTwo += '<br>';
-              outputTwo += '<div class="grid-x grid-padding-x grid-padding-y">';
-                outputTwo += '<div class="cell large-4">';
-                  outputTwo += '<img src="%globals_asset_assetid:284270^as_asset:asset_thumbnail_v_agent-thumbnail_url%" alt="" class="circle">';
-                  var phone = '%globals_asset_assetid:284270^as_asset:asset_metadata_Ulster.International.Agent.Phone%';
-                  if (phone !== '') {
-                    var mobile = res[i].phone;
-                    mobile = mobile.replace(/\s/g, '');
-                    mobile = mobile.replace('+', '');
-                    outputTwo += '<a href="https://api.whatsapp.com/send?phone=' + phone + '" class="button large expanded"><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>';
-                  }
-                  var email = '%globals_asset_assetid:284270^as_asset:asset_metadata_Ulster.International.Agent.Email%';
-                  if (email !== '') {
-                    outputTwo += '<a href="mailto:' + email + '" class="button large expanded"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>';
-                  }
-                  var facebook = '%globals_asset_assetid:284270^as_asset:asset_metadata_Ulster.International.Agent.Facebook%';
-                  if (facebook !== '') {
-                    outputTwo += '<a href="https://m.me/' + facebook + '" class="button large expanded" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>';
-                  }
-                outputTwo += '</div>';
-              outputTwo += '<div class="cell large-8">';
-                outputTwo += '<cite>';
-                  outputTwo += '<span class="h3">';
-                    outputTwo += '%globals_asset_assetid:284270^as_asset:asset_metadata_Ulster.International.Agent.Digital.Prospectus.Intro^escapequotes%';
-                  outputTwo += '</span>';
-                outputTwo += '</cite>';
-                outputTwo += '<br>';
-                outputTwo += '%globals_asset_assetid:284270^as_asset:asset_metadata_Ulster.International.Agent.Digital.Prospectus.Content^escapequotes%';
-              outputTwo += '</div>';
-            outputTwo += '</div>';
-          outputTwo += '</div>';
-        outputTwo += '</div>';
-      outputTwo += '</div>';
-      outputTwo += '<br><br>';
-      outputTwo += '</div>';
-      print(outputTwo);
-    }*/
   }
   yourCountryAgents();
 }

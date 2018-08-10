@@ -34,12 +34,6 @@ a.brand
   display: block;
 }
 
-//breadcrumb
-.breadcrumbs
-{
-  margin: 20px 0 0 0 !important;
-}
-
 //cards
 .card
 {
@@ -691,10 +685,17 @@ a.button
 {
   text-shadow: rgba(0,0,0,.3) 2px 3px 5px;
 }
+
 .larger
 {
   font-size: 62px;
   line-height: 68px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 38px;
+    line-height: 42px;
+  }
 }
 
 .shade
@@ -804,6 +805,24 @@ ul.ui-autocomplete
     path
     {
       fill: $c-purple !important;
+    }
+  }
+}
+
+.wysiwyg
+{
+  table
+  {
+    thead
+    {
+      tr
+      {
+        th
+        {
+          background: $corp-navy;
+          color: #fff;
+        }
+      }
     }
   }
 }

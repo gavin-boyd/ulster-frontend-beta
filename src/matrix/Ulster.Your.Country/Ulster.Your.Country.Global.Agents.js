@@ -27,7 +27,7 @@ if (res) {
         var phone = res[i].phone;
         var address = res[i].address;
         if (country_code == global_agent_code) {
-          output += '<div class="grid-x grid-padding-x grid-padding-y">';
+          output += '<div class="grid-x">';
             output += '<div class="cell medium-12">';
               output += '<div class="shadow card card-section">';
                 output += '<h2 class="h4">';
@@ -56,7 +56,7 @@ if (res) {
       }
     }
     if (total > 0) {
-      title += '<hr><h2>Global Agents - %globals_asset_name%</h2>';
+      title += '<hr><h2>Local representatives for %globals_asset_name%</h2><br>';
       print(title);
       print('<style>#global-agent-menu-item{display:block !important;}</style>');
     }

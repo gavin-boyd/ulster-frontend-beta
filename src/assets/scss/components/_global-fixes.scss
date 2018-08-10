@@ -1,18 +1,5 @@
 .element-with-video-bg
 {
-  @include breakpoint(small only)
-  {
-    min-height: 380px;
-  }
-
-  h2
-  {
-    @include breakpoint(small only)
-    {
-      margin-top: 40px;
-    }
-  }
-
   p.lead
   {
     @include breakpoint(small only)
@@ -21,4 +8,9 @@
       text-align: left;
     }
   }
+}
+.hero-lead
+{
+  margin: 0 auto 30px auto;
+  max-width: 650px;
 }

@@ -1,0 +1,37 @@
+ul.breadcrumbs
+{
+  margin: 20px 0 0 0 !important;
+
+  @include breakpoint(small down)
+  {
+    margin-top: 5px !important;
+  }
+
+  li
+  {
+    text-transform: none;
+    font-size: 15px;
+    color: #000;
+
+    a
+    {
+      color: #0b0c0c;
+
+      @include breakpoint(small down)
+      {
+        font-size: 12px;
+      }
+    }
+  }
+
+  li:not(:last-child)::after
+  {
+    font-family: FontAwesome;
+    content: "\f0da";
+
+    @include breakpoint(small down)
+    {
+      margin: 0 5px;
+    }
+  }
+}

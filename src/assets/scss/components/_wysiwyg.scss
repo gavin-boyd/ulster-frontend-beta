@@ -1,0 +1,25 @@
+.wysiwyg
+{
+  h2
+  {
+    margin: 40px 0 20px 0;
+  }
+
+  > h2
+  {
+    margin-top: 0;
+  }
+
+  iframe
+  {
+    min-height: 400px;
+    border-radius:3px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.20), 0 15px 12px rgba(0,0,0,0.12);
+    margin: 20px 0;
+  }
+
+  > iframe
+  {
+    margin-top: 0;
+  }
+}

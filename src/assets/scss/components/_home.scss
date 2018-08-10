@@ -4,10 +4,18 @@ $animated-gradient-seconds: 15s;
 .full-viewport-height
 {
   height: $hero-height;
+  min-height: 760px;
+
+  @include breakpoint(medium down)
+  {
+    height: auto;
+    min-height: 750px;
+  }
 
   @include breakpoint(small down)
   {
     height: auto;
+    min-height: 0;
   }
 }
 
