@@ -10,10 +10,10 @@ const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/student-json'
 
 function hideEmptyEventRows() {
   //debug
-  console.log('hideEmptyEventRows');
+  //console.log('hideEmptyEventRows');
   jQuery('.ww_events > .grid-x > .cell').each(function() {
     //debug
-    console.log('Found a row!');
+    //console.log('Found a row!');
     var checkArray = [];
     jQuery(this).find('.ww_event').each(function() {
       if (jQuery(this).parent('div').is(':hidden')) {
@@ -25,10 +25,10 @@ function hideEmptyEventRows() {
     if (jQuery.inArray(0, checkArray) == -1) {
       jQuery(this).hide();
       //debug
-      console.log('Found a row with all events are hidden, so hide this row!');
+      //console.log('Found a row with all events are hidden, so hide this row!');
     }
     //debug
-    console.log('Check Array: ' + checkArray);
+    //console.log('Check Array: ' + checkArray);
   });
 }
 
@@ -50,12 +50,12 @@ function welcomeWeekUserActions(user_cookie) {
     var international = u_cookie_array[4];
 
     //debug
-    console.log('Reslife: ' + reslife);
-    console.log('International: ' + international);
+    //console.log('Reslife: ' + reslife);
+    //console.log('International: ' + international);
 
     if (reslife == 1) {
       //debug
-      console.log('show reslife events');
+      //console.log('show reslife events');
 
       jQuery('.reslife').each(function() {
         jQuery(this).show();
@@ -64,7 +64,7 @@ function welcomeWeekUserActions(user_cookie) {
 
     if (reslife == 1) {
       //debug
-      console.log('hide for reslife');
+      //console.log('hide for reslife');
 
       jQuery('.reslife').each(function() {
         jQuery(this).show();
@@ -77,7 +77,7 @@ function welcomeWeekUserActions(user_cookie) {
 
     if (international == 1) {
       //debug
-      console.log('show international events');
+      //console.log('show international events');
 
       jQuery('.international').each(function() {
         jQuery(this).show();
@@ -192,18 +192,18 @@ jQuery(document).ready(function() {
       jQuery('#app-toolbar-options').append('<a href="' + jQuery.cookie('uls_welcome_week_c') + '" class="button large expanded rounded no-margin-bottom shadow" id="back-to-course"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;View my course</a>');
 
       //debug
-      console.log('show course button');
-      console.log('show toolbar');
+      //console.log('show course button');
+      //console.log('show toolbar');
     } else {
       jQuery('#back-to-course').remove();
       //debug
-      console.log('hide course button');
+      //console.log('hide course button');
     }
     if (jQuery('#course-id').length > 0) {
       //remove back to course button on course pages
       jQuery('#back-to-course').remove();
       //debug
-      console.log('hide course button because this is a course page');
+      //console.log('hide course button because this is a course page');
       //set course cookie
       var courseUrl = jQuery('#course-id').data('url');
       welcomeWeekCourseCookie(courseUrl);
@@ -211,10 +211,10 @@ jQuery(document).ready(function() {
 
     //debug
     if (jQuery.cookie('uls_welcome_week_u')) {
-      console.log('user cookie is present');
-      console.log(jQuery.cookie('uls_welcome_week_u'));
+      //console.log('user cookie is present');
+      //console.log(jQuery.cookie('uls_welcome_week_u'));
     } else {
-      console.log('user cookie not found');
+      //console.log('user cookie not found');
     }
 
     hideEmptyEventRows();
