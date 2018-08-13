@@ -182,7 +182,7 @@ jQuery(document).ready(function() {
             var values_array = [id, fname, sname, reslife, international];
             welcomeWeekUserActions(values_array);
           }
-          hideEmptyEventRows();
+          //hideEmptyEventRows();
         });
       });
     }
@@ -217,7 +217,7 @@ jQuery(document).ready(function() {
       //console.log('user cookie not found');
     }
 
-    hideEmptyEventRows();
+    //hideEmptyEventRows();
   })();
 
 });
