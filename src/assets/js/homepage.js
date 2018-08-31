@@ -29,3 +29,8 @@ window.$ = window.jQuery = jquery;
 
 //megamenu
 require('./plugins/megamenu/init');
+
+//funnelback completion
+require('./plugins/funnelback-completion/jquery-ui');
+require('./plugins/funnelback-completion/funnelback-completion');
+require('./plugins/funnelback-completion/funnelback-completion-init');
