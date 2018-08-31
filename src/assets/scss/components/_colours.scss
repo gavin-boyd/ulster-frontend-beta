@@ -78,6 +78,7 @@ $opacity: .9;
 //############ 2. Navy - START
   $c-navy: #151E3E;
   $c-navy-trans: rgba($c-navy, $opacity);
+  $c-navy-trans-lighter: rgba($c-navy, .6);
   $c-navy-accent: darken(#D81B7A, 15%);
   $c-navy-accent-light: lighten(#D81B7A, 35%);
   $c-navy-trans-accent: rgba($c-navy-accent, $opacity);
@@ -89,6 +90,16 @@ $opacity: .9;
   .bg-navy-trans
   {
     background: $c-navy-trans;
+  }
+  .bg-navy-on-small
+  {
+    @include breakpoint(small only) {
+      background: $c-navy !important;
+    }
+  }
+  .bg-navy-trans-lighter
+  {
+    background: $c-navy-trans-lighter;
   }
   .bg-navy-trans-gradient-one
   {

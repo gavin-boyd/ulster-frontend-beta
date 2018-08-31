@@ -1,103 +1,154 @@
+---
+
+layout: homecritical
+
+---
+
 {{> header}}
 
-<!-- slider -->
-<div class="cover-background" style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0004/295195/clearing-v2.jpg');background-position:center center;">
-  <div class="grid-container">
-    <div class="grid-x grid-padding-x">
-      <div class="cell large-2 large-offset-3 svg-graphic-device">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1276px" height="616.666px" viewBox="0 0 1276 616.666" enable-background="new 0 0 1276 616.666" xml:space="preserve"><path fill="#231F20" d="M12.461-3C147.51,140.801,191.405,366.931,191.405,616.474h-999.792v408.251H1286V-3H12.461z"></path></svg>
+<div class="cover-background-r hide-bg-on-small" style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0004/295195/clearing-v2.jpg');background-position:0 0;">
+  <div class="bg-navy-trans">
+    <form method="GET" action="https://www.ulster.ac.uk/courses">
+      <div class="grid-container">
+        <div class="grid-x p-t-15">
+          <div class="cell small-12 large-2 white-text text-center">
+            <h2 class="h2">Find a course</h2>
+          </div>
+          <div class="cell small-12 large-5">
+            <input type="text" id="query" name="query" placeholder="Search for courses, subject, campus, etc..." class="input-group-field">
+          </div>
+          <div class="cell small-12 large-4 p-l-10 p-r-10 p-medium-l-0 p-medium-r-0 p-medium-t-10 p-medium-b-10 p-small-l-0 p-small-r-0 p-small-t-10 p-small-b-10">
+            <select name="f.Level|Y" id="fTypeD" class="input-group-field">
+              <optgroup label="Study level">
+                <option value="">All Levels</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="Short courses and CPD">Short courses and CPD</option>
+                <option value="Postgraduate Research">Postgraduate Research</option>
+                <option value="eLearning">eLearning</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="cell small-12 large-1">
+            <div class="m-r-20 m-medium-r-0 m-small-r-0">
+              <button type="submit" class="button radius shadow expanded">
+                <span class="show-for-sr">Search</span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cell large-7 bg-purple-trans white-text">
-        <div class="pad-60">
-          <h2 class="h1">Study opportunities for 2018/19</h2>
-          <p class="lead">This is a lead paragraph</p>
-          <p>
-            <a href="#" class="button large hollow rounded expanded">Undergraduate Clearing Vacancies September 2018&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            <a href="#" class="button large hollow rounded expanded">Postgraduate Opportunities September 2018&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            <a href="#" class="button large hollow rounded expanded">PhD Opportunities September 2018&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </form>
+  </div>
+  <div class="grid-container full">
+    <div class="grid-x grid-padding-x">
+      <div class="cell large-2 large-offset-4 svg-graphic-device">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="600px" viewBox="50 0 120 600" enable-background="new 0 0 1276 616.666" xml:space="preserve"><path fill="#231F20" d="M12.461-3C147.51,140.801,191.405,366.931,191.405,616.474h-999.792v408.251H1286V-3H12.461z"></path></svg>
+      </div>
+      <div class="cell small-12 medium-12 large-6 bg-navy-trans-lighter bg-navy-on-small white-text">
+        <div class="p-t-60 p-l-30 p-r-60 p-b-60 p-medium-l-0 p-medium-t-20 p-medium-b-20 p-medium-r-0 p-small-r-0 p-small-l-0 p-small-t-20 p-small-b-20 text-center-medium-only text-center-small-only">
+          <h2 class="h2 m-b-20 text-shadow">Study opportunities for 2018/19</h2>
+          <p class="m-b-0"><a href="https://www.ulster.ac.uk/clearing" class="button hollow rounded max-w-400 text-shadow">Undergraduate Clearing Vacancies September 2018&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          <p class="m-b-0"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate/find-courses2" class="button hollow rounded max-w-400 text-shadow">Postgraduate Opportunities September 2018&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          <p class="m-b-0"><a href="https://www.ulster.ac.uk/doctoralcollege" class="button hollow rounded max-w-400 text-shadow">PhD Opportunities September 2018&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+        </div>
+      </div>
+      <div class="cell large-1 bg-navy-trans-lighter"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Three Primary CTAs -->
+<div class="p-t-40 p-large-t-30 p-medium-t-0 p-small-t-5 p-b-40 p-large-b-30 p-medium-b-0 p-small-b-5">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell medium-4 large-4">
+        <h2 class="h3"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/undergraduate">Undergraduate</a></h2>
+        <p>
+          <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/undergraduate">
+            <img src="https://www.ulster.ac.uk/__data/assets/image/0017/20636/varieties/thumb-larger.jpg" alt="" class="radius" /></a>
           </p>
+        <p>Full-time and part-time undergraduate courses at four campuses across Northern Ireland.</p>
+      </div>
+      <div class="cell medium-4 large-4">
+        <h2 class="h3"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate">Postgraduate</a></h2>
+        <p>
+          <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate">
+            <img src="https://www.ulster.ac.uk/__data/assets/image/0003/27759/varieties/thumb-larger.jpg" alt="" class="radius" />
+          </a>
+        </p>
+        <p>Postgraduate Certificate, Diploma or Masters level courses delivered on-campus and online.</p>
+      </div>
+      <div class="cell medium-4 large-4">
+        <h2 class="h3"><a href="https://www.ulster.ac.uk/doctoralcollege">Postgraduate research</a></h2>
+        <p>
+          <a href="https://www.ulster.ac.uk/doctoralcollege">
+            <img src="https://www.ulster.ac.uk/__data/assets/image/0005/35690/varieties/thumb-larger.jpg" alt="" class="radius" />
+          </a>
+        </p>
+        <p>Opportunities to study towards a research degree at Ulster University.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="off-white-bg">
+  <div class="p-t-40 p-large-t-30 p-medium-t-0 p-small-t-5 p-b-40 p-large-b-30 p-medium-b-0 p-small-b-5">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x grid-padding-y">
+        <div class="cell medium-3 large-3">
+          <h2 class="h3"><a href="https://www.ulster.ac.uk/alumniandsupporters">Alumni</a></h2>
+          <p>
+            <a href="https://www.ulster.ac.uk/alumniandsupporters">
+              <img src="https://www.ulster.ac.uk/__data/assets/image/0005/27761/varieties/thumb-large.jpg" alt="" class="radius" />
+            </a>
+          </p>
+          <p class="hide-for-medium-only">Re-connect with a network of over 150,000 Ulster University alumni.</p>
+        </div>
+        <div class="cell medium-3 large-3">
+          <h2 class="h3"><a href="https://www.ulster.ac.uk/business">Business</a></h2>
+          <p>
+            <a href="https://www.ulster.ac.uk/business">
+              <img src="https://www.ulster.ac.uk/__data/assets/image/0018/20637/varieties/thumb-large.jpg" alt="" class="radius" /></a>
+            </p>
+          <p class="hide-for-medium-only">Personal & professional development programmes, consultancy services, conference facilities.</p>
+        </div>
+        <div class="cell medium-3 large-3">
+          <h2 class="h3"><a href="https://www.ulster.ac.uk/international">International</a></h2>
+          <p>
+            <a href="https://www.ulster.ac.uk/international"><img src="https://www.ulster.ac.uk/__data/assets/image/0019/28153/varieties/thumb-large.jpg" alt="" class="radius" /></a>
+          </p>
+          <p class="hide-for-medium-only">We welcome students from all over the world.</p>
+        </div>
+        <div class="cell medium-3 large-3">
+          <h2 class="h3"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/short-courses">Short courses</a></h2>
+          <p>
+            <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/short-courses"><img src="https://www.ulster.ac.uk/__data/assets/image/0004/27760/varieties/thumb-large.jpg" alt="" class="radius" /></a>
+          </p>
+          <p class="hide-for-medium-only">A wide range of courses for all - supporting personal and professional development.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- slider -->
 
-<br>
-<br>
-<div class="grid-container">
-  <div class="grid-x grid-padding-x grid-padding-y">
-    <div class="cell large-4">
-      <h2><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/undergraduate">Undergraduate</a></h2>
-      <p>
-        <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/undergraduate">
-          <img src="https://www.ulster.ac.uk/__data/assets/image/0017/20636/varieties/thumb-larger.jpg" alt="" class="radius" /></a>
-        </p>
-      <p>Full-time and part-time undergraduate courses at four campuses across Northern Ireland.</p>
-    </div>
-    <div class="cell large-4">
-      <h2><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate">Postgraduate</a></h2>
-      <p>
-        <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/postgraduate">
-          <img src="https://www.ulster.ac.uk/__data/assets/image/0003/27759/varieties/thumb-larger.jpg" alt="" class="radius" />
-        </a>
-      </p>
-      <p>Postgraduate Certificate, Diploma or Masters level courses delivered on-campus and online.</p>
-    </div>
-    <div class="cell large-4">
-      <h2><a href="https://www.ulster.ac.uk/doctoralcollege">Postgraduate research</a></h2>
-      <p>
-        <a href="https://www.ulster.ac.uk/doctoralcollege">
-          <img src="https://www.ulster.ac.uk/__data/assets/image/0005/35690/varieties/thumb-larger.jpg" alt="" class="radius" />
-        </a>
-      </p>
-      <p>Opportunities to study towards a research degree at Ulster University.</p>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-
-<div class="off-white-bg">
-  <br>
-  <br>
+<!-- Events -->
+<div class="p-t-40 p-large-t-30 p-medium-t-0 p-small-t-5 p-b-40 p-large-b-30 p-medium-b-0 p-small-b-5">
   <div class="grid-container">
-    <div class="grid-x grid-padding-x grid-padding-y">
-      <div class="cell large-3">
-        <h2 class="h3"><a href="https://www.ulster.ac.uk/alumniandsupporters">Alumni</a></h2>
-        <p>
-          <a href="https://www.ulster.ac.uk/alumniandsupporters">
-            <img src="https://www.ulster.ac.uk/__data/assets/image/0005/27761/varieties/thumb-large.jpg" alt="" class="radius" />
-          </a>
-        </p>
-        <p>Re-connect with a network of over 150,000 Ulster University alumni.</p>
-      </div>
-      <div class="cell large-3">
-        <h2 class="h3"><a href="https://www.ulster.ac.uk/business">Business</a></h2>
-        <p>
-          <a href="https://www.ulster.ac.uk/business">
-            <img src="https://www.ulster.ac.uk/__data/assets/image/0018/20637/varieties/thumb-large.jpg" alt="" class="radius" /></a>
-          </p>
-        <p>Personal & professional development programmes, consultancy services, conference facilities.</p>
-      </div>
-      <div class="cell large-3">
-        <h2 class="h3"><a href="https://www.ulster.ac.uk/international">International</a></h2>
-        <p>
-          <a href="https://www.ulster.ac.uk/international"><img src="https://www.ulster.ac.uk/__data/assets/image/0019/28153/varieties/thumb-large.jpg" alt="" class="radius" /></a>
-        </p>
-        <p>We welcome students from all over the world.</p>
-      </div>
-      <div class="cell large-3">
-        <h2 class="h3"><a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/short-courses">Short courses</a></h2>
-        <p>
-          <a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/short-courses"><img src="https://www.ulster.ac.uk/__data/assets/image/0004/27760/varieties/thumb-large.jpg" alt="" class="radius" /></a>
-        </p>
-        <p>A wide range of courses for all - supporting personal and professional development.</p>
-      </div>
+    {{> news-3-col}}
+  </div>
+</div>
+<!-- Events -->
+
+<!-- News -->
+<div class="off-white-bg">
+  <div class="p-t-40 p-large-t-30 p-medium-t-0 p-small-t-5 p-b-40 p-large-b-30 p-medium-b-0 p-small-b-5">
+    <div class="grid-container">
+      {{> news-3-col}}
     </div>
   </div>
-  <br>
-  <br>
 </div>
+<!-- News -->
 
 {{> footer}}
