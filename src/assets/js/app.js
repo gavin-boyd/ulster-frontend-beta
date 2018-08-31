@@ -50,10 +50,6 @@ require('./plugins/regions-map/init');
 //jQuery Background Video
 require('./plugins/jquery-background-video/init');
 
-//
-require('./plugins/cookie/init');
-require('./plugins/ww/init-min');
-
 //funnelback completion
 require('./plugins/funnelback-completion/jquery-ui');
 require('./plugins/funnelback-completion/funnelback-completion');
