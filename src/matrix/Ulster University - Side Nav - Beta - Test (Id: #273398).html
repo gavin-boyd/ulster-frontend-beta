@@ -1,6 +1,4 @@
-<MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>
-
-%globals_asset_contents_raw:256435%
+<MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>%globals_asset_contents_raw:256435%
 <MySource_AREA id_name="global_header" design_area="nest_content" print="yes" />
 <script runat="server">
   function ulsMenuLink(short_name, type) {
@@ -9,7 +7,7 @@
     ulsLabel = ulsLabel.replace('(( ', '');
     ulsLabel = ulsLabel.replace(' ))', '');
     if (ulsType == 'Redirect Page') {
-      print(ulsLabel + '&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small>');
+      print(ulsLabel + '&nbsp;<small><span class="fa fa-external-link" aria-hidden="true"></span></small>');
     } else {
       print(ulsLabel);
     }
@@ -18,23 +16,21 @@
 %globals_asset_contents_raw:292663%
 <MySource_AREA id_name="additional_content" design_area="nest_content" print="no" />
 <div class="grid-container">
-  <div class="hide-for-small-only">
-    <nav aria-label="You are here:" role="navigation">
-      <ul class="breadcrumbs">
-        <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
-          <MySource_SET name="levels_to_print" value="0" />
-          <MySource_SET name="start_at_level" value="0" />
-          <MySource_SET name="suffix_with_current_link" value="true" />
-          <MySource_ASSET>
-            <li><MySource_PRINT var="asset_short_name_linked" /></li>
-          </MySource_ASSET>
-          <MySource_DIVIDER></MySource_DIVIDER>
-        </MySource_AREA>
-      </ul>
-    </nav>
-  </div>
+  <nav aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs">
+      <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
+        <MySource_SET name="levels_to_print" value="0" />
+        <MySource_SET name="start_at_level" value="0" />
+        <MySource_SET name="suffix_with_current_link" value="true" />
+        <MySource_ASSET>
+          <li><MySource_PRINT var="asset_short_name_linked" /></li>
+        </MySource_ASSET>
+        <MySource_DIVIDER></MySource_DIVIDER>
+      </MySource_AREA>
+    </ul>
+  </nav>
   <div class="grid-x grid-padding-x grid-padding-y">
-    <div class="cell large-3 small-order-2">
+    <div class="cell small-12 medium-3 large-3 small-order-3">
       <div class="radius bordered shadow card">
         <ul class="uls-side vertical menu" id="section-nav">
           <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
@@ -46,8 +42,9 @@
             <MySource_ASSET>
               <li>
                 <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  <span class="fa fa-angle-left" aria-hidden="true"></span>
                   <MySource_PRINT var="asset_short_name" />
+                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
                 </a>
               </li>
             </MySource_ASSET>
@@ -61,8 +58,9 @@
             <MySource_ASSET>
               <li>
                 <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  <span class="fa fa-angle-down" aria-hidden="true"></span>
                   <MySource_PRINT var="asset_short_name" />
+                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
                 </a>
               </li>
             </MySource_ASSET>
@@ -77,6 +75,7 @@
               <li class="<MySource_PRINT var="settings.class" />">
                 <a href="<MySource_PRINT var="asset_link" />">
                   <MySource_PRINT var="asset_short_name" />
+                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
                 </a>
                 <MySource_DIVIDER></MySource_DIVIDER>
                 <MySource_SUB design_area="menu_normal">
@@ -88,6 +87,7 @@
                         <li class="<MySource_PRINT var="settings.class" />">
                           <a href="<MySource_PRINT var="asset_link" />">
                             <MySource_PRINT var="asset_short_name" />
+                            <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
                           </a>
                           <MySource_SUB design_area="menu_normal">
                             <MySource_SET name="settings.class.normal" value="" />
@@ -97,6 +97,7 @@
                                 <li class="<MySource_PRINT var="settings.class" />">
                                   <a href="<MySource_PRINT var="asset_link" />">
                                     <MySource_PRINT var="asset_short_name" />
+                                    <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
                                   </a>
                                 </li>
                               </MySource_ASSET>
