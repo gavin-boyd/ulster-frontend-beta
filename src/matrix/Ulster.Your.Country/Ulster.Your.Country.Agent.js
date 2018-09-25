@@ -8,11 +8,7 @@ if (res) {
     for (i = 0; i < res.length; i++) {
       var agent_country_code = res[i].country_code;
       var agent_contact_types = res[i].contact_type;
-      if (agent_country_code.indexOf(';') !== -1) {
-        var agent_country_code_array = agent_country_code.split('; ');
-      } else {
-        var agent_country_code_array = agent_country_code;
-      }
+      var agent_country_code_array = agent_country_code.split('; ');
       if (agent_contact_types.indexOf(';') !== -1) {
         var agent_country_contact_type_array = agent_contact_types.split('; ');
       } else {
@@ -56,6 +52,14 @@ if (res) {
                       if (res[i].facebook !== '' && agent_country_contact_type_string.indexOf('facebook') !== -1) {
                         output += '<a href="https://m.me/' + res[i].facebook + '" class="button rounded shadow" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>&nbsp;';
                       }
+                      //Phone
+                      if (res[i].phone !== '' && agent_country_contact_type_string.indexOf('phone') !== -1)  {
+                        var mobileOnly = res[i].phone;
+                        var mobileOnlyValue = res[i].phone;
+                        mobileOnly = mobileOnly.replace(/\s/g, '');
+                        mobileOnly = mobileOnly.replace('+', '');
+                        output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
+                      }
                     } else {
                       //WhatsApp
                       if (res[i].phone !== '' && agent_country_contact_type_array == 'whats-app') {
@@ -73,6 +77,14 @@ if (res) {
                       //Facebook
                       if (res[i].facebook !== '' && agent_country_contact_type_array == 'facebook') {
                         output += '<a href="https://m.me/' + res[i].facebook + '" class="button rounded shadow" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>&nbsp;';
+                      }
+                      //Phone
+                      if (res[i].phone !== '' && agent_country_contact_type_array == 'phone') {
+                        var mobileOnly = res[i].phone;
+                        var mobileOnlyValue = res[i].phone;
+                        mobileOnly = mobileOnly.replace(/\s/g, '');
+                        mobileOnly = mobileOnly.replace('+', '');
+                        output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
                       }
                     }
                     output += '</p>';

@@ -370,3 +370,13 @@ $c-off-white: #f5f4f3;
 {
   @include linear-gradient(#fff, #eee);
 }
+
+.bg-small-only-navy
+{
+  background: none;
+
+  @include breakpoint(small only)
+  {
+    background-color: $c-navy-trans;
+  }
+}
