@@ -71,7 +71,7 @@ $global-width: rem-calc(1160); //apha change, beta should be 1200
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #005ea5,
-  secondary: #767676,
+  secondary: #000,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -137,8 +137,8 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.2;
+$header-margin-bottom: 2rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
@@ -150,7 +150,7 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 34),
-    'h2': ('font-size': 24),
+    'h2': ('font-size': 28),
     'h3': ('font-size': 19),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
@@ -280,11 +280,11 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-font-family: "futura-pt-bold";
+$button-padding: 0.85em 2em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $corp-gold;
+$button-background: #ccc;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
@@ -294,7 +294,7 @@ $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
   default: 0.9rem,
-  large: 1.25rem,
+  large: 1rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
@@ -503,7 +503,7 @@ $offcanvas-vertical-sizes: (
   medium: 450px,
   large: 400px
 );
-$offcanvas-background: $corp-navy;
+$offcanvas-background: #000;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
@@ -663,7 +663,7 @@ $prototype-separator-breakpoints: $global-prototype-breakpoints;
 $prototype-separator-align: center;
 $prototype-separator-height: rem-calc(2);
 $prototype-separator-width: 3rem;
-$prototype-separator-background: $corp-gold;
+$prototype-separator-background: #eee;
 $prototype-separator-margin-top: $global-margin;
 
 // 40. Prototype Shadow
