@@ -18,7 +18,7 @@ if (res) {
         var flag = false;
       }
       if (flag === true) {
-        output += '<div class="testimonials">';
+        output += '<div class="m-t-30 testimonials">';
           output += '<div class="featured-testimonials-section">';
             output += '<div class="testimonial" data-eqalizer>';
               output += '<div class="grid-x">';

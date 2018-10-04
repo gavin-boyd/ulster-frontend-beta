@@ -23,9 +23,9 @@ if (res) {
         var country_code = res[i].cca2;
         if (country == country_code) {
           var capital_city = res[i].capital;
-          output += '<div class="cell medium-6">';
+          output += '<div class="cell medium-6 wysiwyg">';
           output += '<iframe ' +
-                    'width="600" ' +
+                    'width="100%" ' +
                     'height="450" ' +
                     'frameborder="0" style="border:0" ' +
                     'src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD7oMxxt8TeWQIvmbu9mPmTEefkYF1Bp80&origin=' + capital_city + '+' + country + '&destination=' + campus + '&mode=flying" allowfullscreen>' +
