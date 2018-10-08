@@ -1,21 +1,20 @@
 var res = eval('(' + _REST.response.body + ')');
 var country_code = "%globals_asset_metadata_Content.Tagging.Country_key%";
+var output = '';
+var flagArray = [];
 if (res) {
-  var output = '';
   for (i = 0; i < res.length; i++) {
     var testimonial_country_code = res[i].tag_country;
-    if (testimonial_country_code.indexOf(',') !== -1) {
-      var testimonial_country_code_array = testimonial_country_code.split(',');
-    } else {
-      var testimonial_country_code_array = testimonial_country_code;
-    }
+    var testimonial_country_code_array = testimonial_country_code.split(',');
     for (x = 0; x < testimonial_country_code_array.length; x++) {
       var testimonial_code = testimonial_country_code_array[x];
       testimonial_code = String(testimonial_code);
       if (country_code == testimonial_code) {
         var flag = true;
+        flagArray.push('true');
       } else {
         var flag = false;
+        flagArray.push('false');
       }
       if (flag === true) {
         output += '<div class="m-t-30 testimonials">';
@@ -46,5 +45,11 @@ if (res) {
       }
     }
   }
+  if (flagArray.indexOf('true') > -1) {
+    print('<h2 class="h1">What our students from %globals_asset_name% say</h2>');
+  }
   print(output);
+  if (flagArray.indexOf('true') > -1) {
+    print('<hr>');
+  }
 }

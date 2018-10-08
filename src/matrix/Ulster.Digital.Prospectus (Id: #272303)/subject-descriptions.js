@@ -1,6 +1,9 @@
 jQuery(document).ready(function() {
-  var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/faculties-and-schools';
-  //var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/static/4-6-18/faculties-and-schools';
+  //dynamic json
+  //var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/faculties-and-schools';
+  //static json
+  var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/static/8-10-18/faculties-and-schools';
+  jQuery('#metadata_field_select_272290_').parent('td').parent('tr').css('display', 'none');
   jQuery.getJSON(schoolAPI, success);
   function success(data) {
     jQuery('#subjects label').each(function() {
