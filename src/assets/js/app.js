@@ -32,6 +32,10 @@ require('./api/clickforassistance/init');
 require('./plugins/fancybox/dist');
 require('./plugins/fancybox/init');
 
+//isotope
+require('./plugins/isotope/dist');
+require('./plugins/isotope/init');
+
 //sticky video
 require('./plugins/stickyvideo/init');
 
