@@ -8,9 +8,9 @@ jQuery(document).ready(function() {
     e.preventDefault();
     var valid = jQuery("#page_asset_builder_272204").valid();
     if (valid === true) {
-      jQuery('body').prepend('<div id="loading" style="width:100%; height:100%; position:fixed; background: rgba(0,0,0,.8); z-index:9999; display:table;"><div style="display:table-cell;vertical-align:middle;text-align:center;"><img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/cool-preloader.gif" alt="Loading" /><p style="color:#fff;" id="loading-text">Creating your prospectus</p></div></div>');
+      jQuery('body').prepend('<div class="preloader-container" id="loading"><div class="preloader"><img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/><p id="loading-text" class="m-t-20">Creating your prospectus</p></div></div>');
       jQuery.ajax({
-          url: '%globals_asset_url%',
+          url: 'https://www.ulster.ac.uk/personalised-prospectus',
           type: 'POST',
           data: jQuery(this).serialize(),
           success: function(result) {
@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
       if (total == 0) {
         message = '<p class="callout warning" id="uls_validation">Please refine your search, try changing either type, attendance or campus.</p>';
       }
-      var cta = '<p><a href="#" id="build" class="button large expanded"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Build my prospectus</a></p>';
+      var cta = '<p><a href="#" id="build" class="build button large rounded shadow expanded"><span class="fa fa-wrench" aria-hidden="true"></span>&nbsp;&nbsp;Build my prospectus</a></p>';
       jQuery('#course-counter').html('<div class="card bordered radius shadow card-section"' +
         '<p>We found</p>' +
         '<div class="stat">' + total + ' <small>' + coursesLabel + '</small></div><br><p>Matching your selections:</p>' +
@@ -120,17 +120,23 @@ jQuery(document).ready(function() {
         message +
         cta +
         '</div>');
+        jQuery('#mobile-course-counter').html('<div class="card bordered radius shadow card-section m-b-0">' +
+          '<div class="stat">' + total + ' <small>' + coursesLabel + '</small></div><p class="m-b-0">Matching your selections:</p>' +
+          labelHTML +
+          message +
+          '<p><a href="#" id="build" class="build button large rounded shadow expanded"><span class="fa fa-wrench" aria-hidden="true"></span>&nbsp;&nbsp;Build my prospectus</a></p>' +
+          '</div>');
       //add click event to build button
       if (total == 0) {
-        jQuery('#build').addClass('uls-disabled');
-        jQuery('#build').click(function(e) {
+        jQuery('.build').addClass('uls-disabled');
+        jQuery('.build').click(function(e) {
           e.preventDefault();
           jQuery('#uls_validation').css('border', '2px solid red');
         })
       } else {
         jQuery('#uls_validation').remove();
-        jQuery('#build').removeClass('uls-disabled');
-        jQuery('#build').click(function(e) {
+        jQuery('.build').removeClass('uls-disabled');
+        jQuery('.build').click(function(e) {
           e.preventDefault();
           //console.log('submit!');
           var valid = jQuery("#page_asset_builder_272204").valid();
@@ -195,8 +201,11 @@ jQuery(document).ready(function() {
 });
 //school description js
 jQuery(document).ready(function() {
-  var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/faculties-and-schools';
-  //var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/static/4-6-18/faculties-and-schools';
+  //dynamic json
+  //var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/faculties-and-schools';
+  //static json
+  var schoolAPI = 'https://www.ulster.ac.uk/digital-prospectus/_web_services/static/8-10-18/faculties-and-schools';
+  jQuery('#metadata_field_select_272290_').parent('td').parent('tr').css('display', 'none');
   jQuery.getJSON(schoolAPI, success);
   function success(data) {
     jQuery('#subjects label').each(function() {
