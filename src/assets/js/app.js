@@ -58,3 +58,6 @@ require('./plugins/jquery-background-video/init');
 require('./plugins/funnelback-completion/jquery-ui');
 require('./plugins/funnelback-completion/funnelback-completion');
 require('./plugins/funnelback-completion/funnelback-completion-init');
+
+//departments campus facets
+require('./plugins/departments-campus-facets/init');
