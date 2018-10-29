@@ -54,3 +54,6 @@ require('./plugins/jquery-background-video/init');
 require('./plugins/funnelback-completion/jquery-ui');
 require('./plugins/funnelback-completion/funnelback-completion');
 require('./plugins/funnelback-completion/funnelback-completion-init');
+
+//mobile side nav
+require('./plugins/mobilesidenav/init');
