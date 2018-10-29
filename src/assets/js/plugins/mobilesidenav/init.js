@@ -9,7 +9,6 @@ function initMobileSideNav() {
   jQuery('#uls-mobile-side-button a').click(function() {
     var icon = jQuery('#uls-mobile-side-button a span');
     if(icon.hasClass('fa-angle-down')) {
-      console.log('true')
       icon.removeClass('fa-angle-down');
       icon.addClass('fa-angle-up');
     } else {
