@@ -61,3 +61,6 @@ require('./plugins/funnelback-completion/funnelback-completion-init');
 
 //departments campus facets
 require('./plugins/departments-campus-facets/init');
+
+//mobile side nav
+require('./plugins/mobilesidenav/init');
