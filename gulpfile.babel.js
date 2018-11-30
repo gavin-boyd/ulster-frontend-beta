@@ -29,7 +29,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(futurasass, pages, sass, legacysass, homecriticalsass, prospectusappsass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(futurasass, pages, sass, legacysass, homecriticalsass, prospectusappsass, formsass, javascript, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -117,6 +117,25 @@ function legacysass() {
 //added for prospectus-app.scss
 function prospectusappsass() {
   return gulp.src('src/assets/scss/prospectus-app.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+
+//added for application-form.scss
+function formsass() {
+  return gulp.src('src/assets/scss/application-form.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
@@ -233,6 +252,7 @@ function watch() {
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
   gulp.watch('src/assets/scss/legacy-app.scss').on('all', legacysass);
   gulp.watch('src/assets/scss/prospectus-app.scss').on('all', prospectusappsass);
+  gulp.watch('src/assets/scss/application-from.scss').on('all', formsass);
   gulp.watch('src/assets/scss/homepage-critical.scss').on('all', homecriticalsass);
   gulp.watch('src/assets/scss/personalised-medicine.scss').on('all', futurasass);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
