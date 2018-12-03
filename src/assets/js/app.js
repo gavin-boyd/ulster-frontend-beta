@@ -64,3 +64,6 @@ require('./plugins/departments-campus-facets/init');
 
 //mobile side nav
 require('./plugins/mobilesidenav/init');
+
+//add selected state background to form inputs checkboxes and radios
+require('./plugins/selected-radios/init');
