@@ -24,11 +24,17 @@ label
 }
 .sq-form-error
 {
-  background: #B10E1E;
-  color: #fff;
-  display:block;
-  padding:10px 20px;
-  color:#fff;
+  color:#b10e1e;
+  font-weight:bold;
+}
+.sq-form-question-error
+{
+  padding-left:15px;
+  border-left:5px solid #b10e1e;
+}
+.sq-form-question-error input
+{
+  margin-bottom: 5px;
 }
 textarea,
 input
@@ -46,11 +52,6 @@ input
   background:#eee;
   padding: 20px;
   margin-bottom:1px;
-}
-.sq-form-page-list li.sq-form-current-page-number
-{
-  background:#425582;
-  color:#fff;
 }
 .sq-form-page-list li .no-pulse-navy
 {
@@ -144,7 +145,7 @@ select:focus
 }
 .sq-form-page-list li.sq-form-current-page-number
 {
-  background:#425582;
+  background:#005ea5;
   color:#fff;
 }
 .sq-form-page-list li .no-pulse-navy
@@ -163,29 +164,44 @@ select:focus
 {
   font-family: "FS Matthew Web Regular";
 }
-.sq-form-question-answer
+
+.sq-form-question-option-list
 {
-  ul:not(.country-list)
+  .sq-form-question-answer
   {
-    margin:0 0 20px 0;
-
-    li
+    ul:not(.country-list)
     {
-      display:inline-block;
-      background:#eee;
-      margin-right:5px;
-      padding-left:10px;
+      margin:0 0 20px 0;
 
-      label
+      li
       {
-        padding:10px;
+        display:inline-block;
+        background:#eee;
+        margin-right:5px;
+        padding-left:10px;
+
+        label
+        {
+          padding:10px;
+        }
       }
     }
   }
 }
-
-
-
+.sq-form-question-tickbox-list
+{
+  .sq-form-question-answer
+  {
+    ul
+    {
+      li
+      {
+        display:block !important;
+        margin-bottom: 10px !important;
+      }
+    }
+  }
+}
 
 //Int Tel Input
 /**
@@ -1176,13 +1192,30 @@ label[for="q300597_q5"]
   display:none;
 }
 
-//TAE form
+//Global Applications Form
 label[for=q328019_q2],
 label[for=q328019_q3],
 label[for=q328019_q4],
 label[for=q328020_q7],
 label[for=q332869_q2],
-label[for=q332869_q4]
+label[for=q332869_q4],
+label[for=q340725_q2],
+label[for=q340725_q3],
+label[for=q340725_q4],
+label[for=q340726_q2],
+label[for=q340726_q4],
+label[for=q340727_q11],
+label[for=q340929_q2],
+label[for=q340929_q3],
+label[for=q340929_q4],
+label[for=q340930_q2],
+label[for=q340930_q4],
+label[for=q340931_q11]
 {
   display:none;
+}
+
+.ui-menu-item
+{
+  padding:10px;
 }
