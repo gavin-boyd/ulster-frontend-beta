@@ -1,0 +1,1167 @@
+<div class="grid-container m-b-60">
+  <div class="grid-x grid-padding-x">
+    <div class="cell large-3">
+      <ul class="vertical tabs" data-tabs id="course-tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge>
+        <li class="tabs-title is-active"><a href="#overview" aria-selected="true">Overview</a></li>
+        <li class="tabs-title"><a href="#about">About</a></li>
+        %begin_modules_exist%
+        %begin_is_course_type_ug_or_pg%
+          %begin_show_modules_per_school%
+            %begin_hide_modules_for_course%
+            %else_hide_modules_for_course%
+              <li class="tabs-title"><a href="#modules">Modules</a></li>
+            %end_hide_modules_for_course%
+          %end_show_modules_per_school%
+        %end_is_course_type_ug_or_pg%
+        %end_modules_exist%
+          %begin_not_short_course%
+            %begin_entry_conditions_exist%
+              <li class="tabs-title"><a href="#entryconditions">Entry conditions</a></li>
+            %end_entry_conditions_exist%
+          %end_not_short_course%
+          %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+            %begin_career_options%
+              <li class="tabs-title"><a href="#opportunities">Careers &amp; opportunities</a></li>
+            %end_career_options%
+          %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+          %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+            %begin_career_options%
+              <li class="tabs-title"><a href="#opportunities">Careers &amp; opportunities</a></li>
+            %end_career_options%
+          %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+          %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+            %begin_career_options%
+              <li class="tabs-title"><a href="#opportunities">Careers &amp; opportunities</a></li>
+            %end_career_options%
+          %end_asset_metadata_Courses.New.Type^eq:Research programme%
+          <li class="tabs-title"><a href="#apply">Apply</a></li>
+          %begin_fees_and_funding%
+            <li class="tabs-title">
+              <a href="#fees">
+                %begin_asset_metadata_Courses.New.Course.Type^eq:Other short course%
+                  Price &amp; Payment
+                %else_asset_metadata_Courses.New.Course.Type^eq:Other short course%
+                  Fees &amp; Funding
+                %end_asset_metadata_Courses.New.Course.Type^eq:Other short course%
+              </a>
+            </li>
+          %end_fees_and_funding%
+          %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+            %begin_asset_metadata_Courses.New.Research.Facilities.And.Groups%
+              <li class="tabs-title"><a href="#research">Research facilities &amp; groups</a></li>
+            %end_asset_metadata_Courses.New.Research.Facilities.And.Groups%
+          %end_asset_metadata_Courses.New.Type^eq:Research programme%
+          %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+            %begin_asset_metadata_Courses.New.Staff.Research.Areas%
+              <li class="tabs-title"><a href="#staff">Staff research areas</a></li>
+            %end_asset_metadata_Courses.New.Staff.Research.Areas%
+          %end_asset_metadata_Courses.New.Type^eq:Research programme%
+          %begin_asset_metadata_Courses.New.Contact.Details%
+            <li class="tabs-title"><a href="#contact">Contact</a></li>
+          %end_asset_metadata_Courses.New.Contact.Details%
+          %begin_asset_metadata_Courses.New.Testimonials%
+            <li class="tabs-title testimonial-tab"><a href="#testimonials">Testimonials</a></li>
+          %end_asset_metadata_Courses.New.Testimonials%
+      </ul>
+    </div>
+    <div class="cell large-9">
+      <div class="tabs-content" data-tabs-content="course-tabs">
+        <div class="tabs-panel is-active" id="overview">
+          <h2>Overview</h2>
+          %begin_asset_metadata_Course.Show.Additional.Message.In.Orange.Box^neq:n%
+            %begin_asset_metadata_Course.Additional.Custom.Message%
+              <div class="callout">
+                <p><strong>Important notice – campus change</strong> %asset_metadata_Course.Additional.Custom.Message^as_asset:asset_contents_raw%</p>
+              </div>
+            %end_asset_metadata_Course.Additional.Custom.Message%
+          %end_asset_metadata_Course.Show.Additional.Message.In.Orange.Box^neq:n%
+          %begin_asset_metadata_Course.Moving.Message^eq:belfast%
+            %globals_asset_contents_raw:71365%
+          %end_asset_metadata_Course.Moving.Message^eq:belfast%
+          %begin_asset_metadata_Course.Moving.Message^eq:coleraine%
+            %globals_asset_contents_raw:71369%
+          %end_asset_metadata_Course.Moving.Message^eq:coleraine%
+          %begin_asset_metadata_Course.Changing.Name.Message^eq:Yes%
+            <div class="callout">
+              <p>Subject to revalidation, this course will undergo change in course title with updates to the course curriculum.</p>
+            </div>
+          %end_asset_metadata_Course.Changing.Name.Message^eq:Yes%
+
+          %begin_subject_to_approval%
+            <div class="callout">
+              <p>* This course is undergoing academic validation. Please note that the information displayed here is subject to change as part of this process.</p>
+            </div>
+          %end_subject_to_approval%
+          %begin_asset_metadata_Courses.New.Video.Two.ID%
+            <p>In this section</p>
+            <ol class="sectionlinks">
+              %begin_asset_metadata_Courses.New.Summary%
+                <li><a href="#secsummary">Summary</a></li>
+              %end_asset_metadata_Courses.New.Summary%
+              %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+              %else_asset_metadata_Courses.New.Type^eq:Research programme%
+                <li><a href="#secupdates">Sign up for course updates</a></li>
+              %end_asset_metadata_Courses.New.Type^eq:Research programme%
+            </ol>
+          %end_asset_metadata_Courses.New.Video.Two.ID%
+          %begin_condition_media_one_column%
+            <!-- one column media -->
+            %begin_asset_metadata_Courses.New.Video.Two.ID%
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/%asset_metadata_Courses.New.Video.Two.ID%" frameborder="0" allowfullscreen=""></iframe>
+            %end_asset_metadata_Courses.New.Video.Two.ID%
+          %end_condition_media_one_column%
+          %begin_condition_media_two_column%
+            <!-- multi column media -->
+            <h3 id="secmedia" class="hidden">Media</h3>
+            <div class="videos three">
+              %begin_asset_metadata_Courses.New.Video.Two.ID%
+                <div class="video-container-one">
+                  <button style="background-image: url(//img.youtube.com/vi/%asset_metadata_Courses.New.Video.Two.ID%/0.jpg)" class="%asset_metadata_Courses.New.Video.Two.ID%"><span>%asset_metadata_Courses.New.Video.Two.Title%</span><i class="fa fa-play-circle"></i></button>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/%asset_metadata_Courses.New.Video.Two.ID%" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+              %end_asset_metadata_Courses.New.Video.Two.ID%
+              %begin_asset_metadata_Courses.New.Video.Three.ID%
+                <div class="video-container-two">
+                  <button style="background-image: url(//img.youtube.com/vi/%asset_metadata_Courses.New.Video.Three.ID%/0.jpg)" class="%asset_metadata_Courses.New.Video.Three.ID%"><span>%asset_metadata_Courses.New.Video.Three.Title%</span><i class="fa fa-play-circle"></i></button>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/%asset_metadata_Courses.New.Video.Three.ID%" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+              %end_asset_metadata_Courses.New.Video.Three.ID%
+            </div>
+          %end_condition_media_two_column%
+          %begin_asset_metadata_Courses.New.Course.Strapline%
+            <div class="intro">
+              <p>%asset_metadata_Courses.New.Course.Strapline%</p>
+            </div>
+          %end_asset_metadata_Courses.New.Course.Strapline%
+          %begin_asset_metadata_Courses.New.Summary%
+            <h3 id="secsummary">Summary</h3>
+          %end_asset_metadata_Courses.New.Summary%
+          %begin_asset_metadata_Courses.New.Summary%
+            %asset_metadata_Courses.New.Summary%
+          %end_asset_metadata_Courses.New.Summary%
+          %begin_asset_metadata_Courses.New.Tagging.System%
+            <!--<h3>International Students</h3>
+            <p>If you don't meet our entry requirements for this course you may want to consider our <a href="./?a=173724">International Foundation Programme (IFP)</a></p>
+            <p>The <a href="./?a=173724">International Foundation Programme (IFP)</a> will prepare you for studying an undergraduate degree at Ulster.</p>
+            <a href="./?a=173724" class="btn btn-primary" title="Find out more about the International Foundation Programme">Find out more</a>-->
+          %end_asset_metadata_Courses.New.Tagging.System%
+          %begin_asset_metadata_Courses.New.Joint.Or.Minor%
+            %asset_metadata_Courses.New.Joint.Or.Minor%
+          %end_asset_metadata_Courses.New.Joint.Or.Minor%
+          %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+          %else_asset_metadata_Courses.New.Type^eq:Research programme%
+            <h3 id="secupdates">Sign up for course updates</h3>
+            <p>Sign up to receive regular updates, news and information on courses, events and developments at Ulster University.</p>
+            <p>We’ll not share your information and you can unsubscribe at any time.</p>
+            <iframe src="https://app-eu.geckoform.com/public/#/iframe/FOEU02eemsQECcdq?course_title=%asset_metadata_Courses.New.Index.Title%&mode_of_study=%asset_metadata_Courses.New.Mode.Of.Attendance.FT%%asset_metadata_Courses.New.Mode.Of.Attendance.PT%&academic_year=%asset_metadata_Courses.New.Entry.Year%&campus=%asset_metadata_Courses.New.Campus%&level_of_study=%asset_metadata_Courses.New.Study.Level%" frameborder="0" width="100%" height="900" data-include="true" seamless></iframe>
+          %end_asset_metadata_Courses.New.Type^eq:Research programme%
+        </div><!-- close overview tab -->
+        <div class="tabs-panel" id="about">
+          %begin_home_campus%
+            %asset_metadata_Courses.New.Campus^eq:Belfast:<script runat="server">var campusVideo = 'JFUrfasaQQo'; var campusVideoStrap = 'A globally recognised hub of creativity, innovation and entrepreneurship';</script>:%
+            %asset_metadata_Courses.New.Campus^eq:Coleraine:<script runat="server">var campusVideo = 'yOYm878T29s'; var campusVideoStrap = 'Our coastal and riverside campus with a primary academic focus on science and health';</script>:%
+            %asset_metadata_Courses.New.Campus^eq:Magee:<script runat="server">var campusVideo = 'NHHGMS9FD2k'; var campusVideoStrap = 'Our vision is aligned to the strategic growth plan for the city and region';</script>:%
+            <h2>%asset_metadata_Courses.New.Campus% campus</h2>
+            <p><script runat="server">print(campusVideoStrap);</script></p>
+            <iframe frameborder="0" allowfullscreen="1" width="100%" height="400" src="https://www.youtube.com/embed/<script runat="server">print(campusVideo);</script>"></iframe>
+          %end_home_campus%
+          <h2>About this course</h2>
+          <p>In this section</p>
+          <ol class="sectionlinks">
+            %begin_asset_metadata_Courses.New.About.This.Course%
+              <li><a href="#secabout">About</a></li>
+            %end_asset_metadata_Courses.New.About.This.Course%
+            %begin_asset_metadata_Courses.New.Linked.To.Programmes%
+              <li><a href="#seclinkedprogrammes">Linked programmes</a></li>
+            %end_asset_metadata_Courses.New.Linked.To.Programmes%
+            %begin_asset_metadata_Courses.New.Assessment%
+              <li><a href="#secassessment">Assessment</a></li>
+            %end_asset_metadata_Courses.New.Assessment%
+            %begin_asset_metadata_Courses.New.Associate.Awards%
+              <li><a href="#secassociateawards">Associate awards</a></li>
+            %end_asset_metadata_Courses.New.Associate.Awards%
+            %begin_asset_metadata_Courses.New.Attendance%
+              <li><a href="#secattendance">Attendance</a></li>
+            %end_asset_metadata_Courses.New.Attendance%
+            %begin_not_short_course%
+            %else_not_short_course%
+              %begin_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+                %begin_asset_metadata_Courses.New.Professional.Recognition.Text%
+                  <li><a href="#secprofrecognition">Professional recognition</a></li>
+                %end_asset_metadata_Courses.New.Professional.Recognition.Text%
+              %end_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+              %begin_asset_metadata_Courses.New.Academic.Profile%
+                <li><a href="#secacademicprofile">Academic profile</a></li>
+              %end_asset_metadata_Courses.New.Academic.Profile%
+              %begin_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+                <li><a href="#secentryrequirements">Entry requirements</a></li>
+              %end_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+              %begin_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+                <li><a href="#secenglishreq">English Language Requirements</a></li>
+              %end_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+            %end_not_short_course%
+            %begin_asset_metadata_Courses.New.Start.Date.One%
+              <li><a href="#secstartdatesab">Start dates</a></li>
+            %end_asset_metadata_Courses.New.Start.Date.One%
+          </ol>
+          %begin_asset_metadata_Courses.New.About.This.Course%
+            <h3 id="secabout">About</h3>
+            %asset_metadata_Courses.New.About.This.Course%
+          %end_asset_metadata_Courses.New.About.This.Course%
+          %begin_asset_metadata_Courses.New.Linked.To.Programmes%
+            <h3 id="seclinkedprogrammes">Linked programmes</h3>
+            %asset_metadata_Courses.New.Linked.To.Programmes%
+          %end_asset_metadata_Courses.New.Linked.To.Programmes%
+          %begin_asset_metadata_Courses.New.Assessment%
+            <h3 id="secassessment">Assessment</h3>
+            %asset_metadata_Courses.New.Assessment%
+          %end_asset_metadata_Courses.New.Assessment%
+          %begin_asset_metadata_Courses.New.Associate.Awards%
+            <h3 id="secassociateawards">Associate awards</h3>
+            %asset_metadata_Courses.New.Associate.Awards%
+            %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+              <p>Find out more about <a href="./?a=82740">placement awards</a></p>
+            %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+          %end_asset_metadata_Courses.New.Associate.Awards%
+          %begin_asset_metadata_Courses.New.Attendance%
+            <h3 id="secattendance">Attendance</h3>
+            %asset_metadata_Courses.New.Attendance%
+          %end_asset_metadata_Courses.New.Attendance%
+          %begin_not_short_course%
+          %else_not_short_course%
+            %begin_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+              %begin_asset_metadata_Courses.New.Professional.Recognition.Text%
+                <h3 id="secprofrecognition">Professional recognition</h3>
+                %asset_metadata_Courses.New.Professional.Recognition.Text%
+              %end_asset_metadata_Courses.New.Professional.Recognition.Text%
+            %end_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+          %end_not_short_course%
+          %begin_not_short_course%
+          %else_not_short_course%
+            %begin_asset_metadata_Courses.New.Academic.Profile%
+              <h3 id="secacademicprofile">Academic profile</h3>
+              %asset_metadata_Courses.New.Academic.Profile%
+            %end_asset_metadata_Courses.New.Academic.Profile%
+          %end_not_short_course%
+          %begin_not_short_course%
+          %else_not_short_course%
+            %begin_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+              <h3 id="secentryrequirements">Entry requirements</h3>
+              %asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+            %end_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+          %end_not_short_course%
+          %begin_not_short_course%
+          %else_not_short_course%
+            %begin_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+              <h3 id="secenglishreq">English Language Requirements</h3>
+              %asset_metadata_Courses.New.Entry.Conditions.English.Language%
+            %end_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+          %end_not_short_course%
+          %begin_asset_metadata_Courses.New.Start.Date.One%
+            <h3 id="secstartdatesab">Start dates</h3>
+            <ul>
+              %begin_asset_metadata_Courses.New.Start.Date.One%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.One^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.One%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.One.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.One.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.One.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.One%
+              %begin_asset_metadata_Courses.New.Start.Date.Two%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Two^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Two%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Two.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Two.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Two.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Two%
+              %begin_asset_metadata_Courses.New.Start.Date.Three%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Three^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Three%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Three.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Three.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Three.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Three%
+              %begin_asset_metadata_Courses.New.Start.Date.Four%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Four^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Four%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Four.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Four.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Four.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Four%
+              %begin_asset_metadata_Courses.New.Start.Date.Five%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Five^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Five%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Five.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Five.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Five.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Five%
+              %begin_asset_metadata_Courses.New.Start.Date.Six%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Six^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Six%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Six.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Six.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Six.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Six%
+              %begin_asset_metadata_Courses.New.Start.Date.Seven%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Seven^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Seven%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Seven.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Seven.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Seven.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Seven%
+              %begin_asset_metadata_Courses.New.Start.Date.Eight%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Eight^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Eight%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Eight.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Eight.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Eight.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Eight%
+              %begin_asset_metadata_Courses.New.Start.Date.Nine%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Nine^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Nine%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Nine.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Nine.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Nine.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Nine%
+              %begin_asset_metadata_Courses.New.Start.Date.Ten%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Ten^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Ten%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Ten.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Ten.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Ten.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Ten%
+              %begin_asset_metadata_Courses.New.Start.Date.Eleven%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Eleven^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Eleven%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Eleven.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Eleven.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Eleven.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Eleven%
+              %begin_asset_metadata_Courses.New.Start.Date.Twelve%
+                <li>
+                  %begin_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Twelve^preg_replace:75250%
+                  %else_if_ug_or_pg%
+                    %asset_metadata_Courses.New.Start.Date.Twelve%
+                  %end_if_ug_or_pg%
+                  %begin_asset_metadata_Courses.New.Start.Date.Twelve.Apply.URL%
+                    <a href="%asset_metadata_Courses.New.Start.Date.Twelve.Apply.URL%">Apply</a>
+                  %end_asset_metadata_Courses.New.Start.Date.Twelve.Apply.URL%
+                </li>
+              %end_asset_metadata_Courses.New.Start.Date.Twelve%
+            </ul>
+          %end_asset_metadata_Courses.New.Start.Date.One%
+          %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+            <a href="./?a=7386" class="btn btn-primary">How to apply <i class="fa fa-external-link"></i></a>
+          %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+          %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+            <a href="./?a=7386" class="btn btn-primary">How to apply <i class="fa fa-external-link"></i></a>
+          %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+          %begin_asset_metadata_Courses.New.Type^eq:Short course module%
+            <a href="./?a=7386" class="btn btn-primary">How to apply <i class="fa fa-external-link"></i></a>
+          %end_asset_metadata_Courses.New.Type^eq:Short course module%
+          %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+            <a href="./?a=59295" class="btn btn-primary">How to apply <i class="fa fa-external-link"></i></a>
+          %end_asset_metadata_Courses.New.Type^eq:Research programme%
+        </div><!-- close about tab -->
+        %begin_modules_exist%
+        %begin_is_course_type_ug_or_pg%
+          %begin_show_modules_per_school%
+          %begin_hide_modules_for_course%
+          %else_hide_modules_for_course%
+          <!-- modules content START -->
+          <div class="tabs-panel" id="modules">
+            <div class="wysiwyg">
+              <h2>Modules</h2>
+              <p class="intro" style="margin-bottom:10px;">Here is a guide to the subjects studied on this course.</p>
+              <p>Courses are continually reviewed to take advantage of new teaching approaches and developments in research, industry and the professions. Please be aware that modules may change for your year of entry. The exact modules available and their order may vary depending on course updates, staff availability, timetabling and student demand. Please contact the course team for the most up to date module list.</p>
+              <p>In this section</p>
+              <ol class="sectionlinks">
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.One%
+                  <li><a href="#secyearone">Year one</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.One%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Two%
+                  <li><a href="#secyeartwo">Year two</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Two%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Three%
+                  <li><a href="#secyearthree">Year three</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Three%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Four%
+                  <li><a href="#secyearfour">Year four</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Four%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Five%
+                  <li><a href="#secyearfive">Year five</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Five%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Six%
+                  <li><a href="#secyearsix">Year six</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Six%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Seven%
+                  <li><a href="#secyearseven">Year seven</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Seven%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Eight%
+                  <li><a href="#secyeareight">Year eight</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Eight%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Nine%
+                  <li><a href="#secyearnine">Year nine</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Nine%
+                %begin_asset_metadata_Courses.New.Modular.Structure.Year.Ten%
+                  <li><a href="#secyearten">Year ten</a></li>
+                %end_asset_metadata_Courses.New.Modular.Structure.Year.Ten%
+              </ol>
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.One%
+                <h3 id="secyearone">Year one</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.One%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.One%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Two%
+                <h3 id="secyeartwo">Year two</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Two%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Two%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Three%
+                <h3 id="secyearthree">Year three</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Three%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Three%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Four%
+                <h3 id="secyearfour">Year four</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Four%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Four%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Five%
+                <h3 id="secyearfive">Year five</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Five%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Five%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Six%
+                <h3 id="secyearsix">Year six</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Six%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Six%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Seven%
+                <h3 id="secyearseven">Year seven</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Seven%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Seven%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Eight%
+                <h3 id="secyeareight">Year eight</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Eight%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Eight%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Nine%
+                <h3 id="secyearnine">Year nine</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Nine%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Nine%
+
+              %begin_asset_metadata_Courses.New.Modular.Structure.Year.Ten%
+                <h3 id="secyearten">Year ten</h3>
+                %asset_metadata_Courses.New.Modular.Structure.Year.Ten%
+              %end_asset_metadata_Courses.New.Modular.Structure.Year.Ten%
+            </div>
+          </div>
+          <!-- modules content END -->
+          %end_hide_modules_for_course%
+          %end_show_modules_per_school%
+        %end_is_course_type_ug_or_pg%
+        %end_modules_exist%
+        %begin_not_short_course%
+          %begin_entry_conditions_exist%
+            <!-- entry conditions START -->
+            <div class="tabs-panel" id="entryconditions">
+              <div class="wysiwyg">
+                <h2>Entry conditions</h2>
+                <p class="intro">We recognise a range of qualifications for admission to our courses. In addition to the specific entry conditions for this course you must also meet the University’s <a href="./?a=7433">General Entrance Requirements</a>.</p>
+                <p>In this section</p>
+                <ol class="sectionlinks">
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+                    <li><a href="#secento">Entry Requirements</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.GCE.A.Level%
+                    <li><a href="#secentone">A level</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.GCE.A.Level%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.BTEC%
+                    <li><a href="#secenttwo">Applied General Qualifications</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.BTEC%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.Irish.Leaving.Certificate%
+                    <li><a href="#secentthree">Irish Leaving Certificate</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.Irish.Leaving.Certificate%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.Scottish.Highers%
+                    <li><a href="#secentfour">Scottish Highers</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.Scottish.Highers%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.Scottish.Advanced.Highers%
+                    <li><a href="#secentfive">Scottish Advanced Highers</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.Scottish.Advanced.Highers%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.International.Baccalaureate%
+                    <li><a href="#secentsix">International Baccalaureate</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.International.Baccalaureate%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.Access.To.HE%
+                    <li><a href="#secentseven">Access to Higher Education (HE)</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.Access.To.HE%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.GCSE%
+                    <li><a href="#secenteight">GCSE</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.GCSE%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+                    <li><a href="#secentnine">English Language Requirements</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+                  %begin_asset_metadata_Courses.New.Entry.Conditions.Additional.Entry.Requirements%
+                    <li><a href="#secentten">Additional Entry Requirements</a></li>
+                  %end_asset_metadata_Courses.New.Entry.Conditions.Additional.Entry.Requirements%
+                  %begin_asset_metadata_Courses.New.Teaching.And.Learning.Assessment%
+                    <li><a href="#secenteleven">Teaching and learning assessment</a></li>
+                  %end_asset_metadata_Courses.New.Teaching.And.Learning.Assessment%
+                  %begin_asset_metadata_Courses.New.Exemptions.And.Transferability%
+                    <li><a href="#secenttwelve">Exemptions and transferability</a></li>
+                  %end_asset_metadata_Courses.New.Exemptions.And.Transferability%
+                </ol>
+                %begin_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+                  <h3 id="secento">Entry Requirements</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+                %end_asset_metadata_Courses.New.Entry.Conditions.Entry.Requirements%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.GCE.A.Level%
+                  <h3 id="secentone">A level</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.GCE.A.Level%
+                %end_asset_metadata_Courses.New.Entry.Conditions.GCE.A.Level%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.BTEC%
+                  <h3 id="secenttwo">Applied General Qualifications</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.BTEC%
+                %end_asset_metadata_Courses.New.Entry.Conditions.BTEC%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.Irish.Leaving.Certificate%
+                  <h3 id="secentthree">Irish Leaving Certificate</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.Irish.Leaving.Certificate%
+                %end_asset_metadata_Courses.New.Entry.Conditions.Irish.Leaving.Certificate%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.Scottish.Highers%
+                  <h3 id="secentfour">Scottish Highers</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.Scottish.Highers%
+                %end_asset_metadata_Courses.New.Entry.Conditions.Scottish.Highers%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.Scottish.Advanced.Highers%
+                  <h3 id="secentfive">Scottish Advanced Highers</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.Scottish.Advanced.Highers%
+                %end_asset_metadata_Courses.New.Entry.Conditions.Scottish.Advanced.Highers%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.International.Baccalaureate%
+                  <h3 id="secentsix">International Baccalaureate</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.International.Baccalaureate%
+                %end_asset_metadata_Courses.New.Entry.Conditions.International.Baccalaureate%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.Access.To.HE%
+                  <h3 id="secentseven">Access to Higher Education (HE)</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.Access.To.HE%
+                %end_asset_metadata_Courses.New.Entry.Conditions.Access.To.HE%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.GCSE%
+                  <h3 id="secenteight">GCSE</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.GCSE%
+                %end_asset_metadata_Courses.New.Entry.Conditions.GCSE%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+                  <h3 id="secentnine">English Language Requirements</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.English.Language%
+                %end_asset_metadata_Courses.New.Entry.Conditions.English.Language%
+                %begin_asset_metadata_Courses.New.Entry.Conditions.Additional.Entry.Requirements%
+                  <h3 id="secentten">Additional Entry Requirements</h3>
+                  %asset_metadata_Courses.New.Entry.Conditions.Additional.Entry.Requirements%
+                %end_asset_metadata_Courses.New.Entry.Conditions.Additional.Entry.Requirements%
+                %begin_asset_metadata_Courses.New.Teaching.And.Learning.Assessment%
+                  <h3 id="secenteleven">Teaching and learning assessment</h3>
+                  %asset_metadata_Courses.New.Teaching.And.Learning.Assessment%
+                %end_asset_metadata_Courses.New.Teaching.And.Learning.Assessment%
+                %begin_asset_metadata_Courses.New.Exemptions.And.Transferability%
+                  <h3 id="secenttwelve">Exemptions and transferability</h3>
+                  %asset_metadata_Courses.New.Exemptions.And.Transferability%
+                %end_asset_metadata_Courses.New.Exemptions.And.Transferability%
+              </div>
+            </div>
+            <!-- entry conditions END -->
+          %end_entry_conditions_exist%
+        %end_not_short_course%
+        %begin_not_short_course%
+          %begin_career_options%
+            <!-- careers & opportunities START -->
+            <div class="tabs-panel" id="opportunities">
+              <div class="wysiwyg">
+                <h2>Careers &amp; opportunities</h2>
+                <p>In this section</p>
+                <ol class="sectionlinks">
+                  %begin_asset_metadata_Courses.New.Graduate.Employers%
+                    <li><a href="#secgrademployers">Graduate employers</a></li>
+                  %end_asset_metadata_Courses.New.Graduate.Employers%
+                  %begin_asset_metadata_Courses.New.Job.Roles%
+                    <li><a href="#secjobroles">Job roles</a></li>
+                  %end_asset_metadata_Courses.New.Job.Roles%
+                  %begin_asset_metadata_Courses.New.Career.Options%
+                    <li><a href="#seccareeroptions">Career options</a></li>
+                  %end_asset_metadata_Courses.New.Career.Options%
+                  %begin_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+                    <li><a href="#secprofrecognition">Professional recognition</a></li>
+                  %end_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+                  %begin_asset_metadata_Courses.New.Work.Placement.Study.Abroad%
+                    <li><a href="#secworkplacement">Work placement / study abroad</a></li>
+                  %end_asset_metadata_Courses.New.Work.Placement.Study.Abroad%
+                  %begin_asset_metadata_Courses.New.Professional.Recognition^neq:FALSE%
+                    %begin_asset_metadata_Courses.New.Professional.Recognition%
+                      %begin_hide_IES_accreditation%
+                        <!--Thursday, 22 November 2018 at 09:36 - 'with' courses and accreditation issue - OLP entries Arlene Crymble -->
+                      %else_hide_IES_accreditation%
+                        <li><a href="#secprofessionalrecognition">Professional recognition</a></li>
+                      %end_hide_IES_accreditation%
+                    %end_asset_metadata_Courses.New.Professional.Recognition%
+                  %end_asset_metadata_Courses.New.Professional.Recognition^neq:FALSE%
+                  %begin_asset_metadata_Courses.New.Academic.Profile%
+                    <li><a href="#secacademicprofile">Academic profile</a></li>
+                  %end_asset_metadata_Courses.New.Academic.Profile%
+                </ol>
+
+                %begin_asset_metadata_Courses.New.Graduate.Employers%
+                  <h3 id="secgrademployers">Graduate employers</h3>
+                  <p>Graduates from this course have gained employment with a wide range of organisations. Here are some examples:</p>
+                  %asset_metadata_Courses.New.Graduate.Employers%
+                %end_asset_metadata_Courses.New.Graduate.Employers%
+
+                %begin_asset_metadata_Courses.New.Job.Roles%
+                  <h3 id="secjobroles">Job roles</h3>
+                  <p>Graduates from this course are employed in many different roles. Here are some examples:</p>
+                  %asset_metadata_Courses.New.Job.Roles%
+                %end_asset_metadata_Courses.New.Job.Roles%
+
+                %begin_asset_metadata_Courses.New.Career.Options%
+                  <h3 id="seccareeroptions">Career options</h3>
+                  %asset_metadata_Courses.New.Career.Options%
+                %end_asset_metadata_Courses.New.Career.Options%
+
+                %begin_asset_metadata_Courses.New.Work.Placement.Study.Abroad%
+                  <h3 id="secworkplacement">Work placement / study abroad</h3>
+                  %asset_metadata_Courses.New.Work.Placement.Study.Abroad%
+                %end_asset_metadata_Courses.New.Work.Placement.Study.Abroad%
+
+                %begin_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+                  %begin_asset_metadata_Courses.New.Professional.Recognition.Text%
+                    <h3 id="secprofrecognition">Professional recognition</h3>
+                    %asset_metadata_Courses.New.Professional.Recognition.Text%
+                    <!-- test message -->
+                  %end_asset_metadata_Courses.New.Professional.Recognition.Text%
+                %end_asset_metadata_Courses.New.Professional.Recognition.Text^neq:FALSE%
+
+                %begin_asset_metadata_Courses.New.Professional.Recognition^neq:FALSE%
+                  %begin_asset_metadata_Courses.New.Professional.Recognition%
+                    %begin_hide_IES_accreditation%
+                      <!--Thursday, 22 November 2018 at 09:36 - 'with' courses and accreditation issue - OLP entries Arlene Crymble -->
+                    %else_hide_IES_accreditation%
+                      <h3 id="secprofessionalrecognition">Professional recognition</h3>
+                      %asset_metadata_Courses.New.Professional.Recognition%
+                    %end_hide_IES_accreditation%
+                  %end_asset_metadata_Courses.New.Professional.Recognition%
+                %end_asset_metadata_Courses.New.Professional.Recognition^neq:FALSE%
+
+                %begin_asset_metadata_Courses.New.Academic.Profile%
+                  <h3 id="secacademicprofile">Academic profile</h3>
+                  %asset_metadata_Courses.New.Academic.Profile%
+                %end_asset_metadata_Courses.New.Academic.Profile%
+              </div>
+            </div>
+            <!-- careers & opportunities END -->
+          %end_career_options%
+        %end_not_short_course%
+        <!-- apply START -->
+        <div class="tabs-panel" id="apply">
+          <div class="wysiwyg">
+            <h2>Apply</h2>
+            <!-- Apply Buttons START -->
+            %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+              %begin_asset_metadata_Courses.New.elearning^eq:eLearning%
+                <a href="%globals_asset_url:220965%" class="btn btn-primary" id="olphowtoapplybanner">How to apply</a>
+              %else_asset_metadata_Courses.New.elearning^eq:eLearning%
+                <a href="%globals_asset_url:220956%" class="btn btn-primary" id="olphowtoapplybanner">How to apply</a>
+                <a href="%globals_asset_url:222385%" class="btn btn-primary">Request a prospectus</a>
+              %end_asset_metadata_Courses.New.elearning^eq:eLearning%
+            %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+            %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+              %begin_asset_metadata_Courses.New.elearning^eq:eLearning%
+                <a href="%globals_asset_url:220965%" class="btn btn-primary" id="olphowtoapplybanner">How to apply</a>
+              %else_asset_metadata_Courses.New.elearning^eq:eLearning%
+                <a href="%globals_asset_url:220960%" class="btn btn-primary" id="olphowtoapplybanner">How to apply</a>
+                <a href="%globals_asset_url:222385%" class="btn btn-primary">Request a prospectus</a>
+              %end_asset_metadata_Courses.New.elearning^eq:eLearning%
+            %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+            %begin_asset_metadata_Courses.New.Type^eq:Short course module%
+              <a href="./?a=220999" class="btn btn-primary" id="olphowtoapplybanner">How to apply</a>
+            %end_asset_metadata_Courses.New.Type^eq:Short course module%
+            %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+              <a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/how-to-apply" class="btn btn-primary" id="olphowtoapplybanner">How to apply</a>
+            %end_asset_metadata_Courses.New.Type^eq:Research programme%
+            <!-- Apply Buttons END -->
+
+            %begin_asset_metadata_Courses.New.How.To.Apply%
+              %asset_metadata_Courses.New.How.To.Apply%
+            %end_asset_metadata_Courses.New.How.To.Apply%
+
+            %begin_asset_metadata_Courses.New.Start.Date.One%
+              <h3>Start dates</h3>
+              <ul>
+                %begin_asset_metadata_Courses.New.Start.Date.One%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.One^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.One%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.One.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.One.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.One.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.One%
+                %begin_asset_metadata_Courses.New.Start.Date.Two%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Two^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Two%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Two.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Two.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Two.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Two%
+                %begin_asset_metadata_Courses.New.Start.Date.Three%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Three^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Three%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Three.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Three.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Three.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Three%
+                %begin_asset_metadata_Courses.New.Start.Date.Four%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Four^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Four%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Four.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Four.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Four.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Four%
+                %begin_asset_metadata_Courses.New.Start.Date.Five%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Five^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Five%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Five.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Five.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Five.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Five%
+                %begin_asset_metadata_Courses.New.Start.Date.Six%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Six^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Six%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Six.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Six.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Six.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Six%
+                %begin_asset_metadata_Courses.New.Start.Date.Seven%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Seven^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Seven%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Seven.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Seven.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Seven.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Seven%
+                %begin_asset_metadata_Courses.New.Start.Date.Eight%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Eight^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Eight%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Eight.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Eight.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Eight.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Eight%
+                %begin_asset_metadata_Courses.New.Start.Date.Nine%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Nine^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Nine%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Nine.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Nine.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Nine.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Nine%
+                %begin_asset_metadata_Courses.New.Start.Date.Ten%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Ten^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Ten%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Ten.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Ten.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Ten.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Ten%
+                %begin_asset_metadata_Courses.New.Start.Date.Eleven%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Eleven^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Eleven%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Eleven.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Eleven.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Eleven.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Eleven%
+                %begin_asset_metadata_Courses.New.Start.Date.Twelve%
+                  <li>
+                    %begin_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Twelve^preg_replace:75250%
+                    %else_if_ug_or_pg%
+                      %asset_metadata_Courses.New.Start.Date.Twelve%
+                    %end_if_ug_or_pg%
+                    %begin_asset_metadata_Courses.New.Start.Date.Twelve.Apply.URL%
+                      <a href="%asset_metadata_Courses.New.Start.Date.Twelve.Apply.URL%">Apply</a>
+                    %end_asset_metadata_Courses.New.Start.Date.Twelve.Apply.URL%
+                  </li>
+                %end_asset_metadata_Courses.New.Start.Date.Twelve%
+              </ul>
+            %end_asset_metadata_Courses.New.Start.Date.One%
+          </div>
+        </div>
+        <!-- apply END -->
+        %begin_fees_and_funding%
+          <!-- fees and funding START -->
+          <div class="tabs-panel" id="fees">
+            <div class="wysiwyg">
+              %begin_asset_metadata_Courses.New.Type^eq:Other short course%
+                <h2>Price and payment</h2>
+              %else_asset_metadata_Courses.New.Type^eq:Other short course%
+                <h2>Fees and funding</h2>
+              %end_asset_metadata_Courses.New.Type^eq:Other short course%
+              %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+                %asset_metadata_Courses.New.Funding%
+              %else_asset_metadata_Courses.New.Type^eq:Research programme%
+                <p>In this section</p>
+                <ol class="sectionlinks">
+                  %begin_fees_exist%
+                    <li><a href="#secfeebands">Fees information</a></li>
+                  %end_fees_exist%
+                  %begin_prices_exist%
+                    <li><a href="#secprices">Prices</a></li>
+                  %end_prices_exist%
+                  %begin_asset_metadata_Courses.New.S.Price%
+                    <li><a href="#secprice">Price</a></li>
+                  %end_asset_metadata_Courses.New.S.Price%
+                  %begin_asset_metadata_Courses.New.Fees.Information%
+                    <li>
+                      <a href="#secfeesinfo">
+                        %begin_asset_metadata_Courses.New.Type^eq:Other short course%
+                          Payment information
+                        %else_asset_metadata_Courses.New.Type^eq:Other short course%
+                          Fees information
+                        %end_asset_metadata_Courses.New.Type^eq:Other short course%
+                      </a>
+                    </li>
+                  %end_asset_metadata_Courses.New.Fees.Information%
+                  %begin_asset_metadata_Courses.New.Scholarships.Awards.Prizes%
+                    <li><a href="#secscholarships">Scholarships, awards and prizes</a></li>
+                  %end_asset_metadata_Courses.New.Scholarships.Awards.Prizes%
+                  %begin_asset_metadata_Courses.New.Additional.Mandatory.Costs%
+                    <li><a href="#secaddcosts">Additional mandatory costs</a></li>
+                  %end_asset_metadata_Courses.New.Additional.Mandatory.Costs%
+                </ol>
+              %end_asset_metadata_Courses.New.Type^eq:Research programme%
+
+              %begin_fees_exist%
+                <h3 id="secfeebands">Fees %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%%begin_asset_metadata_Courses.New.Mode.Of.Attendance.FT%(per year)%end_asset_metadata_Courses.New.Mode.Of.Attendance.FT%%begin_asset_metadata_Courses.New.Mode.Of.Attendance.PT%(total cost)%end_asset_metadata_Courses.New.Mode.Of.Attendance.PT%%else_asset_metadata_Courses.New.Type^eq:Undergraduate%(total cost)%end_asset_metadata_Courses.New.Type^eq:Undergraduate%</h3>
+
+                %begin_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application%
+                <p class="notice">
+                  <strong>Important notice - Tuition fees for this course may vary</strong>
+                  Contact us for more details on the price of this course
+                </p>
+                %else_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application%
+
+
+
+                  <!-- added 20/3/17 -->
+                  %begin_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+                  <p class="notice">
+                      <strong>Price on Application</strong>
+                      There is a non-means-tested financial support package for all Northern Ireland-domiciled students studying in Northern Ireland. For further details and to check your eligibility, please visit <a href="http://www.nhsbsa.nhs.uk/Students">www.nhsbsa.nhs.uk/Students</a> Please note that all Health and Social Services bursaries are currently under review and may be subject to change.
+                  </p>
+                %else_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+                  %begin_asset_metadata_Courses.New.Entry.Year^eq:201819%
+
+                  %end_asset_metadata_Courses.New.Entry.Year^eq:201819%
+
+                  %begin_asset_metadata_Courses.New.Entry.Year^eq:201920%
+
+                  %end_asset_metadata_Courses.New.Entry.Year^eq:201920%
+                    %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+                    <p class="notice">
+                      <strong>Important notice - fees information</strong>
+                      Fees illustrated are based on 18/19 entry and are subject to an annual increase. Correct at the time of publishing. Terms and conditions apply.  Additional mandatory costs are highlighted where they are known in advance. There are other costs associated with university study.
+                      <br />
+                      <a href="https://www.ulster.ac.uk/finance/student">Visit our Fees pages for full details of fees</a>
+                    </p>
+                    %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+                    %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+                    %begin_asset_metadata_Courses.New.Mode.Of.Attendance.PT^eq:Part-time%
+                    %end_asset_metadata_Courses.New.Mode.Of.Attendance.PT^eq:Part-time%
+                    <p class="notice">
+                      <strong>Important notice - fees information</strong>
+                      Fees illustrated are based on 18/19 entry and are subject to an annual increase. Correct at the time of publishing. Terms and conditions apply.  Additional mandatory costs are highlighted where they are known in advance. There are other costs associated with university study.
+                      <br />
+                      <a href="https://www.ulster.ac.uk/finance/student">Visit our Fees pages for full details of fees</a>
+                    </p>
+                    %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+
+
+                %end_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+                %end_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application%
+
+                <!-- 1211 -->
+                %begin_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
+                  <p>To find out more about fees related to this course please visit <br /><a href="%asset_metadata_Courses.New.Feeband.Funded.URL%">%asset_metadata_Courses.New.Feeband.Funded.URL%</a></p>
+                %end_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
+
+                  <!-- added 20/3/17 -->
+                  %begin_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+
+                  %else_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+          <dl>
+           %begin_asset_metadata_Courses.New.Feeband.NIEU^neq:FALSE%
+             %begin_asset_metadata_Courses.New.Feeband.NIEU%
+           <dt>Northern Ireland &amp; EU:</dt>
+           <dd>&pound;%asset_metadata_Courses.New.Feeband.NIEU%</dd>
+         %end_asset_metadata_Courses.New.Feeband.NIEU%
+        %end_asset_metadata_Courses.New.Feeband.NIEU^neq:FALSE%
+        %begin_asset_metadata_Courses.New.Feeband.GB^neq:FALSE%
+         %begin_asset_metadata_Courses.New.Feeband.GB%
+           <br><dt>England, Scotland, Wales <br>and the Islands:</dt>
+           <dd style="display:block;">
+            <br>
+            <span>
+              &pound;%asset_metadata_Courses.New.Feeband.GB%
+            </span>
+            %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+              %begin_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+                %begin_asset_metadata_Courses.New.Default.Year%
+                &nbsp;<a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students"><span>Discounts available</span> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                %end_asset_metadata_Courses.New.Default.Year%
+              %end_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+            %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+           </dd>
+         %end_asset_metadata_Courses.New.Feeband.GB%
+        %end_asset_metadata_Courses.New.Feeband.GB^neq:FALSE%
+        %begin_asset_metadata_Courses.New.Feeband.International^neq:FALSE%
+         %begin_asset_metadata_Courses.New.Feeband.International%
+           <br><dt>International:</dt>
+           <dd>
+             &pound;%asset_metadata_Courses.New.Feeband.International%
+             &nbsp;<a href="https://www.ulster.ac.uk/international/apply/scholarships"><span>Scholarships available</span> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+           </dd>
+         %end_asset_metadata_Courses.New.Feeband.International%
+        %end_asset_metadata_Courses.New.Feeband.International^neq:FALSE%
+                </dl>
+                <!-- added 20/3/17 -->
+                %end_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+
+                %begin_asset_metadata_Courses.New.Feeband.Name^eq:DHSSPS funded%
+                <a href="./?a=83091" id="fees-information">Funding is available for this course - find out more <i class="fa fa-external-link"></i></a>
+                %end_asset_metadata_Courses.New.Feeband.Name^eq:DHSSPS funded%
+          %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+            %begin_asset_metadata_Courses.New.Final.Award^contains:/%
+              <p class="notice info">Where the postgraduate course selected offers multiple awards (e.g. PG Cert, PG Dip, Master’s), please note that the price displayed is for the complete master’s programme. Postgraduate certificates and diplomas are charged at a pro-rata basis. <a href="https://www.ulster.ac.uk/apply/fees-and-finance/postgraduate">Find out more</a></p>
+            %end_asset_metadata_Courses.New.Final.Award^contains:/%
+          %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+              %end_fees_exist%
+              %begin_prices_exist%
+                <h3 id="secprices">Prices</h3>
+                <dl>
+                  %begin_asset_metadata_Courses.New.Price.NI%
+                    <dt>Northern Ireland &amp; EU:</dt>
+                    <dd>&pound;%asset_metadata_Courses.New.Price.NI%</dd>
+                  %end_asset_metadata_Courses.New.Price.NI%
+                  %begin_asset_metadata_Courses.New.Price.GB%
+                    <dt>England, Scotland, Wales <br>and the Islands:</dt>
+                    <dd>&pound;%asset_metadata_Courses.New.Price.GB%</dd>
+                  %end_asset_metadata_Courses.New.Price.GB%
+                  %begin_asset_metadata_Courses.New.Price.INT%
+                    <br><dt>International:</dt>
+                    <dd>&pound;%asset_metadata_Courses.New.Price.INT%</dd>
+                  %end_asset_metadata_Courses.New.Price.INT%
+                </dl>
+              %end_prices_exist%
+              %begin_asset_metadata_Courses.New.S.Price%
+                <h3 id="secprice">Price</h3>
+                <p>&pound;%asset_metadata_Courses.New.S.Price%</p>
+              %end_asset_metadata_Courses.New.S.Price%
+              %begin_asset_metadata_Courses.New.Fees.Information%
+                <h3 id="secfeesinfo">
+                  %begin_asset_metadata_Courses.New.Type^eq:Other short course%
+                    Payment information
+                  %else_asset_metadata_Courses.New.Type^eq:Other short course%
+                    Fees information
+                  %end_asset_metadata_Courses.New.Type^eq:Other short course%
+                </h3>
+                %asset_metadata_Courses.New.Fees.Information%
+              %end_asset_metadata_Courses.New.Fees.Information%
+              %begin_asset_metadata_Courses.New.Scholarships.Awards.Prizes%
+                <h3 id="secscholarships">Scholarships, awards and prizes</h3>
+                %asset_metadata_Courses.New.Scholarships.Awards.Prizes%
+              %end_asset_metadata_Courses.New.Scholarships.Awards.Prizes%
+              %begin_asset_metadata_Courses.New.Additional.Mandatory.Costs%
+                <h3 id="secaddcosts">Additional mandatory costs</h3>
+                %asset_metadata_Courses.New.Additional.Mandatory.Costs%
+                %begin_fees_exist%
+                  %globals_asset_contents_raw:86796%
+                %end_fees_exist%
+              %else_asset_metadata_Courses.New.Additional.Mandatory.Costs%
+                %begin_fees_exist%
+                  <h3 id="secaddcosts">Additional mandatory costs</h3>
+                  %globals_asset_contents_raw:86796%
+                %end_fees_exist%
+              %end_asset_metadata_Courses.New.Additional.Mandatory.Costs%
+            </div>
+          </div>
+          <!-- fees and funding END -->
+        %end_fees_and_funding%
+        <!-- research facilities and groups START -->
+        %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+          %begin_asset_metadata_Courses.New.Research.Facilities.And.Groups%
+            <div class="tabs-panel" id="research">
+              <div class="wysiwyg researchprogramme">
+                <h2>Research facilities and groups</h2>
+                %asset_metadata_Courses.New.Research.Facilities.And.Groups%
+              </div>
+            </div>
+          %end_asset_metadata_Courses.New.Research.Facilities.And.Groups%
+        %end_asset_metadata_Courses.New.Type^eq:Research programme%
+        <!-- research facilities and groups END -->
+        <!-- staff research areas START -->
+        %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+          %begin_asset_metadata_Courses.New.Staff.Research.Areas%
+            <div class="tabs-panel" id="staff">
+              <div class="wysiwyg researchprogramme">
+                <h2>Staff research areas</h2>
+                %asset_metadata_Courses.New.Staff.Research.Areas%
+              </div>
+            </div>
+          %end_asset_metadata_Courses.New.Staff.Research.Areas%
+        %end_asset_metadata_Courses.New.Type^eq:Research programme%
+        <!-- staff research areas END -->
+        <!-- contact START -->
+        %begin_asset_metadata_Courses.New.Contact.Details%
+          <div class="tabs-panel" id="contact">
+            <div class="wysiwyg">
+              <h2>Contact</h2>
+              %asset_metadata_Courses.New.Contact.Details%
+              %begin_known_faculty_or_school%
+                <h3>For more information visit</h3>
+                %begin_asset_metadata_Courses.New.Faculty%
+                  <p><a href="https://www.ulster.ac.uk/%asset_metadata_Courses.New.Faculty^lowercase^replace: :-^replace:,:%">%asset_metadata_Courses.New.Faculty%</a></p>
+                %end_asset_metadata_Courses.New.Faculty%
+                %begin_asset_metadata_Courses.New.School%
+                  <p><a href="https://www.ulster.ac.uk/%asset_metadata_Courses.New.School^lowercase^replace: :-^replace:,:%">%asset_metadata_Courses.New.School%</a></p>
+                %end_asset_metadata_Courses.New.School%
+              %end_known_faculty_or_school%
+            </div>
+          </div>
+        %end_asset_metadata_Courses.New.Contact.Details%
+        <!-- contact END -->
+        %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+          %begin_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+            <div class="grid-container">
+            <!-- unistats kis widget -->
+        	<script>
+        	  (function (d) {
+        	    "use strict";
+        	    var widgetScript = d.createElement('script');
+        	    widgetScript.id = 'unistats-widget-script';
+        	    widgetScript.src = '//widget.unistats.ac.uk/js/unistats.widget.js';
+        	    var scriptTags = d.getElementsByTagName('script')[0];
+        	    if (d.getElementById('unistats-widget-script')) { return; }
+        	    scriptTags.parentNode.insertBefore(widgetScript, scriptTags);
+        	  } (document));
+        	</script>
+            <h2><a href="https://unistats.direct.gov.uk">UniStats statistics</a></h2>
+            <div class="kis-widget" data-institution="10007807" data-course="%asset_metadata_Courses.New.UCAS.Code.One.Banner%" data-kismode="fulltime" data-orientation="horizontal" data-language="en-GB"></div>
+            </div>
+          %end_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+        %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+      </div>
+    </div>
+  </div>
+</div>
+</div>

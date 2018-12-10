@@ -1,0 +1,330 @@
+<div class="cover-background" style="background-image:url('<script runat='server'>courseImage();</script>')";>
+  <div class="bg-navy-trans white-text p-t-60 p-b-60 p-small-t-20 p-small-b-20">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="cell large-12">
+          <h1 class="h1 larger bl">
+            %asset_metadata_Courses.New.Index.Title%
+            %begin_asset_metadata_Courses.New.Final.Award.Acronym^neq:FALSE%
+              %begin_asset_metadata_Courses.New.Final.Award.Acronym%
+               - %asset_metadata_Courses.New.Final.Award.Acronym%
+              %end_asset_metadata_Courses.New.Final.Award.Acronym%
+            %end_asset_metadata_Courses.New.Final.Award.Acronym^neq:FALSE%
+            %begin_subject_to_approval% *%end_subject_to_approval%
+          </h1>
+          <h2 class="m-b-60 m-small-b-20">
+            %asset_metadata_Courses.New.Entry.Year^preg_replace:71774%%asset_metadata_Courses.New.Entry.Year^preg_replace:71772%
+            %begin_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+              %asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+              %begin_asset_metadata_Courses.New.Mode.Of.Attendance.PT%
+                and %asset_metadata_Courses.New.Mode.Of.Attendance.PT%
+                %end_asset_metadata_Courses.New.Mode.Of.Attendance.PT%
+              %else_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+              %begin_asset_metadata_Courses.New.Mode.Of.Attendance.PT%
+                %asset_metadata_Courses.New.Mode.Of.Attendance.PT%
+              %end_asset_metadata_Courses.New.Mode.Of.Attendance.PT%
+            %end_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+            %asset_metadata_Courses.New.Study.Level%
+            %begin_asset_metadata_Courses.New.Type^eq:Short course module%
+              Short course and CPD
+            %end_asset_metadata_Courses.New.Type^eq:Short course module%
+            %begin_asset_metadata_Courses.New.Type^eq:Other short course%
+              Short course and CPD
+            %end_asset_metadata_Courses.New.Type^eq:Other short course%
+            %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+              programme
+            %end_asset_metadata_Courses.New.Type^eq:Research programme%
+            %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+              course
+            %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+            %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+              course
+            %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+          </h2>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <!-- key information -->
+        <div class="cell large-6">
+          <div class="m-r-30">
+            <h3 class="m-b-20 separator-left">Key information</h3>
+            %begin_asset_metadata_Courses.New.Final.Award%
+            <!-- final award -->
+              <div class="grid-x m-b-10">
+                <div class="cell large-6">
+                  <p class="m-b-0">Award:</p>
+                </div>
+                <div class="cell large-6">
+                  <p class="m-b-0">%asset_metadata_Courses.New.Final.Award%</p>
+                </div>
+              </div>
+            <!-- final award -->
+            %end_asset_metadata_Courses.New.Final.Award%
+            %begin_asset_metadata_Courses.New.Faculty%
+            <!-- faculty -->
+              <div class="grid-x m-b-10">
+                <div class="cell large-6">
+                  <p class="m-b-0">Faculty:</p>
+                </div>
+                <div class="cell large-6">
+                  <p class="m-b-0">%asset_metadata_Courses.New.Faculty%</p>
+                </div>
+              </div>
+            <!-- faculty -->
+            %end_asset_metadata_Courses.New.Faculty%
+            %begin_asset_metadata_Courses.New.School%
+            <!-- School -->
+              <div class="grid-x m-b-10">
+                <div class="cell large-6">
+                  <p class="m-b-0">School:</p>
+                </div>
+                <div class="cell large-6">
+                  <p class="m-b-0">%asset_metadata_Courses.New.School%</p>
+                </div>
+              </div>
+            <!-- School -->
+            %end_asset_metadata_Courses.New.School%
+            %begin_asset_metadata_Courses.New.Campus%
+            <!-- Campus -->
+              <div class="grid-x m-b-10">
+                <div class="cell large-6">
+                  <p class="m-b-0">Campus:</p>
+                </div>
+                <div class="cell large-6">
+                  <p class="m-b-0">
+                    %begin_asset_assetid^eq:252631%
+                      <!-- request arlene crymble 16:04 9 may 2018 -->
+                      Magee (UCAS: L500), BMC (UCAS: L505) and South West College, Dungannon (UCAS: L506)
+                    %else_asset_assetid^eq:252631%
+                    %begin_asset_metadata_Courses.New.Campus%
+                      %begin_asset_metadata_Courses.New.Campus^eq:Fully Online%
+                      %else_asset_metadata_Courses.New.Campus^eq:Fully Online%
+                        %asset_metadata_Courses.New.Campus% campus
+                      %end_asset_metadata_Courses.New.Campus^eq:Fully Online%
+                      %begin_asset_metadata_Courses.New.Other.Location^neq:FALSE%
+                        %begin_asset_metadata_Courses.New.Other.Location%
+                        , %asset_metadata_Courses.New.Other.Location%
+                        %end_asset_metadata_Courses.New.Other.Location%
+                      %end_asset_metadata_Courses.New.Other.Location^neq:FALSE%
+                    %else_asset_metadata_Courses.New.Campus%
+                      %begin_asset_metadata_Courses.New.Other.Location^neq:FALSE%
+                        %begin_asset_metadata_Courses.New.Other.Location%
+                          %asset_metadata_Courses.New.Other.Location%
+                        %end_asset_metadata_Courses.New.Other.Location%
+                      %end_asset_metadata_Courses.New.Other.Location^neq:FALSE%
+                    %end_asset_metadata_Courses.New.Campus%
+                    %end_asset_assetid^eq:252631%
+                  </p>
+                </div>
+              </div>
+            <!-- Campus -->
+            %end_asset_metadata_Courses.New.Campus%
+            %begin_asset_metadata_Courses.New.Credit.Points%
+            <!-- Credit Points -->
+              <div class="grid-x m-b-10">
+                <div class="cell large-6">
+                  <p class="m-b-0">Credit points:</p>
+                </div>
+                <div class="cell large-6">
+                  <p class="m-b-0">%asset_metadata_Courses.New.Credit.Points%</p>
+                </div>
+              </div>
+            <!-- Credit Points -->
+            %end_asset_metadata_Courses.New.Credit.Points%
+
+            %begin_asset_metadata_Courses.New.elearning%
+            <!-- elearning -->
+              <div class="grid-x m-b-10">
+                <div class="cell large-6">
+                  <p class="m-b-0">eLearning:</p>
+                </div>
+                <div class="cell large-6">
+                  <p class="m-b-0">Yes</p>
+                </div>
+              </div>
+            <!-- elearning -->
+            %end_asset_metadata_Courses.New.elearning%
+            %begin_asset_assetid^eq:252631%
+            <!-- UCAS code -->
+            <!-- request arlene crymble 16:04 9 may 2018 - hide ucas code for this course -->
+            %else_asset_assetid^eq:252631%
+              %begin_if_business_studies_ucas_fix%
+                <div class="grid-x m-b-10">
+                  <div class="cell large-6">
+                    <p class="m-b-0">UCAS code:</p>
+                  </div>
+                  <div class="cell large-6">
+                    <p class="m-b-0">N125</p>
+                  </div>
+                </div>
+              %else_if_business_studies_ucas_fix%
+                %begin_asset_metadata_Courses.New.UCAS.Code.One%
+                <div class="grid-x m-b-10">
+                  <div class="cell large-6">
+                    <p class="m-b-0">UCAS code:</p>
+                  </div>
+                  <div class="cell large-6">
+                    <p class="m-b-0">%asset_metadata_Courses.New.UCAS.Code.One%</p>
+                  </div>
+                </div>
+                %end_asset_metadata_Courses.New.UCAS.Code.One%
+              %end_if_business_studies_ucas_fix%
+            <!-- UCAS code -->
+            %end_asset_assetid^eq:252631%
+            %begin_asset_metadata_Course.HPAT.Course.Message.Show^eq:Yes%
+              <!-- HPAT -->
+              %globals_asset_contents_raw:311826%
+              <!-- HPAT -->
+            %end_asset_metadata_Course.HPAT.Course.Message.Show^eq:Yes%
+            %begin_asset_metadata_Course.Show.Message.Header^eq:Yes%
+              %begin_asset_metadata_Course.Show.Message.Header.Asset%
+                %globals_asset_metadata_Course.Show.Message.Header.Asset^as_asset:asset_contents_raw%
+              %end_asset_metadata_Course.Show.Message.Header.Asset%
+            %end_asset_metadata_Course.Show.Message.Header^eq:Yes%
+          </div>
+        </div>
+        <!-- key information -->
+        <!-- fees information -->
+        <div class="cell large-6">
+          %begin_fees_exist%
+            <h3 class="m-b-20 separator-left m-small-t-20">Fees information</h3>
+            %begin_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application%
+              <p>Tuition fees for this course may vary. Please contact us for more details on the price of this course.</p>
+            %else_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application%
+            <!-- added 20/3/17 -->
+            %begin_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+              <p>Tuition fees for this course may vary. Please contact us for more details on the price of this course.</p>
+            %else_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+            <!-- added 20/3/17 -->
+            <p>Fees %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%%begin_asset_metadata_Courses.New.Mode.Of.Attendance.FT%(per year)%end_asset_metadata_Courses.New.Mode.Of.Attendance.FT%%begin_asset_metadata_Courses.New.Mode.Of.Attendance.PT%(total cost)%end_asset_metadata_Courses.New.Mode.Of.Attendance.PT%%else_asset_metadata_Courses.New.Type^eq:Undergraduate%(total cost)%end_asset_metadata_Courses.New.Type^eq:Undergraduate%</p>
+            %begin_asset_metadata_Courses.New.Feeband.NIEU^neq:FALSE%
+              %begin_asset_metadata_Courses.New.Feeband.NIEU%
+                <div class="grid-x m-b-10">
+                  <div class="cell large-6">
+                    <p class="m-b-0">Northern Ireland &amp; EU:</p>
+                  </div>
+                  <div class="cell large-6">
+                    <p class="m-b-0">&pound;%asset_metadata_Courses.New.Feeband.NIEU%</p>
+                  </div>
+                </div>
+              %end_asset_metadata_Courses.New.Feeband.NIEU%
+             %end_asset_metadata_Courses.New.Feeband.NIEU^neq:FALSE%
+             %begin_asset_metadata_Courses.New.Feeband.GB^neq:FALSE%
+               %begin_asset_metadata_Courses.New.Feeband.GB%
+                 <div class="grid-x m-b-10">
+                   <div class="cell large-6">
+                     <p class="m-b-0">England, Scotland, Wales and the Islands:</p>
+                   </div>
+                   <div class="cell large-6">
+                     <p class="m-b-0">&pound;%asset_metadata_Courses.New.Feeband.GB%</p>
+                     %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+                       %begin_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+                         %begin_asset_metadata_Courses.New.Default.Year%
+                         &nbsp;<a href="https://www.ulster.ac.uk/ulster-life/study-at-ulster/gb-students/discounts-for-gb-students">Discounts available&nbsp;&nbsp;<span class="fa fa-external-link" aria-hidden="true"></span></a>
+                         %end_asset_metadata_Courses.New.Default.Year%
+                       %end_asset_metadata_Courses.New.Mode.Of.Attendance.FT%
+                     %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+                   </div>
+                 </div>
+               %end_asset_metadata_Courses.New.Feeband.GB%
+              %end_asset_metadata_Courses.New.Feeband.GB^neq:FALSE%
+              %begin_asset_metadata_Courses.New.Feeband.International^neq:FALSE%
+               %begin_asset_metadata_Courses.New.Feeband.International%
+                 <div class="grid-x m-b-10">
+                   <div class="cell large-6">
+                     <p class="m-b-0">International:</p>
+                   </div>
+                   <div class="cell large-6">
+                     <p class="m-b-0">&pound;%asset_metadata_Courses.New.Feeband.International%</p>
+                     <p><a href="https://www.ulster.ac.uk/international/apply/scholarships">Scholarships available&nbsp;&nbsp;<span class="fa fa-external-link" aria-hidden="true"></span></a></p>
+                   </div>
+                 </div>
+               %end_asset_metadata_Courses.New.Feeband.International%
+              %end_asset_metadata_Courses.New.Feeband.International^neq:FALSE%
+            <!-- added 20/3/17 -->
+            %end_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application UGFT%
+            <!-- added 20/3/17 -->
+          %end_asset_metadata_Courses.New.Feeband.Name^eq:Price on Application%
+        %end_fees_exist%
+        %begin_asset_metadata_Courses.New.Type^eq:Other short courses%
+          <div class="grid-x m-b-10">
+            <div class="cell large-6">
+              <p class="m-b-0">Cost:</p>
+            </div>
+            <div class="cell large-6">
+              <p class="m-b-0">&pound;295.05</p>
+              <p><a href="#">start dates and applying</a></p>
+            </div>
+          </div>
+        %end_asset_metadata_Courses.New.Type^eq:Other short courses%
+      </div>
+      <!-- fees information -->
+      </div>
+      <div class="grid-x grid-padding-x m-t-60 m-small-t-20">
+        <!-- ctas -->
+        %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
+          %begin_asset_metadata_Courses.New.elearning^eq:eLearning%
+            <div class="cell large-4">
+              <p><a href="%globals_asset_url:220965%" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+            </div>
+          %else_asset_metadata_Courses.New.elearning^eq:eLearning%
+            <div class="cell large-4">
+              <p><a href="%globals_asset_url:220956%" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+            </div>
+          %end_asset_metadata_Courses.New.elearning^eq:eLearning%
+          <div class="cell large-4">
+            <p><a href="%globals_asset_url:222385%" class="button large rounded expanded hollow">Request a prospectus</a></p>
+          </div>
+        %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
+        %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
+          %begin_asset_metadata_Courses.New.elearning^eq:eLearning%
+            <div class="cell large-4">
+              <p><a href="%globals_asset_url:220965%" class="button large expanded rounded" id="olphowtoapplybanner">How to apply</a></p>
+            </div>
+          %else_asset_metadata_Courses.New.elearning^eq:eLearning%
+            <div class="cell large-4">
+              <p><a href="%globals_asset_url:220960%" class="button large expanded rounded" id="olphowtoapplybanner">How to apply</a></p>
+            </div>
+          %end_asset_metadata_Courses.New.elearning^eq:eLearning%
+          <div class="cell large-4">
+            <p><a href="%globals_asset_url:222385%" class="button large expanded rounded">Request a prospectus</a></p>
+          </div>
+        %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
+        %begin_asset_metadata_Courses.New.Type^eq:Short course module%
+          <div class="cell large-4">
+            <p><a href="./?a=220999" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+          </div>
+        %end_asset_metadata_Courses.New.Type^eq:Short course module%
+        %begin_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
+          %begin_asset_metadata_Courses.New.Feeband.Funded.URL%
+            <div class="cell large-4">
+              <p><a href="#fees" id="fees-information" class="button expanded hollow large rounded">Find out more about fees</a></p>
+            </div>
+          %end_asset_metadata_Courses.New.Feeband.Funded.URL%
+        %else_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
+          <div class="cell large-4">
+            <p><a href="#fees" id="fees-information" class="button expanded hollow large rounded">Find out more about fees</a></p>
+          </div>
+        %end_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
+        %begin_asset_metadata_Courses.New.Feeband.Name^eq:DHSSPS funded%
+          <div class="cell large-4">
+            <p><a href="./?a=83091" id="fees-information" class="button expanded hollow large rounded">Funding is available for this course - find out more</a></p>
+          </div>
+        %end_asset_metadata_Courses.New.Feeband.Name^eq:DHSSPS funded%
+        %begin_asset_metadata_Courses.New.Type^eq:Research programme%
+          <div class="cell large-12">
+            <p><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/how-to-apply" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+            %globals_asset_contents_raw:239999%
+          </div>
+        %end_asset_metadata_Courses.New.Type^eq:Research programme%
+        %begin_asset_metadata_Courses.New.Type^eq:Other short course%
+          %begin_asset_metadata_Courses.New.S.Price%
+            <p class="price">&pound;%asset_metadata_Courses.New.S.Price%</p>
+          %end_asset_metadata_Courses.New.S.Price%
+          <a href="#apply" id="othershortapply" class="button large rounded expanded" id="olpstartdatesandapplybanner">Start dates &amp; apply <i class="fa fa-chevron-down"></i></a>
+        %end_asset_metadata_Courses.New.Type^eq:Other short course%
+        <!-- ctas -->
+      </div>
+    </div>
+  </div>
+</div>
