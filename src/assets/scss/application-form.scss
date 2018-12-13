@@ -18,9 +18,12 @@ select
 {
   margin-top:20px;
 }
-label
+label,
+legend
 {
-  font-size:16px;
+  font-size:20px;
+  margin-bottom:5px;
+  font-weight: bold;
 }
 .sq-form-error
 {
@@ -81,14 +84,6 @@ input
   display:block;
   font-size:14px;
   font-style: normal;
-}
-
-label,
-legend
-{
-  font-size:20px;
-  margin-bottom:5px;
-  font-weight:normal !important;
 }
 .udl
 {
@@ -1210,7 +1205,8 @@ label[for=q340929_q3],
 label[for=q340929_q4],
 label[for=q340930_q2],
 label[for=q340930_q4],
-label[for=q340931_q11]
+label[for=q340931_q11],
+label[for=q300597_q16]
 {
   display:none;
 }

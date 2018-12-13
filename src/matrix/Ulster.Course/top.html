@@ -262,58 +262,62 @@
       </div>
       <div class="grid-x grid-padding-x m-t-60 m-small-t-20">
         <!-- ctas -->
+        <!-- new apply button -->
+        <div class="cell large-3">
+          <p><a href="./?a=297399?course=%asset_assetid%" class="button large rounded expanded">Apply now</a></p>
+        </div>
         %begin_asset_metadata_Courses.New.Type^eq:Undergraduate%
           %begin_asset_metadata_Courses.New.elearning^eq:eLearning%
-            <div class="cell large-4">
-              <p><a href="%globals_asset_url:220965%" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+            <div class="cell large-3">
+              <p><a href="%globals_asset_url:220965%" class="button large rounded expanded hollow" id="olphowtoapplybanner">How to apply</a></p>
             </div>
           %else_asset_metadata_Courses.New.elearning^eq:eLearning%
-            <div class="cell large-4">
-              <p><a href="%globals_asset_url:220956%" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+            <div class="cell large-3">
+              <p><a href="%globals_asset_url:220956%" class="button large rounded expanded hollow" id="olphowtoapplybanner">How to apply</a></p>
             </div>
           %end_asset_metadata_Courses.New.elearning^eq:eLearning%
-          <div class="cell large-4">
+          <div class="cell large-3">
             <p><a href="%globals_asset_url:222385%" class="button large rounded expanded hollow">Request a prospectus</a></p>
           </div>
         %end_asset_metadata_Courses.New.Type^eq:Undergraduate%
         %begin_asset_metadata_Courses.New.Type^eq:Postgraduate%
           %begin_asset_metadata_Courses.New.elearning^eq:eLearning%
-            <div class="cell large-4">
-              <p><a href="%globals_asset_url:220965%" class="button large expanded rounded" id="olphowtoapplybanner">How to apply</a></p>
+            <div class="cell large-3">
+              <p><a href="%globals_asset_url:220965%" class="button large expanded rounded hollow" id="olphowtoapplybanner">How to apply</a></p>
             </div>
           %else_asset_metadata_Courses.New.elearning^eq:eLearning%
-            <div class="cell large-4">
-              <p><a href="%globals_asset_url:220960%" class="button large expanded rounded" id="olphowtoapplybanner">How to apply</a></p>
+            <div class="cell large-3">
+              <p><a href="%globals_asset_url:220960%" class="button large expanded rounded hollow" id="olphowtoapplybanner">How to apply</a></p>
             </div>
           %end_asset_metadata_Courses.New.elearning^eq:eLearning%
-          <div class="cell large-4">
-            <p><a href="%globals_asset_url:222385%" class="button large expanded rounded">Request a prospectus</a></p>
+          <div class="cell large-3">
+            <p><a href="%globals_asset_url:222385%" class="button large expanded rounded hollow">Request a prospectus</a></p>
           </div>
         %end_asset_metadata_Courses.New.Type^eq:Postgraduate%
         %begin_asset_metadata_Courses.New.Type^eq:Short course module%
-          <div class="cell large-4">
-            <p><a href="./?a=220999" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+          <div class="cell large-3">
+            <p><a href="./?a=220999" class="button large rounded expanded hollow" id="olphowtoapplybanner">How to apply</a></p>
           </div>
         %end_asset_metadata_Courses.New.Type^eq:Short course module%
         %begin_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
           %begin_asset_metadata_Courses.New.Feeband.Funded.URL%
-            <div class="cell large-4">
-              <p><a href="#fees" id="fees-information" class="button expanded hollow large rounded">Find out more about fees</a></p>
+            <div class="cell large-3">
+              <p><a href="#fees" id="fees-information" class="button expanded hollow large rounded">Fees information</a></p>
             </div>
           %end_asset_metadata_Courses.New.Feeband.Funded.URL%
         %else_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
-          <div class="cell large-4">
-            <p><a href="#fees" id="fees-information" class="button expanded hollow large rounded">Find out more about fees</a></p>
+          <div class="cell large-3">
+            <p><a href="#fees" id="fees-information" class="button expanded hollow large rounded">Fees information</a></p>
           </div>
         %end_asset_metadata_Courses.New.Feeband.Funded.URL^neq:FALSE%
         %begin_asset_metadata_Courses.New.Feeband.Name^eq:DHSSPS funded%
-          <div class="cell large-4">
+          <div class="cell large-3">
             <p><a href="./?a=83091" id="fees-information" class="button expanded hollow large rounded">Funding is available for this course - find out more</a></p>
           </div>
         %end_asset_metadata_Courses.New.Feeband.Name^eq:DHSSPS funded%
         %begin_asset_metadata_Courses.New.Type^eq:Research programme%
           <div class="cell large-12">
-            <p><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/how-to-apply" class="button large rounded expanded" id="olphowtoapplybanner">How to apply</a></p>
+            <p><a href="https://www.ulster.ac.uk/doctoralcollege/phd-opportunities/how-to-apply" class="button large rounded expanded hollow" id="olphowtoapplybanner">How to apply</a></p>
             %globals_asset_contents_raw:239999%
           </div>
         %end_asset_metadata_Courses.New.Type^eq:Research programme%
