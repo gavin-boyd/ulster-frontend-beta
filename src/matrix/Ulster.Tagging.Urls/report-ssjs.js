@@ -11,9 +11,9 @@ var ten = '%globals_asset_metadata_Content.Tagging.Group.Students_key^escapequot
 var eleven = '%globals_asset_metadata_Content.Tagging.Group.Business_key^escapequotes%';
 var twelve = '%globals_asset_metadata_Content.Tagging.Group.Other_key^escapequotes%';
 var thirteen = '%globals_asset_metadata_Content.Tagging.Course.Type_key^escapequotes%';
-var fourteen = '%globals_asset_metadata_Content.Tagging.Country_key^escapequotes%';
-var fifthteen = '%globals_asset_metadata_Content.Tagging.Region_key^escapequotes%';
-var sixteen = '%globals_asset_metadata_Content.Tagging.UOA_key^escapequotes%';
+//var fourteen = '%globals_asset_metadata_Content.Tagging.Country_key^escapequotes%';
+//var fifthteen = '%globals_asset_metadata_Content.Tagging.Region_key^escapequotes%';
+//var sixteen = '%globals_asset_metadata_Content.Tagging.UOA_key^escapequotes%';
 
 one = one.split('; ');
 two = two.split('; ');
@@ -28,16 +28,16 @@ ten = ten.split('; ');
 eleven = eleven.split('; ');
 twelve = twelve.split('; ');
 thirteen = thirteen.split('; ');
-fourteen = fourteen.split('; ');
-fifthteen = fifthteen.split('; ');
-sixteen = sixteen.split('; ');
+//fourteen = fourteen.split('; ');
+//fifthteen = fifthteen.split('; ');
+//sixteen = sixteen.split('; ');
 
-var tags = one.concat(two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifthteen, sixteen);
+var tags = one.concat(two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen);
 
 var output = '';
 
 for (var i = 0; i < tags.length; i++) {
-  output += '<p><a href="https://www.ulster.ac.uk/"' + tags[i] + '">https://wwww.ulster.ac.uk/' + tags[i] + '</a></p>';
+  output += '<p><a href="https://www.ulster.ac.uk/' + tags[i] + '">https://wwww.ulster.ac.uk/' + tags[i] + '</a></p>';
 }
 
 print(output);
