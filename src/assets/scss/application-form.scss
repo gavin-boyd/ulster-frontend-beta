@@ -2,6 +2,7 @@
 input[type="email"],
 input[type="date"],
 input[type="num"],
+input[type="password"],
 select
 {
   max-width:300px;
@@ -24,6 +25,15 @@ legend
   font-size:20px;
   margin-bottom:5px;
   font-weight: bold;
+
+  strong
+  {
+    color:#b10e1e;
+  }
+}
+.red
+{
+  color:#b10e1e;
 }
 .sq-form-error
 {
@@ -1206,7 +1216,8 @@ label[for=q340929_q4],
 label[for=q340930_q2],
 label[for=q340930_q4],
 label[for=q340931_q11],
-label[for=q300597_q16]
+label[for=q300597_q16],
+label[for=q300597_q19]
 {
   display:none;
 }
