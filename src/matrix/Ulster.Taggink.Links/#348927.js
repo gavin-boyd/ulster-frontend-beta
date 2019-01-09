@@ -61,16 +61,24 @@ function createListofTagLinks() {
 
   var output = '';
 
+  var check = 'false';
+
   for (var i = 0; i < tags.length; i++) {
     if (tags[i]) {
-      output += '<li><a href="https://www.ulster.ac.uk/' + tags[i] + '">' + values[i] + '</a></li>';
+      if (values[i] == 'Alumni') {
+        var title = 'Alumni and Supporters';
+      } else {
+        var title = values[i];
+      }
+      output += '<li><a href="https://www.ulster.ac.uk/' + tags[i] + '">' + title + '</a></li>';
+      check = 'true';
     }
   }
 
-  if (tags.length > 0) {
+  if (check == 'true') {
     print('<hr><h2>Related links</h2>');
     print('<div class="wysiwyg">');
-    print('<ul class="two-col">');
+    print('<ul>');
     print(output);
     print('</div>');
     print('</ul>');
