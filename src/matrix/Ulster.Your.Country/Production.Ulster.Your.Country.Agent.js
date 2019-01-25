@@ -3,8 +3,8 @@ if (res) {
   function yourCountryAgents() {
     var country_code = "%globals_asset_metadata_Content.Tagging.Country_key%";
     var output = '';
-    var showGeneric = [];
     var total = 0;
+    var assetids = [];
     for (i = 0; i < res.length; i++) {
       var agent_country_code = res[i].country_code;
       var agent_contact_types = res[i].contact_type;
@@ -22,7 +22,7 @@ if (res) {
         var agent_code = agent_country_code_array[x];
         agent_code = String(agent_code);
         if (country_code == agent_code) {
-            showGeneric.push('true');
+            assetids.push(res[i].asset_id);
             output += '<div class="shadow card card-section radius">';
               output += '<div class="grid-x">';
                 output += '<div class="cell small-12 medium-3 large-3">';
@@ -81,12 +81,12 @@ if (res) {
             output += '</div>';
           output += '</div>';
           total++;
-          print(output);
         }
       }
     }
     if (total > 0) {
       print('<style>#regional-agent-menu-item{display:block !important;}</style>');
+      print(output);
     }
   }
   yourCountryAgents();
