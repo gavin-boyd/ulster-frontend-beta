@@ -695,13 +695,19 @@ a.button
 
 .larger
 {
-  font-size: 62px;
-  line-height: 68px;
+  font-size: 42px;
+  line-height: 46px;
 
   @include breakpoint(medium down)
   {
-    font-size: 38px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 
@@ -873,4 +879,18 @@ ul.ui-autocomplete
 .bl
 {
   font-weight:bold;
+}
+
+.udl
+{
+  text-decoration: underline !important;
+}
+
+.extra-large-wrap
+{
+  @media only screen and (min-width: 1400px)
+  {
+    max-width:1160px;
+    margin: 0 auto;
+  }
 }

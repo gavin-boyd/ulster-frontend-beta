@@ -76,13 +76,19 @@ $opacity: .9;
 //############ 1. Purple - END
 
 //############ 2. Navy - START
-  $c-navy: #151E3E;
+//old: #151E3E
+//new: #001335
+  $c-navy: #001335;
   $c-navy-trans: rgba($c-navy, $opacity);
   $c-navy-trans-lighter: rgba($c-navy, .6);
   $c-navy-accent: darken(#D81B7A, 15%);
   $c-navy-accent-light: lighten(#D81B7A, 35%);
   $c-navy-trans-accent: rgba($c-navy-accent, $opacity);
   $c-navy-trans-shade: rgba($c-navy, $opacity);
+  .cl-navy
+  {
+    color:$c-navy;
+  }
   .bg-navy
   {
     background: $c-navy;
