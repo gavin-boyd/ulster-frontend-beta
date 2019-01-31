@@ -10,28 +10,25 @@
   </head>
   <body>
     <!-- header -->
-    <div class="video-promo-container">
-      <div class="element-with-video-bg jquery-background-video-wrapper">
-        <video class="my-background-video jquery-background-video" webkit-playsinline="true" playsinline="true" loop autoplay muted preload="auto" poster="//cdn.ulster.ac.uk/home/ulster-frontend/video/global/global.jpg?v=1" style="z-index:-1;">
-      		<source src="//cdn.ulster.ac.uk/home/ulster-frontend/video/global/global.mp4?v=1" type="video/mp4">
-      		<source src="//cdn.ulster.ac.uk/home/ulster-frontend/video/global/global.webm?v=1" type="video/webm">
-      		<source src="//cdn.ulster.ac.uk/home/ulster-frontend/video/global/global.ogv?v=1" type="video/ogg">
-      	</video>
+    <div class="cover-background" style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0006/264093/6079.jpg');">
         <div class="lighter-grey-bg-trans">
         	<div class="with-overlay">
         		%globals_asset_contents_raw:305528%
         		<div class="grid-container">
-        			<div class="grid-x grid-padding-x p-t-60 p-b-100 p-small-t-0 p-small-b-10">
+        			<div class="grid-x grid-padding-x p-t-60 p-b-100 p-small-t-20 p-small-b-10">
                 <div class="cell large-12">
                   <div class="white-text">
-        						<h1 class="h1 text-shadow larger bl hide-for-small-only">%asset_name%</h1>
-        						<h2 class="h1 text-shadow show-for-small-only m-t-30">%asset_name%</h2>
-        						<p class="lead text-shadow m-small-b-0">%asset_metadata_Description%</p>
-        					</div>
+                    <h1 class="h1 text-shadow larger bl">%asset_name%</h1>
+                    <div class="grid-x m-b-30">
+                      <div class="cell large-9">
+                        <p class="lead text-shadow m-small-b-20">%asset_metadata_Description%</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
         				<div class="cell large-6">
                   <!-- key information -->
-        					<div class="p-l-30 p-r-30 p-b-5 p-t-20 p-small-b-0 white-text shadow" style="background-color:#009fe3;">
+        					<div class="m-medium-b-20 p-l-30 p-r-30 p-b-5 p-t-20 p-small-l-15 p-small-r-15 p-small-t-15 p-small-b-0 white-text shadow" style="background-color:#009fe3;outline:10px solid rgba(0,159,227,.3);">
         					    <h2 class="bl m-b-10">Key Facts</h2>
         					    <div class="grid-x m-b-20">
         					        <div class="cell small-12 medium-3 large-3">
@@ -87,8 +84,8 @@
                   <!-- key information -->
         				</div>
         				<div class="cell large-6">
-                  <div class="white-bg-trans p-l-30 p-r-30 p-b-5 p-t-20 p-small-b-0">
-                    <h2 class="bl m-b-10">Form Heading</h2>
+                  <div class="p-l-30 p-r-30 p-b-5 p-t-20 p-small-l-15 p-small-r-15 p-small-t-15 p-small-b-0 shadow" style="background:#fff;outline:10px solid rgba(255,255,255,.3);">
+                    <h2 class="bl">Call to Action Heading</h2>
                     <script src="https://app.geckoform.com/gecko-embed/form.js?uuid=FOEU02eeNx2C0pkJ" id="gecko-form-embed-script"></script>
                   </div>
                 </div>
@@ -135,9 +132,6 @@
           <div class="cell small-12 medium-12 large-6">
             <h2 class="h1 bl larger m-b-20 cl-navy">Entry requirements</h2>
             <p class="lead m-small-b-0">To be eligible for the International Foundation Programme you must:</p>
-          </div>
-          <div class="cell small-12 medium-12 large-6">
-            <hr>
             <ul class="angle-right">
               <li>Have successfully completed your high school education</li>
               <li>Meet the residency/nationality requirements to be defined as an international student</li>
@@ -150,6 +144,7 @@
             <p>If your country is not listed please contact international admissions for further information.</p>
             <p><a href="mailto:internationaladmissions@ulster.ac.uk">internationaladmissions@ulster.ac.uk</a></p>
           </div>
+          <div class="cell small-12 medium-12 large-6 cover-background m-b-0" style="background-image:url('%globals_asset_url:264096%');"></div>
         </div>
       </div>
     </section>
