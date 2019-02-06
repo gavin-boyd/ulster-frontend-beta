@@ -894,3 +894,13 @@ ul.ui-autocomplete
     margin: 0 auto;
   }
 }
+
+.home-promos-height
+{
+  min-height:320px;
+
+  @include breakpoint(medium down)
+  {
+    min-height:auto;
+  }
+}
