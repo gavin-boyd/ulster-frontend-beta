@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulster University</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>%globals_asset_contents_raw:256435%
+    <div class="grid-y medium-grid-frame cover-background" style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0004/377014/uu-connect-hero.jpg');">
+      %globals_asset_contents_raw:374938%
+      <div class="cell medium-auto medium-cell-block-container">
+        <div class="grid-x">
+          <!-- col 1 -->
+          %globals_asset_contents_raw:378514%
+          <!-- col 1 -->
+          <!-- col 2 -->
+          <div class="cell small-12 medium-12 large-2 large-cell-block-y">
+            <div class="white-bg p-l-30 p-r-30 p-t-0 p-b-30">
+              <ul class="uls-side vertical menu" id="section-nav">
+                <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
+                  <MySource_SET name="levels_to_print" value="1" />
+                  <MySource_SET name="start_at_level" value="1" />
+                  <MySource_SET name="suffix_with_current_link" value="false" />
+                  <MySource_SET name="prefix_with_divider" value="false" />
+                  <MySource_SET name="suffix_with_divider" value="false" />
+                  <MySource_ASSET>
+                    <li>
+                      <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        <MySource_PRINT var="asset_short_name" />
+                        <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                      </a>
+                    </li>
+                  </MySource_ASSET>
+                </MySource_AREA>
+                <MySource_AREA id_name="sub_section_link" design_area="asset_lineage" print="yes">
+                  <MySource_SET name="levels_to_print" value="1" />
+                  <MySource_SET name="start_at_level" value="2" />
+                  <MySource_SET name="suffix_with_current_link" value="true" />
+                  <MySource_SET name="prefix_with_divider" value="false" />
+                  <MySource_SET name="suffix_with_divider" value="false" />
+                  <MySource_ASSET>
+                    <li>
+                      <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
+                        <span class="fa fa-angle-down" aria-hidden="true"></span>
+                        <MySource_PRINT var="asset_short_name" />
+                        <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                      </a>
+                    </li>
+                  </MySource_ASSET>
+                </MySource_AREA>
+                <MySource_AREA id_name="menu" design_area="menu_normal">
+                  <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
+                  <MySource_SET name="level" value="top"/>
+                  <MySource_SET name="settings.class.normal" value="" />
+                  <MySource_SET name="settings.class.current" value="is-active" />
+                  <MySource_SET name="show_subs" value="always"/>
+                  <MySource_ASSET>
+                    <li class="<MySource_PRINT var="settings.class" />">
+                      <a href="<MySource_PRINT var="asset_link" />">
+                        <MySource_PRINT var="asset_short_name" />
+                        <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                      </a>
+                      <MySource_DIVIDER></MySource_DIVIDER>
+                      <MySource_SUB design_area="menu_normal">
+                        <MySource_SET name="settings.class.normal" value="" />
+                        <MySource_SET name="settings.class.current" value="is-active" />
+                        <MySource_SET name="show_subs" value="always"/>
+                          <ul class="menu vertical nested">
+                            <MySource_ASSET>
+                              <li class="<MySource_PRINT var="settings.class" />">
+                                <a href="<MySource_PRINT var="asset_link" />">
+                                  <MySource_PRINT var="asset_short_name" />
+                                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                                </a>
+                                <MySource_SUB design_area="menu_normal">
+                                  <MySource_SET name="settings.class.normal" value="" />
+                                  <MySource_SET name="settings.class.current" value="is-active" />
+                                  <ul class="menu vertical nested">
+                                    <MySource_ASSET>
+                                      <li class="<MySource_PRINT var="settings.class" />">
+                                        <a href="<MySource_PRINT var="asset_link" />">
+                                          <MySource_PRINT var="asset_short_name" />
+                                          <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                                        </a>
+                                      </li>
+                                    </MySource_ASSET>
+                                  </ul>
+                                </MySource_SUB>
+                              </li>
+                            </MySource_ASSET>
+                          </ul>
+                        </MySource_SUB>
+                      </li>
+                    </MySource_ASSET>
+                </MySource_AREA>
+              </ul>
+            </div>
+          </div>
+          <!-- col 2 -->
+          <!-- col 3 -->
+          <div class="cell small-12 medium-12 large-6 large-cell-block-y">
+            <div class="white-bg p-l-30 p-r-30 p-t-30 p-b-30">
+              <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs" style="margin-top:0;">
+                  <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
+                    <MySource_SET name="levels_to_print" value="0" />
+                    <MySource_SET name="start_at_level" value="0" />
+                    <MySource_SET name="suffix_with_current_link" value="true" />
+                    <MySource_ASSET>
+                      <li><MySource_PRINT var="asset_short_name_linked" /></li>
+                    </MySource_ASSET>
+                    <MySource_DIVIDER></MySource_DIVIDER>
+                  </MySource_AREA>
+                </ul>
+              </nav>
+              <MySource_AREA id_name="body" design_area="body" />
+            </div>
+          </div>
+          <!-- col 3 -->
+        </div>
+      </div>
+    </div>
+    %globals_asset_contents_raw:256455%
+    
+    <script src="assets/js/app.js" async></script>
+  </body>
+</html>
