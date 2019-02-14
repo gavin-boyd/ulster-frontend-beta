@@ -148,13 +148,14 @@ jQuery.fn.extend({
         jQuery('#open-favourites').click(function(e) {
             e.preventDefault();
             var favCookie = jQuery.cookie('uls_ss_f');
-            var path = 'https://www.ulster.ac.uk/scienceshop-dev/favourites'; // update this for production
+            var path = 'https://www.ulster.ac.uk/scienceshop-dev/search'; // update this for production
             if (favCookie) {
                 var favouritesArray = favCookie.split(',');
-                var url = path + '?projects=';
+                var url = path + '?query=assetid:[';
                 jQuery.each(favouritesArray, function(i, id) {
-                    url += '+' + id;
+                    url += '' + id + ' ';
                 });
+                url += ']';
                 //load the favourites
                 window.location.href = url;
             }
