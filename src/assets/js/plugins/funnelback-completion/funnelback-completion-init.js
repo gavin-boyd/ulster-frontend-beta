@@ -68,7 +68,7 @@ jQuery(document).ready(function() {
     });
 
     //uu connect
-    jQuery("input#uuc-search").fbcompletion({
+    /*jQuery("input#uuc-search").fbcompletion({
         'enabled': 'enabled',
         'collection': 'ulster-student-connect',
         'program': '//ulster.funnelback.co.uk/s/suggest.json',
@@ -82,7 +82,7 @@ jQuery(document).ready(function() {
         'interactionLog': '//ulster.funnelback.co.uk/s/log',
         'zindex': '10000',
         'view_all': 'enabled'
-    });
+    });*/
 
     //science shop
     jQuery("input#science-shop-search").fbcompletion({

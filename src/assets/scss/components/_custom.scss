@@ -797,8 +797,9 @@ ul.ui-autocomplete
 		{
 			padding: 5px 10px;
 			font-family: FS Matthew Web Medium;
+      font-size:16px;
 			cursor: pointer;
-			color: #000;
+			color: #333;
 			@include transition-background;
 
 			strong
@@ -903,4 +904,10 @@ ul.ui-autocomplete
   {
     min-height:auto;
   }
+}
+.ui-state-highlight
+{
+  font-family: "FS Matthew Web Light";
+  color: #000;
+  font-weight:normal;
 }

@@ -54,8 +54,13 @@ require('./plugins/regions-map/init');
 //jQuery Background Video
 require('./plugins/jquery-background-video/init');
 
-//funnelback completion
+//jquery ui
 require('./plugins/funnelback-completion/jquery-ui');
+
+//custom auto completion
+require('./plugins/autocomplete/init');
+
+//funnelback completion
 require('./plugins/funnelback-completion/funnelback-completion');
 require('./plugins/funnelback-completion/funnelback-completion-init');
 
