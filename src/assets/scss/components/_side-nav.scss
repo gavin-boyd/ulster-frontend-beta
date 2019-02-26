@@ -23,13 +23,15 @@
       {
           background: transparent;
           border-top: 5px solid $c-navy;
-          border-bottom: 5px solid $c-navy;
 
           a
           {
             background: transparent;
-            //border-bottom: 1px solid lighten($purple, 65%);
-            //color: $purple;
+
+            &:hover
+            {
+              background: #eee;
+            }
           }
 
           > a
@@ -46,11 +48,17 @@
             }*/
             background: $corp-navy;
             color: #fff;
+
+            &:hover
+            {
+              background: $corp-navy;
+            }
           }
 
           > ul
           {
             display: block;
+            border-left: 5px solid $corp-navy;
           }
       }
 
@@ -78,7 +86,7 @@
         //color: #272828;
         padding-top: 12px;
         padding-bottom: 15px;
-        padding-left: 35px;
+        padding-left: 15px;
         font-size: 16px;
         line-height: 20px;
         display: block;
@@ -99,11 +107,6 @@
           top: 10px;
           color: #ccc;
           font-size: 28px;
-        }
-
-        &.is-active
-        {
-          background: transparent;
         }
 
         ul
@@ -130,6 +133,24 @@
           padding-left: 40px;
         }
       }
+    }
+  }
+
+  //sub section link
+  .sub-section-link
+  {
+    background: none;
+
+    a
+    {
+      font-size: 18px !important;
+      line-height: 28px;
+      font-weight: bold;
+      color: #000;
+      background: none;
+      padding:25px 15px !important;
+      color: $corp-navy;
+      border-bottom: 1px solid #ddd;
     }
   }
 }

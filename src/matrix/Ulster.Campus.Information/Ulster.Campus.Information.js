@@ -9,7 +9,14 @@ if (res) {
         output = '<div class="grid-x grid-padding-y">';
         output += '<div class="cell large-12">';
         output += '<hr>';
-        output += '<h2 class="h3 bl"><span class="fa fa-map-marker"></span>&nbsp;&nbsp;' + campus_name + ' location info</h2>';
+        output += '<div class="grid-x">';
+        output += '<div class="cell large-6">';
+        output += '<h2 class="h3 bl m-b-20"><span class="fa fa-map-marker"></span>&nbsp;&nbsp;' + campus_name + ' location info</h2>';
+        output += '</div>';
+        output += '<div class="cell large-6">';
+        output += '<a href="' + res[i].url + '" class="button hollow rounded expanded m-t-20">Find out more about our ' + campus_name + '&nbsp;&nbsp;<span class="fa fa-external-link" aria-hidden="true"></span></a></h2>';
+        output += '</div>';
+        output += '</div>';
         output += '</div>';
         output += '<div class="cell large-4">';
         output += '<h3 class="h6">Address</h3>';

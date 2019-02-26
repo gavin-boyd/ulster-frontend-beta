@@ -34,6 +34,18 @@ a.brand
   display: block;
 }
 
+ul.breadcrumbs
+{
+  li
+  {
+    &:last-child
+    {
+      position: absolute;
+      left: -9999px;
+    }
+  }
+}
+
 //cards
 .card
 {
@@ -697,6 +709,24 @@ a.button
 {
   font-size: 42px;
   line-height: 46px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.extra-large
+{
+  font-size: 62px;
+  line-height: 66px;
 
   @include breakpoint(medium down)
   {

@@ -1,0 +1,26 @@
+.brand.service
+{
+  position: relative;
+
+  span
+  {
+    position: absolute;
+    top: 53px;
+    margin-left: 20px;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+    color: #1a2a4f;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+}
+
+.service.mob
+{
+  border-bottom: 1px solid #eee;
+
+  p
+  {
+    display: block;
+  }
+}

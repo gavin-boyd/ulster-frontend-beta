@@ -118,16 +118,16 @@ jQuery.fn.extend({
                     jQuery(inputID).attr('value', '');
                     jQuery(inputID).attr('value', inputContent);*/
                     //debug
-                    console.log('######remove fav');
+                    //console.log('######remove fav');
                 } else {
                     jQuery(this).addClass('alert');
                     favourites();
                     //debug
-                    console.log('######add fav');
+                    //console.log('######add fav');
                 }
                 //debug
-                console.log('Clicked favourite');
-                console.log(jQuery.cookie('uls_ss_f'));
+                //console.log('Clicked favourite');
+                //console.log(jQuery.cookie('uls_ss_f'));
                 return false;
             });
             //favouriteBtn.css('display', 'block');
@@ -148,7 +148,7 @@ jQuery.fn.extend({
         jQuery('#open-favourites').click(function(e) {
             e.preventDefault();
             var favCookie = jQuery.cookie('uls_ss_f');
-            var path = 'https://www.ulster.ac.uk/scienceshop-dev/search'; // update this for production
+            var path = 'https://www.ulster.ac.uk/scienceshop/search'; // update this for production
             if (favCookie) {
                 var favouritesArray = favCookie.split(',');
                 var url = path + '?query=assetid:[';
@@ -169,5 +169,5 @@ jQuery(document).ready(function() {
     jQuery('#ss-projects').ulsterFavourites();
   }
   //debug
-  console.log(jQuery.cookie('uls_ss_f'));
+  //console.log(jQuery.cookie('uls_ss_f'));
 });
