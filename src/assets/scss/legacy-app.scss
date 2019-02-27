@@ -53,10 +53,19 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+//dependencies
+@import "./node_modules/angled-edges/angled-edges"; //https://www.npmjs.com/package/angled-edges
+
 //custom
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/variables';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
 @import 'components/colours';
 @import 'components/mega-menu';
 @import 'components/multilevel-offcanvas-menu';
+@import 'components/spacing-utilities';
 @import 'components/custom';
+
+#global-search
+{
+  height:41px;
+}

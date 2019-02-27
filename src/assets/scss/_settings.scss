@@ -64,8 +64,9 @@
 
 // 1. Global
 // ---------
+$futura: 'futura-pt', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 
-$global-font-size: 100%;
+$global-font-size: 110%;
 $global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
@@ -84,12 +85,13 @@ $white: #fefefe;
 $body-background: $white;
 //$body-background: #f4f4f4; //legacy background
 $body-font-color: #0b0c0c;
-$body-font-family: 'FS Matthew Web Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+//$body-font-family: 'FS Matthew Web Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: $futura;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: normal;
+$global-weight-normal: 400;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
@@ -132,8 +134,9 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'FS Matthew Web Medium', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$header-font-weight: $global-weight-normal;
+//$header-font-family: 'FS Matthew Web Medium', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: $futura;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;

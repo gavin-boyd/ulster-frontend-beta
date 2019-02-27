@@ -1,6 +1,12 @@
 .brand.service
 {
   position: relative;
+  max-width: none;
+
+  img
+  {
+    width: 160px;
+  }
 
   span
   {

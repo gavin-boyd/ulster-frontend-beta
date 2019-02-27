@@ -32,9 +32,10 @@ a.brand
 {
   margin: 30px 0;
   display: block;
+  max-width:160px;
 }
 
-ul.breadcrumbs
+/*ul.breadcrumbs
 {
   li
   {
@@ -44,7 +45,7 @@ ul.breadcrumbs
       left: -9999px;
     }
   }
-}
+}*/
 
 //cards
 .card
@@ -94,11 +95,6 @@ footer
   padding-top: 0;
   border-top: 0;
   background: #fff;
-
-  a
-  {
-    font-family: "FS Matthew Web Regular";
-  }
 }
 
 //search box button in header
@@ -126,7 +122,6 @@ button
     a
     {
       color: #000;
-      font-family: "FS Matthew Web Regular";
     }
   }
 }
@@ -509,9 +504,7 @@ ul.columns-2
     > a,
     > span
     {
-      background: #fff;
       display: block;
-      padding: 10px;
     }
 
     > span
@@ -558,7 +551,7 @@ ul.columns-2
     width: 40px;
     height: 40px;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 5px;
     text-align: center;
 
     @include breakpoint(large) {
@@ -569,13 +562,13 @@ ul.columns-2
   span
   {
     width: 22px;
-    padding-top: 8px;
   }
 
   a
   {
-    background: #eee;
-    display: block;
+    background: $corp-navy;
+    display: inline-block;
+    border:0;
     outline: 1px solid #555;
     @include transition-all;
 
@@ -825,8 +818,8 @@ ul.ui-autocomplete
 	{
 		a
 		{
+      font-weight: 600;
 			padding: 5px 10px;
-			font-family: FS Matthew Web Medium;
       font-size:16px;
 			cursor: pointer;
 			color: #333;
@@ -834,7 +827,6 @@ ul.ui-autocomplete
 
 			strong
 			{
-				font-family: FS Matthew Web Light;
 				font-weight: normal;
 			}
 
