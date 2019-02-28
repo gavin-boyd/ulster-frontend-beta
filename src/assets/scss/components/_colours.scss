@@ -155,11 +155,57 @@ $opacity: .9;
   }
 //############ 2. Navy - END
 
+//new brand page 43
+
+$core-blue: #041e42;
+$deep-blue: #151f6d;
+$bright-blue: #009fdf;
+$sky-blue: #00b5e2;
+
+.bg-core-blue
+{
+  background-color: $core-blue;
+}
+
+.bg-deep-blue
+{
+  background-color: $deep-blue;
+}
+
+.bg-bright-blue
+{
+  background-color: $bright-blue;
+}
+
+.bg-sky-blue
+{
+  background-color: $sky-blue;
+}
+
+.text-core-blue
+{
+  background-color: $core-blue !important;
+}
+
+.text-deep-blue
+{
+  color: $deep-blue !important;
+}
+
+.text-bright-blue
+{
+  color: $bright-blue !important;
+}
+
+.text-sky-blue
+{
+  background-color: $sky-blue !important;
+}
+
 .no-bg
 {
   background-color: transparent !important;
 }
-
 
 $c-grey-trans: rgba(#111, .85);
 .bg-grey-trans

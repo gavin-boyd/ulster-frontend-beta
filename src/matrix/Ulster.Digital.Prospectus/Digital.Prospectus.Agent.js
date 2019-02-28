@@ -61,6 +61,14 @@ if (res) {
                         mobileOnly = mobileOnly.replace('+', '');
                         output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
                       }
+                      //Landline
+                      if (res[i].landline !== '' && agent_country_contact_type_string.indexOf('landline') !== -1)  {
+                        var landlineOnly = res[i].landline;
+                        var landlineOnlyValue = res[i].landline;
+                        landlineOnly = landlineOnly.replace(/\s/g, '');
+                        landlineOnly = landlineOnly.replace('+', '');
+                        output += '<a href="tel:' + landlineOnly + '" class="button rounded shadow"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + landlineOnlyValue + '</a>&nbsp;';
+                      }
                     } else {
                       //WhatsApp
                       if (res[i].phone !== '' && agent_country_contact_type_array == 'whats-app') {

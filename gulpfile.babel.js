@@ -33,7 +33,7 @@ function loadConfig() {
 
 //clean build - lean
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, sass, legacysass, javascript)));
+  gulp.series(clean, gulp.parallel(pages, sass, legacysass, javascript, prospectusappsass)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
