@@ -17,7 +17,8 @@ jQuery(document).ready(function() {
     });
 
     //course finder
-    jQuery("input#query").fbcompletion({
+    //refactored to use new auto suggestions
+    /*jQuery("input#query").fbcompletion({
         'enabled': 'enabled',
         'collection': 'ulster-dev',
         'program': '//ulster.funnelback.co.uk/s/suggest.json',
@@ -31,7 +32,7 @@ jQuery(document).ready(function() {
         'interactionLog': '//ulster.funnelback.co.uk/s/log',
         'zindex': '10000',
         'view_all': 'enabled'
-    });
+    });*/
 
     //departments and people
     jQuery("input#dept-query").fbcompletion({

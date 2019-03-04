@@ -164,27 +164,27 @@ $sky-blue: #00b5e2;
 
 .bg-core-blue
 {
-  background-color: $core-blue;
+  background-color: $core-blue !important;
 }
 
 .bg-deep-blue
 {
-  background-color: $deep-blue;
+  background-color: $deep-blue !important;
 }
 
 .bg-bright-blue
 {
-  background-color: $bright-blue;
+  background-color: $bright-blue !important;
 }
 
 .bg-sky-blue
 {
-  background-color: $sky-blue;
+  background-color: $sky-blue !important;
 }
 
 .text-core-blue
 {
-  background-color: $core-blue !important;
+  color: $core-blue !important;
 }
 
 .text-deep-blue
@@ -199,7 +199,7 @@ $sky-blue: #00b5e2;
 
 .text-sky-blue
 {
-  background-color: $sky-blue !important;
+  color: $sky-blue !important;
 }
 
 .no-bg

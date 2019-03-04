@@ -1157,7 +1157,7 @@ input.error
 #subjects tr td input[type=radio]:checked + label
 {
     background:#eee;
-    outline:5px solid #D81B7A;
+    outline:5px solid $sky-blue;
 }
 #subjects tr td label > span
 {
@@ -1173,6 +1173,30 @@ input.error
     height:100%;
     padding:15px;
     transition: background-color 0.5s ease;
+}
+#subjects tr td label.active > span > span
+{
+    display:block;
+    background:rgba(0,0,0,.5);
+    width:100%;
+    height:100%;
+    padding:15px;
+    transition: background-color 0.5s ease;
+}
+#subjects tr td label.active
+{
+  &::before
+  {
+    position: absolute;
+    z-index: 9999;
+    content: 'Selected';
+    background: $sky-blue;
+    padding:5px 20px;
+    left:0;
+    bottom:0;
+    color: #fff;
+    font-weight:600;
+  }
 }
 #subjects tr td label:hover > span > span
 {

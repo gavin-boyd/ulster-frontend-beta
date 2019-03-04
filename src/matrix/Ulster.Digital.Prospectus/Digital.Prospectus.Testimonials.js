@@ -51,8 +51,8 @@ if (res) {
   //if no country found list by school
   var department = "%globals_asset_metadata_Ulster.Capture.School%";
   if (flagArray.indexOf('true') > -1) {
-    print('<section data-magellan-target="section-5" id="section-5"><div class="cover-background" style="background-image:url(https://www.ulster.ac.uk/__data/assets/image/0005/264722/7132.jpg);"><div class="bg-purple-trans p-t-30 p-b-30"><div class="grid-container"><div class="grid-x grid-padding-x"><div class="cell small-12 medium-12 large-12">');
-    print('<div class="white-text"><h2 class="h1 separator-left m-b-30">What our students from %globals_asset_metadata_Ulster.Capture.Country_value% say</h2></div>');
+    print('<section data-magellan-target="section-5" id="section-5"><div class="cover-background" style="background-image:url(https://www.ulster.ac.uk/__data/assets/image/0005/264722/7132.jpg);"><div class="p-t-60 p-b-60 p-small-b-30 p-small-t-30 bg-navy-trans"><div class="grid-container"><div class="grid-x grid-padding-x"><div class="cell small-12 medium-12 large-12">');
+    print('<h2 class="h1 bl larger m-b-30 text-sky-blue">What our students from %globals_asset_metadata_Ulster.Capture.Country_value% say</h2>');
     print(output);
     print('</div></div></div></div></div></section>');
   } else {
@@ -97,8 +97,8 @@ if (res) {
       }
     }
     if (flagArrayTwo.indexOf('true') > -1) {
-      print('<section data-magellan-target="section-5" id="section-5"><div class="cover-background" style="background-image:url(https://www.ulster.ac.uk/__data/assets/image/0005/264722/7132.jpg);"><div class="bg-purple-trans p-t-30 p-b-30"><div class="grid-container"><div class="grid-x grid-padding-x"><div class="cell small-12 medium-12 large-12">');
-      print('<div class="white-text"><h2 class="h1 separator-left m-b-30">What our students say</h2></div>');
+      print('<section data-magellan-target="section-5" id="section-5"><div class="cover-background" style="background-image:url(https://www.ulster.ac.uk/__data/assets/image/0005/264722/7132.jpg);"><div class="bg-navy-trans p-t-60 p-b-60 p-small-b-30 p-small-t-30"><div class="grid-container"><div class="grid-x grid-padding-x"><div class="cell small-12 medium-12 large-12">');
+      print('<h2 class="h1 bl larger m-b-30 text-sky-blue">What our students say</h2>');
       print(output_two);
       print('</div></div></div></div></div></section>');
     }

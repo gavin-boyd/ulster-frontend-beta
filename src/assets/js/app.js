@@ -67,6 +67,9 @@ require('./plugins/funnelback-completion/funnelback-completion-init');
 //departments campus facets
 require('./plugins/departments-campus-facets/init');
 
+//service logos
+require('./plugins/servicelogos/init');
+
 //mobile side nav
 require('./plugins/mobilesidenav/init');
 
