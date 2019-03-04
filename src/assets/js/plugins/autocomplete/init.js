@@ -43,8 +43,7 @@ jQuery(document).ready(function() {
   initUUConnectAutoComplete();
 
   //olp init
-  function initOlpAutoComplete() {
-    //olp init
+  /*function initOlpAutoComplete() {
     if (jQuery('input#query').length !== 0) {
       jQuery('input#query').autocomplete({
         source: function(request, response) {
@@ -63,6 +62,6 @@ jQuery(document).ready(function() {
       });
     }
   }
-  initOlpAutoComplete();
+  initOlpAutoComplete();*/
 
 });
