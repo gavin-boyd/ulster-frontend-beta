@@ -3,7 +3,8 @@ jQuery(document).ready(function() {
   //if using new autocomplete load custom autocomplete instance
   // Custom autocomplete instance.
   // https://jsfiddle.net/adamboduch/jhZ6E/
-  if (jQuery('input#query').length !== 0 || jQuery('input#uuc-search').length !== 0) {
+  //if (jQuery('input#query').length !== 0 || jQuery('input#uuc-search').length !== 0) {
+  if (jQuery('input#uuc-search').length !== 0) {
     jQuery.widget("app.autocomplete", jQuery.ui.autocomplete, {
       options: {
           highlightClass: "ui-state-highlight"

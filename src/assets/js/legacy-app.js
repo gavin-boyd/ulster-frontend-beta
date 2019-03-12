@@ -5,7 +5,7 @@
  */
 import $ from 'jquery';
 import whatInput from 'what-input';
-//window.$ = $;
+window.$ = $;
 import Foundation from 'foundation-sites';
 $(document).ready(function() {
   $(document).foundation();
@@ -13,3 +13,15 @@ $(document).ready(function() {
     e.preventDefault();
   });
 });
+
+/*
+ * Run jQuery as jQuery
+ */
+import jquery from 'jquery';
+window.$ = window.jQuery = jquery;
+
+//jquery ui
+require('./plugins/funnelback-completion/jquery-ui');
+
+//custom auto completion
+require('./plugins/autocomplete/init');

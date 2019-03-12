@@ -3,7 +3,7 @@ if (res) {
   function displayPopularSearches() {
     var output = '';
     output += '<h2 class="bl m-b-20">Popular search terms</h2>';
-    output += '<ul class="angle-right columns-2 m-b-0">';
+    output += '<ul class="angle-right columns m-b-0">';
     for (i = 0; i < res.data.queries.length; i++) {
       var query = res.data.queries[i].query;
       var count = res.data.queries[i].query;

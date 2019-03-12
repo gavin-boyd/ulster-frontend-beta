@@ -38,3 +38,5 @@ PATHS:
     - "src/assets/js/homepage.js"
     - "src/assets/js/submit-prospectus.js"
     - "src/assets/js/ss.js"
+    - "src/assets/js/insight.js"
+    - "src/assets/js/app-geo.js"

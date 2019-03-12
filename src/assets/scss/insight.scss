@@ -12,7 +12,7 @@
 @include foundation-flex-grid;
 //
 @include foundation-xy-grid-classes;
-@include foundation-typography;
+//@include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
@@ -61,7 +61,7 @@
 //@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
 //@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/video-promo';
 //@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/videowall';
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
+/*@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
 @import 'components/colours';
 @import 'components/mega-menu';
 @import 'components/multilevel-offcanvas-menu';
@@ -87,12 +87,10 @@
 @import 'components/max-width-utilities';
 @import 'components/magellan';
 @import 'components/isotope';
-@import 'components/service-logo';
-@import 'components/prettycheckable';
+@import 'components/service-logo';*/
 //@import 'components/hero-full-screen';
 //@import 'components/clean-hero-slider';
 //@import 'components/video-custom';
-
 
 //cli installed building blocks
 //@import 'components/building-blocks/card-user-profile';

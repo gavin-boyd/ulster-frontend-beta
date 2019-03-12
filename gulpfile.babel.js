@@ -29,11 +29,11 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 /*gulp.task('build',
- gulp.series(clean, gulp.parallel(futurasass, pages, sass, legacysass, homecriticalsass, prospectusappsass, formsass, javascript, images, copy), styleGuide));*/
+ gulp.series(clean, gulp.parallel(futurasass, pages, sass, legacysass, homecriticalsass, prospectusappsass, formsass, insightsass, javascript, images, copy), styleGuide));*/
 
 //clean build - lean
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, sass, legacysass, javascript, prospectusappsass, images)));
+  gulp.series(clean, gulp.parallel(pages, sass, legacysass, insightsass, javascript, prospectusappsass, formsass, legacymicrositesass, images)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -102,6 +102,42 @@ function sass() {
 //added for legacy-app.scss
 function legacysass() {
   return gulp.src('src/assets/scss/legacy-app.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+function legacymicrositesass() {
+  return gulp.src('src/assets/scss/legacy-app-microsite.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+
+//added for insight.scss
+function insightsass() {
+  return gulp.src('src/assets/scss/insight.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
@@ -255,6 +291,8 @@ function watch() {
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
   gulp.watch('src/assets/scss/legacy-app.scss').on('all', legacysass);
+  gulp.watch('src/assets/scss/legacy-app-microsite.scss').on('all', legacymicrositesass);
+  gulp.watch('src/assets/scss/insight.scss').on('all', insightsass);
   gulp.watch('src/assets/scss/prospectus-app.scss').on('all', prospectusappsass);
   gulp.watch('src/assets/scss/application-from.scss').on('all', formsass);
   gulp.watch('src/assets/scss/homepage-critical.scss').on('all', homecriticalsass);

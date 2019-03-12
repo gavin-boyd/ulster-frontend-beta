@@ -57,6 +57,7 @@ jQuery(document).ready(function() {
   /*jQuery('#selections label').each(function() {
     jQuery(this).attr('id', 'id-' + convertToSlug(jQuery(this).text()));
   });*/
+  //1211
   jQuery('#selections input:radio').change(function() {
     var urlPartTwo = '';
     var labelHTML = '<ul class="angle-right">';

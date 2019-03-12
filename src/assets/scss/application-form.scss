@@ -24,12 +24,16 @@ legend
 {
   font-size:20px;
   margin-bottom:5px;
-  font-weight: bold;
+  font-weight: 400;
 
   strong
   {
     color:#b10e1e;
   }
+}
+legend
+{
+  font-weight: 600;
 }
 .red
 {
@@ -80,7 +84,8 @@ input
 }
 .sq-form-page-list li .fa
 {
-  font-family: "FS Matthew Web Regular";
+  font-family: "futura-pt";
+  font-weight:600;
 }
 .sq-form-section-title
 {
@@ -167,7 +172,7 @@ select:focus
 }
 .sq-form-page-list li .fa
 {
-  font-family: "FS Matthew Web Regular";
+  font-family: "futura-pt";
 }
 
 .sq-form-question-option-list

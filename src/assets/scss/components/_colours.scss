@@ -161,6 +161,7 @@ $core-blue: #041e42;
 $deep-blue: #151f6d;
 $bright-blue: #009fdf;
 $sky-blue: #00b5e2;
+$fresh-teal: #00968C;
 
 .bg-core-blue
 {
@@ -200,6 +201,16 @@ $sky-blue: #00b5e2;
 .text-sky-blue
 {
   color: $sky-blue !important;
+}
+
+.text-fresh-teal
+{
+  color: $fresh-teal !important;
+}
+
+.text-white
+{
+  color: #fff !important;
 }
 
 .no-bg

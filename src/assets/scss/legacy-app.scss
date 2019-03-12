@@ -65,7 +65,19 @@
 @import 'components/spacing-utilities';
 @import 'components/custom';
 
+
 #global-search
 {
   height:41px;
+}
+
+.global-nav
+{
+  li.h5
+  {
+    a
+    {
+      font-weight:600;
+    }
+  }
 }

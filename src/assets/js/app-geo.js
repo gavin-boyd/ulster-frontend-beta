@@ -43,7 +43,7 @@ require('./plugins/stickyvideo/init');
 require('./plugins/megamenu/init');
 
 //Click4Assistance
-require('./plugins/click4assistance/init');
+////require('./plugins/click4assistance/init');
 
 //Courses atoz
 require('./plugins/courses-atoz/init');
@@ -78,3 +78,9 @@ require('./plugins/selected-radios/init');
 
 //prettyCheckable
 require('./plugins/prettycheckable/init');
+
+//Cookies
+require('./plugins/cookie/init');
+
+//geo
+require('./plugins/geo/init');
