@@ -35,6 +35,11 @@ a.brand
   max-width:160px;
 }
 
+.hidden
+{
+  display: none !important;
+}
+
 /*ul.breadcrumbs
 {
   li
@@ -46,6 +51,11 @@ a.brand
     }
   }
 }*/
+
+pre
+{
+  margin-bottom: 30px;
+}
 
 //cards
 .card

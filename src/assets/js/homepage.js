@@ -30,7 +30,12 @@ window.$ = window.jQuery = jquery;
 //megamenu
 require('./plugins/megamenu/init');
 
-//funnelback completion
+//jquery ui
 require('./plugins/funnelback-completion/jquery-ui');
+
+//custom auto completion
+require('./plugins/autocomplete/init');
+
+//funnelback completion
 require('./plugins/funnelback-completion/funnelback-completion');
 require('./plugins/funnelback-completion/funnelback-completion-init');
