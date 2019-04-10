@@ -93,6 +93,11 @@ pre
   }
 }
 
+.inline-block
+{
+  display:inline-block;
+}
+
 //footer
 .footer
 {
@@ -171,7 +176,7 @@ ul.angle-right,
       li
       {
         padding-left: 0;
-        
+
         &::before
         {
           content:'';
@@ -720,6 +725,24 @@ a.button
   text-shadow: rgba(0,0,0,.3) 2px 3px 5px;
 }
 
+.large
+{
+  font-size: 32px;
+  line-height: 36px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .larger
 {
   font-size: 42px;
@@ -738,6 +761,16 @@ a.button
   }
 }
 
+.extra-large-sub-heading
+{
+  font-size: 32px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 22px;
+  }
+}
+
 .extra-large
 {
   font-size: 62px;
@@ -745,8 +778,8 @@ a.button
 
   @include breakpoint(medium down)
   {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 42px;
+    line-height: 46px;
   }
 
   @include breakpoint(small down)

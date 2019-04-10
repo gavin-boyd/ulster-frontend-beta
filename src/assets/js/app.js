@@ -78,3 +78,9 @@ require('./plugins/selected-radios/init');
 
 //prettyCheckable
 //require('./plugins/prettycheckable/init');
+
+//cookies
+require('./plugins/cookie/init');
+
+//last search display for olp
+require('./plugins/last-search/init');

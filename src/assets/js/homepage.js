@@ -39,3 +39,9 @@ require('./plugins/autocomplete/init');
 //funnelback completion
 require('./plugins/funnelback-completion/funnelback-completion');
 require('./plugins/funnelback-completion/funnelback-completion-init');
+
+//cookies
+require('./plugins/cookie/init');
+
+//last search display for olp
+require('./plugins/last-search/init');
