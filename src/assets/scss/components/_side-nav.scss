@@ -51,7 +51,7 @@
 
             &:hover
             {
-              background: $corp-navy;
+              background: lighten($corp-navy,5%);
             }
           }
 
@@ -60,6 +60,41 @@
             display: block;
             border-left: 5px solid $corp-navy;
           }
+      }
+
+      .is-active
+      {
+        > a
+        {
+          background: $bright-blue;
+          color: #fff;
+          border-left:5px solid $bright-blue;
+
+          &:hover
+          {
+            background: darken($bright-blue,5%);
+          }
+        }
+
+        ul
+        {
+          border-left: 5px solid $bright-blue;
+        }
+
+        .is-active
+        {
+          > a
+          {
+            background: #eee;
+            color: inherit;
+            border-left:0;
+
+            &:hover
+            {
+              background: darken(#eee,5%);
+            }
+          }
+        }
       }
 
       li

@@ -21,6 +21,7 @@
     "jquery-background-video": "^1.0.0",
     "jquery-validation": "^1.17.0",
     "magnific-popup": "^1.1.0",
+    "moment": "^2.24.0",
     "motion-ui": "~1.2.2",
     "svg-country-flags": "^1.2.1",
     "tinysort": "^2.3.6",

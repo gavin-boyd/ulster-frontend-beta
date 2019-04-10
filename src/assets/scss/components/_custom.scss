@@ -165,6 +165,19 @@ ul.angle-right,
       left: 0;
       top:0;
     }
+
+    ol
+    {
+      li
+      {
+        padding-left: 0;
+        
+        &::before
+        {
+          content:'';
+        }
+      }
+    }
   }
 }
 
@@ -982,5 +995,15 @@ ul.ui-autocomplete
   @include breakpoint(medium down)
   {
     min-height:auto;
+  }
+}
+
+/* tables */
+table
+{
+  thead
+  {
+    background: $deep-blue;
+    color:#fff;
   }
 }

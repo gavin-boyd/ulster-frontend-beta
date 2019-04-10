@@ -11,10 +11,8 @@ if (res) {
         output += '<hr>';
         output += '<div class="grid-x">';
         output += '<div class="cell large-6">';
-        output += '<h2 class="h3 bl m-b-20"><span class="fa fa-map-marker"></span>&nbsp;&nbsp;' + campus_name + ' location info</h2>';
-        output += '</div>';
-        output += '<div class="cell large-6">';
-        output += '<a href="' + res[i].url + '" class="button hollow rounded expanded m-t-20">Find out more about our ' + campus_name + '&nbsp;&nbsp;<span class="fa fa-external-link" aria-hidden="true"></span></a></h2>';
+        output += '<h2 class="bl m-b-0">' + campus_name + ' location info</h2>';
+        output += '<p class="m-b-0"><a href="' + res[i].url + '" class="button clear bl p-l-0 m-b-0"><span class="fa fa-angle-right" aria-hidden="true"></span>&nbsp;&nbsp;Find out more about our ' + campus_name + '</a></p>';
         output += '</div>';
         output += '</div>';
         output += '</div>';
@@ -28,13 +26,13 @@ if (res) {
         output += '<div class="cell small-6 large-6">';
         output += '<a href="' + res[i].google_map + '" target="_blank" class="thumbnail">';
         output += '<img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/google-map.png" alt="Google Map">';
-        output += '</a>';
+        output += '</a><br>';
         output += '<a href="' + res[i].google_map + '" target="_blank" class="button">Google Maps</a>';
         output += '</div>';
         output += '<div class="cell small-6 large-6">';
         output += '<a href="' + res[i].google_map_diagram + '" target="_blank" class="thumbnail">';
         output += '<img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/diagram-map.png" alt="Campus Map">';
-        output += '</a>';
+        output += '</a><br>';
         output += '<a href="' + res[i].google_map_diagram + '" target="_blank" class="button">Map Diagram</a>';
         output += '</div>';
         output += '</div>';

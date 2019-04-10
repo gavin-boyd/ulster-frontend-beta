@@ -60,7 +60,7 @@ require('./plugins/funnelback-completion/jquery-ui');
 //custom auto completion
 require('./plugins/autocomplete/init');
 
-//funnelback completion
+//funnelback completion plugin
 require('./plugins/funnelback-completion/funnelback-completion');
 require('./plugins/funnelback-completion/funnelback-completion-init');
 
@@ -77,4 +77,4 @@ require('./plugins/mobilesidenav/init');
 require('./plugins/selected-radios/init');
 
 //prettyCheckable
-require('./plugins/prettycheckable/init');
+//require('./plugins/prettycheckable/init');

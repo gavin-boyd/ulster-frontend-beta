@@ -180,7 +180,7 @@ function formsass() {
     .pipe($.sass({
       includePaths: PATHS.sass
     })
-      .on('error', $.sass.logError))
+    .on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
@@ -287,6 +287,7 @@ function reload(done) {
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
+  gulp.watch('src/assets/scss/**/*.scss').on('all', formsass);
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
@@ -294,7 +295,6 @@ function watch() {
   gulp.watch('src/assets/scss/legacy-app-microsite.scss').on('all', legacymicrositesass);
   gulp.watch('src/assets/scss/insight.scss').on('all', insightsass);
   gulp.watch('src/assets/scss/prospectus-app.scss').on('all', prospectusappsass);
-  gulp.watch('src/assets/scss/application-from.scss').on('all', formsass);
   gulp.watch('src/assets/scss/homepage-critical.scss').on('all', homecriticalsass);
   gulp.watch('src/assets/scss/personalised-medicine.scss').on('all', futurasass);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));

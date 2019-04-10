@@ -97,7 +97,7 @@ input
   margin-top:0;
   margin-bottom:10px;
   display:block;
-  font-size:14px;
+  font-size:18px;
   font-style: normal;
 }
 .udl
@@ -109,6 +109,7 @@ input[type=email],
 input[type=password],
 input[type=date],
 input[type=number],
+input[type=tel],
 textarea,
 select
 {
@@ -187,17 +188,35 @@ select:focus
       {
         display:inline-block;
         background:#eee;
-        margin-right:5px;
+        margin-right:10px;
+        margin-bottom: 10px;
         padding-left:10px;
+
+        @media only screen and (max-width: 600px) {
+          display: block;
+        }
 
         label
         {
-          padding:10px;
+          padding:10px 10px 10px 0;
+
+          @media only screen and (max-width: 600px) {
+            width: 80%;
+          }
         }
       }
     }
   }
 }
+
+.sq-form-question-answer
+{
+  ul
+  {
+    margin-left: 0;
+  }
+}
+
 .sq-form-question-tickbox-list
 {
   .sq-form-question-answer
@@ -1230,4 +1249,9 @@ label[for=q300597_q19]
 .ui-menu-item
 {
   padding:10px;
+}
+
+.prettyradio>a
+{
+  margin-top:9px;
 }

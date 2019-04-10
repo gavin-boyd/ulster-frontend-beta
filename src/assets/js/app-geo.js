@@ -84,3 +84,4 @@ require('./plugins/cookie/init');
 
 //geo
 require('./plugins/geo/init');
+require('./plugins/geo/image-swap/init');

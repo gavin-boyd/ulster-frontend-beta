@@ -2,11 +2,9 @@ const ww_setCookieExpiry = 800;
 //Live
 const ww_setCookieDomain = 'ulster.ac.uk';
 const ww_setCookiePath = '/';
-const ww_api = 'https://www.ulster.ac.uk/welcomeweek/_web_services/user';
 //Test
 ////const ww_setCookieDomain = 'localhost';
 ////const ww_setCookiePath = '';
-////const ww_api = 'http://dct.ulster.ac.uk/welcomeweek/feeds/test.json';
 
 jQuery.fn.extend({
     ulsterFavourites: function() {
@@ -148,7 +146,7 @@ jQuery.fn.extend({
         jQuery('#open-favourites').click(function(e) {
             e.preventDefault();
             var favCookie = jQuery.cookie('uls_welcome_week_f');
-            var path = 'https://www.ulster.ac.uk/welcomeweek-dev/favourites'; // update this for production
+            var path = 'https://www.ulster.ac.uk/welcome/favourites'; // update this for production
             if (favCookie) {
                 var favouritesArray = favCookie.split(',');
                 var url = path + '?events=';

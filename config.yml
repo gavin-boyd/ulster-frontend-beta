@@ -40,3 +40,5 @@ PATHS:
     - "src/assets/js/ss.js"
     - "src/assets/js/insight.js"
     - "src/assets/js/app-geo.js"
+    - "src/assets/js/app-with-day-night.js"
+    - "src/assets/js/app-with-date.js"

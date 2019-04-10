@@ -21,7 +21,8 @@ window.$ = window.jQuery = jquery;
 /*
  * APIs
  */
-
+require('./api/youtube/init');
+require('./api/clickforassistance/init');
 
 /*
  * Plugins
@@ -31,15 +32,55 @@ window.$ = window.jQuery = jquery;
 require('./plugins/fancybox/dist');
 require('./plugins/fancybox/init');
 
+//isotope
+require('./plugins/isotope/dist');
+require('./plugins/isotope/init');
+
+//sticky video
+require('./plugins/stickyvideo/init');
+
+//megamenu
+require('./plugins/megamenu/init');
+
+//Click4Assistance
+require('./plugins/click4assistance/init');
+
 //Courses atoz
-require('./plugins/welcomeweek-atoz/init');
+require('./plugins/courses-atoz/init');
+
+//Regions map
+require('./plugins/regions-map/init');
+
+//jQuery Background Video
+require('./plugins/jquery-background-video/init');
+
+//jquery ui
+require('./plugins/funnelback-completion/jquery-ui');
+
+//custom auto completion
+require('./plugins/autocomplete/init');
+
+//funnelback completion
+require('./plugins/funnelback-completion/funnelback-completion');
+require('./plugins/funnelback-completion/funnelback-completion-init');
+
+//departments campus facets
+require('./plugins/departments-campus-facets/init');
+
+//service logos
+require('./plugins/servicelogos/init');
+
+//mobile side nav
+require('./plugins/mobilesidenav/init');
+
+//add selected state background to form inputs checkboxes and radios
+require('./plugins/selected-radios/init');
+
+//prettyCheckable
+require('./plugins/prettycheckable/init');
 
 //Cookies
 require('./plugins/cookie/init');
 
-//welcome week additional plugins
-require('./plugins/welcomeweek-search/init');
-require('./plugins/welcomeweek-search/jquery-ui');
-require('./plugins/welcomeweek-search/funnelback-completion');
-require('./plugins/welcomeweek-search/funnelback-completion-init');
+//ww favs
 require('./plugins/welcomeweek-favourites/init');
