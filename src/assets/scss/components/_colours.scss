@@ -163,10 +163,16 @@ $deep-blue: #151f6d;
 $bright-blue:#187ab8;
 $sky-blue: #00b5e2;
 $fresh-teal: #00968C;
+$pink:#e56c93;
 
 .bg-core-blue
 {
   background-color: $core-blue !important;
+}
+
+.bg-pink
+{
+  background-color: $pink !important;
 }
 
 .bg-deep-blue
@@ -207,6 +213,11 @@ $fresh-teal: #00968C;
 .text-fresh-teal
 {
   color: $fresh-teal !important;
+}
+
+.text-pink
+{
+  color: $pink !important;
 }
 
 .text-white

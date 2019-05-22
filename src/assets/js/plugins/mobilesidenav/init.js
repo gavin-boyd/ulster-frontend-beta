@@ -2,7 +2,9 @@ function initMobileSideNav() {
   var active = jQuery('.uls-side').find('li.is-active');
   if (active.children('ul.menu').length > 0) {
     active.clone().appendTo('#uls-mobile-side-container');
-    jQuery('#uls-mobile-side-container-show > ul > li.is-active > a').hide();
+    if (jQuery('#uls-mobile-side-container-show li.is-active').length > 1) {
+      jQuery('#uls-mobile-side-container-show > ul > li.is-active').last().hide();
+    }
   } else {
     jQuery('#uls-mobile-side-button').hide();
   }

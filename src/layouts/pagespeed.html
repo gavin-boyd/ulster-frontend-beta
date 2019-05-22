@@ -1,0 +1,26 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulster University</title>
+    <!-- critical css test -->
+    <link rel="stylesheet" href="{{root}}assets/css/critical.css">
+    <!-- critical css test -->
+    <!--<script type="text/javascript">
+      var giftofspeed = document.createElement('link');
+      giftofspeed.rel = 'stylesheet';
+      giftofspeed.href = '//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/css/app.css';
+      giftofspeed.type = 'text/css';
+      var godefer = document.getElementsByTagName('link')[0];
+      godefer.parentNode.insertBefore(giftofspeed, godefer);
+    </script>-->
+  </head>
+  <body>
+    {{> body}}
+    <script src="{{root}}assets/js/app.js" async></script>
+  </body>
+</html>

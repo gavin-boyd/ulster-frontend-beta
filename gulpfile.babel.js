@@ -12,6 +12,8 @@ import fs            from 'fs';
 import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
+import uncss         from 'uncss';
+import autoprefixer  from 'autoprefixer';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -28,12 +30,9 @@ function loadConfig() {
 }
 
 // Build the "dist" folder by running all of the below tasks
-/*gulp.task('build',
- gulp.series(clean, gulp.parallel(futurasass, pages, sass, legacysass, homecriticalsass, prospectusappsass, formsass, insightsass, javascript, images, copy), styleGuide));*/
-
-//clean build - lean
+// Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, sass, legacysass, insightsass, javascript, prospectusappsass, formsass, legacymicrositesass, images)));
+ gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, criticalsass, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -82,170 +81,71 @@ function styleGuide(done) {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
+
+  const postCssPlugins = [
+    // Autoprefixer
+    autoprefixer({ browsers: COMPATIBILITY }),
+
+    // UnCSS - Uncomment to remove unused styles in production
+    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+  ].filter(Boolean);
+
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
     })
       .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.postcss(postCssPlugins))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
-//added for legacy-app.scss
-function legacysass() {
-  return gulp.src('src/assets/scss/legacy-app.scss')
+function criticalsass() {
+
+  const postCssPlugins = [
+    // Autoprefixer
+    autoprefixer({ browsers: COMPATIBILITY }),
+
+    // UnCSS - Uncomment to remove unused styles in production
+    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+  ].filter(Boolean);
+
+  return gulp.src('src/assets/scss/critical.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
     })
       .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-}
-function legacymicrositesass() {
-  return gulp.src('src/assets/scss/legacy-app-microsite.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.postcss(postCssPlugins))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
-//added for insight.scss
-function insightsass() {
-  return gulp.src('src/assets/scss/insight.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-}
-
-//added for prospectus-app.scss
-function prospectusappsass() {
-  return gulp.src('src/assets/scss/prospectus-app.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-}
-
-//added for application-form.scss
-function formsass() {
-  return gulp.src('src/assets/scss/application-form.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-    .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-}
-
-//added for homepage-critical.scss
-function homecriticalsass() {
-  return gulp.src('src/assets/scss/homepage-critical.scss')
-    //.pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-    .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    .pipe($.uncss(UNCSS_OPTIONS))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    //.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-}
-
-// Compile Sass into CSS
-// including Typekit Futura
-function futurasass() {
-  return gulp.src('src/assets/scss/personalised-medicine.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-    // Comment in the pipe below to run UnCSS in production
-    .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
-    //.pipe($.uncss(UNCSS_OPTIONS))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-}
 
 let webpackConfig = {
+  mode: (PRODUCTION ? 'production' : 'development'),
   module: {
     rules: [
       {
-        test: /.js$/,
-        use: [
-          {
-            loader: 'babel-loader'
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ "@babel/preset-env" ],
+            compact: false
           }
-        ]
+        }
       }
     ]
-  }
+  },
+  devtool: !PRODUCTION && 'source-map'
 }
+
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript() {
@@ -264,9 +164,9 @@ function javascript() {
 // In production, the images are compressed
 function images() {
   return gulp.src('src/assets/img/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin({
-      progressive: true
-    })))
+    .pipe($.if(PRODUCTION, $.imagemin([
+      $.imagemin.jpegtran({ progressive: true }),
+    ])))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
@@ -274,8 +174,7 @@ function images() {
 function server(done) {
   browser.init({
     server: PATHS.dist, port: PORT
-  });
-  done();
+  }, done);
 }
 
 // Reload the browser with BrowserSync
@@ -287,16 +186,12 @@ function reload(done) {
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/assets/scss/**/*.scss').on('all', formsass);
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch('src/data/**/*.{js,json,yml}').on('all', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch('src/helpers/**/*.js').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
-  gulp.watch('src/assets/scss/legacy-app.scss').on('all', legacysass);
-  gulp.watch('src/assets/scss/legacy-app-microsite.scss').on('all', legacymicrositesass);
-  gulp.watch('src/assets/scss/insight.scss').on('all', insightsass);
-  gulp.watch('src/assets/scss/prospectus-app.scss').on('all', prospectusappsass);
-  gulp.watch('src/assets/scss/homepage-critical.scss').on('all', homecriticalsass);
-  gulp.watch('src/assets/scss/personalised-medicine.scss').on('all', futurasass);
+  gulp.watch('src/assets/scss/**/*.scss').on('all', criticalsass);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
