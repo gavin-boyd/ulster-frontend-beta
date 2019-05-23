@@ -37,3 +37,4 @@ PATHS:
     - "src/assets/js/global.js"
     - "src/assets/js/welcomeweek.js"
     - "src/assets/js/countdown.js"
+    - "src/assets/js/clearing.js"

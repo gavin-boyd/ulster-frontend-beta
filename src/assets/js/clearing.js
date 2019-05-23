@@ -24,82 +24,22 @@ window.$ = window.jQuery = jquery;
  * APIs
  */
 require('./api/youtube/init');
-require('./api/clickforassistance/init');
-
-/*
- * Plugins
- */
-
-//fancybox
-require('./plugins/fancybox/dist');
-require('./plugins/fancybox/init');
-
-//isotope
-require('./plugins/isotope/dist');
-require('./plugins/isotope/init');
-
-//sticky video
-require('./plugins/stickyvideo/init');
-
-//megamenu
-require('./plugins/megamenu/init');
-
-//Click4Assistance
-require('./plugins/click4assistance/init');
-
-//Courses atoz
-require('./plugins/courses-atoz/init');
-
-//Regions map
-require('./plugins/regions-map/init');
-
-//jQuery Background Video
-require('./plugins/jquery-background-video/init');
-
-//jquery ui
-require('./plugins/funnelback-completion/jquery-ui');
-
-//custom auto completion
-require('./plugins/autocomplete/init');
-
-//funnelback completion plugin
-require('./plugins/funnelback-completion/funnelback-completion');
-require('./plugins/funnelback-completion/funnelback-completion-init');
-
-//departments campus facets
-require('./plugins/departments-campus-facets/init');
-
-//service logos
-require('./plugins/servicelogos/init');
-
-//mobile side nav
-require('./plugins/mobilesidenav/init');
-
-//add selected state background to form inputs checkboxes and radios
-require('./plugins/selected-radios/init');
-
-//prettyCheckable
-//require('./plugins/prettycheckable/init');
 
 //cookies
 require('./plugins/cookie/init');
 
-//last search display for olp
-require('./plugins/last-search/init');
+//clearing audiences
+require('./plugins/clearing-audiences/init');
 
-//image alternator
-require('./plugins/imagealternator/init');
+//service logos
+require('./plugins/servicelogos/init');
 
-//slick init
-require('slick-carousel');
-require('./plugins/slickslider/init');
+//megamenu
+require('./plugins/megamenu/init');
 
-//clearing site message
-require('./plugins/clearing-audiences/site-message');
-
-//tilt js
-//require('./plugins/tilt/tilt.jquery.js');
-//require('./plugins/tilt/init.js');
+//fancybox
+require('./plugins/fancybox/dist');
+require('./plugins/fancybox/init');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
