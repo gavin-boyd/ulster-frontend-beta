@@ -54,6 +54,12 @@ require('./plugins/funnelback-completion/funnelback-completion-init');
 //mobile side nav
 require('./plugins/mobilesidenav/init');
 
+//cookies
+require('./plugins/cookie/init');
+
+//clearing site message
+require('./plugins/clearing-audiences/site-message');
+
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 

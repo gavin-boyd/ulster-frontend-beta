@@ -1098,6 +1098,16 @@ ul.ui-autocomplete
   position:relative;
   z-index:9999;
 
+  &.minus-67
+  {
+    margin-top: -67px;
+
+    @include breakpoint(small down)
+    {
+      margin-top: 15px;
+    }
+  }
+
   @include breakpoint(small down)
   {
     margin-top: 15px;
@@ -1114,7 +1124,7 @@ ul.ui-autocomplete
   @include breakpoint(small only)
   {
     float: none;
-  }  
+  }
 }
 
 .clr
@@ -1292,4 +1302,31 @@ table
 .opacity-effect
 {
   opacity:.9;
+}
+
+.reverse-tabs
+{
+  a
+  {
+    background-color: $button-background;
+    color: #fff;
+    margin-right: 1px;
+    @include transition-background;
+
+    &:hover,
+    &:focus
+    {
+      background-color: $button-background-hover;
+      color: #fff !important;
+    }
+  }
+
+  .is-active
+  {
+    a
+    {
+      background: #fff !important;
+      color: #005ea5 !important;
+    }
+  }
 }
