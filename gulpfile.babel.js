@@ -32,7 +32,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, criticalsass, styleGuide));
+ gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, criticalsass, legacysass, legacymicrositesass, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -114,6 +114,52 @@ function criticalsass() {
   ].filter(Boolean);
 
   return gulp.src('src/assets/scss/critical.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.postcss(postCssPlugins))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+
+function legacysass() {
+
+  const postCssPlugins = [
+    // Autoprefixer
+    autoprefixer({ browsers: COMPATIBILITY }),
+
+    // UnCSS - Uncomment to remove unused styles in production
+    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+  ].filter(Boolean);
+
+  return gulp.src('src/assets/scss/legacy-app.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.postcss(postCssPlugins))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+
+function legacymicrositesass() {
+
+  const postCssPlugins = [
+    // Autoprefixer
+    autoprefixer({ browsers: COMPATIBILITY }),
+
+    // UnCSS - Uncomment to remove unused styles in production
+    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+  ].filter(Boolean);
+
+  return gulp.src('src/assets/scss/legacy-app-microsite.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass

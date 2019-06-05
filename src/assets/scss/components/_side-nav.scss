@@ -21,7 +21,7 @@
 
       &.is-active
       {
-          background: transparent;
+          background: #f4f4f4;
           border-top: 5px solid $c-navy;
 
           a
@@ -30,7 +30,7 @@
 
             &:hover
             {
-              background: #eee;
+              background: #fff;
             }
           }
 

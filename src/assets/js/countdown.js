@@ -132,12 +132,14 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("clock").innerHTML = '<div>' + days + "<span>days</span></div>" + '<div>' + hours + "<span>hours</span></div>"
-  + '<div>' + minutes + "<span>mins</span></div>" + '<div>' + seconds + "<span>secs</span></div>";
+  jQuery('.clock').each(function() {
+    jQuery(this).html('<div>' + days + "<span>days</span></div>" + '<div>' + hours + "<span>hours</span></div>"
+    + '<div>' + minutes + "<span>mins</span></div>" + '<div>' + seconds + "<span>secs</span></div>")
+  });
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("clock").innerHTML = "EXPIRED";
+    //document.getElementById("clock").innerHTML = "EXPIRED";
   }
 }, 1000);

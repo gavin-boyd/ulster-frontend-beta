@@ -12,7 +12,7 @@
 @include foundation-flex-grid;
 //
 @include foundation-xy-grid-classes;
-//@include foundation-typography;
+@include foundation-typography;
 @include foundation-button;
 //@include foundation-forms;
 // @include foundation-range-input;
@@ -46,26 +46,32 @@
 //@include foundation-title-bar;
 //@include foundation-tooltip;
 //@include foundation-top-bar;
-//@include foundation-visibility-classes;
+@include foundation-visibility-classes;
 // @include foundation-float-classes;
 //@include foundation-flex-classes;
-//@include foundation-prototype-classes;
+@include foundation-prototype-classes;
 //@include motion-ui-transitions;
 //@include motion-ui-animations;
 
 //dependencies
-//@import "./node_modules/angled-edges/angled-edges"; //https://www.npmjs.com/package/angled-edges
+@import "./node_modules/angled-edges/angled-edges"; //https://www.npmjs.com/package/angled-edges
 
 //custom
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/variables';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
-//@import 'components/colours';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/variables';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
+@import 'components/colours';
 //@import 'components/mega-menu';
 //@import 'components/multilevel-offcanvas-menu';
-//@import 'components/spacing-utilities';
+@import 'components/spacing-utilities';
 //@import 'components/custom';
 
-/*#global-search
+.bl
 {
-  height:41px;
-}*/
+  font-weight:bold;
+}
+
+body > .bg-pink
+{
+  position: relative;
+  z-index: 9999;
+}

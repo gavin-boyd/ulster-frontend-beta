@@ -34,8 +34,15 @@ require('./plugins/clearing-audiences/init');
 //service logos
 require('./plugins/servicelogos/init');
 
+//Courses atoz
+require('./plugins/courses-atoz/init');
+
 //megamenu
 require('./plugins/megamenu/init');
+
+//slick init
+require('slick-carousel');
+require('./plugins/slickslider/init');
 
 //fancybox
 require('./plugins/fancybox/dist');

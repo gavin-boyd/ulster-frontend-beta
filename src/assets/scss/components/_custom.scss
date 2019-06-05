@@ -1108,6 +1108,16 @@ ul.ui-autocomplete
     }
   }
 
+  &.minus-62
+  {
+    margin-top: -62px;
+
+    @include breakpoint(small down)
+    {
+      margin-top: 15px;
+    }
+  }
+
   @include breakpoint(small down)
   {
     margin-top: 15px;
@@ -1145,7 +1155,33 @@ ul.ui-autocomplete
     {
       float:none;
     }
+
+    a
+    {
+      @include transition-background;
+
+      &:hover
+      {
+        background: #eee;
+      }
+    }
+
+    &.is-active
+    {
+      a
+      {
+        &:hover
+        {
+          background: #005ea5;
+        }
+      }
+    }
   }
+}
+
+.no-border
+{
+  border: 0 !important;
 }
 
 .bottom-top-divider
@@ -1224,11 +1260,11 @@ table
   text-transform: uppercase;
 }
 
-#clock
+.clock
 {
   div
   {
-    color:$pink;
+    color:inherit;
     display: inline-block;
     margin-right: 10px;
     padding-right: 10px;
@@ -1304,6 +1340,11 @@ table
   opacity:.9;
 }
 
+.tabs-title>a
+{
+  padding: 1.25rem 1.5rem !important;
+}
+
 .reverse-tabs
 {
   a
@@ -1327,6 +1368,44 @@ table
     {
       background: #fff !important;
       color: #005ea5 !important;
+    }
+  }
+}
+
+.hqy-lazy
+{
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+
+  &.hqy-loaded,
+  &.hqy-error
+  {
+    opacity: 1;
+  }
+}
+
+a.zoom
+{
+  overflow: hidden;
+  display: block;
+  height: 100%;
+
+  img
+  {
+    width: 100%;
+    transition: transform .4s; /* Animation */
+    margin: 0 auto;
+  }
+
+  &:hover
+  {
+    img
+    {
+      transform: scale(1.2);
     }
   }
 }

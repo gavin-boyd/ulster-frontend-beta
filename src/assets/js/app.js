@@ -97,6 +97,12 @@ require('./plugins/slickslider/init');
 //clearing site message
 require('./plugins/clearing-audiences/site-message');
 
+//people list hide last hr
+require('./plugins/peoplelist/init');
+
+//custom smooth scroll
+require('./plugins/smooth-scroll/init');
+
 //tilt js
 //require('./plugins/tilt/tilt.jquery.js');
 //require('./plugins/tilt/init.js');
