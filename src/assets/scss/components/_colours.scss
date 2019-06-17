@@ -455,3 +455,12 @@ $c-off-white: #f5f4f3;
     background-color: $c-navy-trans;
   }
 }
+
+
+.white-bg-small
+{
+  @include breakpoint(small down)
+  {
+    background-color: #fff !important;
+  }
+}

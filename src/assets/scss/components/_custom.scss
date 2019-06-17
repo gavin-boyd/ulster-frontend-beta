@@ -35,6 +35,11 @@ a.brand
   max-width:160px;
 }
 
+a.block
+{
+  display: block;
+}
+
 .hidden
 {
   display: none !important;
@@ -1464,5 +1469,55 @@ a.zoom
   @include breakpoint(small down)
   {
     position: relative !important;
+  }
+}
+
+.responsive-promo
+{
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .bg
+  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  @include breakpoint(small down)
+  {
+    background-size: 48%;
+    background-position: 0 0;
+    display: block;
+
+    > div > div > div
+    {
+      @include breakpoint(small down)
+      {
+        background-color: #fff !important;
+      }
+    }
+
+    .text-white
+    {
+      color: #000 !important;
+    }
+
+    .lead
+    {
+      font-size: 16px;
+    }
+
+    .h1
+    {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    .bg
+    {
+      background-size:100%;
+      background-position: -10px 0;
+    }
   }
 }

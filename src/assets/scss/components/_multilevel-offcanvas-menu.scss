@@ -7,9 +7,9 @@
  * Created by: Gavin Boyd
  * Date: 26/2/18
 */
-$nav-text-color: $white;
+$nav-text-color: $core-blue;
 $nav-height: 120px;
-$nav-background: $corp-navy;
+$nav-background: #fff;
 $offcanvas-padding: 20px;
 
 .nav-bar
@@ -60,7 +60,8 @@ $offcanvas-padding: 20px;
     padding: 1.6rem;
     color: $nav-text-color;
     text-transform: uppercase;
-    background-color: lighten($nav-background, 20%);
+    background-color: #f4f4f4;
+    margin-right: 10px;
     transition: background-color 0.2s ease-in;
     cursor: pointer;
 
