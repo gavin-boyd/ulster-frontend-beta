@@ -1,5 +1,6 @@
 const ww_setCookieExpiry = 800;
 const ww_setCookieDomain = 'ulster.ac.uk';
+//const ww_setCookieDomain = 'localhost';
 const ww_setCookiePath = '/';
 const ww_api = jQuery('#uls-welcome-week').data('url');
 
@@ -147,6 +148,14 @@ jQuery(document).ready(function() {
           }
         });
       });
+    } else {
+      if (jQuery.cookie('uls_welcome_week_us')) {
+        if (jQuery.cookie('uls_welcome_week_us')) {
+          var cookie = jQuery.cookie('uls_welcome_week_us');
+          cookie = cookie.split(',');
+          welcomeWeekUserActions(cookie);
+        }
+      }
     }
     if (jQuery.cookie('uls_welcome_week_us')) {
       var cookie = jQuery.cookie('uls_welcome_week_us');
@@ -155,3 +164,6 @@ jQuery(document).ready(function() {
     }
   })();
 });
+
+//debug box
+//jQuery('#debug').html(jQuery.cookie('uls_welcome_week_us'));

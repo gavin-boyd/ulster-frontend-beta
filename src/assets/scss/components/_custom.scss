@@ -101,6 +101,35 @@ pre
       font-size: 14px;
     }
   }
+
+  &.expanded
+  {
+    li
+    {
+      @include breakpoint(small down)
+      {
+        -webkit-box-flex: none !important;
+        -webkit-flex: none !important;
+        -ms-flex: none !important;
+        flex: none !important;
+        width:100% !important;
+      }
+
+      a
+      {
+        @include breakpoint(small down)
+        {
+          margin-right:0;
+        }
+
+        &:hover,
+        &:focus
+        {
+          background: darken(#005ea5, 5%);
+        }
+      }
+    }
+  }
 }
 
 .inline-block
@@ -840,7 +869,6 @@ a.button
   }
 }
 
-
 .text-center-large
 {
   @include breakpoint(large) {
@@ -1228,7 +1256,7 @@ table
 
   @include breakpoint(medium only)
   {
-    width: 60%;
+    width: 50%;
   }
 
   @include breakpoint(small down)
@@ -1240,6 +1268,10 @@ table
 .large-off-canvas.reveal-for-medium ~ .off-canvas-content
 {
   margin-left: 60% !important;
+
+  @include breakpoint(medium only) {
+    margin-left: 49% !important;
+  }
 
   @include breakpoint(small down) {
     margin-left: 0 !important;
@@ -1312,26 +1344,25 @@ table
 {
   position:fixed;
   top:0;
-  right:37%;
+  right:40%;
   z-index:1;
-  width: 750px;
 
   @include breakpoint(large only)
   {
-    width: 600px;
+
   }
 
   @include breakpoint(medium only)
   {
-    width: 460px;
+    right: auto;
+    left: 0;
+    top: 200px;
+    position: absolute;
   }
 
   @include breakpoint(small only)
   {
-    width: 100%;
-    position: relative;
-    right: auto;
-    left: auto;
+
   }
 }
 
@@ -1407,5 +1438,31 @@ a.zoom
     {
       transform: scale(1.2);
     }
+  }
+}
+
+.clear
+{
+  clear: both;
+}
+
+
+//remove this
+.countdown .clearing-promo
+{
+  position: fixed !important;
+  z-index: 9999;
+  width: 100%;
+}
+
+.countdown .clearing-promo
+{
+  position: fixed !important;
+  z-index: 9999;
+  width: 100%;
+
+  @include breakpoint(small down)
+  {
+    position: relative !important;
   }
 }

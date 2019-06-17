@@ -94,6 +94,9 @@ require('./plugins/imagealternator/init');
 require('slick-carousel');
 require('./plugins/slickslider/init');
 
+//clearing site message
+require('./plugins/clearing-audiences/site-message');
+
 //tilt js
 //require('./plugins/tilt/tilt.jquery.js');
 //require('./plugins/tilt/init.js');
@@ -133,8 +136,11 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   jQuery('.clock').each(function() {
-    jQuery(this).html('<div>' + days + "<span>days</span></div>" + '<div>' + hours + "<span>hours</span></div>"
-    + '<div>' + minutes + "<span>mins</span></div>" + '<div>' + seconds + "<span>secs</span></div>")
+    if (days > 0) {
+      jQuery(this).html(days + " days</span>");
+    } else {
+      jQuery(this).html(hours + " hours</span>");
+    }
   });
 
   // If the count down is finished, write some text
