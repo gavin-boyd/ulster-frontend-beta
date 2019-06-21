@@ -180,6 +180,11 @@ $pink:#e56c93;
   background-color: $deep-blue !important;
 }
 
+.bg-deep-blue-opacity
+{
+  background-color: rgba($deep-blue, .9);
+}
+
 .bg-bright-blue
 {
   background-color: $bright-blue !important;

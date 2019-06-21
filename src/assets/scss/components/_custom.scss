@@ -895,6 +895,13 @@ a.button
   }
 }
 
+.text-left-medium
+{
+  @include breakpoint(medium down) {
+    text-align: left !important;
+  }
+}
+
 .text-center-medium-only
 {
   @include breakpoint(medium only) {
@@ -1147,7 +1154,7 @@ ul.ui-autocomplete
 
     @include breakpoint(small down)
     {
-      margin-top: 15px;
+      margin-top: 0;
     }
   }
 
@@ -1520,4 +1527,61 @@ a.zoom
       background-position: -10px 0;
     }
   }
+}
+
+.is-stuck
+{
+  &.bg-core-blue
+  {
+    border-bottom: 5px solid $deep-blue;
+  }
+}
+
+.course-tabs
+{
+  li
+  {
+    a
+    {
+      span
+      {
+        display: block;
+      }
+    }
+  }
+}
+
+.right-arrow
+{
+  font-size:200px;
+  line-height:118px;
+  margin-left:-20px;
+
+  @include breakpoint(medium down)
+  {
+    margin-left: 0;
+    line-height: 0;
+  }
+}
+
+.grey-lines
+{
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 4px,
+    #f4f4f4 4px,
+    #f4f4f4 6px
+  );
+}
+
+.white-lines
+{
+  background: repeating-linear-gradient(
+    45deg,
+    #eee,
+    #eee 4px,
+    #fff 4px,
+    #fff 6px
+  );
 }
