@@ -26,7 +26,7 @@ ul.breadcrumbs
 
   li:not(:last-child)::after
   {
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Pro';
     content: "\f0da";
 
     @include breakpoint(small down)
