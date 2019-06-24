@@ -1,9 +1,3 @@
-@charset 'utf-8';
-//v4 fontawesome
-//@import './node_modules/font-awesome/scss/font-awesome.scss';
-//@import 'components/font-awesome-paths';
-
-//v5 fontawesome
 $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !default;
 @import './node_modules/@fortawesome/fontawesome-pro/scss/fontawesome';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/v4-shims';
@@ -20,10 +14,9 @@ $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !d
 @include foundation-global-styles;
 //@include foundation-grid;
 @include foundation-flex-grid;
-//
 @include foundation-xy-grid-classes;
 @include foundation-typography;
-@include foundation-button;
+//@include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
 @include foundation-accordion;
@@ -63,49 +56,53 @@ $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !d
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-//dependencies
-@import "./node_modules/angled-edges/angled-edges"; //https://www.npmjs.com/package/angled-edges
+@media print{
+  body
+  {
+    overflow-x: hidden;
+  }
+  .cover-background-fixed,
+  .cover-background
+  {
+    background-image: none !important;
+  }
 
-//custom
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/variables';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/video-promo';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/videowall';
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
-@import 'components/colours';
-@import 'components/mega-menu';
-@import 'components/multilevel-offcanvas-menu';
-@import 'components/custom';
-@import 'components/fancy-box';
-@import 'components/timeline';
-@import 'components/image-hover-wrapper';
-@import 'components/sticky-video';
-@import 'components/image-link';
-@import 'components/side-nav';
-@import 'components/featured-testimonials';
-@import 'components/angled-edges';
-@import 'components/home';
-@import 'components/image-promos';
-@import 'components/funnelback';
-@import 'components/forms';
-@import 'components/preloader';
-@import 'components/accordion';
-@import 'components/global-fixes';
-@import 'components/wysiwyg';
-@import 'components/breadcrumbs';
-@import 'components/spacing-utilities';
-@import 'components/max-width-utilities';
-@import 'components/magellan';
-@import 'components/isotope';
-@import 'components/service-logo';
-@import 'components/prettycheckable';
-@import 'pickadate/classic';
-@import 'pickadate/classic-date';
-@import 'components/slick';
-@import 'components/slick-theme';
-@import 'components/animation';
-//@import 'components/hero-full-screen';
-//@import 'components/clean-hero-slider';
-//@import 'components/video-custom';
-//cli installed building blocks
-//@import 'components/building-blocks/card-user-profile';
+  p
+  {
+    margin-bottom: 0;
+  }
+
+  img,
+  caption,
+  .fa.sticky,
+  a.brand,
+  a.thumbnail,
+  [data-smooth-scroll],
+  [data-fancybox],
+  body > .grid-container.hide-for-small-only,
+  body > .show-for-small-only,
+  body > .grid-container > div > form,
+  .cell.small-12.medium-3.large-3.small-order-3.hide-for-small-only,
+  nav,
+  #uls-mobile-side-button,
+  .cell.small-12.medium-5.large-5.white-text.p-t-90.p-b-0.p-small-t-10.p-small-b-0.p-medium-t-20,
+  footer
+  {
+    display: none !important;
+  }
+
+  .grid-container.full,
+  .grid-container,
+  .cell
+  {
+    max-width: none !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .text-center,
+  .text-right
+  {
+    text-align: left !important;
+  }
+}
