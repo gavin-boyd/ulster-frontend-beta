@@ -52,8 +52,10 @@ jQuery(document).ready(function() {
               data[0].gb_sub_title,
               data[0].gb_phone,
               data[0].gb_phone_text,
-              'https://www.ulster.ac.uk/clearing/ni-eu',
-              data[0].gb_colour
+              'https://www.ulster.ac.uk/clearing/gb',
+              data[0].gb_colour,
+              'gb-banner-link',
+              'gb-banner-call'
             );
           }
         }
@@ -72,7 +74,9 @@ jQuery(document).ready(function() {
               data[0].nieu_phone,
               data[0].nieu_phone_text,
               'https://www.ulster.ac.uk/clearing/ni-eu',
-              data[0].nieu_colour
+              data[0].nieu_colour,
+              'ni-eu-banner-link',
+              'ni-eu-banner-call'
             );
           }
         }
@@ -80,7 +84,7 @@ jQuery(document).ready(function() {
     }
   }
 
-  function addBanner(title, subtitle, phone, phonetext, url, colour) {
+  function addBanner(title, subtitle, phone, phonetext, url, colour, courseBtnID, callBtnID) {
     var display = jQuery.cookie('uls_clearing_d');
     var hideClass = '';
     if (display) {
@@ -102,23 +106,23 @@ jQuery(document).ready(function() {
     '<div class="grid-x">' +
     '<div class="cell small-11 medium-11 large-5 p-t-5 m-small-b-10 small-order-1 medium-order-1 large-order-1">' +
     '<p class="m-b-0">' +
-    '<span class="h2 text-white"><span class="fa fa-bell-o shake" aria-hidden="true"></span></span>' +
+    '<span class="h2 text-white"><span class="fas fa-bell shake" aria-hidden="true"></span></span>' +
     '&nbsp;&nbsp;<span class="bl h2 text-white">' + title + '</span>' +
     '<span class="text-white m-l-10">' + subtitle + '</span></p>' +
     '</div>' +
     '<div class="cell small-12 medium-6 large-3 small-order-3 medium-order-3 large-order-2">' +
     '<div class="p-r-10 p-small-r-0">' +
-    '<a href="tel:' + phone + '" class="button rounded expanded m-b-0 bl m-medium-t-10 m-small-b-10">' +
-    '<span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;' + phonetext + '</a>' +
+    '<a href="tel:' + phone + '" class="button rounded expanded m-b-0 bl m-medium-t-10 m-small-b-10" id="' + callBtnID + '">' +
+    '<span class="fas fa-phone-alt" aria-hidden="true"></span>&nbsp;&nbsp;' + phonetext + '</a>' +
     '</div></div>' +
     '<div class="cell small-12 medium-6 large-3 small-order-4 medium-order-4 large-order-3">' +
     '<div class="">' +
-    '<a href="' + url + '" class="button rounded expanded m-b-0 m-medium-t-10 bl">View courses and apply&nbsp;&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>' +
+    '<a href="' + url + '" class="button rounded expanded m-b-0 m-medium-t-10 bl" id="' + courseBtnID + '">View courses and apply&nbsp;&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a>' +
     '</div>' +
     '</div>' +
     '<div class="cell small-1 medium-1 large-1 text-right white-text small-order-2 medium-order-2 large-order-4">' +
     '<div class="">' +
-    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fa fa-close" aria-hidden="true"></span></a>' +
+    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fas fa-times-circle" aria-hidden="true"></span></a>' +
     '</div>' +
     '</div></div></div></div>';
     jQuery('body').prepend(html);
@@ -147,18 +151,18 @@ jQuery(document).ready(function() {
     '<div class="grid-x">' +
     '<div class="cell small-11 medium-11 large-7 p-t-5 m-small-b-10 small-order-1 medium-order-1 large-order-1">' +
     '<p class="m-b-0">' +
-    '<span class="h2 text-white"><span class="fa fa-bell-o shake" aria-hidden="true"></span></span>' +
+    '<span class="h2 text-white"><span class="fas fa-bell shake" aria-hidden="true"></span></span>' +
     '&nbsp;&nbsp;<span class="bl h2 text-white">' + title + '</span>' +
     '<span class="text-white m-l-10">' + subtitle + '</span></p>' +
     '</div>' +
     '<div class="cell small-12 medium-12 large-4 small-order-3 medium-order-3 large-order-2">' +
     '<div class="">' +
-    '<a href="' + url + '" class="button rounded expanded m-b-0 m-medium-t-10 bl">' + cta + '&nbsp;&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>' +
+    '<a href="' + url + '" class="button rounded expanded m-b-0 m-medium-t-10 bl" id="default-banner-link">' + cta + '&nbsp;&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a>' +
     '</div>' +
     '</div>' +
     '<div class="cell small-1 medium-1 large-1 text-right white-text small-order-2 medium-order-2 large-order-4">' +
     '<div class="">' +
-    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fa fa-close" aria-hidden="true"></span></a>' +
+    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fas fa-times-circle" aria-hidden="true"></span></a>' +
     '</div>' +
     '</div></div></div></div><style>.with-top-promo{margin-top:80px;}</style>';
     jQuery('body').prepend(html);

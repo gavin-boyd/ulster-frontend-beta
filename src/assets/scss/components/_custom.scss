@@ -1497,6 +1497,7 @@ a.zoom
     background-position: 0 0;
     display: block;
 
+    > div > div > div > div,
     > div > div > div
     {
       @include breakpoint(small down)
