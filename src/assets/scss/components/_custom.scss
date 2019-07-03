@@ -174,9 +174,18 @@ button
 
   li
   {
-    list-style: none;
-    float: right;
-    margin-left: 10px;
+    border-right: 1px solid #eee;
+
+    &:last-child
+    {
+      border-right: 0;
+      padding-right: 0;
+
+      a
+      {
+        padding-right: 0;
+      }
+    }
 
     a
     {
@@ -1483,6 +1492,11 @@ a.zoom
 {
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include breakpoint(medium only)
+  {
+    background-position: center center;
+  }
 
   .bg
   {

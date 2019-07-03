@@ -1,8 +1,19 @@
 @charset 'utf-8';
-//@import './node_modules/font-awesome/scss/font-awesome.scss';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/font-awesome-paths';
+//v5 fontawesome
+$fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !default;
+@import './node_modules/@fortawesome/fontawesome-pro/scss/fontawesome';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/v4-shims';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/solid';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/regular';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/light';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/brands';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/colours';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/fonts';
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/fonts';
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/colours';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -48,7 +59,7 @@
 //@include foundation-top-bar;
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
-//@include foundation-flex-classes;
+@include foundation-flex-classes;
 @include foundation-prototype-classes;
 //@include motion-ui-transitions;
 //@include motion-ui-animations;

@@ -54,7 +54,7 @@ $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !d
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
-//@include foundation-flex-classes;
+@include foundation-flex-classes;
 @include foundation-prototype-classes;
 @include motion-ui-transitions;
 @include motion-ui-animations;
