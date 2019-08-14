@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulster University</title>
     <link rel="stylesheet" href="assets/css/app.css" media="screen">
-    <link rel="stylesheet" href="assets/css/print.css" media="print">
+    <!--<link rel="stylesheet" href="assets/css/print.css" media="print">-->
   </head>
   <body>
-    <div class="scroll-fixed cover-background p-small-b-100 m-b-0" style="background-image:url('https://www.ulster.ac.uk/__data/assets/image/0020/270146/8014.jpg');">
+    <div class="scroll-fixed cover-background p-small-b-10 m-b-0 hqy-lazy hide-bg-on-small" data-src="https://www.ulster.ac.uk/__data/assets/image/0020/270146/8014.jpg">
       <div class="grid-container">
         <div class="grid-x">
       	  <div class="cell medium-3 large-3">
-            <a class="brand" href="https://www.ulster.ac.uk">
+            <a class="brand m-small-b-0" href="https://www.ulster.ac.uk">
               <img class="logo hqy-lazy"
               src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
               data-src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg?v=1.1"
@@ -24,10 +24,13 @@
           </div>
         </div>
         <div class="grid-x m-t-30 m-t-small-0">
-          <div class="cell small-8 medium-7 large-6">
-            <div class="bg-core-blue p-l-30 p-r-30 p-t-30 p-b-30 opacity-effect">
-              <h1 class="larger text-sky-blue m-b-30">Sorry, we couldn't find what you're looking for...</h1>
-              <p class="lead text-white m-b-30">The page that you’re looking for has either been moved, deleted or simply doesn’t exist. Please go back or continue exploring the site:</p>
+          <div class="cell small-12 medium-7 large-6">
+            <div class="show-for-small-only">
+              <img src="//cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" data-src="https://www.ulster.ac.uk/__data/assets/image/0020/270146/8014.jpg" class="hqy-lazy" />
+            </div>
+            <div class="bg-core-blue p-l-30 p-r-30 p-t-30 p-b-30 p-small-l-15 p-small-r-15 p-small-t-15 p-small-b-15 opacity-effect">
+              <h1 class="text-sky-blue m-b-20 m-small-b-10">Sorry, we couldn't find what you're looking for...</h1>
+              <p class="text-white m-b-20 m-small-b-10">The page that you’re looking for has either been moved, deleted or simply doesn’t exist. Please go back or continue exploring the site:</p>
               <ul class="angle-right columns-2 m-b-0 white-text">
                 <li><a href="https://www.ulster.ac.uk/courses">Find courses</a></li>
                 <li><a href="https://www.ulster.ac.uk/departments">Search for staff and departments</a></li>

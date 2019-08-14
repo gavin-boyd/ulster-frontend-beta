@@ -5,7 +5,7 @@ function ulsGeoCookie() {
 
   if (geoCookie) {
     //geo goodness
-    console.log('geo set!');
+    //console.log('geo set!');
     //debug
     /*if (jQuery('#debug-geo').length > 0) {
       jQuery('#debug-geo').html('<p>Country code: ' + jQuery.cookie('uls_co') + '</p>');
@@ -47,7 +47,7 @@ function ulsGeoCookie() {
       }*/
 
       //reload to perform server side persona logic
-      location.reload();
+      //location.reload();
 
     }).fail(function(jqXHR, textStatus, errorThrown) {
       //DEBUG

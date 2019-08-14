@@ -38,3 +38,6 @@ PATHS:
     - "src/assets/js/welcomeweek.js"
     - "src/assets/js/countdown.js"
     - "src/assets/js/clearing.js"
+    - "src/assets/js/phds.js"
+    - "src/assets/js/coursefinder.js"
+    - "src/assets/js/course-atoz.js"

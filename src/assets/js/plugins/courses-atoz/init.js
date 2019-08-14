@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
               if (jQuery(this).next('div').length !== 0) {
                   var nextLetter = jQuery(this).next('div').data('letter');
                   if (letter != nextLetter) {
-                      jQuery('<div class="callout primary" data-magellan-target="' + nextLetter + '" id="' + nextLetter + '"><h2 class="h1">' + nextLetter + '</h2></div>').insertAfter(jQuery(this));
+                      jQuery('<span class="callout primary m-b-0 m-t-20" data-magellan-target="' + nextLetter + '" id="' + nextLetter + '"><span class="h1">' + nextLetter + '</span></span>').insertAfter(jQuery(this));
                       currentLettersArray.push(nextLetter);
                       //lettersHTML += '<a href="#' + nextLetter + '" data-letter="' + nextLetter + '">' + nextLetter + '</a>';
                       //debug
@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
                   }
               }
               if (index == 0) {
-                  jQuery('<div class="callout primary" data-magellan-target="' + letter + '" id="' + letter + '"><h2 class="h1">' + letter + '</h2></div>').insertBefore(jQuery(this));
+                  jQuery('<span class="callout primary m-b-0 m-t-20" data-magellan-target="' + letter + '" id="' + letter + '"><span class="h1">' + letter + '</span></span>').insertBefore(jQuery(this));
                   currentLettersArray.push(letter);
                   //lettersHTML += '<a href="#' + letter + '" data-letter="' + letter + '">' + letter + '</a>';
                   //debug
@@ -75,9 +75,11 @@ jQuery(document).ready(function() {
     }
     if (jQuery('.courses-az').length !== 0) {
         coursesAlphabetical();
-        var sticky = new Foundation.Sticky(jQuery('.sticky'), {
-            marginTop: 0,
-            anchor: 'sticky-anchor'
-        });
+        if (jQuery('.sticky').length > 0) {
+          var sticky = new Foundation.Sticky(jQuery('.sticky'), {
+              marginTop: 0,
+              anchor: 'sticky-anchor'
+          });
+        }
     }
 });

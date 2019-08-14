@@ -56,35 +56,30 @@
       }
     </style>
   </head>
-  <body>
+  <body class="p-t-30 p-l-30 p-r-30 p-b-30">
 
-    <div class="column row">
+    <div class="grid-container full">
+      
       <h1>Client Style Guide</h1>
       <p class="lead">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
-      <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
-      <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a>
-      <a href="http://foundation.zurb.com/business/business-support.html" class="secondary button">Technical Support</a>
-    </div>
 
-    <div class="column row"><div class="row collapse">
-
-      <div class="large-3 medium-4 columns" data-sticky-container>
-        <ul class="vertical menu">
+      <div class="grid-x">
+        <div class="cell large-3" data-sticky-container>
+          <ul class="vertical menu">
+            {{#each pages}}
+              <li><a href="#{{ anchor }}">{{ title }}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="cell large-9">
           {{#each pages}}
-            <li><a href="#{{ anchor }}">{{ title }}</a></li>
+            <section class="ss-section" id="{{ anchor }}">
+              {{ body }}
+            </section>
           {{/each}}
-        </ul>
+        </div>
       </div>
-
-      <div class="large-9 medium-8 columns">
-        {{#each pages}}
-          <section class="ss-section" id="{{ anchor }}">
-            {{ body }}
-          </section>
-        {{/each}}
-      </div>
-
-    </div></div>
+    </div>
 
     <script src="assets/js/app.js"></script>
   </body>
