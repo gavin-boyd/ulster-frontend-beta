@@ -91,59 +91,13 @@ function sass() {
   ].filter(Boolean);
 
   //app.css
-  return gulp.src('src/assets/scss/app.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-
-  //critical.css
-  return gulp.src('src/assets/scss/critical.scss')
-      .pipe($.sourcemaps.init())
-      .pipe($.sass({
-        includePaths: PATHS.sass
-      })
-        .on('error', $.sass.logError))
-      .pipe($.postcss(postCssPlugins))
-      .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-      .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-      .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-      .pipe(browser.reload({ stream: true }));
-
-  //print.css
-  return gulp.src('src/assets/scss/print.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-
-  //legacy.css
-  return gulp.src('src/assets/scss/legacy-app.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
-
-  //legacy-app-microsite.css
-  return gulp.src('src/assets/scss/legacy-app-microsite.scss')
+  return gulp.src([
+    'src/assets/scss/app.scss',
+    'src/assets/scss/critical.scss',
+    'src/assets/scss/legacy-app.scss',
+    'src/assets/scss/legacy-app-microsite.scss',
+    'src/assets/scss/homepage-critical.scss',
+  ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass

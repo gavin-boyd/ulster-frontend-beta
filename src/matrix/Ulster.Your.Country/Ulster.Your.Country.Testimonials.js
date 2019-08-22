@@ -17,31 +17,34 @@ if (res) {
         flagArray.push('false');
       }
       if (flag === true) {
-        output += '<div class="m-t-30 testimonials">';
+        var type = res[i].type;
+        if (type !== '') {
+          type = '(' + type + ')';
+        }
+        output += '<div class="testimonials">';
           output += '<div class="featured-testimonials-section">';
             output += '<div class="testimonial" data-eqalizer>';
-              output += '<div class="grid-x">';
+              output += '<div class="grid-x grid-margin-x m-b-30">';
+                output += '<div class="cell small-4 medium-4 large-4">';
                 if (res[i].image !== '') {
-                  output += '<div class="cell medium-6 large-6 cover-background no-margin-bottom shadow" style="background-image:url(' + res[i].image + ')" data-equalizer-watch="true">';
-                  output += '&nbsp;</div>';
-                  output += '<div class="cell medium-6 large-6 off-white-bg card-section shadow" data-equalizer-watch="true">';
+                  output += '<img src="' + res[i].image + '" alt="" class="thumbnail" />';
                 } else {
-                  output += '<div class="cell medium-12 large-12 off-white-bg card-section shadow" data-equalizer-watch="true">';
+                  output += '<img src="https://www.ulster.ac.uk/__data/assets/image/0020/452162/quote-holder.jpg" alt="" class="thumbnail" />';
                 }
-                output += '<br>';
-                output += '<div class="featured-testimonials-quotation">';
-                  output += res[i].quote
-                  output += '<cite>' + res[i].forename + ' ' + res[i].surname + ' - ' + res[i].course_name + ' (' + res[i].type + ')</cite>';
                 output += '</div>';
-                output += '<br>';
+                output += '<div class="cell small-8 medium-8 large-8" data-equalizer-watch="true">';
+                output += '<div class="">';
+                  output += '<p class="bl text-deep-blue m-b-5">' + res[i].forename + ' ' + res[i].surname + ' - ' + res[i].course_name + type + '</p>';
+                  output += res[i].quote
+                output += '</div>';
                 if (res[i].video !== '') {
-                  output += '<a data-fancybox href="https://www.youtube.com/watch?v=' + res[i].video + '" class="button large expanded hollow rounded no-margin-bottom">Watch Video</a>';
+                  output += '<p class="m-b-0 m-t-20"><a data-fancybox href="https://www.youtube.com/watch?v=' + res[i].video + '" class="bl">Watch Video&nbsp;&nbsp;<span class="fas fa-play" aria-hidden="true"></span></a></p>';
                 }
               output += '</div>';
             output += '</div>';
           output += '</div>';
         output += '</div>';
-        output += '</div><br>';
+        output += '</div>';
       }
     }
   }

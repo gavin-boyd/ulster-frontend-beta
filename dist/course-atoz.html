@@ -10,7 +10,7 @@
     <!--<link rel="stylesheet" href="assets/css/print.css" media="print">-->
   </head>
   <body>
-    
+    <div id="page-url" data-url="https://www.ulster.ac.uk/courses/202021"></div>
     <div class="grid-container show-for-large">
     	<div class="grid-x">
     		<div class="cell medium-3 large-3">
@@ -409,23 +409,27 @@
     		</div>
     	</div>
     </div>
-    <div class="inner content" id="atoz-ajax-content">
-    	<div>
-    		<div class="container">
-    			<div class="row">
-    				<div class="col col-sm-12 col-lg-9">
-    					<h1 id="thetop">Ulster University courses for entry year 2020/21</h1>
-    				</div>
-    				<div class="col col-sm-12 col-lg-3"></div>
-    			</div>
+    <div class="grid-container" id="atoz-ajax-content">
+    	<div class="grid-x m-t-30">
+    		<div class="cell large-6">
+    			<h1 id="thetop">Ulster University courses for entry year 2020/21</h1>
     		</div>
+    		<div class="cell large-3">
+    			<a class="button expanded rounded bl" href="https://www.ulster.ac.uk/prospectus">Get your prospectus&nbsp;&nbsp;<span aria-hidden="true" class="far fa-book"></span></a>
+    		</div>
+    		<div class="cell large-3">
+    			<a class="button expanded rounded bl" href="https://www.ulster.ac.uk/prospectus">Get your prospectus&nbsp;&nbsp;<span aria-hidden="true" class="far fa-book"></span></a>
+    		</div>
+    	</div>
+    	<div>
+    		<!-- search form -->
     		<div class="embed-course-listing" id="courses">
     			<div class="course-finder-new">
     				<form action="https://www.ulster.ac.uk/course-finder-foundation/202021" id="course-finder-new" method="get" name="course-finder-new">
     					<input id="query" type="hidden" value=""> <input id="year" name="f.Entry_year|entryyear" type="hidden" value="202021">
     					<div id="filters">
     						<p><strong>Filter the courses</strong></p>
-    						<ul class="selector-menu facetcategory" style="max-width:none;">
+    						<ul class="selector-menu facetcategory">
     							<li class="category"><label><input name="f.Level|Y" type="checkbox" value="Undergraduate"> Undergraduate</label></li>
     							<li class="category"><label><input name="f.Level|Y" type="checkbox" value="Postgraduate"> Postgraduate</label></li>
     							<li class="category"><label><input name="f.Level|coursetype" type="checkbox" value="Short+courses+and+CPD"> Short courses and CPD</label></li>
@@ -445,7 +449,8 @@
     					</div>
     				</form>
     			</div>
-    		</div>
+    		</div><!-- search form -->
+    		<!-- search results -->
     		<div class="results-group courses-az" id="course_list">
     			<p data-letter="A" data-level=""><a href="https://ulster.funnelback.co.uk/s/redirect?collection=ulster-dev&url=https%3A%2F%2Fwww.ulster.ac.uk%2Fcourses%2F202021%2Faccounting-pathways-19188&auth=0PQve73SvFEarw%2BC83PbvQ&profile=_default&rank=1&query=%21nullquery+%7Centryyear%3A%22%24%2B%2B+202021+%24%2B%2B%22"><span class="title">Accounting (Pathways) - BSc (Hons)</span> <span class="sub"><span class="sub-label">Undergraduate course</span> <span class="sub-label">Bachelor of Science with Honours</span> <span class="sub-label">Jordanstown campus</span> <span class="sub-label">Full-time</span></span> <span class="cta">View Course</span></a></p>
     			<p data-letter="A" data-level=""><a href="https://ulster.funnelback.co.uk/s/redirect?collection=ulster-dev&url=https%3A%2F%2Fwww.ulster.ac.uk%2Fcourses%2F202021%2Faccounting-and-law-19189&auth=AKDO3hxSKSnYTDFH2Umc9Q&profile=_default&rank=2&query=%21nullquery+%7Centryyear%3A%22%24%2B%2B+202021+%24%2B%2B%22"><span class="title">Accounting and Law - BSc (Hons)</span> <span class="sub"><span class="sub-label">Undergraduate course</span> <span class="sub-label">Bachelor of Science with Honours</span> <span class="sub-label">Jordanstown campus</span> <span class="sub-label">Full-time</span></span> <span class="cta">View Course</span></a></p>
@@ -607,7 +612,7 @@
     			<p data-letter="T" data-level=""><a href="https://ulster.funnelback.co.uk/s/redirect?collection=ulster-dev&url=https%3A%2F%2Fwww.ulster.ac.uk%2Fcourses%2F202021%2Ftechnology-with-design-19259&auth=MLURlhZPgj0HRg%2BiKeRoIw&profile=_default&rank=158&query=%21nullquery+%7Centryyear%3A%22%24%2B%2B+202021+%24%2B%2B%22"><span class="title">Technology with Design - BSc (Hons)</span> <span class="sub"><span class="sub-label">Undergraduate course</span> <span class="sub-label">Bachelor of Science with Honours</span> <span class="sub-label">Jordanstown campus</span> <span class="sub-label">Full-time</span></span> <span class="cta">View Course</span></a></p>
     			<p data-letter="T" data-level=""><a href="https://ulster.funnelback.co.uk/s/redirect?collection=ulster-dev&url=https%3A%2F%2Fwww.ulster.ac.uk%2Fcourses%2F202021%2Ftextile-art-design-and-fashion-19192&auth=qe4nNbC5kECcK3wOEZ2BJQ&profile=_default&rank=159&query=%21nullquery+%7Centryyear%3A%22%24%2B%2B+202021+%24%2B%2B%22"><span class="title">Textile Art, Design and Fashion - BA (Hons)</span> <span class="sub"><span class="sub-label">Undergraduate course</span> <span class="sub-label">Bachelor of Arts with Honours</span> <span class="sub-label">Belfast campus</span> <span class="sub-label">Full-time</span></span> <span class="cta">View Course</span></a></p>
     		</div>
-    	</div>
+    	</div><!-- search results -->
     </div>
     
     <script src="assets/js/course-atoz.js" async></script>

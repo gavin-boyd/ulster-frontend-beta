@@ -34,14 +34,15 @@
 
   &::before
   {
-    content: "“";
-    font-size: 120px;
-    line-height: 30px;
+    font-family: 'Font Awesome 5 Pro';
+    content: "\f10d";
+    font-size: 60px;
+    line-height: 60px;
     width: 100px;
     height: auto;
     display: block;
     margin-left: -20px;
-    color: lighten($black, 80%);
+    color: #ddd;
 
     @include breakpoint(small)
     {

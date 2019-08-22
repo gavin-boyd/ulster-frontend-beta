@@ -239,6 +239,20 @@ ul.angle-right,
   }
 }
 
+ul.no-bullet,
+.wysiwyg ul.no-bullet
+{
+  li
+  {
+    padding-left: 0;
+
+    &::before
+    {
+      display: none;
+    }
+  }
+}
+
 ul.columns
 {
   columns: 3;
@@ -567,6 +581,7 @@ ul.columns-2
     display: block;
   }
 }
+
 .page_letters
 {
   margin-bottom: 20px;
@@ -583,6 +598,7 @@ ul.columns-2
     min-width: 25px;
     margin: 1px;
     float:left;
+    text-align: center;
 
     > a,
     > span
@@ -597,6 +613,16 @@ ul.columns-2
 
     a
     {
+      background-color: $sky-blue;
+      color:#fff;
+      font-weight: 600;
+      outline: none !important;
+
+      &:hover
+      {
+        background: darken($sky-blue, 5%);
+      }
+
       &.active
       {
         background: $corp-gold;
@@ -640,11 +666,6 @@ ul.columns-2
     @include breakpoint(large) {
       width: 39px;
     }
-  }
-
-  span
-  {
-    width: 22px;
   }
 
   a
@@ -971,7 +992,7 @@ ul.ui-autocomplete
 
         &::before
         {
-          font-family: 'FontAwesome';
+          font-family: 'Font Awesome 5 Pro';
           content: "\f19d";
           color: rgb(72, 72, 72);
           position: absolute;
@@ -1775,6 +1796,11 @@ ol.rounded
   background: #fff;
   padding: 20px;
 
+  @include breakpoint(small down)
+  {
+    padding: 10px 0 0 0;
+  }
+
   div.search
   {
     position: absolute;
@@ -1803,6 +1829,9 @@ ol.rounded
         top:auto;
         right:auto;
         width: 100%;
+        height: 42px;
+        margin-bottom: 0;
+        background-size: 28px;
       }
     }
 
@@ -1819,6 +1848,8 @@ ol.rounded
       @include breakpoint(small down)
       {
         width: 100%;
+        font-size: 16px;
+        height: 42px;
       }
     }
   }
@@ -1982,7 +2013,7 @@ ol.rounded
         @include breakpoint(small down)
         {
           font-size: 28px;
-          width: 49%;
+          width: 48%;
         }
 
         span
@@ -2059,7 +2090,12 @@ ol.rounded
 
 #main-content
 {
-  background:url('//cdn.ulster.ac.uk/home/ulster-frontend/img/olp/longimage1.jpg') no-repeat;
+  background-repeat: no-repeat;
+
+  @include breakpoint(small down)
+  {
+    background-position: 40% 0;
+  }
 }
 
 #filters
@@ -2096,4 +2132,98 @@ ol.rounded
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+form.course-finder
+{
+  button
+  {
+    max-height: 41px;
+  }
+
+  h2
+  {
+    margin-top: 3px;
+  }
+}
+
+.results-group.courses-az
+{
+  padding: 0 !important;
+
+  h2
+  {
+    font-weight: 600;
+    font-size:30px;
+    background: $sky-blue;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 60px;
+
+    &:first-child
+    {
+      margin-top: 0;
+    }
+  }
+
+  p
+  {
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+
+    a
+    {
+      display: block;
+      position: relative;
+
+      span.title
+      {
+        display: block;
+        font-weight: 600;
+        font-size: 24px;
+        color: #000;
+      }
+
+      span.sub
+      {
+        display: block;
+        color: #555;
+
+        span.sub-label
+        {
+          margin-right: 10px;
+          padding-right: 10px;
+          border-right: 1px solid #ccc;
+
+          &:last-child
+          {
+            border-right: 0;
+          }
+        }
+      }
+
+      span.cta
+      {
+        @include button();
+        display: block;
+        position: absolute;
+        right:0;
+        top: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+input[type="search"]::-webkit-search-cancel-button
+{
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  display: block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAn0lEQVR42u3UMQrDMBBEUZ9WfQqDmm22EaTyjRMHAlM5K+Y7lb0wnUZPIKHlnutOa+25Z4D++MRBX98MD1V/trSppLKHqj9TTBWKcoUqffbUcbBBEhTjBOV4ja4l4OIAZThEOV6jHO8ARXD+gPPvKMABinGOrnu6gTNUawrcQKNCAQ7QeTxORzle3+sDfjJpPCqhJh7GixZq4rHcc9l5A9qZ+WeBhgEuAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: 14px;
 }

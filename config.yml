@@ -41,3 +41,4 @@ PATHS:
     - "src/assets/js/phds.js"
     - "src/assets/js/coursefinder.js"
     - "src/assets/js/course-atoz.js"
+    - "src/assets/js/coursefinder-upgrade.js"

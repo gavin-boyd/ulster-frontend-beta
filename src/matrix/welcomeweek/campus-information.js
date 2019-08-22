@@ -33,6 +33,9 @@ if (res) {
         output += '</div>';
         output += '</div>';
         output += '</div>';
+        //if (res[i].ww_video_id !== '') {
+        //  output += '<div class="cell large-12"><div class="responsive-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' + res[i].ww_video_id + '?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>';
+        //}
         output += '</div>';
         output += '</div>';
         output += '</div>';

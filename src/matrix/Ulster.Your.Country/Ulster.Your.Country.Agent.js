@@ -20,19 +20,19 @@ if (res) {
         if (country_code == agent_code) {
             showGeneric.push('true');
             output += '<div class="shadow card card-section radius">';
-              output += '<div class="grid-x">';
+              output += '<div class="grid-x grid-margin-x">';
                 output += '<div class="cell small-12 medium-3 large-3">';
                   output += '<img src="' + res[i].image + '" alt="' + res[i].full_name + '" class="circle shadow" style="max-width:170px;">';
                 output += '</div>';
                 output += '<div class="cell small-12 medium-9 large-9">';
-                  output += '<div class="featured-testimonials-quotation">';
-                    output += '<h2 class="h4">';
+                  output += '<div class="">';
+                    output += '<p class="bl m-b-0">';
                       output += res[i].prospectus_intro;
-                    output += '</h2>';
+                    output += '</p>';
                     output += '<p>';
                       output += res[i].prospectus_content;
                     output += '</p>';
-                    output += '<p>';
+                    output += '<p class="m-b-0">';
                     if (Array.isArray(agent_country_contact_type_array)) {
                       var agent_country_contact_type_string = agent_country_contact_type_array.toString();
                       //WhatsApp
@@ -40,17 +40,17 @@ if (res) {
                         var mobile = res[i].phone;
                         mobile = mobile.replace(/\s/g, '');
                         mobile = mobile.replace('+', '');
-                        output += '<a href="https://api.whatsapp.com/send?phone=' + mobile + '" class="button rounded shadow"><i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;&nbsp;WhatsApp</a>&nbsp;';
+                        output += '<a href="https://api.whatsapp.com/send?phone=' + mobile + '" class="button rounded shadow m-b-0"><span class="fa fa-whatsapp" aria-hidden="true"></span>&nbsp;&nbsp;WhatsApp</a>&nbsp;';
                         //output += '<a href="#" class="button large expanded"><i class="fa fa-weixin" aria-hidden="true"></i> WeChat</a>';
                       }
                       //Email
                       if (res[i].email !== '' && agent_country_contact_type_string.indexOf('email') !== -1) {
                         var email = res[i].email;
-                        output += '<a href="mailto:' + email + '" class="button rounded shadow"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;Email</a>&nbsp;';
+                        output += '<a href="mailto:' + email + '" class="button rounded shadow m-b-0"><span class="fa fa-envelope-o" aria-hidden="true"></span>&nbsp;&nbsp;Email</a>&nbsp;';
                       }
                       //Facebook
                       if (res[i].facebook !== '' && agent_country_contact_type_string.indexOf('facebook') !== -1) {
-                        output += '<a href="https://m.me/' + res[i].facebook + '" class="button rounded shadow" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>&nbsp;';
+                        output += '<a href="https://m.me/' + res[i].facebook + '" class="button rounded shadow m-b-0" target="_blank><span class="fa fa-facebook" aria-hidden="true"></span>&nbsp;&nbsp;Facebook</a>&nbsp;';
                       }
                       //Phone
                       if (res[i].phone !== '' && agent_country_contact_type_string.indexOf('phone') !== -1)  {
@@ -58,7 +58,7 @@ if (res) {
                         var mobileOnlyValue = res[i].phone;
                         mobileOnly = mobileOnly.replace(/\s/g, '');
                         mobileOnly = mobileOnly.replace('+', '');
-                        output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
+                        output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow m-b-0"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
                       }
                     } else {
                       //WhatsApp
@@ -66,17 +66,17 @@ if (res) {
                         var mobile = res[i].phone;
                         mobile = mobile.replace(/\s/g, '');
                         mobile = mobile.replace('+', '');
-                        output += '<a href="https://api.whatsapp.com/send?phone=' + mobile + '" class="button rounded shadow"><i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;&nbsp;WhatsApp</a>&nbsp;';
+                        output += '<a href="https://api.whatsapp.com/send?phone=' + mobile + '" class="button rounded shadow m-b-0"><span class="fa fa-whatsapp" aria-hidden="true"></span>&nbsp;&nbsp;WhatsApp</a>&nbsp;';
                         //output += '<a href="#" class="button large expanded"><i class="fa fa-weixin" aria-hidden="true"></i> WeChat</a>';
                       }
                       //Email
                       if (res[i].email !== '' && agent_country_contact_type_array == 'email') {
                         var email = res[i].email;
-                        output += '<a href="mailto:' + email + '" class="button rounded shadow"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;Email</a>&nbsp;';
+                        output += '<a href="mailto:' + email + '" class="button rounded shadow m-b-0"><span class="fa fa-envelope-o" aria-hidden="true"></span>&nbsp;&nbsp;Email</a>&nbsp;';
                       }
                       //Facebook
                       if (res[i].facebook !== '' && agent_country_contact_type_array == 'facebook') {
-                        output += '<a href="https://m.me/' + res[i].facebook + '" class="button rounded shadow" target="_blank><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>&nbsp;';
+                        output += '<a href="https://m.me/' + res[i].facebook + '" class="button rounded shadow m-b-0" target="_blank><span class="fa fa-facebook" aria-hidden="true"></span>&nbsp;&nbsp;Facebook</a>&nbsp;';
                       }
                       //Phone
                       if (res[i].phone !== '' && agent_country_contact_type_array == 'phone') {
@@ -84,7 +84,7 @@ if (res) {
                         var mobileOnlyValue = res[i].phone;
                         mobileOnly = mobileOnly.replace(/\s/g, '');
                         mobileOnly = mobileOnly.replace('+', '');
-                        output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
+                        output += '<a href="tel:' + mobileOnly + '" class="button rounded shadow m-b-0"><span class="fa fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + mobileOnlyValue + '</a>&nbsp;';
                       }
                     }
                     output += '</p>';
