@@ -174,7 +174,7 @@
 {
   a
   {
-    background-color: $button-background;
+    background-color: #005ea5 !important;
     color: #fff;
     margin-right: 1px;
     @include transition-background;
@@ -182,7 +182,7 @@
     &:hover,
     &:focus
     {
-      background-color: $button-background-hover;
+      background-color: darken(#005ea5, 10%) !important;
       color: #fff !important;
     }
   }

@@ -100,10 +100,7 @@ input
   font-size:18px;
   font-style: normal;
 }
-.udl
-{
-  text-decoration:underline;
-}
+
 input[type=text],
 input[type=email],
 input[type=password],
@@ -128,10 +125,6 @@ select:focus
 {
   border:none;
   outline:4px solid #009fe3;
-}
-.bl
-{
-  font-weight:bold;
 }
 .sq-backend-smallprint
 {

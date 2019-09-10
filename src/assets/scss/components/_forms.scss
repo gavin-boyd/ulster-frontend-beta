@@ -27,3 +27,243 @@ select
 {
   min-height:41px;
 }
+
+
+.application-form
+{
+  .ui-menu-item
+  {
+    padding:10px;
+  }
+
+  .prettyradio>a
+  {
+    margin-top:9px;
+  }
+  //application forms
+  input[type="email"],
+  input[type="date"],
+  input[type="num"],
+  input[type="password"],
+  select
+  {
+    max-width:300px;
+  }
+  .sq-backend-smallprint
+  {
+    display:none;
+  }
+  .sq-form-page-list
+  {
+    margin:0;
+  }
+  .sq-form-question
+  {
+    margin-top:20px;
+  }
+  label,
+  legend
+  {
+    font-size:20px;
+    margin-bottom:5px;
+    font-weight: 400;
+
+    strong
+    {
+      color:#b10e1e;
+    }
+  }
+  legend
+  {
+    font-weight: 600;
+  }
+  .red
+  {
+    color:#b10e1e;
+  }
+  .sq-form-error
+  {
+    color:#b10e1e;
+    font-weight:bold;
+  }
+  .sq-form-question-error
+  {
+    padding-left:15px;
+    border-left:5px solid #b10e1e;
+  }
+  .sq-form-question-error input
+  {
+    margin-bottom: 5px;
+  }
+  textarea,
+  input
+  {
+    margin-bottom:0;
+  }
+  .sq-form-question > label
+  {
+    margin-top:20px;
+  }
+  .sq-form-page-list li
+  {
+    display:block;
+    text-align:left;
+    background:#eee;
+    padding: 20px;
+    margin-bottom:1px;
+  }
+  .sq-form-page-list li .no-pulse-navy
+  {
+    background:#555;
+  }
+  .sq-form-page-list li.sq-form-current-page-number .no-pulse-navy
+  {
+    background:#fff;
+  }
+  .sq-form-page-list li.sq-form-current-page-number .no-pulse-navy .fa
+  {
+    color:#000;
+  }
+  .sq-form-page-list li .fa
+  {
+    font-family: "futura-pt";
+    font-weight:600;
+  }
+  .sq-form-section-title
+  {
+    display:none;
+  }
+  .sq-form-question-note
+  {
+    padding:0;
+    margin-top:0;
+    margin-bottom:10px;
+    display:block;
+    font-size:18px;
+    font-style: normal;
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=date],
+  input[type=number],
+  input[type=tel],
+  textarea,
+  select
+  {
+    border:none;
+    outline:4px solid #ccc;
+    margin-top:10px;
+    margin-bottom:30px;
+  }
+  input[type=text]:focus,
+  input[type=email]:focus,
+  input[type=password]:focus,
+  input[type=date]:focus,
+  input[type=number]:focus,
+  textarea:focus,
+  select:focus
+  {
+    border:none;
+    outline:4px solid #009fe3;
+  }
+  .sq-backend-smallprint
+  {
+    display:none;
+  }
+  .button
+  {
+    min-width:200px;
+  }
+  /* Page list */
+  .sq-form-page-list
+  {
+    margin:0;
+  }
+  .sq-form-page-list li
+  {
+    display:block;
+    text-align:left;
+    background:#eee;
+    padding: 20px;
+    margin-bottom:1px;
+  }
+  .sq-form-page-list li.sq-form-current-page-number
+  {
+    background:#005ea5;
+    color:#fff;
+  }
+  .sq-form-page-list li .no-pulse-navy
+  {
+    background:#555;
+  }
+  .sq-form-page-list li.sq-form-current-page-number .no-pulse-navy
+  {
+    background:#fff;
+  }
+  .sq-form-page-list li.sq-form-current-page-number .no-pulse-navy .fa
+  {
+    color:#000;
+  }
+  .sq-form-page-list li .fa
+  {
+    font-family: "futura-pt";
+  }
+
+  .sq-form-question-option-list
+  {
+    .sq-form-question-answer
+    {
+      ul:not(.country-list)
+      {
+        margin:0 0 20px 0;
+
+        li
+        {
+          display:inline-block;
+          background:#eee;
+          margin-right:10px;
+          margin-bottom: 10px;
+          padding-left:10px;
+
+          @media only screen and (max-width: 600px) {
+            display: block;
+          }
+
+          label
+          {
+            padding:10px 10px 10px 0;
+
+            @media only screen and (max-width: 600px) {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sq-form-question-answer
+  {
+    ul
+    {
+      margin-left: 0;
+    }
+  }
+
+  .sq-form-question-tickbox-list
+  {
+    .sq-form-question-answer
+    {
+      ul
+      {
+        li
+        {
+          display:block !important;
+          margin-bottom: 10px !important;
+        }
+      }
+    }
+  }
+}

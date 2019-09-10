@@ -36,6 +36,19 @@ ul.angle-right,
       }
     }
   }
+
+  &.web-list
+  {
+    li
+    {
+      padding-left: 25px;
+
+      &::before
+      {
+        content: "\f37e";
+      }
+    }
+  }
 }
 
 ul.no-bullet,

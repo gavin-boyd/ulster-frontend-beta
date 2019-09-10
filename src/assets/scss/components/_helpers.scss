@@ -499,6 +499,15 @@ a.button
   font-weight:bold;
 }
 
+.pos-image
+{
+  position: absolute;
+  top: 0;
+  right: -32px;
+  width:133px;
+  max-width:none;
+}
+
 .udl
 {
   text-decoration: underline !important;
