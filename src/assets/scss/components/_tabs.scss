@@ -1,0 +1,217 @@
+//tabs
+.tabs
+{
+  a
+  {
+    font-size: 18px;
+
+    @include breakpoint(small down)
+    {
+      font-size: 14px;
+    }
+  }
+
+  &.expanded
+  {
+    li
+    {
+      @include breakpoint(small down)
+      {
+        -webkit-box-flex: none !important;
+        -webkit-flex: none !important;
+        -ms-flex: none !important;
+        flex: none !important;
+        width:100% !important;
+      }
+
+      a
+      {
+        @include breakpoint(small down)
+        {
+          margin-right:0;
+        }
+
+        &:hover,
+        &:focus
+        {
+          background: darken(#005ea5, 5%);
+        }
+      }
+    }
+  }
+}
+
+.tabs
+{
+
+  a
+  {
+    &:focus
+    {
+      outline: 0;
+    }
+  }
+
+  &.border-fix
+  {
+    margin-right:1px;
+  }
+
+  &.background-none
+  {
+    a
+    {
+      color: #fff;
+      background: rgba(0,0,0,.3);
+
+      &:hover
+      {
+        color: #fff !important;
+        background-color: $bright-blue;
+        @include transition-all();
+      }
+    }
+
+    li.is-active
+    {
+      a
+      {
+        background-color: $bright-blue;
+
+        &:hover
+        {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.larger
+  {
+    a
+    {
+      font-size:22px;
+    }
+  }
+}
+
+.tabs-pull-up
+{
+  margin-top:-66px;
+  position:relative;
+  z-index:9998;
+
+  &.minus-67
+  {
+    margin-top: -67px;
+
+    @include breakpoint(small down)
+    {
+      margin-top: 15px;
+    }
+  }
+
+  &.minus-62
+  {
+    margin-top: -62px;
+
+    @include breakpoint(small down)
+    {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint(small down)
+  {
+    margin-top: 15px;
+  }
+}
+
+.tabs
+{
+  @include breakpoint(medium down)
+  {
+    background: grey;
+  }
+
+  li
+  {
+    @include breakpoint(medium down)
+    {
+      float:none;
+    }
+
+    a
+    {
+      background-color: #fff;
+      @include transition-background;
+
+      &:hover
+      {
+        background: #eee;
+      }
+    }
+
+    &.is-active
+    {
+      a
+      {
+        &:hover
+        {
+          background: #005ea5;
+        }
+      }
+    }
+  }
+}
+
+.tabs-title>a
+{
+  padding: 1.25rem 1.5rem !important;
+}
+
+.reverse-tabs
+{
+  a
+  {
+    background-color: $button-background;
+    color: #fff;
+    margin-right: 1px;
+    @include transition-background;
+
+    &:hover,
+    &:focus
+    {
+      background-color: $button-background-hover;
+      color: #fff !important;
+    }
+  }
+
+  .is-active
+  {
+    a
+    {
+      background: #fff !important;
+      color: #005ea5 !important;
+    }
+  }
+}
+
+.standard-page-tabs
+{
+  .tabs,
+  .tabs-content
+  {
+    border:none;
+  }
+
+  .tabs
+  {
+    border-bottom: 5px solid #005ea5;
+  }
+
+  .tabs-panel
+  {
+    padding: 20px 0;
+  }
+}

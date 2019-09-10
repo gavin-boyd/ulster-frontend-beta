@@ -103,6 +103,13 @@ require('./plugins/peoplelist/init');
 //custom smooth scroll
 require('./plugins/smooth-scroll/init');
 
+//cookie consent
+require('./plugins/cookie-consent/init');
+
+//responsive content
+require('./plugins/responsive-content/init');
+
+
 //tilt js
 //require('./plugins/tilt/tilt.jquery.js');
 //require('./plugins/tilt/init.js');

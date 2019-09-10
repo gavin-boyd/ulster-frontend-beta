@@ -1,0 +1,202 @@
+pre
+{
+  margin-bottom: 30px;
+}
+
+//angle right list style Type
+ul.angle-right,
+.wysiwyg ul
+{
+  margin-left: 0;
+
+  li
+  {
+    position: relative;
+    padding-left: 15px;
+
+    &::before
+    {
+      font-family: 'Font Awesome 5 Pro';
+      content: "\f105";
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+
+    ol
+    {
+      li
+      {
+        padding-left: 0;
+
+        &::before
+        {
+          content:'';
+        }
+      }
+    }
+  }
+}
+
+ul.no-bullet,
+.wysiwyg ul.no-bullet
+{
+  li
+  {
+    padding-left: 0;
+
+    &::before
+    {
+      display: none;
+    }
+  }
+}
+
+.text-shadow
+{
+  text-shadow: rgba(0,0,0,.3) 2px 3px 5px;
+}
+
+.large
+{
+  font-size: 32px;
+  line-height: 36px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.larger
+{
+  font-size: 42px;
+  line-height: 46px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.extra-large-sub-heading
+{
+  font-size: 32px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 22px;
+  }
+}
+
+.extra-large
+{
+  font-size: 62px;
+  line-height: 66px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.extra-large-2
+{
+  font-size: 62px;
+  line-height: 66px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.wysiwyg
+{
+  table
+  {
+    thead
+    {
+      tr
+      {
+        th
+        {
+          background: $corp-navy;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* tables */
+table
+{
+  thead
+  {
+    background: $deep-blue;
+    color:#fff;
+  }
+}
+
+.large-off-canvas
+{
+  width: 60%;
+  -webkit-transform: translate(-70%);
+  -ms-transform: translate(-70%);
+  transform: translate(-70%);
+  overflow: visible;
+
+  @include breakpoint(medium only)
+  {
+    width: 50%;
+  }
+
+  @include breakpoint(small down)
+  {
+    width: 90%;
+  }
+}
+
+.wysiwyg
+{
+  h2
+  {
+    font-size: rem-calc(34);
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  h4, h5, h6
+  {
+    font-weight: 500;
+  }
+}

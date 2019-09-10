@@ -87,7 +87,7 @@ function sass() {
     autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
 
     // UnCSS - Uncomment to remove unused styles in production
-    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+    //RODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   //app.css

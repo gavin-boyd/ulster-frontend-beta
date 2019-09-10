@@ -1,0 +1,37 @@
+/*
+ * menu for guide page contents
+ */
+.page-contents.menu
+{
+  a
+  {
+    position: relative;
+    padding: 10px 10px 10px 25px;
+    border-left: 5px solid #eee;
+    font-size: 16px;
+    line-height: 20px;
+    @include transition-all;
+
+    &:hover
+    {
+      border-left-color:darken(#eee, 5%);
+    }
+  }
+
+  a.is-active
+  {
+    border-left-color:$sky-blue;
+    background: transparent;
+    background: #eee;
+
+    &::before
+    {
+      font-family: 'Font Awesome 5 Pro';
+      content: "\f105";
+      margin-right: 5px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+  }
+}

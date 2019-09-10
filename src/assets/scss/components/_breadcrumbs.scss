@@ -12,6 +12,12 @@ ul.breadcrumbs
     text-transform: none;
     font-size: 15px;
     color: #000;
+    margin-left:10px;
+
+    &::after
+    {
+      display: none;
+    }
 
     a
     {
@@ -22,12 +28,26 @@ ul.breadcrumbs
         font-size: 12px;
       }
     }
+
+    &:last-child
+    {
+      display: none;
+    }
+
+    &:first-child
+    {
+      padding-left: 0;
+      margin-left: 0;
+    }
   }
 
-  li:not(:last-child)::after
+  li:not(:first-child)::before
   {
     font-family: 'Font Awesome 5 Pro';
     content: "\f0da";
+    font-weight: 900;
+    margin-right: 5px;
+    color: #ccc;
 
     @include breakpoint(small down)
     {

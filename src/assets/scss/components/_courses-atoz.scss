@@ -1,0 +1,133 @@
+/*
+ * courses atoz
+ */
+.back-to-top,
+.toggler,
+#open
+{
+  display: none;
+}
+.is-stuck
+{
+  .back-to-top
+  {
+    display: block;
+  }
+
+  .toggler
+  {
+    display: block;
+  }
+}
+
+.page_letters
+{
+  margin-bottom: 20px;
+  @include clearfix;
+
+  > p
+  {
+    margin-bottom: 5px;
+  }
+
+  > div
+  {
+    width: 3.6%;
+    min-width: 25px;
+    margin: 1px;
+    float:left;
+    text-align: center;
+
+    > a,
+    > span
+    {
+      display: block;
+    }
+
+    > span
+    {
+      background: transparent;
+    }
+
+    a
+    {
+      background-color: $sky-blue;
+      color:#fff;
+      font-weight: 600;
+      outline: none !important;
+
+      &:hover
+      {
+        background: darken($sky-blue, 5%);
+      }
+
+      &.active
+      {
+        background: $corp-gold;
+        color:#fff;
+      }
+    }
+  }
+
+  .back-to-top
+  {
+    display: none;
+  }
+
+  &.is-stuck
+  {
+    padding: 10px 5px;
+    background: rgba(255,255,255,.95);
+    border-top: 5px solid #000;
+
+    .back-to-top
+    {
+      display: block;
+    }
+  }
+
+  span
+  {
+    display: block;
+    color: lighten(#555, 20%);
+  }
+
+  a,
+  span
+  {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+
+    @include breakpoint(large) {
+      width: 39px;
+    }
+  }
+
+  a
+  {
+    background: $corp-navy;
+    display: inline-block;
+    border:0;
+    outline: 1px solid #555;
+    @include transition-all;
+
+    &:hover
+    {
+      background: darken(#eee,5%);
+    }
+
+    &.active
+    {
+      background: $corp-gold;
+      color: #fff;
+    }
+
+    @include breakpoint(small) {
+      margin-bottom: 10px;
+      margin-right: 5px;
+    }
+  }
+}

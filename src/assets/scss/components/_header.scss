@@ -1,0 +1,96 @@
+//brand
+a.brand
+{
+  margin: 30px 0;
+  display: block;
+  max-width:160px;
+}
+
+//global search box
+#searchform
+{
+  margin-top: 20px;
+}
+
+//megamenu
+.dropdown-pane.full
+{
+  width: 100% !important;
+  left: 0 !important;
+}
+
+//search box button in header
+button
+{
+  i
+  {
+    color: #fff !important;
+  }
+}
+
+//utility (alpha)
+.utility
+{
+  padding: 10px 0;
+  margin-bottom: 0;
+  @include clearfix;
+
+  li
+  {
+    border-right: 1px solid #eee;
+
+    &:last-child
+    {
+      border-right: 0;
+      padding-right: 0;
+
+      a
+      {
+        padding-right: 0;
+      }
+    }
+
+    a
+    {
+      color: #000;
+    }
+  }
+}
+
+//main-content spacing fix for ulster-alpha
+body .main-content
+{
+  margin-top: 0;
+  top: 0 !important;
+}
+.resp-pull-left
+{
+  position: relative;
+}
+
+/*
+ * top bar background color
+ */
+.top-bar
+{
+  background: none repeat scroll 0 0 transparent;
+
+  ul
+  {
+    background: none repeat scroll 0 0 transparent;
+  }
+}
+
+/*
+ * no sticky magellan menus on medium size screens
+ */
+#nav
+{
+  .sticky.is-stuck
+  {
+    @include breakpoint(medium down)
+    {
+      position: relative !important;
+    }
+  }
+}
