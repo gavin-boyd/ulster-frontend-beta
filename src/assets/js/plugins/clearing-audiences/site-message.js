@@ -87,7 +87,7 @@ jQuery(document).ready(function() {
       });
     }
     //global
-    if (cookie == 'global') {
+    /*if (cookie == 'global') {
       jQuery.ajax({
         dataType: "json",
         url: api,
@@ -107,7 +107,7 @@ jQuery(document).ready(function() {
           }
         }
       });
-    }
+    }*/
   }
 
   function addBanner(title, subtitle, phone, phonetext, url, colour, courseBtnID, callBtnID, buttonType) {
@@ -132,7 +132,7 @@ jQuery(document).ready(function() {
     '<div class="grid-x">' +
     '<div class="cell small-11 medium-11 large-5 p-t-5 m-small-b-10 small-order-1 medium-order-1 large-order-1">' +
     '<p class="m-b-0">' +
-    '<span class="h2 text-white"><span class="fas fa-bell shake" aria-hidden="true"></span></span>' +
+    '<span class="h2 text-white"><span class="fas fa-bell shake" aria-hidden="true"></span><span class="show-for-sr">Clearing</span></span>' +
     '&nbsp;&nbsp;<span class="bl h2 text-white">' + title + '</span>' +
     '<span class="text-white m-l-10">' + subtitle + '</span></p>' +
     '</div>' +
@@ -154,7 +154,7 @@ jQuery(document).ready(function() {
     '</div>' +
     '<div class="cell small-1 medium-1 large-1 text-right white-text small-order-2 medium-order-2 large-order-4">' +
     '<div class="">' +
-    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fas fa-times-circle" aria-hidden="true"></span></a>' +
+    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fas fa-times-circle" aria-hidden="true"></span><span class="show-for-sr">Dismiss this message</span></a>' +
     '</div>' +
     '</div></div></div></div>';
     jQuery('body').prepend(html);
@@ -194,7 +194,7 @@ jQuery(document).ready(function() {
     '</div>' +
     '<div class="cell small-1 medium-1 large-1 text-right white-text small-order-2 medium-order-2 large-order-4">' +
     '<div class="">' +
-    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fas fa-times-circle" aria-hidden="true"></span></a>' +
+    '<a href="#" class="button clear m-b-0 m-small-b-10" id="dismiss-clearing-banner"><span class="fas fa-times-circle" aria-hidden="true"></span><span class="show-for-sr">Dismiss</span></a>' +
     '</div>' +
     '</div></div></div></div><style>.with-top-promo{margin-top:80px;}</style>';
     jQuery('body').prepend(html);

@@ -28,6 +28,21 @@ button
   }
 }
 
+.nav-bar
+{
+  .offcanvas-trigger
+  {
+    background: transparent;
+
+    &:focus,
+    &:active
+    {
+      background: transparent !important;
+    }
+  }
+
+}
+
 //utility (alpha)
 .utility
 {
@@ -53,6 +68,7 @@ button
     a
     {
       color: #000;
+      background-color: #fff;
     }
   }
 }
@@ -93,4 +109,25 @@ body .main-content
       position: relative !important;
     }
   }
+}
+
+.nav-bar.uls-mob
+{
+  background: #fff;
+
+  li
+  {
+    background: transparent;
+  }
+
+  .offcanvas-trigger:hover
+  {
+    background: transparent;
+  }
+}
+
+#mobileSearch
+{
+  padding: 0 15px;
+  background: #eee;
 }

@@ -8,14 +8,15 @@
 */
 .global-nav
 {
-  @include linear-gradient($top: #f4f4f4, $bottom: #ddd);
-  @include box-shadow(
+  //@include linear-gradient($top: #f4f4f4, $bottom: #ddd);
+  background-color: #f4f4f4;
+  /*@include box-shadow(
     $x : 2px,
     $y : 2px,
     $blur : 5px,
     $spread : 0,
     $color : rgba(0,0,0,0.2)
-  );
+  );*/
   width: 100%;
 
   a
@@ -27,9 +28,9 @@
   {
     background: transparent;
     @include box-shadow(
-      $x : 2px,
-      $y : 2px,
-      $blur : 5px,
+      $x : 0px,
+      $y : 8px,
+      $blur : 2px,
       $spread : 0,
       $color : rgba(0,0,0,0)
     );
@@ -48,7 +49,7 @@
 
   > li
   {
-    border-right: 1px solid #f2f2ec;
+    border-right: 2px solid #fff;
     display: inline-block;
 
     &:last-child
@@ -89,7 +90,7 @@
 
       &.hover
       {
-        background: $bright-blue;
+        background: $accessible-blue;
         color: #fff;
       }
     }
@@ -97,7 +98,7 @@
     .dropdown-pane
     {
       border:none;
-      border-top: 5px solid $bright-blue;
+      border-top: 5px solid $accessible-blue;
       background: #fff;
       max-width: 1120px;
       z-index: 9999;
@@ -145,5 +146,60 @@
         }
       }
     }
+  }
+}
+
+/*
+ * Microsite header
+ */
+.mega-menu
+{
+  @include linear-gradient($top: #f4f4f4, $bottom: #ddd);
+  @include box-shadow(
+    $x : 2px,
+    $y : 2px,
+    $blur : 5px,
+    $spread : 0,
+    $color : rgba(0,0,0,0.2)
+  );
+
+  a.button
+  {
+    background: none;
+    width: 100%;
+    color: $core-blue;
+    font-weight: 600;
+    padding: 15px 0;
+    border: none !important;
+    border-right:1px solid #fff !important;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover
+    {
+      background-color:#eee;
+    }
+
+    &:last-child
+    {
+      border-right: 0 !important;
+    }
+
+    &.dropdown
+    {
+      &::after
+      {
+        display: none;
+      }
+    }
+  }
+
+  .dropdown-pane
+  {
+    border: 0;
+    border-top:5px solid $accessible-blue;
+    -webkit-box-shadow:0 -2px 19px 0 rgba(51,62,72,.08), 0 12px 19px 0 rgba(51,62,72,.25);
+    box-shadow:0 -2px 19px 0 rgba(51,62,72,.08), 0 12px 19px 0 rgba(51,62,72,.25);
   }
 }

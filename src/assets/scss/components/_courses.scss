@@ -354,7 +354,7 @@
 
         a
         {
-          color: #005ea5 !important;
+          color: $accessible-blue !important;
           padding: 0;
           display: block;
           width: 42px;
@@ -374,11 +374,11 @@
           a
           {
             color: #fff !important;
-            background: #005ea5;
+            background: $accessible-blue;
 
             &:hover
             {
-              background: #005ea5;
+              background: $accessible-blue;
             }
           }
         }
@@ -475,6 +475,16 @@ form.course-finder
   h2
   {
     margin-top: 3px;
+  }
+
+  select
+  {
+    background-color: #fff;
+
+    option
+    {
+      background-color: #fff;
+    }
   }
 }
 

@@ -34,7 +34,7 @@
         &:hover,
         &:focus
         {
-          background: darken(#005ea5, 5%);
+          background: darken($accessible-blue, 5%);
         }
       }
     }
@@ -158,7 +158,7 @@
       {
         &:hover
         {
-          background: #005ea5;
+          background: $accessible-blue;
         }
       }
     }
@@ -174,7 +174,7 @@
 {
   a
   {
-    background-color: #005ea5 !important;
+    background-color: $accessible-blue !important;
     color: #fff;
     margin-right: 1px;
     @include transition-background;
@@ -182,7 +182,7 @@
     &:hover,
     &:focus
     {
-      background-color: darken(#005ea5, 10%) !important;
+      background-color: darken($accessible-blue, 10%) !important;
       color: #fff !important;
     }
   }
@@ -192,7 +192,7 @@
     a
     {
       background: #fff !important;
-      color: #005ea5 !important;
+      color: $accessible-blue !important;
     }
   }
 }
@@ -207,7 +207,7 @@
 
   .tabs
   {
-    border-bottom: 5px solid #005ea5;
+    border-bottom: 5px solid $accessible-blue;
   }
 
   .tabs-panel

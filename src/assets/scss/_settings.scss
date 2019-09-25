@@ -62,16 +62,19 @@
 
 @import 'util/util';
 
+// 0. Custom
+// _________
+$accessible-blue: #005c97;
+
 // 1. Global
 // ---------
 $futura: 'futura-pt', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-
 $global-font-size: 110%;
 $global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #005ea5,
+  primary: $accessible-blue,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -81,7 +84,7 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
+$white: #fff;
 $body-background: $white;
 //$body-background: #f4f4f4; //legacy background
 $body-font-color: #0b0c0c;

@@ -109,6 +109,8 @@ require('./plugins/cookie-consent/init');
 //responsive content
 require('./plugins/responsive-content/init');
 
+//clickable div
+require('./plugins/clickable-div/init');
 
 //tilt js
 //require('./plugins/tilt/tilt.jquery.js');

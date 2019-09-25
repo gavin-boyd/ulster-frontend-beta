@@ -3,3 +3,10 @@ jQuery(document).ready(function() {
     e.preventDefault();
   });
 });
+
+//setup mobile search menu
+jQuery(document).ready(function() {
+  if (jQuery('#global-search-form').length > 0) {
+    jQuery('#global-search-form').clone().appendTo('#mobileSearch');
+  }
+});

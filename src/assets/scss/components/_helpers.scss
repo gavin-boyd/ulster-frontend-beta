@@ -7,6 +7,14 @@ a.block
   display: none !important;
 }
 
+.show-for-sr
+{
+  background-color: #fff;
+  color:#000;
+  left: -9999px;
+  top: 0;
+}
+
 .bg-fixed
 {
   background-attachment:fixed;
