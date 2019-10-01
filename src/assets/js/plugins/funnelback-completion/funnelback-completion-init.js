@@ -133,4 +133,20 @@ jQuery(document).ready(function() {
         'interactionLog': '//ulster.funnelback.co.uk/s/log',
         'zindex': '10000'
     });
+
+    //isd policies search
+    jQuery("input.isd-policies").fbcompletion({
+        'enabled': 'enabled',
+        'collection': 'ulster-policy-checker',
+        'program': '//ulster.funnelback.co.uk/s/suggest.json',
+        'format': 'extended',
+        'alpha': '.5',
+        'show': '10',
+        'sort': '0',
+        'length': '3',
+        'delay': '0',
+        'profile': '',
+        'interactionLog': '//ulster.funnelback.co.uk/s/log',
+        'zindex': '10000'
+    });
 });

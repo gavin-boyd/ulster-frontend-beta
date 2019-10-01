@@ -10,14 +10,16 @@
 
   span
   {
-    position: absolute;
-    top: 53px;
+    position: relative;
+    display: inline-block;
+    top: 20px;
     margin-left: 20px;
     border-left: 1px solid #ddd;
     padding-left: 20px;
     color: #1a2a4f;
     font-size: 18px;
     white-space: nowrap;
+    background-color: #fff;
   }
 }
 

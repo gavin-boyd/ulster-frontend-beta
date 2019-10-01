@@ -43,3 +43,4 @@ PATHS:
     - "src/assets/js/course-atoz.js"
     - "src/assets/js/coursefinder-upgrade.js"
     - "src/assets/js/event.js"
+    - "src/assets/js/policy-checker.js"

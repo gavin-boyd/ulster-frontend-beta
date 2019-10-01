@@ -128,6 +128,18 @@ body .main-content
 
 #mobileSearch
 {
-  padding: 0 15px;
+  padding: 10px 15px 0 15px;
   background: #eee;
+}
+
+.uls-mob-side-container
+{
+  text-align:left !important;
+  font-size:18px;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  display:block;
+  padding:10px 0;
+  color: #000;
+  background-color: #fff;
 }

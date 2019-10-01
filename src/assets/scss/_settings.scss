@@ -75,19 +75,19 @@ $global-width: rem-calc(1160); //apha change, beta should be 1200
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $accessible-blue,
-  secondary: #767676,
-  success: #3adb76,
+  secondary: #595959,
+  success: #006726,
   warning: #ffae00,
-  alert: #cc4b37,
+  alert: #B10E1E,
 );
-$light-gray: #e6e6e6;
+$light-gray: #eee;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fff;
 $body-background: $white;
 //$body-background: #f4f4f4; //legacy background
-$body-font-color: #0b0c0c;
+$body-font-color: #000;
 //$body-font-family: 'FS Matthew Web Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-font-family: $futura;
 $body-antialiased: true;
@@ -195,8 +195,8 @@ $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: #3F0F52;
 $blockquote-padding: rem-calc(0 40 0 19);
 $blockquote-border: 3px solid #3F0F52;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
+$cite-font-size: rem-calc(18);
+$cite-color: #000;
 $cite-pseudo-content: '\2014 \0020';
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
@@ -323,7 +323,7 @@ $buttongroup-radius-on-each: true;
 // -----------
 
 $callout-background: $white;
-$callout-background-fade: 85%;
+$callout-background-fade: 95%;
 $callout-border: 1px solid rgba($black, 0.25);
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
@@ -790,7 +790,8 @@ $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 $table-is-striped: true;
-$table-striped-background: smart-scale($table-background, $table-color-scale);
+//$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-striped-background: $white;
 $table-stripe: even;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);
 $table-head-row-hover: darken($table-head-background, $table-hover-scale);

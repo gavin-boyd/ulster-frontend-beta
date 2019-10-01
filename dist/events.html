@@ -14,7 +14,8 @@
     	<div class="grid-x">
     		<div class="cell medium-3 large-3">
     			<a class="brand" href="https://www.ulster.ac.uk">
-    				<img alt="Ulster University" class="logo hqy-lazy" data-src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg?v=1.1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+    				<img alt="Ulster University" class="logo hqy-lazy" data-src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg?v=1.1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    			</a>
     		</div>
     		<div class="cell medium-12 large-9">
     			<div class="grid-x">
@@ -46,13 +47,10 @@
     								<label class="text-right middle hide" for="global-search">Search</label>
     							</div>
     							<div class="cell small-12 medium-9 large-9">
-    								<div class="input-group m-t-15">
-    									<label class="show-for-sr" for="query">Keywords</label>
-    									<input autocomplete="off" class="input-group-field" id="global-search" name="query" placeholder="Search Ulster University" type="text">
+    								<div class="input-group">
+    									<label class="show-for-sr" for="global-search">Keywords</label> <input autocomplete="off" class="input-group-field" id="global-search" name="query" placeholder="Search Ulster University" type="text">
     									<div class="input-group-button">
-    										<button class="button" type="submit" value="Submit">
-    											<span class="show-for-sr">Search</span>
-    											<span aria-hidden="true" class="fa fa-search hide-for-sr"></span></button>
+    										<button class="button" type="submit" value="Submit"><span class="show-for-sr">Search</span> <span aria-hidden="true" class="fa fa-search hide-for-sr"></span></button>
     									</div>
     								</div>
     							</div>
@@ -340,10 +338,9 @@
     	</ul>
     </div>
     <div id="#main-content"></div>
-    
     <div class="hide-for-large">
     	<!-- mobile menu -->
-    	<div class="multilevel-offcanvas off-canvas position-right" id="mobileMenu" data-off-canvas data-transition="overlap">
+    	<div class="multilevel-offcanvas off-canvas position-right" data-off-canvas="" data-transition="overlap" id="mobileMenu">
     		<ul class="vertical menu grid-x grid-padding-y">
     			<li>
     				<a href="https://www.ulster.ac.uk"><img alt="Ulster University" class="brand hqy-lazy m-b-10" data-src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university-reverse.svg" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" width="120"></a>
@@ -397,36 +394,24 @@
     			</li>
     		</ul>
     	</div>
-    
-    	<div class="off-canvas-content" data-off-canvas-content>
+    	<div class="off-canvas-content" data-off-canvas-content="">
     		<div class="nav-bar uls-mob">
     			<div class="nav-bar-left">
-    				<a class="nav-bar-logo" href="https://www.ulster.ac.uk">
-    					<img alt="Ulster University" class="logo" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg">
-    				</a>
+    				<a class="nav-bar-logo" href="https://www.ulster.ac.uk"><img alt="Ulster University" class="logo" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg"></a>
     			</div>
     			<div class="nav-bar-right">
     				<ul class="menu">
-    					<li>
-    						<button class="button large clear mobSearchBtn" data-toggle="mobileSearch" type="button">
-                  <span class="show-for-sr">Menu</span>
-    					    <span class="fa fa-search text-core-blue" aria-hidden="true"></span>
-                </button>
-    					</li>
-    					<li>
-                <button class="offcanvas-trigger button large clear" data-open="mobileMenu" type="button">
-                  <span class="show-for-sr">Menu</span>
-    					    <span class="fas fa-bars text-core-blue" aria-hidden="true"></span>
-                </button>
-              </li>
+    					<li><button class="button large clear mobSearchBtn" data-toggle="mobileSearch" type="button"><span class="show-for-sr">Search</span> <span aria-hidden="true" class="fa fa-search text-core-blue"></span></button></li>
+    					<li><button class="offcanvas-trigger button large clear" data-open="mobileMenu" type="button"><span class="show-for-sr">Menu</span> <span aria-hidden="true" class="fas fa-bars text-core-blue"></span></button></li>
     				</ul>
     			</div>
     		</div>
     		<!-- mobile search -->
-    		<div id="mobileSearch" class="hide" data-toggler=".hide"></div>
+    		<div class="hide" data-toggler=".hide" id="mobileSearch" aria-hidden="true">
+    			<p class="bl m-b-0">Search ulster.ac.uk</p>
+    		</div>
     		<!-- mobile search -->
     	</div>
-    
     </div>
     <h1 class="show-for-sr">Ulster University</h1>
     

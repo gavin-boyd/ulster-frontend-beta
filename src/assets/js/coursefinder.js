@@ -24,7 +24,6 @@ window.$ = window.jQuery = jquery;
  * APIs
  */
 require('./api/youtube/init');
-//require('./api/clickforassistance/init');
 
 /*
  * Plugins
@@ -43,9 +42,6 @@ require('./plugins/fancybox/init');
 
 //megamenu
 require('./plugins/megamenu/init');
-
-//Click4Assistance
-//require('./plugins/click4assistance/init');
 
 //Courses atoz
 //require('./plugins/courses-atoz/init');

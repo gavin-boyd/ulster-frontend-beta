@@ -159,8 +159,10 @@ $opacity: .9;
 $core-blue: #041e42;
 $deep-blue: #151f6d;
 //$bright-blue: #009fdf;
-$bright-blue:#187ab8;
-$sky-blue: #00b5e2;
+//$bright-blue:#187ab8;
+$bright-blue:#005c97;
+$sky-blue-light: #00b5e2;
+$sky-blue:#005c97;
 $fresh-teal: #00968C;
 $pink:#e56c93;
 
@@ -212,6 +214,14 @@ $pink:#e56c93;
 .text-sky-blue
 {
   color: $sky-blue !important;
+}
+
+.bg-core-blue
+{
+  .text-sky-blue
+  {
+    color: $sky-blue-light !important;
+  }
 }
 
 .text-fresh-teal
@@ -468,4 +478,9 @@ $c-off-white: #fffefd;
   {
     background-color: #fff !important;
   }
+}
+
+.callout.secondary
+{
+  background: #eee;
 }
