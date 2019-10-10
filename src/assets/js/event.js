@@ -91,7 +91,7 @@ require('slick-carousel');
 require('./plugins/slickslider/init');
 
 //clearing site message
-require('./plugins/clearing-audiences/site-message');
+//require('./plugins/clearing-audiences/site-message');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');

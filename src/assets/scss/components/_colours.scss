@@ -114,6 +114,10 @@ $opacity: .9;
   {
     @include linear-gradient(darken($c-navy, 10%), $c-navy);
   }
+  .bg-black-trans-gradient
+  {
+    @include linear-gradient(rgba(#000, .6), rgba(#000, .1));
+  }
   .bg-gold-trans-gradient-one
   {
     @include linear-gradient(rgba(#000, .6), rgba($corp-gold, .1));
@@ -196,6 +200,11 @@ $pink:#e56c93;
   background-color: $sky-blue !important;
 }
 
+.bg-sky-blue-light
+{
+  background-color: $sky-blue-light !important;
+}
+
 .text-core-blue
 {
   color: $core-blue !important;
@@ -214,6 +223,11 @@ $pink:#e56c93;
 .text-sky-blue
 {
   color: $sky-blue !important;
+}
+
+.text-sky-blue-light
+{
+  color: $sky-blue-light !important;
 }
 
 .bg-core-blue
@@ -335,7 +349,29 @@ $c-off-white: #fffefd;
   color: #555 !important;
 }
 
+.text-black
+{
+  color: #000 !important;
+}
+
+a.text-black
+{
+  &:hover
+  {
+    text-decoration: underline !important;
+  }
+}
+
 //background with white text
+
+.separator-left.white
+{
+  &::after
+  {
+    border-bottom-color: rgba(255,255,255,.5);
+  }
+}
+
 .white-text
 {
   *

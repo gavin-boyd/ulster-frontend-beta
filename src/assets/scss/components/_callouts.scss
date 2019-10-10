@@ -22,4 +22,26 @@
   {
     border-color: $alert-color;
   }
+
+  &.white-text
+  {
+    *
+    {
+      color: #000 !important;
+    }
+
+    p
+    {
+      a
+      {
+        color: #005c97 !important;
+        text-decoration: underline;
+
+        &:hover
+        {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

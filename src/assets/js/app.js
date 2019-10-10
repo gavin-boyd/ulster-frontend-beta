@@ -91,7 +91,10 @@ require('slick-carousel');
 require('./plugins/slickslider/init');
 
 //clearing site message
-require('./plugins/clearing-audiences/site-message');
+//require('./plugins/clearing-audiences/site-message');
+
+//site message
+//require('./plugins/site-message/init');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');
@@ -108,6 +111,16 @@ require('./plugins/responsive-content/init');
 //tilt js
 //require('./plugins/tilt/tilt.jquery.js');
 //require('./plugins/tilt/init.js');
+
+//waypoints
+//require('./plugins/waypoints/jquery-waypoints-min');
+//require('./plugins/waypoints/init');
+
+//responsive content
+require('./plugins/content-images/init');
+
+//responsive content
+require('./plugins/nested-faceted-courses/init');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */

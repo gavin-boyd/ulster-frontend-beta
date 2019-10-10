@@ -194,7 +194,7 @@ jQuery(document).ready(function ($) {
     addAccordion();
     // Generate the search URL by taking values from the inputs
     function generateSearchURL() {
-      var searchURL = '/isd/policy-checker?query=' + jQuery('#query').val();
+      var searchURL = '/isd/schedule-checker?query=' + jQuery('#query').val();
       jQuery('#course-finder-new #filters input:checkbox:checked, #course-finder-new #filters input:radio:checked').each(function () {
         // The input names are modified for Funnelback
         var name = jQuery(this).attr('name'), value = jQuery(this).val();

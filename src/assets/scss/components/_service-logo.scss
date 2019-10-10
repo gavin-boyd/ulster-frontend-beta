@@ -8,27 +8,46 @@
     width: 160px;
   }
 
-  span
+  > span
   {
     position: relative;
     display: inline-block;
     top: 20px;
     margin-left: 20px;
-    border-left: 1px solid #ddd;
+    border-left: 2px solid $core-blue;
     padding-left: 20px;
     color: #1a2a4f;
     font-size: 18px;
     white-space: nowrap;
     background-color: #fff;
+    font-weight: 600;
+
+    > span
+    {
+      display: block;
+      font-weight:400;
+    }
   }
 }
 
 .service.mob
 {
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid $core-blue;
+  margin-bottom: 10px;
 
   p
   {
     display: block;
+
+    > span
+    {
+      display: block;
+      font-weight: 600;
+
+      > span
+      {
+        font-weight:400;
+      }
+    }
   }
 }
