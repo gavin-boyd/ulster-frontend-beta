@@ -122,6 +122,9 @@ require('./plugins/content-images/init');
 //responsive content
 require('./plugins/nested-faceted-courses/init');
 
+//sport dependent controls
+require('./plugins/sport-dependent-controls/init');
+
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 

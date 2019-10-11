@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
   //debug
-  console.log('init course embed component');
+  //console.log('init course embed component');
   if (jQuery('.uls-faceted-embed').length > 0) {
     jQuery('.uls-faceted-embed').each(function() {
       var uid = Math.floor(Math.random() * 100001);
@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
           }
 
           //debug
-          console.log(queryURL + '&' + facet + '=' + facet_val + ' #' + uid);
+          //console.log(queryURL + '&' + facet + '=' + facet_val + ' #' + uid);
 
           content.load(queryURL + '&' + facet + '=' + facet_val + ' #output-courses', function() {
             //remove preloader
