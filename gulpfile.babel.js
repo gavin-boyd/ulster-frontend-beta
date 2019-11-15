@@ -97,6 +97,7 @@ function sass() {
     'src/assets/scss/legacy-app.scss',
     'src/assets/scss/legacy-app-microsite.scss',
     'src/assets/scss/homepage-critical.scss',
+    'src/assets/scss/application-form.scss',
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({

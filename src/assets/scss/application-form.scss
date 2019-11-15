@@ -149,7 +149,7 @@ select:focus
 }
 .sq-form-page-list li.sq-form-current-page-number
 {
-  background:$accessible-blue;
+  background:#005c97;
   color:#fff;
 }
 .sq-form-page-list li .no-pulse-navy
@@ -1214,7 +1214,7 @@ label[for="q300597_q5"]
   display:none;
 }
 
-//Global Applications Form
+//Global Applications Form versions two
 label[for=q328019_q2],
 label[for=q328019_q3],
 label[for=q328019_q4],
@@ -1237,7 +1237,9 @@ label[for=q300597_q16],
 label[for=q300597_q19],
 label[for=q328019_q16],
 label[for=q340725_q18],
-label[for=q340929_q18]
+label[for=q340929_q18],
+label[for=q300597_q20],
+label[for=q345959_q4]
 {
   display:none !important;
 }

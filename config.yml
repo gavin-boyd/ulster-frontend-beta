@@ -45,3 +45,4 @@ PATHS:
     - "src/assets/js/event.js"
     - "src/assets/js/policy-checker.js"
     - "src/assets/js/sports-fixtures.js"
+    - "src/assets/js/fb-geo-test.js"

@@ -94,7 +94,7 @@ require('./plugins/slickslider/init');
 //require('./plugins/clearing-audiences/site-message');
 
 //site message
-require('./plugins/site-message/init');
+//require('./plugins/site-message/init');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');
@@ -122,8 +122,8 @@ require('./plugins/content-images/init');
 //responsive content
 require('./plugins/nested-faceted-courses/init');
 
-//course mob tabs
-require('./plugins/course-mob-tabs/init');
+//funnelback geo
+require('./plugins/geo/funnelback-geo');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */

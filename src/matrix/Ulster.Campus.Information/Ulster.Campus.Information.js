@@ -10,7 +10,7 @@ if (res) {
         output += '<div class="cell large-12">';
         output += '<hr>';
         output += '<div class="grid-x">';
-        output += '<div class="cell large-6">';
+        output += '<div class="cell large-12">';
         output += '<h2 class="bl m-b-0">' + campus_name + ' location info</h2>';
         output += '<p class="m-b-0"><a href="' + res[i].url + '" class="button clear bl p-l-0 m-b-0"><span class="fa fa-angle-right" aria-hidden="true"></span>&nbsp;&nbsp;Find out more about our ' + campus_name + '</a></p>';
         output += '</div>';

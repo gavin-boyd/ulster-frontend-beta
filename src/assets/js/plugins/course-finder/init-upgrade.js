@@ -226,7 +226,11 @@ jQuery(document).ready(function ($) {
     addAccordion();
     // Generate the search URL by taking values from the inputs
     function generateSearchURL() {
-      var searchURL = '/courses?query=' + jQuery('#query').val();
+      if (jQuery('#query').val() !== '') {
+        var searchURL = '/courses?query=' + jQuery('#query').val() + ' ~Full-time';
+      } else {
+        var searchURL = '/courses?query=' + jQuery('#query').val();
+      }
       jQuery('#course-finder-new #filters input:checkbox:checked, #course-finder-new #filters input:radio:checked').each(function () {
         // The input names are modified for Funnelback
         var name = jQuery(this).attr('name'), value = jQuery(this).val();

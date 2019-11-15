@@ -1,99 +1,152 @@
-<div class="bg-navy p-t-30 p-b-30 p-small-t-15 p-small-b-15 m-b-15">
-	<div class="grid-container">
-		<div class="grid-x grid-padding-x">
-			<div class="cell small-4 medium-4 large-4"><img alt="Ulster University" class="logo hide-form-small-only" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university-reverse.svg" width="160"></div>
-			<div class="cell small-8 medium-8 large-8 white-text">
-				<p class="h2 m-t-45 m-small-t-25">Sport Fixtures &amp; Results</p>
-			</div>
-		</div>
-	</div>
+---
+layout: sportssystem
+---
+
+<style>
+    label[for=q461227_q1],
+    label[for=q461227_q4],
+    label[for=q461227_q2],
+    label[for=q461227_q5],
+    label[for=q461227_q6],
+    label[for=q460528_q8_value_d],
+    label[for=q460528_q8_value_m],
+    label[for=q460528_q8_value_y],
+    label[for=q461227_q7],
+    label[for=q460528_q7],
+    label[for=q460528_q9],
+    label[for=q461227_q9]
+    {
+        display:none !important;
+    }
+    .sq-form-question-datetime .sq-form-field
+    {
+        float:left;
+        width:100px;
+        margin-right:10px;
+        display:block;
+    }
+    label[for=q460528_q8_value_h],
+    label[for=q460528_q8_value_i]
+    {
+        clear:both;
+    }
+    #form_email_461227 a.uls-sport,
+    #form_email_461227 a.uls-team,
+    a.uls-competition-sel
+    {
+        display:inline-block;
+        margin-right:10px;
+        margin-bottom:10px;
+    }
+    #form_email_461227 .teams
+    {
+        margin-top:30px;
+    }
+    #form_email_460451 #fixture-selects p.bl
+    {
+        font-weight:400;
+        font-size:20px;
+        margin-bottom:5px;
+    }
+    #form_email_460451 #competitions
+    {
+        margin-top:20px;
+    }
+</style><div class="bg-navy p-t-30 p-b-30 p-small-t-15 p-small-b-15 m-b-15">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-4 medium-4 large-4">
+        <img alt="Ulster University" class="logo hide-form-small-only" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university-reverse.svg" width="160">
+      </div>
+      <div class="cell small-8 medium-8 large-8 white-text">
+          <p class="h2 m-t-45 m-small-t-25">Sport Fixtures &amp; Results</p>
+      </div>
+    </div>
+  </div>
+</div><div class="grid-container">
+  <div class="grid-x">
+    <div class="cell small-12 medium-4 large-4">
+        <p class="m-b-0">Last signed in: 14 October 2019 2:57pm</p>
+    </div>
+    <div class="cell small-12 medium-8 large-8 text-right text-left-small">
+        <p class="m-b-0">
+            Gavin Boyd:
+            <span class="teams-modal">&nbsp;&nbsp;<a data-fancybox href="#teams-content" class="udl" href="javascript:;">Teams</a></span>
+            &nbsp;&nbsp;<a href="https://www.ulster.ac.uk/fixtures" class="udl">Dashboard</a>&nbsp;&nbsp;
+            &nbsp;&nbsp;<a data-fancybox data-src="#help-content" href="javascript:;" class="udl">Help</a>
+        </p>
+    </div>
+    <div class="cell large-12">
+      <hr>
+    </div>
+  </div>
+</div><div style="display: none;" id="help-content" class="grid-container">
+	<h2>Help</h2>
+	<p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+	<p class="lead">Any enquiries should be directed to Ulster Sport Services team can be contacted on <a href="mailto:sport@ulster.ac.uk">sport@ulster.ac.uk</a></p>
+</div><!-- Teams -->
+<div id="my-teams" class="hide">
+  478943,478944,478839,478900,478897,478898
 </div>
 
-
-<div class="grid-container">
-  <div id="uls-sports-selector"></div>
-
-  <br><br><br><br>
-  <label for="team">Teams Array of ID's (hidden)</label>
-  <input type="text" name="team" id="team" />
+<div style="display: none;min-width:400px;" id="teams-content" class="grid-container">
+	<h2>My Teams</h2>
+	<hr>
+	<ul class="angle-right" id="my-teams-output" data-teams="478943,478944,478839,478900,478897,478898">
+	</ul>
 </div>
+<!-- Teams -->
+<form id="form_email_460451" enctype="multipart/form-data" action="https://www.ulster.ac.uk/fixtures/submit?" method="post"  ><input type="hidden" name="SQ_FORM_460451_SUBMISSION" value="478828"  class="sq-form-field" id="SQ_FORM_460451_SUBMISSION" /><input type="hidden" name="SQ_FORM_460451_PAGE" value="1"  class="sq-form-field" id="SQ_FORM_460451_PAGE" /><input type="hidden" name="form_email_460451_referral_url" value="" /><div class="grid-container">
+    <div class="grid-x">
+        <div class="cell large-8">
+            <h2 class="larger m-b-20">Fixture</h2>
 
-<!--<form action="https://www.ulster.ac.uk/sport-fixtures-and-results/sign-up" enctype="multipart/form-data" id="form_email_461227" method="post" name="form_email_461227">
-	<input class="sq-form-field" id="SQ_FORM_461227_PAGE" name="SQ_FORM_461227_PAGE" type="hidden" value="1"><input name="form_email_461227_referral_url" type="hidden" value="">
-	<style>
-	   label[for=q461227_q1],
-	   label[for=q461227_q4],
-	   label[for=q461227_q2],
-	   label[for=q461227_q5],
-	   label[for=q461227_q6],
-	   label[for=q460528_q8_value_d],
-	   label[for=q460528_q8_value_m],
-	   label[for=q460528_q8_value_y]
-	   {
-	       display:none !important;
-	   }
-	   .sq-form-question-datetime .sq-form-field
-	   {
-	       float:left;
-	       width:100px;
-	       margin-right:10px;
-	       display:block;
-	   }
-	   label[for=q460528_q8_value_h],
-	   label[for=q460528_q8_value_i]
-	   {
-	       clear:both;
-	   }
-	</style>
-	<div class="grid-container m-t-30">
-		<h1>Sign-up</h1>
-		<p class="lead">Hello Gavin.</p>
-		<div class="sq-form-unattached">
-			<div class="sq-form-question sq-form-question-text">
-				<label class="sq-form-question-title" for="q461227_q1">Firstname</label>
-				<div class="sq-form-question-answer">
-					<input class="sq-form-field" id="q461227_q1" maxlength="300" name="q461227:q1" size="30" type="hidden" value="Gavin">
-				</div>
-			</div>
-			<div class="sq-form-question sq-form-question-text">
-				<label class="sq-form-question-title" for="q461227_q4">Surname</label>
-				<div class="sq-form-question-answer">
-					<input class="sq-form-field" id="q461227_q4" maxlength="300" name="q461227:q4" size="30" type="hidden" value="Boyd">
-				</div>
-			</div>
-			<div class="sq-form-question sq-form-question-text">
-				<label class="sq-form-question-title" for="q461227_q5">SAML user asset ID</label>
-				<div class="sq-form-question-answer">
-					<input class="sq-form-field" id="q461227_q5" maxlength="300" name="q461227:q5" size="30" type="hidden" value="3872">
-				</div>
-			</div>
-			<div class="sq-form-question sq-form-question-text">
-				<label class="sq-form-question-title" for="q461227_q2">Email</label>
-				<div class="sq-form-question-answer">
-					<input class="sq-form-field" id="q461227_q2" maxlength="300" name="q461227:q2" size="30" type="hidden" value="g.boyd@ulster.ac.uk">
-				</div>
-			</div>
-			<div class="sq-form-question sq-form-question-tickbox-list">
-				<fieldset>
-					<legend class="sq-form-question-title">Choose your sport and team</legend>
-					<div class="sq-form-question-answer">
-						<ul>
-							<li><input class="sq-form-field" id="q461227_q3_0" name="q461227:q3[]" type="checkbox" value="0"> <label for="q461227_q3_0">GAA - 1st XV</label></li>
-							<li><input class="sq-form-field" id="q461227_q3_1" name="q461227:q3[]" type="checkbox" value="1"> <label for="q461227_q3_1">GAA - 2nd XV</label></li>
-							<li><input class="sq-form-field" id="q461227_q3_2" name="q461227:q3[]" type="checkbox" value="2"> <label for="q461227_q3_2">Rugby - 1st XV</label></li>
-							<li><input class="sq-form-field" id="q461227_q3_3" name="q461227:q3[]" type="checkbox" value="3"> <label for="q461227_q3_3">Rugby - 2nd XV</label></li>
-						</ul>
-					</div>
-				</fieldset>
-			</div>
-			<div class="sq-form-question sq-form-question-text">
-				<label class="sq-form-question-title" for="q461227_q6">Student ID</label>
-				<div class="sq-form-question-answer">
-					<input class="sq-form-field" id="q461227_q6" maxlength="300" name="q461227:q6" size="30" type="hidden" value="">
-				</div>
-			</div>
-		</div>
-		<hr>
-		<input class="button rounded bl" id="form_email_461227_submit" name="form_email_461227_submit" type="submit" value="Sign-up">
-	</div>
-</form>-->
+              <div id="fixture-selects"></div>
+
+            <fieldset class="sq-form-section"><legend class="sq-form-section-title">Fixture</legend><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q460528_q10">Sport</label> <div class="sq-form-question-answer" ><input type="text" name="q460528:q10" value="" size="30" maxlength="300"  id="q460528_q10" class="sq-form-field" /></div>
+</div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q460528_q7">Competition</label> <div class="sq-form-question-answer" ><input type="hidden" name="q460528:q7" value="LGFA Higher Education Division 5 League" size="30" maxlength="300"  id="q460528_q7" class="sq-form-field" /></div>
+</div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q460528_q9">Ulster Team</label> <div class="sq-form-question-answer" ><input type="hidden" name="q460528:q9" value="Gaelic Football Ladies 2" size="30" maxlength="300"  id="q460528_q9" class="sq-form-field" /></div>
+</div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q460528_q3">Opponent Team Name</label> <div class="sq-form-question-answer" ><input type="text" name="q460528:q3" value="DCU" size="30" maxlength="300"  id="q460528_q3" class="sq-form-field" /></div>
+</div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q460528_q4">Opponent Team Country</label> <div class="sq-form-question-answer" ><input type="text" name="q460528:q4" value="Ireland" size="30" maxlength="300"  id="q460528_q4" class="sq-form-field" /></div>
+</div><div class="sq-form-question sq-form-question-option-list "><fieldset><legend class="sq-form-question-title">Type</legend> <div class="sq-form-question-answer" ><ul><li><input type="radio" name="q460528:q5" id="q460528_q5_0" value="0"  class="sq-form-field" /> <label for="q460528_q5_0">Home</label></li><li><input type="radio" name="q460528:q5" id="q460528_q5_1" value="1" checked="checked"  class="sq-form-field" /> <label for="q460528_q5_1">Away</label></li><li><input type="radio" name="q460528:q5" id="q460528_q5_2" value="2"  class="sq-form-field" /> <label for="q460528_q5_2">Neutral</label></li></ul></div>
+</fieldset></div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q460528_q6">Venue</label> <div class="sq-form-question-answer" ><input type="text" name="q460528:q6" value="Croke Park" size="30" maxlength="300"  id="q460528_q6" class="sq-form-field" /></div>
+</div><div class="sq-form-question sq-form-question-datetime "><fieldset><legend class="sq-form-question-title">Date and Time <abbr class="sq-form-required-field" title="required">*</abbr></legend> <div class="sq-form-question-answer" >
+		<script type="text/javascript">
+		//<![CDATA[
+			if (typeof adjustDate != "function") {
+				// function to enable + and - keys on a field
+				adjustDate = function(input, evt)
+				{
+					var key = evt.keyCode;
+					var value = parseInt(input.value * 1);
+					if (key == 107 || key == 109) {
+						value += (key == 109)?-1:1;
+						if (value != 0) {
+							input.value = value;
+						}
+						event.returnValue = false;
+						event.cancelBubble = true;
+						return false;
+					}
+				}
+			}
+		//]]>
+		</script>
+
+		<input type="hidden" name="q460528_q8_show" value="dmyhi" /><label  for="q460528_q8_value_d">Day</label> <select name="q460528_q8_value[d]"  id="q460528_q8_value_d" class="sq-form-field"><option value="--"></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14" selected="selected">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <label  for="q460528_q8_value_m">Month</label> <select name="q460528_q8_value[m]"  id="q460528_q8_value_m" class="sq-form-field"><option value="--"></option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11" selected="selected">Nov</option><option value="12">Dec</option></select> <label  for="q460528_q8_value_y">Year</label> <select name="q460528_q8_value[y]"  id="q460528_q8_value_y" class="sq-form-field"><option value="--"></option><option value="2019">2019</option><option value="2020" selected="selected">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option></select>  <label  for="q460528_q8_value_h">Hour</label> <select name="q460528_q8_value[h]"  id="q460528_q8_value_h" class="sq-form-field"><option value="--"></option><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11" selected="selected">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select> <label  for="q460528_q8_value_i">Minute</label> <select name="q460528_q8_value[i]"  id="q460528_q8_value_i" class="sq-form-field"><option value="--"></option><option value="0" selected="selected">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select> <input type="hidden" name="q460528_q8_value[s]" value="--" /></div>
+</fieldset></div></fieldset>
+            <hr>
+
+              <div class="grid-x grid-padding-x grid-padding-y">
+                <div class="cell small-12 medium-6 large-6">
+                  <input type="submit" name="form_email_460451_save_and_exit" value="Save and Exit" class="button large rounded success shadow expanded" id="form_email_460451_save_and_exit" />
+                </div>
+                <div class="cell small-12 medium-6 large-6">
+                  <input type="submit" name="form_email_460451_submit" value="Add Result" class="button large rounded warning shadow expanded" id="form_email_460451_submit" />
+                </div>
+              </div>
+
+
+          </div>
+      </div>
+</div></form>    

@@ -21,7 +21,10 @@ if (res) {
           for (x = 0; x < res.length; x++) {
             if (res[x].faculty_name == faculty_name) {
               if (res[x].school_name !== school_name) {
-                output += '<li><a href="%globals_asset_assetid:' + res[x].school_asset_id + '^as_asset:asset_url%">' + res[x].school_name + '</a></li>';
+                var schoolNameVal = res[x].school_name;
+                if (schoolNameVal.indexOf('School ') !== -1 || schoolNameVal.indexOf('Department ') !== -1) {
+                  output += '<li><a href="%globals_asset_assetid:' + res[x].school_asset_id + '^as_asset:asset_url%">' + res[x].school_name + '</a></li>';
+                }
               }
             }
           }

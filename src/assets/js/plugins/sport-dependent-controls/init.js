@@ -4,9 +4,9 @@ function initDependentSports(data) {
     var inputID = 'q461227_q7';
 
     //get sports
-    var sports = '<div class="sports"><p class="bl">Select sport</p>';
+    var sports = '<div class="sports"><p class="bl">Choose your sport and teams below.</p>';
     jQuery.each(data, function(index) {
-      sports += '<a href="#" data-id="' + data[index].id  + '" class="button hollow uls-sport">' + data[index].name + '</a><br>';
+      sports += '<a href="#" data-id="' + data[index].id  + '" class="button hollow uls-sport">' + data[index].name + '</a>';
     });
     sports += '</div>';
     jQuery('#uls-sports-selector').append(sports);
@@ -18,16 +18,15 @@ function initDependentSports(data) {
       jQuery(this).removeClass('hollow');
       var id = jQuery(this).data('id');
       jQuery('.teams').hide();
-      var teams = '<div class="teams" id="' + id + '-teams"><p class="bl">Select team</p>';
+      var teams = '<div class="teams" id="' + id + '-teams"><p class="bl">Choose the teams you are responsible for.</p>';
       //debug
-      console.log(id);
+      //console.log(id);
 
       jQuery.each(data, function(index) {
         if (data[index].id == id) {
           var teamsObject = data[index].teams;
-
           jQuery.each(teamsObject, function(index) {
-            teams += '<a href="#" data-id="' + teamsObject[index].id  + '" class="button hollow uls-team">' + teamsObject[index].name + '</a><br>';
+            teams += '<a href="#" data-id="' + teamsObject[index].id  + '" class="button hollow uls-team">' + teamsObject[index].name + '</a>';
           });
         }
       });
@@ -68,9 +67,25 @@ function initDependentSports(data) {
         });
 
         //debug
-        console.log(selectedTeamsArray);
+        //console.log(selectedTeamsArray);
 
         jQuery('input#' + inputID).val(selectedTeamsArray);
+
+        //set the other fields
+        var selTeamsNamesArray = [];
+        jQuery.each(selectedTeamsArray, function(index1) {
+          jQuery.each(data, function(index2) {
+            var teamsObject = data[index2].teams;
+            jQuery.each(teamsObject, function(index3) {
+              if (teamsObject[index3].id == selectedTeamsArray[index1]) {
+                //debug
+                //console.log(teamsObject[index3].name);
+                selTeamsNamesArray.push(teamsObject[index3].name);
+              }
+            });
+          });
+        });
+        jQuery('#q461227_q9').val(selTeamsNamesArray);
       });
     });
 
@@ -81,7 +96,7 @@ function initDependentSports(data) {
       selTeamsArray = selTeamsArray.trim();
       selTeamsArray = selTeamsArray.split(',');
       //debug
-      console.log(selTeamsArray);
+      //console.log(selTeamsArray);
 
       var selTeamsNamesArray = [];
 
@@ -91,7 +106,7 @@ function initDependentSports(data) {
           jQuery.each(teamsObject, function(index3) {
             if (teamsObject[index3].id == selTeamsArray[index1]) {
               //debug
-              console.log(teamsObject[index3].name);
+              //console.log(teamsObject[index3].name);
               selTeamsNamesArray.push(teamsObject[index3].name);
             }
           });
@@ -112,8 +127,26 @@ function initDependentSports(data) {
 
           jQuery('#competitions').remove();
 
+          if (jQuery('#q460528_q10').length > 0) {
+            //populate hidden sport field
+            var flag = false;
+            jQuery.each(data, function(index) {
+              var sports = data[index].name;
+              var teams = data[index].teams;
+              jQuery.each(teams, function(index1) {
+                var team = teams[index1].name;
+                if (team == jQuery('input#q460528_q9').val()) {
+                  flag = true;
+                  if (flag == true) {
+                    jQuery('#q460528_q10').val(data[index].name);
+                  }
+                }
+              });
+            });
+          }
+
           //debug
-          console.log('#####' + jQuery(this).text());
+          //console.log('#####' + jQuery(this).text());
 
           jQuery('.uls-team-sel').addClass('hollow');
           jQuery(this).removeClass('hollow');
@@ -130,7 +163,7 @@ function initDependentSports(data) {
               if (teamName === thisTeam) {
                 var competitions = teams[index2].competitions;
                 jQuery.each(competitions, function(index3) {
-                  competitionsOutput += '<a href="#" class="button hollow uls-competition-sel">' + competitions[index3].name + '</a><br>';
+                  competitionsOutput += '<a href="#" class="button hollow uls-competition-sel">' + competitions[index3].name + '</a>';
                 });
               }
             });
@@ -139,21 +172,71 @@ function initDependentSports(data) {
           jQuery('#fixture-selects').append(competitionsOutput);
 
           jQuery('a.uls-competition-sel').click(function(e) {
+            e.preventDefault();
             jQuery('input#q460528_q7').val(jQuery(this).text());
             jQuery('.uls-competition-sel').addClass('hollow');
             jQuery(this).removeClass('hollow');
+          });
+
+          //re-select competions
+          var selComp = jQuery('#q460528_q7').val();
+
+          jQuery('a.uls-competition-sel').each(function() {
+            if (jQuery(this).text() == selComp) {
+              jQuery(this).removeClass('hollow');
+            }
           });
         });
       }
     }
 
-    console.log(jQuery('#my-teams').length);
+    //on load of fixture form select team and comp
+    if (jQuery('#q460528_q9').length > 0) {
+      if (jQuery('#q460528_q9').val() !== '') {
+        jQuery('a.uls-team-sel').each(function() {
+          if (jQuery(this).text() == jQuery('#q460528_q9').val()) {
+            jQuery(this).click();
+          }
+        });
+      }
+    }
+
+    //console.log(jQuery('#my-teams').length);
+
+    //set teams modal
+    if (jQuery('#my-teams-output').length > 0) {
+      //debug
+      //console.log('init');
+      var myTeams = jQuery('#my-teams-output').data('teams');
+      var myTeamsArray = myTeams.split(',');
+      //DEBUG
+      //console.log(myTeamsArray);
+      var myTeamsOutput = '';
+      jQuery.each(myTeamsArray, function(index) {
+        var myTeamID = myTeamsArray[index];
+        //debug
+        //console.log(myTeamID);
+        jQuery.each(data, function(index1) {
+          var teams = data[index1].teams;
+          //debug
+          //console.log(teams);
+          jQuery.each(teams, function(index2) {
+            //debug
+            //console.log(teams[index2].id);
+            if (teams[index2].id == myTeamID) {
+              myTeamsOutput += '<li>' + teams[index2].name + '</li>';
+            }
+          });
+        });
+      });
+      jQuery('#my-teams-output').append(myTeamsOutput);
+    }
 }
 
 jQuery(document).ready(function() {
   //debug
-  console.log('init sport selectors v2!');
-  //var sportsApi = 'https://www.ulster.ac.uk/sport-fixutres-and-results/_web_services/test.json';
-  var sportsApi = 'http://localhost/sport.json';
+  //console.log('init sport selectors v2!');
+  var sportsApi = 'https://www.ulster.ac.uk/sport-fixutres-and-results/_web_services/sports.json';
+  //var sportsApi = 'http://localhost/sport.json';
   jQuery.getJSON(sportsApi, initDependentSports);
 });

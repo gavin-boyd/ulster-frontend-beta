@@ -30,7 +30,8 @@
   display:inline-block;
 }
 
-ul.columns
+ul.columns,
+.columns ul
 {
   columns: 3;
   -webkit-columns: 3;
@@ -44,7 +45,8 @@ ul.columns
   }
 }
 
-ul.columns-2
+ul.columns-2,
+.columns-2 ul
 {
   columns: 2;
   -webkit-columns: 2;
@@ -542,6 +544,11 @@ a.button
   float: left;
 }
 
+.flt-r
+{
+  float: right;
+}
+
 .flt-small-n
 {
   @include breakpoint(small only)
@@ -939,6 +946,11 @@ a.zoom
       transform: scale(1.1);
     }
   }
+
+  @include breakpoint(small down)
+  {
+    height: 220px;
+  }
 }
 
 .wysiwyg-imgs
@@ -960,7 +972,8 @@ a.zoom
   > ol,
   > table,
   > blockquote,
-  > cite
+  > cite,
+  > div
   {
     margin-left: 60px;
     margin-right: 60px;
@@ -1007,4 +1020,61 @@ a.zoom
   z-index:9999;
   position:relative;
   background:#fff;
+}
+
+/*
+ * left top
+ * left center
+ * left bottom
+ * right top
+ * right center
+ * right bottom
+ * center top
+ * center center
+ * center bottom
+ */
+
+.img-pos-left-top
+{
+  background-position: left top;
+}
+
+.img-pos-left-center
+{
+  background-position: left center;
+}
+
+.img-pos-left-bottom
+{
+  background-position: left bottom;
+}
+
+.img-pos-right-top
+{
+  background-position: right top;
+}
+
+.img-pos-right-center
+{
+  background-position: right center;
+}
+
+.img-pos-right-bottom
+{
+  background-position: right bottom;
+}
+
+.img-pos-center-top
+{
+  background-position: center top;
+}
+
+.img-pos-center-center
+{
+  background-position: center center;
+}
+
+.img-pos-center-bottom
+{
+  background-position: center bottom;
 }

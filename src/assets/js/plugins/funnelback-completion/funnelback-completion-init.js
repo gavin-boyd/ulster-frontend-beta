@@ -16,6 +16,21 @@ jQuery(document).ready(function() {
         'zindex': '10000'
     });
 
+    jQuery("input#global-search-inside").fbcompletion({
+        'enabled': 'enabled',
+        'collection': 'ulster-meta',
+        'program': '//ulster.funnelback.co.uk/s/suggest.json',
+        'format': 'extended',
+        'alpha': '.5',
+        'show': '10',
+        'sort': '0',
+        'length': '3',
+        'delay': '0',
+        'profile': '',
+        'interactionLog': '//ulster.funnelback.co.uk/s/log',
+        'zindex': '10000'
+    });
+
     //course finder
     //refactored to use new auto suggestions
     /*jQuery("input#query").fbcompletion({

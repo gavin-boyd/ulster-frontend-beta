@@ -23,7 +23,7 @@ window.$ = window.jQuery = jquery;
 /*
  * APIs
  */
-require('./api/youtube/init');
+//require('./api/youtube/init');
 
 /*
  * Plugins
@@ -34,42 +34,42 @@ require('./plugins/fancybox/dist');
 require('./plugins/fancybox/init');
 
 //isotope
-require('./plugins/isotope/dist');
-require('./plugins/isotope/init');
+//require('./plugins/isotope/dist');
+//require('./plugins/isotope/init');
 
 //sticky video
-require('./plugins/stickyvideo/init');
+//require('./plugins/stickyvideo/init');
 
 //megamenu
-require('./plugins/megamenu/init');
+//require('./plugins/megamenu/init');
 
 //Courses atoz
-require('./plugins/courses-atoz/init');
+//require('./plugins/courses-atoz/init');
 
 //Regions map
-require('./plugins/regions-map/init');
+//require('./plugins/regions-map/init');
 
 //jQuery Background Video
-require('./plugins/jquery-background-video/init');
+//require('./plugins/jquery-background-video/init');
 
 //jquery ui
 require('./plugins/funnelback-completion/jquery-ui');
 
 //custom auto completion
-require('./plugins/autocomplete/init');
+//require('./plugins/autocomplete/init');
 
 //funnelback completion plugin
-require('./plugins/funnelback-completion/funnelback-completion');
-require('./plugins/funnelback-completion/funnelback-completion-init');
+//require('./plugins/funnelback-completion/funnelback-completion');
+//require('./plugins/funnelback-completion/funnelback-completion-init');
 
 //departments campus facets
-require('./plugins/departments-campus-facets/init');
+//require('./plugins/departments-campus-facets/init');
 
 //service logos
-require('./plugins/servicelogos/init');
+//require('./plugins/servicelogos/init');
 
 //mobile side nav
-require('./plugins/mobilesidenav/init');
+//require('./plugins/mobilesidenav/init');
 
 //add selected state background to form inputs checkboxes and radios
 require('./plugins/selected-radios/init');
@@ -81,14 +81,14 @@ require('./plugins/selected-radios/init');
 require('./plugins/cookie/init');
 
 //last search display for olp
-require('./plugins/last-search/init');
+//require('./plugins/last-search/init');
 
 //image alternator
-require('./plugins/imagealternator/init');
+//require('./plugins/imagealternator/init');
 
 //slick init
-require('slick-carousel');
-require('./plugins/slickslider/init');
+//require('slick-carousel');
+//require('./plugins/slickslider/init');
 
 //clearing site message
 //require('./plugins/clearing-audiences/site-message');
@@ -97,7 +97,7 @@ require('./plugins/slickslider/init');
 //require('./plugins/site-message/init');
 
 //people list hide last hr
-require('./plugins/peoplelist/init');
+//require('./plugins/peoplelist/init');
 
 //custom smooth scroll
 require('./plugins/smooth-scroll/init');
@@ -120,7 +120,7 @@ require('./plugins/responsive-content/init');
 require('./plugins/content-images/init');
 
 //responsive content
-require('./plugins/nested-faceted-courses/init');
+//require('./plugins/nested-faceted-courses/init');
 
 //sport dependent controls
 require('./plugins/sport-dependent-controls/init');

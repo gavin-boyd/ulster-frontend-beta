@@ -1,0 +1,148 @@
+---
+layout: sportssystem
+---
+<div class="bg-navy p-t-30 p-b-30 p-small-t-15 p-small-b-15 m-b-15">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-4 medium-4 large-4">
+        <img alt="Ulster University" class="logo hide-form-small-only" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university-reverse.svg" width="160">
+      </div>
+      <div class="cell small-8 medium-8 large-8 white-text">
+          <p class="h2 m-t-45 m-small-t-25">Sport Fixtures &amp; Results</p>
+      </div>
+    </div>
+  </div>
+</div><div class="grid-container">
+  <div class="grid-x">
+    <div class="cell small-12 medium-4 large-4">
+        <p class="m-b-0">Last signed in: 14 October 2019 11:06am</p>
+    </div>
+    <div class="cell small-12 medium-8 large-8 text-right text-left-small">
+        <p class="m-b-0">
+            User Test:
+            <span class="teams-modal">&nbsp;&nbsp;<a data-fancybox href="#teams-content" class="udl" href="javascript:;">Teams</a></span>
+            &nbsp;&nbsp;<a href="https://www.ulster.ac.uk/sport-fixtures-and-results" class="udl">Dashboard</a>&nbsp;&nbsp;
+            &nbsp;&nbsp;<a data-fancybox data-src="#help-content" href="javascript:;" class="udl">Help</a>
+        </p>
+    </div>
+    <div class="cell large-12">
+      <hr>
+    </div>
+  </div>
+</div><div style="display: none;" id="help-content" class="grid-container">
+	<h2>Help</h2>
+	<p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+	<p class="lead">Any enquiries should be directed to Ulster Sport Services team can be contacted on <a href="mailto:sport@ulster.ac.uk">sport@ulster.ac.uk</a></p>
+</div><!-- Teams -->
+<div id="my-teams" class="hide">
+  478965,478897,478898
+</div>
+
+<div style="display: none;min-width:400px;" id="teams-content" class="grid-container">
+	<h2>My Teams</h2>
+	<hr>
+	<ul class="angle-right" id="my-teams-output" data-teams="478965,478897,478898">
+
+	</ul>
+</div>
+<!-- Teams -->
+<div class="grid-container">
+  <p><a href="https://www.ulster.ac.uk/sport-fixtures-and-results/submit" class="button bl rounded"><span class="fas fa-plus-square" aria-hidden="true"></span>&nbsp;&nbsp;Add Fixture</a></p>
+  <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="deeplinked-tabs">
+    <li class="tabs-title is-active bl"><a href="#fixtures" aria-selected="true">Fixtures</a></li>
+    <li class="tabs-title bl"><a data-tabs-target="results" href="#results">Results</a></li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="deeplinked-tabs">
+    <div class="tabs-panel is-active" id="fixtures">
+  <div class="grid-x">
+
+     <div class="cell small-12 medium-12 large-12 text-center">
+       <p class="uppercase">Ulster Hockey Junior 3</p>
+     </div>
+    <!-- Away -->
+      <div class="cell small-12 medium-5 large-5 text-center">
+        <p class="h2 uppercase">DCU</p>
+      </div>
+      <div class="cell small-12 medium-2 large-2 text-center">
+        <p class="h1 opacity-effect">v</p>
+      </div>
+      <div class="cell small-12 medium-5 large-5 text-center">
+        <p class="h2 uppercase">Hockey - Elks 3XI</p>
+      </div>
+    <!-- Away -->
+
+
+    <div class="cell large-12 text-center m-small-b-20">
+      <p class="m-b-0">14 November 11:00 AM<br>
+        Magee (Away)
+      </p>
+    </div>
+</div>
+<div class="text-right text-left-small">
+  <a data-fancybox href="#delete-478828" class="bl"><span class="fa fa-trash"></span>&nbsp;&nbsp;Delete Fixture</a>
+  <div style="display: none;" id="delete-478828">
+	<h2>Permanently Delete</h2>
+	<p>You are about to permamently delete your application #478828.  You will not be able to recover this application or its content.</p>
+	<p><strong>This operation cannot be undone.</strong></p>
+	<hr>
+	<div class="grid-x grid-padding-x">
+	    <div class="cell small-12 medium-6 large-6">
+	        <a data-fancybox-close href="#" class="button rounded large secondary expanded">Cancel</a>
+	    </div>
+	    <div class="cell small-12 medium-6 large-6">
+	        <a data-fancybox-close href="#" data-asset-id="478828" class="button alert rounded trash large expanded">Delete</a>
+	    </div>
+	</div>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.ulster.ac.uk/sport-fixtures-and-results/submit?SQ_FORM_460451_SUBMISSION=478828&SQ_FORM_460451_PAGE=1" class="bl"><span class="fas fa-edit" aria-hidden="true"></span>&nbsp;&nbsp;Edit Fixture</a>
+</div>
+<hr>
+</div>
+    <div class="tabs-panel" id="results">
+  <div class="grid-x">
+
+    <!-- Home -->
+      <div class="cell small-12 medium-12 large-12 text-center">
+        <p class="uppercase">McConnell Shield</p>
+      </div>
+      <div class="cell small-12 medium-5 large-5 text-center">
+        <p class="h2 uppercase">Hockey - Elks 2XI</p>
+      </div>
+      <div class="cell small-12 medium-2 large-2 text-center m-small-b-10">
+        <div class="grid-x">
+            <div class="cell large-4">
+                <span class="label warning larger bl">
+                  2
+                </span>
+            </div>
+            <div class="cell large-4">
+                <p class="h1 opacity-effect">v</p>
+            </div>
+            <div class="cell large-4">
+                <span class="label warning larger bl">
+                  0
+                </span>
+            </div>
+        </div>
+      </div>
+      <div class="cell small-12 medium-5 large-5 text-center">
+        <p class="h2 uppercase">Mossley</p>
+      </div>
+    <!-- Home -->
+
+
+    <div class="cell large-12 text-center m-b-20">
+      <p class="m-b-0">
+        FT<br>
+        1 November 05:00 PM<br>
+        Magee (Home)
+      </p>
+    </div>
+</div>
+<div class="text-right text-left-small">
+  <a href="https://www.ulster.ac.uk/sport-fixtures-and-results/submit?SQ_FORM_460451_SUBMISSION=464223&SQ_FORM_460451_PAGE=2" class="bl"><span class="fas fa-edit" aria-hidden="true"></span>&nbsp;&nbsp;Edit Result</a>
+</div>
+<hr>
+</div>
+  </div>
+</div>
