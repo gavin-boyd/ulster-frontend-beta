@@ -273,6 +273,9 @@ jQuery(document).ready(function ($) {
           jQuery('body').removeClass('showModal');
           jQuery('html').removeClass('showModal');
           setLastSearch();
+          if (jQuery('.embed-course-listing').length > 0) {
+            jQuery('.embed-course-listing').ulsterFavourites();
+          }
         });
         if (!jQuery('#olpsearchresults').hasClass('search-opacity')) {
           jQuery('#olpsearchresults #course_list').addClass('search-opacity');

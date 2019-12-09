@@ -109,6 +109,8 @@ require('./plugins/course-finder/init-upgrade');
 //clearable
 require('./plugins/clearable/init');
 
+console.log('tester');
+
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 

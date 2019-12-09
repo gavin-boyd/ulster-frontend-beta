@@ -1,4 +1,4 @@
-<div class="grid-container m-t-60 m-b-60">
+<div class="grid-container m-t-60 m-b-200">
 	<h1 class="uppercase text-core-blue larger">Styleguide</h1>
 	<hr>
 	<div class="m-t-60 m-b-60">
@@ -7,8 +7,24 @@
 	</div>
 	<hr>
 	<div class="m-t-60 m-b-60">
-		<h2 class="uppercase m-b-30 text-sky-blue larger"><span class="text-core-blue">Section:</span> Side Nav</h2>
-		{{> side-navigation}}
+		<h2 class="uppercase m-b-30 text-sky-blue larger hide-for-small-only"><span class="text-core-blue">Section:</span> Desktop Side Nav</h2>
+		{{> side-nav-example-2}}
+
+		<h2 class="uppercase m-b-30 text-sky-blue larger"><span class="text-core-blue">Section:</span> Mobile Side Nav</h2>
+		<div class="grid-container">
+		  <p class="m-b-0" id="uls-mobile-side-button">
+		    <a data-toggle="uls-mobile-side-container-show" class="m-t-10 m-b-0 uls-mob-side-container" aria-hidden="true">
+		      %globals_asset_name%
+		      <span class="fa fa-angle-down text-right m-r-10 m-t-5 flt-r" aria-hidden="true" id="uls-mobile-side-button-angle"></span>
+		    </a>
+		  </p>
+		  <div class="show-for-small-only">
+		    <div class="shadow hide" data-toggler=".hide" id="uls-mobile-side-container-show">
+		      <ul class="uls-side vertical menu" id="uls-mobile-side-container"></ul>
+		    </div>
+		  </div>
+		</div>
+
 	</div>
 	<hr>
 	<div class="m-t-60 m-b-60">
@@ -28,7 +44,7 @@
 			</li>
 		</ul>
 	</div>
-  <hr>
+	<hr>
 	<div class="m-t-60 m-b-60">
 		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Events</h2>
     <div data-equalizer>
@@ -435,4 +451,53 @@
 			</div>
 		</div>
   </div>
+	<br><br>
+	<h2 class="h1 bl m-b-30">A-Z links</h2>
+	<ul class="menu" data-magellan="" data-offset="500"><li data-letter="A"><a href="#A" data-letter="A" class="page-letter-A">A</a></li><li data-letter="B"><a href="#B" data-letter="B" class="page-letter-B">B</a></li><li data-letter="C"><a href="#C" data-letter="C" class="page-letter-C">C</a></li><li data-letter="D"><a href="#D" data-letter="D" class="page-letter-D active">D</a></li><li data-letter="E"><a href="#E" data-letter="E" class="page-letter-E">E</a></li><li data-letter="F"><a href="#F" data-letter="F" class="page-letter-F">F</a></li><li data-letter="G"><a href="#G" data-letter="G" class="page-letter-G">G</a></li><li data-letter="H"><a href="#H" data-letter="H" class="page-letter-H">H</a></li><li data-letter="I"><a href="#I" data-letter="I" class="page-letter-I">I</a></li><li data-letter="J"><a href="#J" data-letter="J" class="page-letter-J">J</a></li><li data-letter="K"><span>K</span></li><li data-letter="L"><a href="#L" data-letter="L" class="page-letter-L">L</a></li><li data-letter="M"><a href="#M" data-letter="M" class="page-letter-M">M</a></li><li data-letter="N"><a href="#N" data-letter="N" class="page-letter-N">N</a></li><li data-letter="O"><a href="#O" data-letter="O" class="page-letter-O">O</a></li><li data-letter="P"><a href="#P" data-letter="P" class="page-letter-P">P</a></li><li data-letter="Q"><a href="#Q" data-letter="Q" class="page-letter-Q">Q</a></li><li data-letter="R"><a href="#R" data-letter="R" class="page-letter-R">R</a></li><li data-letter="S"><a href="#S" data-letter="S" class="page-letter-S">S</a></li><li data-letter="T"><a href="#T" data-letter="T" class="page-letter-T">T</a></li><li data-letter="U"><span>U</span></li><li data-letter="V"><a href="#V" data-letter="V" class="page-letter-V">V</a></li><li data-letter="W"><span>W</span></li><li data-letter="X"><span>X</span></li><li data-letter="Y"><span>Y</span></li><li data-letter="Z"><span>Z</span></li></ul>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Forms</h2>
+		{{> form}}
+	</div>
+	<br><br>
+	<hr>
+	<h2 class="h1 bl m-b-30">Course list</h2>
+	<div class="uls-course-listing">
+	  <div class="course m-b-10">
+	    <h3 class="h2 bl">
+	      <a href="https://www.ulster.ac.uk/courses/202021/artificial-intelligence-19482">Artificial Intelligence - BEng (Hons)</a>
+	    </h3>
+	    <div class="grid-x grid-margin-x m-small-b-20">
+	      <div class="cell small-12 medium-12 large-6">
+	          <p class="m-b-10">Gain the skills to design and develop the next generation of Artificial Intelligence (Al) systems and services.</p>
+	      </div>
+	      <div class="cell small-12 medium-12 large-6 meta">
+	        <p>
+	          <span><span aria-hidden="true" class="fa fa-graduation-cap"></span></span>
+	            Full-time
+	          Undergraduate
+	           course
+	        </p>
+	        <p>
+	          <span><span aria-hidden="true" class="fa fa-calendar-alt"></span></span>
+	          Year of entry: 2020/21
+	        </p>
+	          <p>
+	            <span><span aria-hidden="true" class="fa fa-map-marker"></span></span>
+	                  <a href="https://www.ulster.ac.uk/campuses/magee">Magee campus</a>
+	          </p>
+	          <p>
+	            <span><span aria-hidden="true" class="fa fa-folder"></span></span>
+	            UCAS code: GA50
+	          </p>
+	      </div>
+	    </div>
+	      <div class="grid-x grid-margin-x">
+	        <div class="cell small-12 large-12">
+	          <a href="https://www.ulster.ac.uk/courses/202021/artificial-intelligence-19482" class="button rounded course-link" id="artificial-intelligence">View course&nbsp;&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>
+	        </div>
+	      </div>
+	  </div>
+	</div>
+
 </div>

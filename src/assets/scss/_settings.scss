@@ -69,7 +69,7 @@ $accessible-blue: #005c97;
 // 1. Global
 // ---------
 $futura: 'futura-pt', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$global-font-size: 110%;
+$global-font-size: 125%;
 $global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
@@ -143,31 +143,31 @@ $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.2;
+$header-margin-bottom: 1rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 18),
+    'h1': ('font-size': 28),
+    'h2': ('font-size': 28),
+    'h3': ('font-size': 20),
     'h4': ('font-size': 16),
     'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
   medium: (
     'h1': ('font-size': 38),
-    'h2': ('font-size': 24),
-    'h3': ('font-size': 18),
-    'h4': ('font-size': 16),
+    'h2': ('font-size': 32),
+    'h3': ('font-size': 24),
+    'h4': ('font-size': 18),
     'h5': ('font-size': 16),
-    'h6': ('font-size': 16),
+    'h6': ('font-size': 14),
   ),
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
-$paragraph-margin-bottom: 1rem;
+$paragraph-lineheight: 1.4;
+$paragraph-margin-bottom: 1.2rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
 $code-font-family: $font-family-monospace;
@@ -192,9 +192,9 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: #3F0F52;
+$blockquote-color: #041e42;
 $blockquote-padding: rem-calc(0 40 0 19);
-$blockquote-border: 3px solid #3F0F52;
+$blockquote-border: 5px solid #00b5e2;
 $cite-font-size: rem-calc(18);
 $cite-color: #000;
 $cite-pseudo-content: '\2014 \0020';

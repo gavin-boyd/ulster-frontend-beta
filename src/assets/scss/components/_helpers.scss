@@ -419,6 +419,13 @@ a.button
   }
 }
 
+.text-right-samll
+{
+  @include breakpoint(small) {
+    text-align: right !important;
+  }
+}
+
 .text-center-large
 {
   @include breakpoint(large) {

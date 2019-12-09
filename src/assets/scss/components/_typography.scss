@@ -3,11 +3,71 @@ pre
   margin-bottom: 30px;
 }
 
+p.lead
+{
+  @include breakpoint(small down)
+  {
+    font-size:100%;
+  }
+}
+
+//header styles
+.h1
+{
+  font-size: rem-calc(28);
+
+  @include breakpoint(small down)
+  {
+    font-size: rem-calc(28);
+  }
+}
+
+.h2
+{
+  font-size: rem-calc(24);
+
+  @include breakpoint(small down)
+  {
+    font-size: rem-calc(24);
+  }
+}
+
+.h3
+{
+  font-size: rem-calc(18);
+
+  @include breakpoint(small down)
+  {
+    font-size: rem-calc(18);
+  }
+}
+
+.h4
+{
+  font-size: rem-calc(20);
+
+  @include breakpoint(small down)
+  {
+    font-size: rem-calc(20);
+  }
+}
+
+.h5
+{
+  font-size: rem-calc(18);
+
+  @include breakpoint(small down)
+  {
+    font-size: rem-calc(18);
+  }
+}
+
 //angle right list style Type
 ul.angle-right,
 .wysiwyg ul
 {
   margin-left: 0;
+  margin-bottom: 20px;
 
   li
   {
@@ -199,15 +259,29 @@ table
   }
 }
 
+h1
+{
+  font-size: rem-calc(38);
+
+  @include breakpoint(small down)
+  {
+    font-size: rem-calc(34);
+  }
+}
+
 .wysiwyg
 {
-  h2
+/*  h2
   {
     &:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6)
     {
       font-size: rem-calc(34);
       font-weight: 600;
-      margin-top: 20px;
+
+      @include breakpoint(small down)
+      {
+        font-size: rem-calc(30);
+      }
     }
   }
 
@@ -215,9 +289,13 @@ table
   {
     &:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6)
     {
-      font-size: rem-calc(28);
+      font-size: rem-calc(26);
       font-weight: 600;
-      margin-top: 20px;
+
+      @include breakpoint(small down)
+      {
+        font-size: rem-calc(22);
+      }
     }
   }
 
@@ -225,7 +303,60 @@ table
   {
     &:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6)
     {
-      font-weight: 500;
-    }  
+      font-weight: 600;
+      font-size: rem-calc(22);
+
+      @include breakpoint(small down)
+      {
+        font-size: rem-calc(18);
+      }
+    }
+  }*/
+}
+
+.page_letters
+{
+  ul
+  {
+    li
+    {
+      font-weight:600;
+      margin-right: 5px;
+      margin-bottom: 5px;
+
+      a
+      {
+        @include button;
+        margin-bottom: 0;
+      }
+
+      span
+      {
+        line-height:1;
+        display: block;
+        background: #eee;
+        color: #ccc;
+        text-align: center;
+      }
+
+      a,
+      span
+      {
+        width: 42px;
+        height: 42px;
+        padding: 12px;
+      }
+    }
+  }
+}
+
+.blockquote
+{
+  &::before
+  {
+    font-family: 'Font Awesome 5 Pro';
+    content: "\f10d";
+    display: block;
+    font-size: 44px;
   }
 }

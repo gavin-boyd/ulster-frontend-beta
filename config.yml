@@ -42,6 +42,7 @@ PATHS:
     - "src/assets/js/coursefinder.js"
     - "src/assets/js/course-atoz.js"
     - "src/assets/js/coursefinder-upgrade.js"
+    - "src/assets/js/coursefinder-upgrade-2.js"
     - "src/assets/js/event.js"
     - "src/assets/js/policy-checker.js"
     - "src/assets/js/sports-fixtures.js"

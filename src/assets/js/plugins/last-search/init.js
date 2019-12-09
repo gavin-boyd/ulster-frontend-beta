@@ -5,7 +5,7 @@
 function setLastSearch() {
   var cookie = jQuery.cookie('uls_last_course');
   if (cookie) {
-    jQuery('#query').val(cookie);
+    jQuery('.course-finder #query').val(cookie);
   }
 }
 jQuery(document).ready(function() {

@@ -14,8 +14,21 @@
 jQuery.fn.extend({
     ulsterCookieConsent: function() {
         var consentCookie = jQuery.cookie('uls_cc');
-        var cookieHTML = '<div id="uls_cc" role="region" aria-label="cookie banner"><div><p class="flt-l">Ulster.ac.uk uses cookies to give users the best experience possible.  <a href="https://www.ulster.ac.uk/about/cookies">Find out more about cookies</a></p><ul class="m-b-0 flt-r m-l-20 m-small-l-0"><li><a href="#" class="button bl m-b-0 m-l-20 m-small-l-0" id="uls_cc_close">Close</a></li></ul></div></div>';
-        var cookieCSS = '<style>body{padding-bottom:50px;}#uls_cc{position:fixed;bottom:0;width:100%;background:#000;background-color:#000;z-index:9999;border-top:5px solid #333;} #uls_cc > div {max-width:1110px;margin:0 auto;padding:10px 0 25px 0;position:relative;} #uls_cc > div p {color:#fff;margin:7px 0 0 0;} #uls_cc > div p a {color:inherit;text-decoration:underline;} #uls_cc > div a#uls_cc_close{} @media (max-width: 1140px) {#uls_cc > div {padding-left:15px;padding-right:15px;}} @media (max-width: 890px) {#uls_cc > div a#uls_cc_close {position:relative;right:auto;top:auto;} #uls_cc > div p {margin-bottom:20px;}}</style>';
+        var cookieHTML = '<div id="uls_cc" role="region" aria-label="cookie banner" class="action-sheet">' +
+                           '<div class="grid-container">' +
+                             '<div class="grid-x grid-margin-x bordered dark-grey-bg m-b-10 m-small-b-0 p-t-10 p-b-10 shadow">' +
+                               '<div class="cell small-9 medium-10 large-10">' +
+                                 '<p class="text-white m-b-0">Ulster.ac.uk uses cookies to give users the best experience possible.</p>' +
+                                 '<p class="m-b-0"><a href="https://www.ulster.ac.uk/about/cookies" class="bl text-white">Find out more&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a></p>' +
+                                '</div>' +
+                                '<div class="cell small-3 medium-2 large-2">' +
+                                  '<ul class="m-t-10 m-b-0 flt-r m-l-20 m-small-l-0 m-small-t-0">' +
+                                    '<li><a href="#" class="bl m-b-0 m-l-20 m-small-l-0 text-white text-right-small" id="uls_cc_close"><span class="fas fa-times-circle m-r-5" aria-hidden="true"></span><span class="hide-for-small-only">&nbsp;Dismiss</span></a></li>' +
+                                  '</ul>' +
+                                '</div>' +
+                             '</div>' +
+                           '</div>' +
+                         '</div>';
         // set the cookie expiry time (days):
         var setCookieExpiry = 30;
         //Live
@@ -29,7 +42,6 @@ jQuery.fn.extend({
             //debug
             //console.log('cookie n');
         } else {
-            jQuery('head').append(cookieCSS);
             jQuery('body').append(cookieHTML);
             //set cookie
             jQuery.cookie.raw = true;

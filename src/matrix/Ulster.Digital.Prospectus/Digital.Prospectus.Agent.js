@@ -2,6 +2,7 @@ var res = eval('(' + _REST.response.body + ')');
 if (res) {
   function yourCountryAgents() {
     var country_code = "%globals_asset_metadata_Ulster.Capture.Country_key%";
+    var level = "%globals_asset_metadata_Ulster.Course.Type_value%";
     var output = '';
     var final_output = '';
     var showGeneric = [];

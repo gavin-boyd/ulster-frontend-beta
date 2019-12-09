@@ -175,6 +175,13 @@ $pink:#e56c93;
   background-color: $core-blue !important;
 }
 
+.bg-core-blue-sm
+{
+  @include breakpoint(small down) {
+    background-color: $core-blue !important;
+  }
+}
+
 .bg-pink
 {
   background-color: $pink !important;

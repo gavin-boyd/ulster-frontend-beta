@@ -1,6 +1,6 @@
 ul.breadcrumbs
 {
-  margin: 20px 0 0 0 !important;
+  margin: 10px 0 10px 0 !important;
 
   @include breakpoint(small down)
   {
@@ -12,7 +12,7 @@ ul.breadcrumbs
     text-transform: none;
     font-size: 15px;
     color: #000;
-    margin-left:10px;
+    margin-right:5px;
 
     &::after
     {
@@ -25,13 +25,27 @@ ul.breadcrumbs
 
       @include breakpoint(small down)
       {
-        font-size: 12px;
+        text-decoration: underline;
+      }
+
+      &:hover
+      {
+        @include breakpoint(small down)
+        {
+          text-decoration: none;
+        }
       }
     }
 
-    &:last-child
+    /*&:last-child
     {
       display: none;
+    }*/
+
+    &.event,
+    &.news
+    {
+      display: none !important;
     }
 
     &:first-child

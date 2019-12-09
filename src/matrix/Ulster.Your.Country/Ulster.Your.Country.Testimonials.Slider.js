@@ -22,17 +22,17 @@ if (res) {
           type = '(' + type + ')';
         }
         output += '<li class="orbit-slide"><div class="testimonials">';
-          output += '<div class="featured-testimonials-section m-l-80 m-r-80">';
+          output += '<div class="featured-testimonials-section m-l-80 m-r-80 m-small-l-70 m-small-r-70">';
             output += '<div class="testimonial" data-eqalizer>';
               output += '<div class="grid-x grid-margin-x">';
-                output += '<div class="cell small-4 medium-4 large-4">';
+                output += '<div class="cell small-12 medium-3 large-3">';
                 if (res[i].image !== '') {
                   output += '<img src="' + res[i].image + '" alt="" class="thumbnail" />';
                 } else {
                   output += '<img src="https://www.ulster.ac.uk/__data/assets/image/0020/452162/quote-holder.jpg" alt="" class="thumbnail" />';
                 }
                 output += '</div>';
-                output += '<div class="cell small-8 medium-8 large-8" data-equalizer-watch="true">';
+                output += '<div class="cell small-12 medium-9 large-9" data-equalizer-watch="true">';
                 output += '<div class="">';
                   output += '<p class="bl text-deep-blue m-b-5">' + res[i].forename + ' ' + res[i].surname + ' - ' + res[i].course_name + type + '</p>';
                   output += res[i].quote

@@ -32,12 +32,18 @@
 
 .service.mob
 {
-  border-bottom: 2px solid $core-blue;
+  background: #000;
   margin-bottom: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  text-transform: uppercase;
 
   p
   {
     display: block;
+    font-weight: 600;
+    padding: 0;
+    font-size: 18px;
 
     > span
     {
@@ -49,5 +55,19 @@
         font-weight:400;
       }
     }
+
+    &::after
+    {
+      content: ' website';
+    }
+  }
+}
+.off-canvas
+{
+  .service.mob
+  {
+    background: none;
+    border-bottom: 2px solid $sky-blue;
+    padding-left: 10px;
   }
 }
