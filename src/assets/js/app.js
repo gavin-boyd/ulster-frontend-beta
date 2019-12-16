@@ -95,6 +95,7 @@ require('./plugins/slickslider/init');
 
 //site message
 //require('./plugins/site-message/init');
+require('./plugins/site-message/init-graduation');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');
