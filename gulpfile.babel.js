@@ -87,25 +87,29 @@ function sass() {
     autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
 
     // UnCSS - Uncomment to remove unused styles in production
-    //RODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+    PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   //app.css
   return gulp.src([
-    'src/assets/scss/app.scss',
-    'src/assets/scss/critical.scss',
-    'src/assets/scss/legacy-app.scss',
-    'src/assets/scss/legacy-app-microsite.scss',
-    'src/assets/scss/homepage-critical.scss',
-    'src/assets/scss/application-form.scss',
+    //'src/assets/scss/app.scss',
+    //'src/assets/scss/critical.scss',
+    //'src/assets/scss/legacy-app.scss',
+    //'src/assets/scss/legacy-app-microsite.scss',
+    //'src/assets/scss/homepage-critical.scss',
+    //'src/assets/scss/application-form.scss',
+    'src/assets/scss/course.scss',
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: PATHS.sass
+      includePaths: PATHS.sass,
+      //addition - 1211
+      outputStyle: 'compressed'
     })
       .on('error', $.sass.logError))
     .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    //.pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(!PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));

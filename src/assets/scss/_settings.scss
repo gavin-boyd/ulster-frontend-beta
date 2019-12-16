@@ -69,7 +69,7 @@ $accessible-blue: #005c97;
 // 1. Global
 // ---------
 $futura: 'futura-pt', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$global-font-size: 125%;
+$global-font-size: 115%;
 $global-width: rem-calc(1160); //apha change, beta should be 1200
 //$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
@@ -208,7 +208,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: $global-font-size * 1.15;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
 $subheader-color: #fff;

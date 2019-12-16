@@ -15,6 +15,17 @@ UNCSS_OPTIONS:
   ignore:
     - !!js/regexp .foundation-mq
     - !!js/regexp ^\.is-.*
+    - !!js/regexp ^\.js.*
+    - !!js/regexp ^\.hqy-.*
+    - !!js/regexp ^\.offcanvas.*
+    - !!js/regexp ^\.fancybox.*
+    - !!js/regexp ^\.ui-.*
+    - !!js/regexp ^\.has-.*
+    - !!js/regexp ^\.dropdown.*
+    - !!js/regexp ^\.multilevel-offcanvas.*
+    - !!js/regexp ^\.position-.*
+    - !!js/regexp .is-open
+    #- !!js/regexp ^\.fa.*
 
 # Gulp will reference these paths when it copies files
 PATHS:
@@ -47,3 +58,4 @@ PATHS:
     - "src/assets/js/policy-checker.js"
     - "src/assets/js/sports-fixtures.js"
     - "src/assets/js/fb-geo-test.js"
+    - "src/assets/js/course.js"
