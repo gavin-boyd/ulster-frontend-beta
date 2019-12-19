@@ -24,10 +24,10 @@ if (res) {
         output += '<h3 class="h6">Campus maps</h3>';
         output += '<div class="grid-x">';
         output += '<div class="cell small-6 large-6">';
-        output += '<a href="' + res[i].google_map + '" target="_blank" class="thumbnail">';
+        output += '<a href="' + res[i].google_map + '" target="_blank" class="thumbnail" rel="noopener">';
         output += '<img src="https://cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" data-src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/google-map.png" alt="Google Map" class="hqy-lazy">';
         output += '</a><br>';
-        output += '<a href="' + res[i].google_map + '" target="_blank" class="button">Google Maps</a>';
+        output += '<a href="' + res[i].google_map + '" target="_blank" class="button" rel="noreferrer">Google Maps</a>';
         output += '</div>';
         output += '<div class="cell small-6 large-6">';
         output += '<a href="' + res[i].google_map_diagram + '" target="_blank" class="thumbnail">';

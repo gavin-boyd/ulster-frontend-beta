@@ -2,6 +2,7 @@ var res = eval('(' + _REST.response.body + ')');
 var country_code = "%globals_asset_metadata_Content.Tagging.Country_key%";
 var output = '';
 var flagArray = [];
+var counter = 0;
 if (res) {
   for (i = 0; i < res.length; i++) {
     var testimonial_country_code = res[i].tag_country;
@@ -16,7 +17,7 @@ if (res) {
         var flag = false;
         flagArray.push('false');
       }
-      if (flag === true) {
+      if (flag === true && counter < 6) {
         var type = res[i].type;
         if (type !== '') {
           type = '(' + type + ')';
@@ -45,6 +46,7 @@ if (res) {
           output += '</div>';
         output += '</div>';
         output += '</div>';
+        counter++;
       }
     }
   }
