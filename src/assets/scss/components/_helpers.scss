@@ -799,11 +799,6 @@ a.zoom
       }
     }
 
-    .text-white
-    {
-      color: #000 !important;
-    }
-
     .lead
     {
       font-size: 16px;
@@ -820,6 +815,36 @@ a.zoom
       background-size:100%;
       background-position: -10px 0;
     }
+
+    h2 a,
+    p
+    {
+      color:#005c97 !important;
+
+      &:hover
+      {
+        color: #004f82 !important;
+      }
+    }
+
+    p
+    {
+      color: #000 !important;
+    }
+  }
+}
+
+.shadow-top
+{
+  -webkit-box-shadow: 0px -10px 10px -8px rgba(0,0,0,0.23);
+  -moz-box-shadow: 0px -10px 10px -8px rgba(0,0,0,0.23);
+  box-shadow: 0px -10px 10px -8px rgba(0,0,0,0.23);
+
+  @include breakpoint(small down)
+  {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 }
 
@@ -957,6 +982,17 @@ a.zoom
   @include breakpoint(small down)
   {
     height: 220px;
+  }
+
+  &.standard-height
+  {
+    height: 220px;
+
+    @include breakpoint(small down)
+    {
+      overflow: visible;
+      height: auto;
+    }
   }
 }
 
