@@ -126,6 +126,9 @@ require('./plugins/nested-faceted-courses/init');
 //course mob tabs
 require('./plugins/course-mob-tabs/init');
 
+//checkForContent
+require('./plugins/check-for-content/init');
+
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 

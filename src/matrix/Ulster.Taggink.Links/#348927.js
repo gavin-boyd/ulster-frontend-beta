@@ -69,6 +69,7 @@ function createListofTagLinks() {
         var title = 'Alumni and Supporters';
       } else {
         var title = values[i];
+        title = title.replace('Faculty - ', '');
       }
       output += '<li><a href="https://www.ulster.ac.uk/' + tags[i] + '">' + title + '</a></li>';
       check = 'true';
@@ -76,9 +77,9 @@ function createListofTagLinks() {
   }
 
   if (check == 'true') {
-    print('<hr><h2>Related links</h2>');
+    print('<hr><h2>Related topics</h2>');
     print('<div class="wysiwyg">');
-    print('<ul>');
+    print('<ul class="columns-2">');
     print(output);
     print('</div>');
     print('</ul>');

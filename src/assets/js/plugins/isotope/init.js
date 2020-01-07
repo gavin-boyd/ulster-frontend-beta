@@ -20,5 +20,20 @@ if (jQuery('.ulster-isotope-grid-filter').length > 0) {
     e.preventDefault();
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
+    Foundation.reInit('equalizer');
+    //init hqy-lazy
+    ;(function() {
+        // Initialize
+        var hqyLazy = new HqyLazyload({
+          breakpoints: [{
+              width: 420,
+              src: 'data-src-small'
+          }, {
+              width: 768,
+              src: 'data-src-medium'
+          }],
+          offset: 100
+        });
+    })();
   });
 }
