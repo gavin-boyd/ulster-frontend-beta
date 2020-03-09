@@ -12,20 +12,30 @@
   {
     position: relative;
     display: inline-block;
-    top: 20px;
+    top: 23px;
     margin-left: 20px;
     border-left: 2px solid $core-blue;
     padding-left: 20px;
     color: #1a2a4f;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 22px;
     white-space: nowrap;
-    background-color: #fff;
-    font-weight: 600;
+    background-color: none;
+    font-weight: 700;
 
     > span
     {
       display: block;
       font-weight:400;
+    }
+  }
+
+  &.white
+  {
+    > span
+    {
+      color: #fff !important;
+      border-left: 2px solid #fff !important;
     }
   }
 }

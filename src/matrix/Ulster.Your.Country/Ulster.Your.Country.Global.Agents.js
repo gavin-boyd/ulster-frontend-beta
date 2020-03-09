@@ -30,22 +30,19 @@ if (res) {
           output += '<div class="grid-x">';
             output += '<div class="cell medium-12">';
               output += '<div class="shadow card card-section">';
-                output += '<h2 class="h4">';
-                  output += '<span class="h6">' + name + '</span><br>' + contact_name;
-                output += '</h2>';
-                output += '<p>';
+                output += '<h3>';
+                  output += '<span class="display-block">' + name + '</span> ' + contact_name;
+                output += '</h3>';
+                output += '<ul class="m-l-0 m-b-0 menu no-bullet">';
                   if (email !== '') {
-                    output += '<a href="mailto:"' + email + '"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;' + email + '</a>';
-                  }
-                  if (phone !== '' && email !== '') {
-                    output += '&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;';
+                    output += '<li class="m-r-10"><a href="mailto:"' + email + '"><span class="fas fa-envelope" aria-hidden="true"></span>&nbsp;&nbsp;' + email + '</a></li>';
                   }
                   if (phone !== '') {
-                    output += '<a href="tel:' + phone + '"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Call ' + phone + '</a>';
+                    output += '<li class="m-r-10"><a href="tel:' + phone + '"><span class="fas fa-phone" aria-hidden="true"></span>&nbsp;&nbsp;Call ' + phone + '</a></li>';
                   }
-                output += '</p>';
+                output += '</ul>';
                 if (address !== '') {
-                  output += '<p class="no-margin-bottom"><strong>Address:</strong></p>';
+                  output += '<h4 class="m-b-0">Address:</h4>';
                 }
                 output += address;
               output += '</div>';

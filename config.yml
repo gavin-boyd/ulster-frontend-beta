@@ -59,3 +59,4 @@ PATHS:
     - "src/assets/js/sports-fixtures.js"
     - "src/assets/js/fb-geo-test.js"
     - "src/assets/js/course.js"
+    - "src/assets/js/qa.js"

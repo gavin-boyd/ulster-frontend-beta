@@ -94,8 +94,8 @@ require('./plugins/slickslider/init');
 //require('./plugins/clearing-audiences/site-message');
 
 //site message
-//require('./plugins/site-message/init');
-require('./plugins/site-message/init-graduation');
+require('./plugins/site-message/init-site-message');
+//require('./plugins/site-message/init-graduation');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');
@@ -105,6 +105,10 @@ require('./plugins/smooth-scroll/init');
 
 //cookie consent
 require('./plugins/cookie-consent/init');
+//init ulsterCookieConsent
+jQuery(document).ready(function() {
+    jQuery('body').ulsterCookieConsent('ulster.ac.uk');
+});
 
 //responsive content
 require('./plugins/responsive-content/init');
@@ -128,6 +132,18 @@ require('./plugins/course-mob-tabs/init');
 
 //checkForContent
 require('./plugins/check-for-content/init');
+
+//clist style change via bullet unicode
+//require('./plugins/bullet-unicode/init');
+
+//clist style change via bullet unicode
+require('./plugins/breadcrumb-style/init');
+
+//universal nav
+require('./plugins/universal-nav/init');
+
+//form preloader
+require('./plugins/form-preloader/init');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */

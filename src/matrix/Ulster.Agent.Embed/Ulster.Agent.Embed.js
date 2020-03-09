@@ -4,10 +4,18 @@ if (res) {
     var country_code = "%globals_asset_metadata_Content.Tagging.Country%";
     var output = '';
     var final_output = '';
+    var level = '%globals_asset_metadata_Ulster.Course.Type_value%';
+    //debug
+    print('<h1>' + level + '</h1>');
     var showGeneric = [];
     var total = 0;
     for (i = 0; i < res.length; i++) {
-      var agent_country_code = res[i].country_code;
+      if (level == 'Undergraduate') {
+        var agent_country_code = res[i].ug_country_code;
+      }
+      if (level == 'Postgraduate') {
+        var agent_country_code = res[i].pg_country_code;
+      }
       var agent_contact_types = res[i].contact_type;
       var agent_country_code_array = agent_country_code.split('; ');
       if (agent_contact_types.indexOf(';') !== -1) {

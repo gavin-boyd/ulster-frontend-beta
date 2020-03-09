@@ -19,5 +19,7 @@ if (ed_achievements.length > 0) {
     } else {
         output += '%globals_asset_contents_raw:467016%';
     }
+} else {
+    output += '%globals_asset_contents_raw:481036%';
 }
 print(output);

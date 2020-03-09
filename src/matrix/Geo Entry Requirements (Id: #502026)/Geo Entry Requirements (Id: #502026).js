@@ -27,14 +27,13 @@ if (res &&  countryCode !== '') {
         output += '<p>Typically we require applicant for taught programmes to hold the equivalent of a UK first degree (usually in a relevant subject area). Please refer to the specific entry requirements for your chosen course of study as outlined in the online prospectus. We consider students who have good grades in the following:</p>';
         output += pgEntry;
       }
-      if (engTop !== "null" || engBottom !== "<p></p>") {
-         output += '<p class="bl">English Language</p>';
-      }
       if (engTop !== "null") {
         output += engTop;
       }
-      if (engBottom !== "<p></p>") {
+      if (engBottom !== "") {
+        output += '<p class="bl">English Language</p>';
         output += engBottom;
+        output += '<hr>';
       }
       output += '<p class="m-b-0"><a href="' + url + '" target="_blank" class="button m-b-0">View more information for students from ' + name + '&nbsp;&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a></p>';
       output += '</div>';

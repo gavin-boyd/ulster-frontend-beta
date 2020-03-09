@@ -98,3 +98,15 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+.uls-slick
+{
+  &.spaced
+  {
+    .slick-slide
+    {
+      padding: 0 10px;
+    }
+  }
+}

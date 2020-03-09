@@ -48,8 +48,13 @@ require('./plugins/cookie/init');
 //last search display for olp
 require('./plugins/last-search/init');
 
+
+//slick init
+require('slick-carousel');
+require('./plugins/slickslider/init');
+
 //clearing site message
-//require('./plugins/clearing-audiences/site-message');
+require('./plugins/clickable-div/init');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */

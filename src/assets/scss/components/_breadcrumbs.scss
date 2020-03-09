@@ -10,7 +10,7 @@ ul.breadcrumbs
   li
   {
     text-transform: none;
-    font-size: 15px;
+    font-size: 16px;
     color: #000;
     margin-right:5px;
 
@@ -52,20 +52,70 @@ ul.breadcrumbs
     {
       padding-left: 0;
       margin-left: 0;
+
+      a
+      {
+        display: inline-block;
+
+        span
+        {
+          position: absolute;
+          left: -9999px;
+          background-color: inherit;
+        }
+
+        &::before
+        {
+          font-family: 'Font Awesome 5 Pro';
+          content: "\f80b";
+          text-indent: 0;
+        }
+      }
     }
   }
 
   li:not(:first-child)::before
   {
     font-family: 'Font Awesome 5 Pro';
-    content: "\f0da";
+    content: "\f105";
     font-weight: 900;
-    margin-right: 5px;
-    color: #ccc;
+    margin-right: 8px;
+    margin-left: 8px;
+    color: inherit;
 
     @include breakpoint(small down)
     {
       margin: 0 5px;
     }
   }
+}
+
+.spi-breadcrumb
+{
+  @include breakpoint(medium) {
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0,0,0,.6);
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1120px;
+
+    ul.breadcrumbs
+    {
+      margin: 0 !important;
+
+      *
+      {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.standard-page-image
+{
+  position: relative;
+  -moz-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8) inset, 0 -10px 10px -10px rgba(0, 0, 0, 0.8) inset;
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8) inset, 0 -10px 10px -10px rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8) inset, 0 -10px 10px -10px rgba(0, 0, 0, 0.8) inset;
 }

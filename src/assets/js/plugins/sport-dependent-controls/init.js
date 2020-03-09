@@ -9,7 +9,7 @@ function initDependentSports(data) {
       sports += '<a href="#" data-id="' + data[index].id  + '" class="button hollow uls-sport">' + data[index].name + '</a>';
     });
     sports += '</div>';
-    jQuery('#uls-sports-selector').append(sports);
+    jQuery('#uls-sports-selector').html(sports);
 
     //sport click
     jQuery('a.uls-sport').click(function(e) {

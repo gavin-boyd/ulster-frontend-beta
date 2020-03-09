@@ -66,6 +66,22 @@ jQuery(document).ready(function() {
         'view_all': 'enabled'
     });
 
+    //hr site search
+    jQuery("input#hr-search").fbcompletion({
+        'enabled': 'enabled',
+        'collection': 'ulster-hr',
+        'program': '//ulster.funnelback.co.uk/s/suggest.json',
+        'format': 'extended',
+        'alpha': '.5',
+        'show': '10',
+        'sort': '0',
+        'length': '3',
+        'delay': '0',
+        'profile': '',
+        'interactionLog': '//ulster.funnelback.co.uk/s/log',
+        'zindex': '10000'
+    });
+
     //education resources
     jQuery("input#eduresources-search").fbcompletion({
         'enabled': 'enabled',
@@ -169,6 +185,38 @@ jQuery(document).ready(function() {
     jQuery("input#isd-search").fbcompletion({
         'enabled': 'enabled',
         'collection': 'ulster-isd',
+        'program': '//ulster.funnelback.co.uk/s/suggest.json',
+        'format': 'extended',
+        'alpha': '.5',
+        'show': '10',
+        'sort': '0',
+        'length': '3',
+        'delay': '0',
+        'profile': '',
+        'interactionLog': '//ulster.funnelback.co.uk/s/log',
+        'zindex': '10000'
+    });
+
+    //ulsteruniversity.qa site search
+    jQuery("input#qatar-search").fbcompletion({
+        'enabled': 'enabled',
+        'collection': 'ulster-qatar',
+        'program': '//ulster.funnelback.co.uk/s/suggest.json',
+        'format': 'extended',
+        'alpha': '.5',
+        'show': '10',
+        'sort': '0',
+        'length': '3',
+        'delay': '0',
+        'profile': '',
+        'interactionLog': '//ulster.funnelback.co.uk/s/log',
+        'zindex': '10000'
+    });
+
+    //sports services site search
+    jQuery("input#sport-search").fbcompletion({
+        'enabled': 'enabled',
+        'collection': 'ulster-sport',
         'program': '//ulster.funnelback.co.uk/s/suggest.json',
         'format': 'extended',
         'alpha': '.5',

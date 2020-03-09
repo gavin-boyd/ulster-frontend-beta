@@ -28,9 +28,9 @@ if (res) {
               output += '<div class="grid-x grid-margin-x m-b-30">';
                 output += '<div class="cell small-4 medium-4 large-4">';
                 if (res[i].image !== '') {
-                  output += '<img src="' + res[i].image + '" alt="" class="thumbnail" />';
+                  output += '<img src="' + res[i].image + '" alt="' + res[i].forename + ' ' + res[i].surname + ' profile image" class="thumbnail" />';
                 } else {
-                  output += '<img src="https://www.ulster.ac.uk/__data/assets/image/0020/452162/quote-holder.jpg" alt="" class="thumbnail" />';
+                  output += '<img src="https://www.ulster.ac.uk/__data/assets/image/0020/452162/quote-holder.jpg" alt="' + res[i].forename + ' ' + res[i].surname + ' profile image" class="thumbnail" />';
                 }
                 output += '</div>';
                 output += '<div class="cell small-8 medium-8 large-8" data-equalizer-watch="true">';

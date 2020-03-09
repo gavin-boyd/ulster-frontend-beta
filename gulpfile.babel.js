@@ -99,6 +99,7 @@ function sass() {
     //'src/assets/scss/homepage-critical.scss',
     //'src/assets/scss/application-form.scss',
     //'src/assets/scss/course.scss',
+    //'src/assets/scss/courseprintpdf.scss',
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({

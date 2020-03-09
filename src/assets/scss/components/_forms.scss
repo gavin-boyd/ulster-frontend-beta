@@ -49,6 +49,13 @@ select
   {
     //max-width:300px;
   }
+  .sq-form-question-title
+  {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
   .sq-backend-smallprint
   {
     display:none;
@@ -86,6 +93,14 @@ select
   .red
   {
     color:#b10e1e;
+  }
+  legend,
+  label
+  {
+    strong
+    {
+      color:#b10e1e !important;
+    }
   }
   .sq-form-error
   {
@@ -137,6 +152,13 @@ select
   }
   .sq-form-section-title
   {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    padding-top: 20px;
+    font-weight:700;
+  }
+  .sq-form-section-title
+  {
     display:none;
   }
   &.show-legends
@@ -166,6 +188,7 @@ select
   input[type=date],
   input[type=number],
   input[type=tel],
+  input[type=datetime],
   textarea,
   select
   {
@@ -179,6 +202,7 @@ select
   input[type=password]:focus,
   input[type=date]:focus,
   input[type=number]:focus,
+  input[type=datetime]:focus,
   textarea:focus,
   select:focus
   {
@@ -365,6 +389,41 @@ select
     input:checked + label::before
     {
       border-color:#fff;
+    }
+  }
+
+  /* tickbox list */
+  .sq-form-question-tickbox-list
+  {
+    .sq-form-question-answer
+    {
+      ul
+      {
+        li
+        {
+          position: relative;
+
+          input[type=checkbox]
+          {
+            @include breakpoint(small down)
+            {
+              position: absolute;
+              left: 0;
+              top:12px;
+            }
+          }
+
+          label
+          {
+            font-weight: 400;
+            @include breakpoint(small down)
+            {
+              margin:0;
+              padding-left: 25px;
+            }
+          }
+        }
+      }
     }
   }
 }

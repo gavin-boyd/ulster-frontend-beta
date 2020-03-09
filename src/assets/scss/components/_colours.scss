@@ -6,6 +6,8 @@
 //## Global vars
 $opacity: .9;
 
+
+
 /*
  * Colours
  * 1. Purple
@@ -158,6 +160,11 @@ $opacity: .9;
   }
 //############ 2. Navy - END
 
+.red-text
+{
+  color:#b10e1e !important;
+}
+
 //new brand page 43
 
 $core-blue: #041e42;
@@ -169,6 +176,16 @@ $sky-blue-light: #00b5e2;
 $sky-blue:#005c97;
 $fresh-teal: #00968C;
 $pink:#e56c93;
+
+.bg-faded-grey
+{
+  background-color: #eee !important;
+}
+
+.bg-fresh-teal
+{
+  background-color: $fresh-teal !important;
+}
 
 .bg-core-blue
 {
@@ -210,6 +227,39 @@ $pink:#e56c93;
 .bg-sky-blue-light
 {
   background-color: $sky-blue-light !important;
+}
+
+.list-icon-core-blue
+{
+  li
+  {
+    &::before
+    {
+      color: $core-blue !important;
+    }
+  }
+}
+
+.list-icon-bright-blue
+{
+  li
+  {
+    &::before
+    {
+      color: $bright-blue !important;
+    }
+  }
+}
+
+.list-icon-white
+{
+  li
+  {
+    &::before
+    {
+      color: #fff !important;
+    }
+  }
 }
 
 .text-core-blue
@@ -258,6 +308,11 @@ $pink:#e56c93;
 .text-white
 {
   color: #fff !important;
+}
+
+.text-bright-orange
+{
+  color: #f39521 !important;
 }
 
 .no-bg
@@ -339,6 +394,11 @@ $c-off-white: #fffefd;
 .bg-pink-trans
 {
   background: $c-pink-trans;
+}
+
+.bg-light-grey-2
+{
+  background: #f2efec;
 }
 
 .bg-light-grey

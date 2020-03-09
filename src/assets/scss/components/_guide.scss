@@ -6,10 +6,11 @@
   a
   {
     position: relative;
-    padding: 10px 10px 10px 25px;
+    padding: 12px 10px 12px 25px;
     border-left: 5px solid #eee;
     font-size: 16px;
     line-height: 20px;
+    font-weight:700;
     @include transition-all;
 
     &:hover
@@ -20,9 +21,9 @@
 
   a.is-active
   {
-    border-left-color:$sky-blue;
-    background: transparent;
-    background: #eee;
+    border-left-color:$core-blue;
+    background: $sky-blue;
+    color: #fff;
 
     &::before
     {

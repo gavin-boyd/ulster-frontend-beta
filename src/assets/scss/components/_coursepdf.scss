@@ -1,0 +1,23 @@
+/* additional styles for print */
+div.break
+{
+  page-break-after: always !important;
+}
+
+@page { size: auto; /* auto is the initial value */ margin: 0; /* this affects the margin in the printer settings */ }
+
+ul
+{
+  list-style-type: circle !important;
+}
+
+/* Removes header */
+#printfriendly #pf-src
+{
+  display:none;
+}
+
+table
+{
+  width: 100% !important;
+}
