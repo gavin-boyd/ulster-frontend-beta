@@ -43,6 +43,7 @@ PATHS:
   entries:
     - "src/assets/js/app.js"
     - "src/assets/js/homepage.js"
+    - "src/assets/js/homepage-2.js"
     - "src/assets/js/legacy-app.js"
     - "src/assets/js/app-with-day-night.js"
     - "src/assets/js/global.js"
@@ -60,3 +61,4 @@ PATHS:
     - "src/assets/js/fb-geo-test.js"
     - "src/assets/js/course.js"
     - "src/assets/js/qa.js"
+    - "src/assets/js/form.js"

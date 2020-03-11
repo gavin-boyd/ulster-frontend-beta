@@ -92,14 +92,16 @@ function sass() {
 
   //app.css
   return gulp.src([
-    'src/assets/scss/app.scss',
-    'src/assets/scss/critical.scss',
+    //'src/assets/scss/app.scss',
+    //'src/assets/scss/homepage.scss',
+    //'src/assets/scss/critical.scss'
     //'src/assets/scss/legacy-app.scss',
     //'src/assets/scss/legacy-app-microsite.scss',
     //'src/assets/scss/homepage-critical.scss',
     //'src/assets/scss/application-form.scss',
     //'src/assets/scss/course.scss',
     //'src/assets/scss/courseprintpdf.scss',
+    'src/assets/scss/form.scss',
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({

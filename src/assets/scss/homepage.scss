@@ -1,6 +1,17 @@
 @charset 'utf-8';
-@import './node_modules/font-awesome/scss/font-awesome.scss';
-@import 'components/font-awesome-paths';
+//v4 fontawesome
+//@import './node_modules/font-awesome/scss/font-awesome.scss';
+//@import 'components/font-awesome-paths';
+
+//v5 fontawesome
+$fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !default;
+@import './node_modules/@fortawesome/fontawesome-pro/scss/fontawesome';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/v4-shims';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/solid';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/regular';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/light';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/brands';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/duotone';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/colours';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/fonts';
 @import 'settings';
@@ -86,5 +97,22 @@
 @import 'components/spacing-utilities';
 @import 'components/max-width-utilities';
 @import 'components/magellan';
-//custom for this project
-@import 'components/intl-tel';
+@import 'components/isotope';
+@import 'components/service-logo';
+@import 'components/prettycheckable';
+@import 'pickadate/classic';
+@import 'pickadate/classic-date';
+@import 'components/slick';
+@import 'components/slick-theme';
+@import 'components/animation';
+@import 'components/universal-nav';
+//@import 'components/hero-full-screen';
+//@import 'components/clean-hero-slider';
+//@import 'components/video-custom';
+//cli installed building blocks
+//@import 'components/building-blocks/card-user-profile';
+
+body
+{
+  opacity:1 !important;
+}

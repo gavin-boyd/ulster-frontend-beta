@@ -28,6 +28,13 @@ select
   min-height:41px;
 }
 
+abbr.sq-form-required-field
+{
+  color: #b10e1e !important;
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
 
 .application-form
 {
