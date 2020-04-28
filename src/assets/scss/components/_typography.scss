@@ -455,3 +455,34 @@ h1
     font-size: 44px;
   }
 }
+
+/* accessibility for links focus */
+a
+{
+  &:not(.button):not(.accordion-title):not(.brand)
+  {
+    &:focus
+    {
+      outline: 3px solid transparent;
+      background-color: #ffdd00 !important;
+      box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+      text-decoration: none;
+      color: #000 !important;
+
+      *
+      {
+        color: #000 !important;
+      }
+    }
+  }
+}
+
+.global-nav>li>a
+{
+  &:focus
+  {
+    background: $core-blue !important;
+    color: #fff !important;
+    box-shadow: none;
+  }
+}

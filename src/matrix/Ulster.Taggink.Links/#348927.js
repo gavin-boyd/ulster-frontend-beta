@@ -27,19 +27,19 @@ function createListofTagLinks() {
   twelve = twelve.split('; ');
   thirteen = thirteen.split('; ');
 
-  var one_v = '%globals_asset_metadata_Content.Tagging.Campus_value^escapequotes%';
-  var two_v = '%globals_asset_metadata_Content.Tagging.Faculty.AHSS_value^escapequotes%';
-  var three_v = '%globals_asset_metadata_Content.Tagging.Faculty.CEBE_value^escapequotes%';
-  var four_v = '%globals_asset_metadata_Content.Tagging.Faculty.LHS_value^escapequotes%';
-  var five_v = '%globals_asset_metadata_Content.Tagging.Faculty.UUBS_value^escapequotes%';
-  var six_v = '%globals_asset_metadata_Content.Tagging.Research.Institute_value^escapequotes%';
-  var seven_v = '%globals_asset_metadata_Content.Tagging.Group.RI_value^escapequotes%';
-  var eight_v = '%globals_asset_metadata_Content.Tagging.Group.IGE_value^escapequotes%';
-  var nine_v = '%globals_asset_metadata_Content.Tagging.Group.CL_value^escapequotes%';
-  var ten_v = '%globals_asset_metadata_Content.Tagging.Group.Students_value^escapequotes%';
-  var eleven_v = '%globals_asset_metadata_Content.Tagging.Group.Business_value^escapequotes%';
-  var twelve_v = '%globals_asset_metadata_Content.Tagging.Group.Other_value^escapequotes%';
-  var thirteen_v = '%globals_asset_metadata_Content.Tagging.Course.Type_value^escapequotes%';
+  var one_v = '%globals_asset_metadata_Content.Tagging.Campus_value^escapequotes^json_encode%';
+  var two_v = '%globals_asset_metadata_Content.Tagging.Faculty.AHSS_value^escapequotes^json_encode%';
+  var three_v = '%globals_asset_metadata_Content.Tagging.Faculty.CEBE_value^escapequotes^json_encode%';
+  var four_v = '%globals_asset_metadata_Content.Tagging.Faculty.LHS_value^escapequotes^json_encode%';
+  var five_v = '%globals_asset_metadata_Content.Tagging.Faculty.UUBS_value^escapequotes^json_encode%';
+  var six_v = '%globals_asset_metadata_Content.Tagging.Research.Institute_value^escapequotes^json_encode%';
+  var seven_v = '%globals_asset_metadata_Content.Tagging.Group.RI_value^escapequotes^json_encode%';
+  var eight_v = '%globals_asset_metadata_Content.Tagging.Group.IGE_value^escapequotes^json_encode%';
+  var nine_v = '%globals_asset_metadata_Content.Tagging.Group.CL_value^escapequotes^json_encode%';
+  var ten_v = '%globals_asset_metadata_Content.Tagging.Group.Students_value^escapequotes^json_encode%';
+  var eleven_v = '%globals_asset_metadata_Content.Tagging.Group.Business_value^escapequotes^json_encode%';
+  var twelve_v = '%globals_asset_metadata_Content.Tagging.Group.Other_value^escapequotes^json_encode%';
+  var thirteen_v = '%globals_asset_metadata_Content.Tagging.Course.Type_value^escapequotes^json_encode%';
 
   one_v = one_v.split('; ');
   two_v = two_v.split('; ');
@@ -62,6 +62,10 @@ function createListofTagLinks() {
   var output = '';
 
   var check = 'false';
+
+  print('Debug: ' + tags.length);
+
+  print('Debug: ' + values.length);
 
   for (var i = 0; i < tags.length; i++) {
     if (tags[i]) {

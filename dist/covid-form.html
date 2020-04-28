@@ -12,7 +12,7 @@
   <body>
     <a href="#navigation" class="button show-for-sr">Skip to navigation</a>
     <a href="#content" class="button show-for-sr">Skip to content</a>
-      <div aria-hidden="true" class="show-for-sr" role="navigation">
+      <div aria-hidden="true" class="show-for-sr" role="navigation" aria-label="utility navigation">
         <ul>
           <li><a href="#navigation" class="button show-for-sr">Skip to navigation</a></li>
           <li><a href="#content" class="button show-for-sr">Skip to content</a></li>
@@ -24,7 +24,7 @@
         <ul class="m-l-0 m-b-0 m-t-0 white-text">
     
           <li class="bl"></li>
-          <li role="treeitem" class="p-l-10"> <a href="/accept" class="bl text-white">Home</a></li><li role="treeitem" class="p-l-10"> <a href="/accept/offer" class="bl text-white">Your Offer</a></li><li role="treeitem" class="p-l-10"> <a href="/accept/deposit" class="bl text-white">Pay Deposit</a></li><li role="treeitem" class="p-l-10"> <a href="/accept/visa" class="bl text-white">Get Visa</a></li><li role="treeitem" class="p-l-10"> <a href="/accept/accommodation" class="bl text-white">Get Accommodation</a></li>  </ul>
+            </ul>
       <hr>
       <ul class="m-l-10 m-t-0 white-text">
     
@@ -49,71 +49,87 @@
     <div class="off-canvas-content" data-off-canvas-content>
       <div class="nav-bar uls-mob">
         <div class="nav-bar-left">
-          <a title="Return to Homepage" class="nav-bar-logo" href="https://www.ulster.ac.uk/accept" aria-hidden="true">
+          <a title="Return to Homepage" class="nav-bar-logo" href="https://www.ulster.ac.uk/coronavirus" aria-hidden="true">
     
               <img alt="Ulster University Logo" class="logo hqy-lazy" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" data-src-small="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg" width="120" aria-hidden="true">
     
           </a>
         </div>
-    
           <div class="nav-bar-right">
             <ul class="menu">
     
-              <li><button class="offcanvas-trigger button large clear" aria-haspopup="true" aria-controls="mobileMenu" data-open="mobileMenu" type="button"><span class="show-for-sr" aria-hidden="true">Menu</span> <span aria-hidden="true" class="fas fa-bars text-core-blue"></span></button></li>
+                <li><button class="button large clear mobSearchBtn" data-toggle="mobileSearch" type="button"><span class="show-for-sr" aria-hidden="true">Search</span><span aria-hidden="true" class="fa fa-search text-core-blue"></span></button></li>
+    
+    
            </ul>
          </div>
-    
         </div>
+    
+          <div class="hide" data-toggler=".hide" id="mobileSearch" aria-hidden="true">
+            <p class="bl m-b-0">Search COVID-19 (Coronavirus)</p>
+          </div>
     
       </div>
     </div>
     
-    <div class="grid-container hide-for-small-only hide-for-print" data-desc="uu-zurb-desktop-header">
+    <div class="grid-container hide-for-small-only hide-for-print" role="navigation" aria-label="Header" data-desc="uu-zurb-desktop-header">
       <div class="grid-x">
         <div class="cell medium-6 large-6">
-          <a title="Return to Homepage" class="brand service" href="https://www.ulster.ac.uk/accept">
+          <a title="Return to Homepage" class="brand service" aria-label="Return to Homepage" href="https://www.ulster.ac.uk/coronavirus">
     
               <img alt="Ulster University Logo" class="logo hqy-lazy" src="//cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" data-src="//cdn.ulster.ac.uk/home/ulster-frontend/img/ulster-university.svg" aria-hidden="true">
-    
-              <span role="contentinfo" aria-labelledby="websitename" id="websitename">
-                  Accepting Your Offer
-    
-                    <span>What you need to do</span>
-    
-              </span>
     
     
     
           </a>
         </div>
         <div class="cell medium-6 large-6 text-right m-t-10">
-        <div role="navigation">
-            <ul class="clear">
+        <div role="navigation" aria-label="Utility">
+            <ul class="clear menu align-right">
     
     
            </ul>
         </div>
     
     
+    
+    
+    
+    <form class="m-t-20 uls-site-search" role="search" aria-label="Search the COVID-19 Information" method="get" id="global-search-form" action="https://www.ulster.ac.uk/coronavirus/search">
+      <div class="grid-x">
+        <div class="small-12 cell">
+          <div class="input-group">
+            <label for="covid-search-inside" class="show-for-sr">Search the COVID-19 Information</label>
+            <input type="search" name="query" id="covid-search-inside" class="input-group-field ui-autocomplete-input" placeholder="Search the COVID-19 Information" autocomplete="off" value="" />
+            <div class="input-group-button">
+              <button class="button" type="submit" value="Submit"><span class="show-for-sr">Search</span><span aria-hidden="true" class="fa fa-search hide-for-sr"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
       <p></p>
     
       </div>
-    </div><div class="hide-for-small-only hide-for-print" id="navigation" role="navigation" aria-labelledby="navigation"><ul class="menu global-nav microsite"><li class="menu-item large" style="width:20%;"><a href="/accept">Home</a></li><li class="menu-item large" style="width:20%;"><a href="/accept/offer">Your Offer</a></li><li class="menu-item large" style="width:20%;"><a href="/accept/deposit">Pay Deposit</a></li><li class="menu-item large" style="width:20%;"><a href="/accept/visa">Get Visa</a></li><li class="menu-item large" style="width:20%;"><a href="/accept/accommodation">Get Accommodation</a></li></ul></div></div>
-    <div id="content"></div>
+    </div><div class="hide-for-small-only hide-for-print" id="navigation" role="navigation" aria-label="Main menu"><ul class="menu global-nav microsite"></ul></div></div>
     
     <div class="grid-container with-overlay">
       <nav aria-label="You are here:" role="navigation" class="hide-for-print">
-        <ul class="m-t-0 breadcrumbs" data-lineage='["523128"]'>
-    
-            <li>
-              <a href="https://www.ulster.ac.uk/accept" class="type-site"><span>Accepting your Offer</span></a>
-            </li>
+        <ul class="m-t-0 breadcrumbs" data-lineage='["529435"]'>
     
           <li>
-        <a href="https://www.ulster.ac.uk/accept/offer" class="type-page_standard"><span>1. Understanding Your Offer</span></a>
+        <a href="https://www.ulster.ac.uk/coronavirus" class="type-site"><span>COVID-19 (Coronavirus)</span></a>
     </li>
           <li>
-            <a href="https://www.ulster.ac.uk/accept/offer/visa-history" class="type-page_custom_form"><span>UK Visa History</span></a>
+            <a href="https://www.ulster.ac.uk/coronavirus/feedback" class="type-page_custom_form"><span>Give Feedback</span></a>
           </li>
         </ul>
       </nav>
@@ -123,62 +139,51 @@
     
     
     
+        <div class="hide-for-small-only standard-page-image hqy-lazy img-pos-center-center  cover-background-r" data-src="https://www.ulster.ac.uk/__data/assets/image/0019/538120/virus-4835301_1280.jpg?v=1.1" style="background-repeat:no-repeat;" data-src="https://www.ulster.ac.uk/__data/assets/image/0019/538120/virus-4835301_1280.jpg" data-src-small="https://cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" role="banner" aria-labelledby="pageheading" id="pageheading">
+    
+          <div class="grid-container p-small-l-0 p-small-r-0">
+            <div class="cell small-12 medium-6 large-6 white-text p-t-100 p-b-100 p-small-t-0 p-small-b-0">
+                <div class="m-t-50 m-b-50 m-small-t-0 m-small-b-0 p-l-30 p-r-30 p-t-30 p-b-20 p-small-l-10 p-small-t-10 p-small-b-10 p-small-r-10 bg-core-blue opacity-effect inline-block shadow">
+    
+                    <p class="h1 bl m-b-10">Give Feedback</p>
+    
+    
+                    <p class="m-b-0">Coronavirus (COVID-19) enquiries form</p>
+    
+                </div>
+            </div>
+          </div>
+        </div>
+    
+    
+    
     
     
     
     
     <div class="grid-container m-t-30 m-b-60">
-      <h1 class="show-for-small-only">UK Visa History</h1>
-    
-      <form id="form_email_533601" enctype="multipart/form-data" action="https://www.ulster.ac.uk/accept/offer/visa-history" method="post" class="application-form show-legends uls-preloader" ><input type="hidden" name="SQ_FORM_533601_PAGE" value="1"  class="sq-form-field" id="SQ_FORM_533601_PAGE" /><input type="hidden" name="form_email_533601_referral_url" value="" /><div class="grid-x grid-margin-x">
-        <div class="cell medium-3" id="catering-side-menu">
-          <ul class="menu vertical no-bullet sq-form-page-list">
-    
-    							<li class="sq-form-current-page-number sq-form-last-seen-page-number">Your Details</li>
-    							<li class="sq-form-unseen-page-number">Your UK Visa History</li>
-    							<li class="sq-form-unseen-page-number">UK Study History</li>
-    							<li class="sq-form-unseen-page-number">Other UK Visa History</li>
-    							<li class="sq-form-unseen-page-number">Refusal of Visa</li>
-    							<li class="sq-form-unseen-page-number">Curtailment Notices</li>
-    
-    
-          </ul>
-        </div>
-        <div class="cell medium-9 large-9">
-            <h1>UK Visa History</h1>
-    
-            <div class="callout">
-                <p>Please use this form to give us more details of your UK visa history.</p>
-            </div>
-    
-    
-    
-    
-    
-            <fieldset class="sq-form-section"><legend class="sq-form-section-title">Your Details</legend><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q533749_q2">Student ID Number <abbr class="sq-form-required-field" title="required">*</abbr></label> <em class="sq-form-question-note">This will start with B00</em> <div class="sq-form-question-answer" ><input type="text" name="q533749:q2" value="" size="30" maxlength="300"  placeholder="B00"  id="q533749_q2" class="sq-form-field" /></div>
-    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q533749_q5">Application Number <abbr class="sq-form-required-field" title="required">*</abbr></label> <em class="sq-form-question-note">This will start with D00</em> <div class="sq-form-question-answer" ><input type="text" name="q533749:q5" value="" size="30" maxlength="300"  placeholder="D00"  id="q533749_q5" class="sq-form-field" /></div>
-    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q533749_q1">First name <abbr class="sq-form-required-field" title="required">*</abbr></label> <div class="sq-form-question-answer" ><input type="text" name="q533749:q1" value="" size="30" maxlength="300"  id="q533749_q1" class="sq-form-field" /></div>
-    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q533749_q4">Family Name <abbr class="sq-form-required-field" title="required">*</abbr></label> <div class="sq-form-question-answer" ><input type="text" name="q533749:q4" value="" size="30" maxlength="300"  id="q533749_q4" class="sq-form-field" /></div>
-    </div><div class="sq-form-question sq-form-question-email-address "><label class="sq-form-question-title" for="q533749_q3">Email <abbr class="sq-form-required-field" title="required">*</abbr></label> <div class="sq-form-question-answer" ><input type="email" name="q533749:q3" value="" size="30" maxlength="300"  id="q533749_q3" class="sq-form-field" /></div>
+      <h1 class="show-for-small-only">Give Feedback</h1>
+      <p class="show-for-small-only">Coronavirus (COVID-19) enquiries form</p>
+      <form id="form_email_549095" enctype="multipart/form-data" action="https://www.ulster.ac.uk/coronavirus/feedback?subject=549576" method="post" class="application-form uls-preloader" ><input type="hidden" name="SQ_FORM_549095_PAGE" value="1"  class="sq-form-field" id="SQ_FORM_549095_PAGE" /><input type="hidden" name="form_email_549095_referral_url" value="" />		<div class="sq-form-required-field-note">Required fields are marked with an asterisk (<abbr class="sq-form-required-field" title="required">*</abbr>).</div>
+    		    		    <fieldset class="sq-form-section"><legend class="sq-form-section-title">Details</legend><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q13">Referral ID</label> <div class="sq-form-question-answer" ><input type="hidden" name="q549097:q13" value="549576" size="30" maxlength="300"  id="q549097_q13" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q9">Covid-19 Web Enquiry</label> <div class="sq-form-question-answer" ><input type="hidden" name="q549097:q9" value="Registry" size="30" maxlength="300"  id="q549097_q9" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q1">First name <abbr class="sq-form-required-field" title="required">*</abbr></label> <div class="sq-form-question-answer" ><input type="text" name="q549097:q1" value="" size="30" maxlength="300"  id="q549097_q1" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q2">Last name <abbr class="sq-form-required-field" title="required">*</abbr></label> <div class="sq-form-question-answer" ><input type="text" name="q549097:q2" value="" size="30" maxlength="300"  id="q549097_q2" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-email-address "><label class="sq-form-question-title" for="q549097_q3">Email address <abbr class="sq-form-required-field" title="required">*</abbr></label> <div class="sq-form-question-answer" ><input type="text" name="q549097:q3" value="" size="30" maxlength="300"  id="q549097_q3" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q4">Mobile number</label> <em class="sq-form-question-note">Only enter your mobile number if you require a callback from a staff member.</em> <div class="sq-form-question-answer" ><input type="tel" name="q549097:q4" value="" size="30" maxlength="300" data-country="GB" id="q549097_q4" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-option-list "><fieldset><legend class="sq-form-question-title">Are you a current student? <abbr class="sq-form-required-field" title="required">*</abbr></legend> <div class="sq-form-question-answer" ><ul><li><input type="radio" name="q549097:q6" id="q549097_q6_0" value="0"  class="sq-form-field" /> <label for="q549097_q6_0">Yes</label></li><li><input type="radio" name="q549097:q6" id="q549097_q6_1" value="1" checked="checked"  class="sq-form-field" /> <label for="q549097_q6_1">No</label></li></ul></div>
+    </fieldset></div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q7">Please add your student number</label> <div class="sq-form-question-answer" ><input type="text" name="q549097:q7" value="" size="30" maxlength="300"  id="q549097_q7" class="sq-form-field" /></div>
+    </div><div class="sq-form-question sq-form-question-option-list "><fieldset><legend class="sq-form-question-title">Campus</legend> <div class="sq-form-question-answer" ><ul><li><input type="radio" name="q549097:q12" id="q549097_q12_0" value="0" checked="checked"  class="sq-form-field" /> <label for="q549097_q12_0">Belfast</label></li><li><input type="radio" name="q549097:q12" id="q549097_q12_1" value="1"  class="sq-form-field" /> <label for="q549097_q12_1">Coleraine</label></li><li><input type="radio" name="q549097:q12" id="q549097_q12_2" value="2"  class="sq-form-field" /> <label for="q549097_q12_2">Jordanstown</label></li><li><input type="radio" name="q549097:q12" id="q549097_q12_3" value="3"  class="sq-form-field" /> <label for="q549097_q12_3">Magee</label></li></ul></div>
+    </fieldset></div><div class="sq-form-question sq-form-question-text "><label class="sq-form-question-title" for="q549097_q11">Message</label> <div class="sq-form-question-answer" ><textarea name="q549097:q11" cols="60" rows="7" onkeyup="if (this.value.length > 900) { this.value = this.value.substr(0,900); alert('This field can contain no more than 900 characters.'); this.focus()}" onblur="if (this.value.length > 900) { this.value = this.value.substr(0,900); alert('This field can contain no more than 900 characters.'); this.focus()}"  id="q549097_q11" class="sq-form-field"></textarea></div>
     </div></fieldset>
-    
-              <hr>
-              <div class="grid-x grid-padding-x grid-padding-y">
-                  <div class="cell small-12 medium-3 large-3">
-    
-                  </div>
-                  <div class="cell small-12 medium-3 large-3 large-offset-2">
-    
-                  </div>
-                  <div class="cell small-12 medium-4 large-4">
-                      <input type="submit" name="form_email_533601_submit" value="Next Page" class="button rounded success shadow expanded" id="form_email_533601_submit" />
-                  </div>
-              </div>
-    
-        </div>
-    </div></form>
+    		    <div class="sq-form-control">
+    		    					    <div class="sq-form-captcha">
+    					    <span id="sq_normal_captcha"><img id="sq_security_key" src="/coronavirus/feedback?SQ_ACTION=send_security_key" alt="Security key" border="0" /><br/><label  for="SQ_SYSTEM_SECURITY_KEY_VALUE">Type the characters you see in the picture above: </label><br/><input type="text" name="SQ_SYSTEM_SECURITY_KEY_VALUE" value="" size="5"  class="sq-form-field" id="SQ_SYSTEM_SECURITY_KEY_VALUE" /></span><span id="sq_regen_captcha"><br /><i>Can't read the security key? <a href="#" onclick="var img = document.getElementById('sq_security_key'); img.src = '/coronavirus/feedback?SQ_ACTION=send_security_key&amp;regen_key=1&amp;t=' + new Date().getTime(); return false;">Click here to get a new key</a></i></span>
+    					    </div>
+    					    				    <input type="submit" name="form_email_549095_submit" value="Submit" class="sq-form-submit" id="form_email_549095_submit" />
+    				    		  </div>
+    		  </form>
     </div>
-    
     
       <!--noindex-->
     <footer class="hide-for-print" role="contentinfo" aria-labelledby="footer" id="footer">

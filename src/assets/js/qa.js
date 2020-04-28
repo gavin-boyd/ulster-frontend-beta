@@ -90,11 +90,8 @@ require('./plugins/imagealternator/init');
 require('slick-carousel');
 require('./plugins/slickslider/init');
 
-//clearing site message
-//require('./plugins/clearing-audiences/site-message');
-
 //site message
-//require('./plugins/site-message/init');
+require('./plugins/site-message/init-for-qa');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');

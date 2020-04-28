@@ -4,7 +4,7 @@ require('./plugins/form-dependent-selections/init');
 
 //init tel inputs
 jQuery(document).ready(function() {
-  jQuery('input[type=tel]').each(function() {
+  jQuery('form.application-form input[type=tel]').each(function() {
     if (jQuery(this).data('country')) {
       var initialCountry = jQuery(this).data('country');
     } else {
@@ -37,8 +37,7 @@ jQuery(document).ready(function() {
         'formatOnDisplay': true,
         'autoHideDialCode': false,
         'initialCountry': initialCountry,
-        'separateDialCode': true,
-        'utilsScript': 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.11/js/utils.js'
+        'separateDialCode': true
     };
     jQuery(this).intlTelInput(options);
   });
@@ -47,7 +46,9 @@ jQuery(document).ready(function() {
     //e.preventDefault();
     jQuery('input[type=tel]').each(function() {
       var telnumber = jQuery(this).intlTelInput("getNumber", intlTelInputUtils.numberFormat.E164);
-      jQuery(this).val(telnumber);
+      if (jQuery(this).val() !== '') {
+        jQuery(this).val(telnumber);
+      }
     });
   });
 });

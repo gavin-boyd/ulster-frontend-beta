@@ -1,0 +1,527 @@
+<div class="grid-container m-t-60 m-b-200">
+	<h1 class="uppercase text-core-blue larger">Styleguide</h1>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Header &amp; Nav</h2>
+    {{> header}}
+	</div>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-30 text-sky-blue larger hide-for-small-only"><span class="text-core-blue">Section:</span> Desktop Side Nav</h2>
+		{{> side-nav-example-2}}
+
+		<h2 class="uppercase m-b-30 text-sky-blue larger"><span class="text-core-blue">Section:</span> Mobile Side Nav</h2>
+		<div class="grid-container">
+		  <p class="m-b-0" id="uls-mobile-side-button">
+		    <a data-toggle="uls-mobile-side-container-show" class="m-t-10 m-b-0 uls-mob-side-container" aria-hidden="true">
+		      %globals_asset_name%
+		      <span class="fa fa-angle-down text-right m-r-10 m-t-5 flt-r" aria-hidden="true" id="uls-mobile-side-button-angle"></span>
+		    </a>
+		  </p>
+		  <div class="show-for-small-only">
+		    <div class="shadow hide" data-toggler=".hide" id="uls-mobile-side-container-show">
+		      <ul class="uls-side vertical menu" id="uls-mobile-side-container"></ul>
+		    </div>
+		  </div>
+		</div>
+
+	</div>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Breadcrumbs</h2>
+		<ul class="breadcrumbs">
+			<li>
+				<a href="https://www.ulster.ac.uk"><span>Ulster University</span></a>
+			</li>
+			<li>
+				<a href="https://www.ulster.ac.uk/study"><span>Study</span></a>
+			</li>
+			<li>
+				<a href="https://www.ulster.ac.uk/study/postgraduate"><span>Postgraduate</span></a>
+			</li>
+			<li>
+				<a href="https://www.ulster.ac.uk/study/postgraduate/fees"><span>Fees</span></a>
+			</li>
+		</ul>
+	</div>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Events</h2>
+    <div data-equalizer>
+  		<div class="grid-x grid-margin-x">
+  			<div class="cell large-12">
+  				<h2 class="h1 bl m-b-30"><a href="#">Events landing page columns</a></h2>
+  			</div>
+  			{{> event-cell}}
+  			{{> event-cell}}
+  			{{> event-cell}}
+  			{{> event-cell}}
+  		</div>
+  	</div>
+
+    <br><br>
+    <h2 class="h1 bl m-b-30">Events standard page list</h2>
+    <!-- event row start -->
+    <div class="grid-x grid-margin-x m-b-30" data-area="true" data-area-url="https://www.ulster.ac.uk">
+      <div class="cell small-12 medium-4 large-4 hide-for-small-only">
+        <a href="https://www.ulster.ac.uk" aria-label="Event Title short">
+          <img alt="This is descriptive alt text" class="hqy-lazy" data-src="https://www.ulster.ac.uk/__data/assets/image/0009/264492/varieties/thumb-newsletter.jpg" data-src-small="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/blank-thumb-newsletter.gif" src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/blank-thumb-newsletter.gif">
+        </a>
+      </div>
+      <div class="cell small-12 medium-8 large-8 p-t-10 p-small-t-0 m-small-b-20">
+        <h3><a href="https://www.ulster.ac.uk">Event Title which is long and wraps two lines for example is very long</a></h3>
+        <div class="meta m-t-10">
+          <p><span><span aria-hidden="true" class="far fa-calendar"></span></span> <time datetime="2019-09-26" itemprop="startDate">Thursday 26 September 2019</time></p>
+          <p><span><span aria-hidden="true" class="far fa-clock"></span></span> 19:00</p>
+          <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <p itemprop="name"><span><span aria-hidden="true" class="far fa-map-marker"></span></span> Magee campus</p>
+            <div class="hide" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <meta content="Northland Rd" itemprop="streetAddress">
+              <meta content="Londonderry" itemprop="addressRegion">
+              <meta content="BT48 7JL" itemprop="postalCode">
+            </div>
+          </div>
+          <p><span><span aria-hidden="true" class="far fa-door-open"></span></span> The Great Hall</p>
+        </div>
+      </div>
+    </div>
+    <!-- event row end -->
+
+    <!-- event row start -->
+    <div class="grid-x grid-margin-x m-b-30" data-area="true" data-area-url="https://www.ulster.ac.uk">
+      <div class="cell small-12 medium-4 large-4 hide-for-small-only">
+        <a href="https://www.ulster.ac.uk" aria-label="Event Title short">
+          <img alt="This is descriptive alt text" class="hqy-lazy" data-src="https://www.ulster.ac.uk/__data/assets/image/0009/264492/varieties/thumb-newsletter.jpg" data-src-small="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/blank-thumb-newsletter.gif" src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/blank-thumb-newsletter.gif">
+        </a>
+      </div>
+      <div class="cell small-12 medium-8 large-8 p-t-10 p-small-t-0 m-small-b-20">
+        <h3><a href="https://www.ulster.ac.uk">Event Title which is long and wraps two lines for example is very long</a></h3>
+        <div class="meta m-t-10">
+          <p><span><span aria-hidden="true" class="far fa-calendar"></span></span> <time datetime="2019-09-26" itemprop="startDate">Thursday 26 September 2019</time></p>
+          <p><span><span aria-hidden="true" class="far fa-clock"></span></span> 19:00</p>
+          <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <p itemprop="name"><span><span aria-hidden="true" class="far fa-map-marker"></span></span> Magee campus</p>
+            <div class="hide" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <meta content="Northland Rd" itemprop="streetAddress">
+              <meta content="Londonderry" itemprop="addressRegion">
+              <meta content="BT48 7JL" itemprop="postalCode">
+            </div>
+          </div>
+          <p><span><span aria-hidden="true" class="far fa-door-open"></span></span> The Great Hall</p>
+        </div>
+      </div>
+    </div>
+    <!-- event row end -->
+  </div>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Typography</h2>
+		<div class="grid-x">
+			<div class="cell"></div>
+			<div class="wysiwyg">
+				<h1>Heading One</h1>
+				<h2>Heading Two</h2>
+				<h3>Heading Three</h3>
+				<h4>Heading Four</h4>
+				<h5>Heading Five</h5>
+				<h3 class="m-t-60">Blockquote</h3>
+				<hr>
+				<blockquote>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p><cite>James Edwards</cite>
+				</blockquote>
+				<h3 class="m-t-60">Paragraphs</h3>
+				<hr>
+				<p class="lead">This is a lead sentence.</p>
+				<p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+				<h3 class="m-t-60">List unordered</h3>
+				<hr>
+				<ul>
+					<li>list item 1</li>
+					<li>list item 1
+						<ul>
+							<li>list item 2</li>
+							<li>list item 2
+								<ul>
+									<li>list item 3</li>
+									<li>list item 3</li>
+								</ul>
+							</li>
+							<li>list item 2</li>
+							<li>list item 2</li>
+						</ul>
+					</li>
+					<li>list item 1</li>
+					<li>list item 1</li>
+				</ul>
+				<h3 class="m-t-60">Change list bullet icon</h3>
+
+				<ul class="large check-circle list-icon-bright-blue">
+					<li>Item One</li>
+					<li>Item two</li>
+					<li>Item three</li>
+				</ul>
+
+				<ul class="large check-circle white-text list-icon-white">
+					<li>Item One</li>
+					<li>Item two</li>
+					<li>Item three</li>
+				</ul>
+
+
+				<h3 class="m-t-60">List ordered</h3>
+				<hr>
+				<ol>
+					<li>list item 1</li>
+					<li>list item 1
+						<ol>
+							<li>list item 2</li>
+							<li>list item 2
+								<ol>
+									<li>list item 3</li>
+									<li>list item 3</li>
+								</ol>
+							</li>
+							<li>list item 2</li>
+							<li>list item 2</li>
+						</ol>
+					</li>
+					<li>list item 1</li>
+					<li>list item 1</li>
+				</ol>
+				<h3 class="m-t-60">Tabular data</h3>
+				<hr>
+				<p>Default table</p>
+				<table>
+					<caption>
+						Table Caption
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">thead th</th>
+							<th scope="col">thead th</th>
+							<th scope="col">thead th</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>tbody td</td>
+							<td>tbody td</td>
+							<td>tbody td</td>
+						</tr>
+						<tr>
+							<td>tbody td</td>
+							<td>tbody td</td>
+							<td>tbody td</td>
+						</tr>
+						<tr>
+							<td>tbody td</td>
+							<td>tbody td</td>
+							<td>tbody td</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Table with side headings</p>
+				<table>
+					<caption>
+						Table Caption
+					</caption>
+					<thead>
+						<tr>
+							<th id="th1" scope="col">thead th</th>
+							<th id="th2" scope="col">thead th</th>
+							<th id="th3" scope="col">thead th</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th headers="th1" id="th4" scope="row">tbody th</th>
+							<td headers="th2 th4">tbody td</td>
+							<td headers="th3 th4">tbody td</td>
+						</tr>
+						<tr>
+							<th headers="th1" id="th5" scope="row">tbody th</th>
+							<td headers="th2 th5">tbody td</td>
+							<td headers="th3 th5">tbody td</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3 class="m-t-60">Text elements</h3>
+				<hr>
+				<div class="wysiwyg">
+					<p>The <a href="#">a element</a> example</p>
+					<p>The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples</p>
+					<p>The <b>b element</b> example</p>
+					<p>The <cite>cite element</cite> example</p>
+					<p>The <code>code element</code> example</p>
+					<p>The <em>em element</em> example</p>
+					<p>The <del>del element</del> example</p>
+					<p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+					<p>The <i>i element</i> example</p>
+					<p>The <ins>ins element</ins> example</p>
+					<p>The <kbd>kbd element</kbd> example</p>
+					<p>The <mark>mark element</mark> example</p>
+					<p>The <q>q element</q> example</p>
+					<p>The <q>q element <q>inside</q> a q element</q> example</p>
+					<p>The <s>s element</s> example</p>
+					<p>The <samp>samp element</samp> example</p>
+					<p>The <small>small element</small> example</p>
+					<p>The <span>span element</span> example</p>
+					<p>The <strong>strong element</strong> example</p>
+					<p>The <sub>sub element</sub> example</p>
+					<p>The <sup>sup element</sup> example</p>
+					<p>The <u>u element</u> example</p>
+					<p>The <var>var element</var> example</p>
+					<h3 class="m-t-60">Date/Time</h3>
+					<hr>
+					<p>Remember, remember the <time datetime="1605-11-05">5<sup>th</sup> of November</time></p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="m-t-60 m-b-60">
+			<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Colour</h2>
+			<div class="wysiwyg">
+				<h1 class="text-sky-blue">Sky Blue</h1>
+				<h1 class="text-bright-blue">Bright Blue</h1>
+				<h1 class="text-deep-blue">Deep Blue</h1>
+				<h1 class="text-core-blue">Core Blue</h1>
+
+        <div class="grid-x grid-margin-x grid-margin-y m-t-60">
+          <div class="cell large-6">
+            <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-sky-blue">
+              <h2>Heading</h2>
+              <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              <p><a href="#">A link</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+            </div>
+          </div>
+          <div class="cell large-6">
+            <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-bright-blue">
+              <h2>Heading</h2>
+              <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              <p><a href="#">A link</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+            </div>
+          </div>
+          <div class="cell large-6">
+            <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-deep-blue">
+              <h2>Heading</h2>
+              <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              <p><a href="#">A link</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+            </div>
+          </div>
+          <div class="cell large-6">
+            <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-core-blue">
+              <h2>Heading</h2>
+              <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              <p><a href="#">A link</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+              <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-background hqy-lazy" data-src="https://www.ulster.ac.uk/__data/assets/image/0011/436286/FamilyOD2019_FB_V3-4July31-web-image.jpg">
+          <div class="grid-x grid-margin-x grid-margin-y m-t-60 opacity-effect">
+            <div class="cell large-6">
+              <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-sky-blue">
+                <h2>Heading</h2>
+                <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <p><a href="#">A link</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-background hqy-lazy" data-src="https://www.ulster.ac.uk/__data/assets/image/0011/436286/FamilyOD2019_FB_V3-4July31-web-image.jpg">
+          <div class="grid-x grid-margin-x grid-margin-y m-t-60 opacity-effect">
+            <div class="cell large-6">
+              <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-bright-blue">
+                <h2>Heading</h2>
+                <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <p><a href="#">A link</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-background hqy-lazy" data-src="https://www.ulster.ac.uk/__data/assets/image/0011/436286/FamilyOD2019_FB_V3-4July31-web-image.jpg">
+          <div class="grid-x grid-margin-x grid-margin-y m-t-60 opacity-effect">
+            <div class="cell large-6">
+              <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-deep-blue">
+                <h2>Heading</h2>
+                <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <p><a href="#">A link</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-background hqy-lazy" data-src="https://www.ulster.ac.uk/__data/assets/image/0011/436286/FamilyOD2019_FB_V3-4July31-web-image.jpg">
+          <div class="grid-x grid-margin-x grid-margin-y m-t-60 opacity-effect">
+            <div class="cell large-6">
+              <div class="p-l-30 p-r-30 p-b-20 p-t-20 white-text bg-core-blue">
+                <h2>Heading</h2>
+                <p>Lorem Ipsum has been the industry's <a href="#">standard dummy text ever</a> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <p><a href="#">A link</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl">A call to action</a></p>
+                <p class="m-b-0"><a href="#" class="button rounded bl success">A call to action</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+			</div>
+		</div>
+	</div>
+
+  <hr>
+  <div class="m-t-60 m-b-60" id="callouts">
+    <h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Callouts</h2>
+    <div class="wysiwyg">
+      <div class="callout">
+        <h3>Just callout - .callout</h3>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+      <div class="callout secondary">
+        <h3>This is a secondary callout - .callout .secondary</h3>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+      <div class="callout primary">
+        <h3>This is a secondary callout - .callout .primary</h3>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+      <div class="callout success">
+        <h3>This is a secondary callout - .callout .success</h3>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+      <div class="callout warning">
+        <h3>This is a secondary callout - .callout .warning</h3>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="m-t-60 m-b-60">
+    <h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Accordion</h2>
+    <div class="wysiwyg">
+      <ul class="accordion" data-accordion>
+        <li class="accordion-item is-active" data-accordion-item>
+          <a href="#" class="accordion-title"><span class="h4">Accordion 1</span></a>
+          <div class="accordion-content" data-tab-content>
+            <p>Panel 1. Lorem ipsum dolor</p>
+            <a href="#">Nowhere to Go</a>
+          </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+          <a href="#" class="accordion-title"><span class="h4">Accordion 1</span></a>
+          <div class="accordion-content" data-tab-content>
+            <p>Panel 1. Lorem ipsum dolor</p>
+            <a href="#">Nowhere to Go</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+	<hr>
+	<div class="m-t-60 m-b-60">
+    <h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Buttons</h2>
+		<div class="wysiwyg">
+			<div class="grid-x">
+				<div class="cell large-2">
+					<p><a href="#" class="button expanded">Primary</a></p>
+					<p><a href="#" class="button secondary expanded">Secondary</a></p>
+					<p><a href="#" class="button success expanded">Success</a></p>
+					<p><a href="#" class="button alert expanded">Alert</a></p>
+				</div>
+			</div>
+		</div>
+  </div>
+	<hr>
+	<div class="m-t-60 m-b-100">
+    <h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Icons</h2>
+		<div class="grid-x">
+			<div class="cell large-3">
+				<h2 class="m-b-30">Duotone</h2>
+				<span class="fad fa-alarm-clock extra-large text-sky-blue" aria-hidden="true"></span>
+				<span class="fad fa-alarm-clock extra-large text-pink" aria-hidden="true"></span>
+		  </div>
+			<div class="cell large-3">
+				<h2 class="m-b-30">Regular</h2>
+				<span class="far fa-alarm-clock extra-large text-sky-blue" aria-hidden="true"></span>
+		  </div>
+			<div class="cell large-3">
+				<h2 class="m-b-30">Solid</h2>
+				<span class="fas fa-alarm-clock extra-large text-sky-blue" aria-hidden="true"></span>
+			</div>
+			<div class="cell large-3">
+				<h2 class="m-b-30">Light</h2>
+				<span class="fal fa-alarm-clock extra-large text-sky-blue" aria-hidden="true"></span>
+			</div>
+		</div>
+  </div>
+	<br><br>
+	<h2 class="h1 bl m-b-30">A-Z links</h2>
+	<ul class="menu" data-magellan="" data-offset="500"><li data-letter="A"><a href="#A" data-letter="A" class="page-letter-A">A</a></li><li data-letter="B"><a href="#B" data-letter="B" class="page-letter-B">B</a></li><li data-letter="C"><a href="#C" data-letter="C" class="page-letter-C">C</a></li><li data-letter="D"><a href="#D" data-letter="D" class="page-letter-D active">D</a></li><li data-letter="E"><a href="#E" data-letter="E" class="page-letter-E">E</a></li><li data-letter="F"><a href="#F" data-letter="F" class="page-letter-F">F</a></li><li data-letter="G"><a href="#G" data-letter="G" class="page-letter-G">G</a></li><li data-letter="H"><a href="#H" data-letter="H" class="page-letter-H">H</a></li><li data-letter="I"><a href="#I" data-letter="I" class="page-letter-I">I</a></li><li data-letter="J"><a href="#J" data-letter="J" class="page-letter-J">J</a></li><li data-letter="K"><span>K</span></li><li data-letter="L"><a href="#L" data-letter="L" class="page-letter-L">L</a></li><li data-letter="M"><a href="#M" data-letter="M" class="page-letter-M">M</a></li><li data-letter="N"><a href="#N" data-letter="N" class="page-letter-N">N</a></li><li data-letter="O"><a href="#O" data-letter="O" class="page-letter-O">O</a></li><li data-letter="P"><a href="#P" data-letter="P" class="page-letter-P">P</a></li><li data-letter="Q"><a href="#Q" data-letter="Q" class="page-letter-Q">Q</a></li><li data-letter="R"><a href="#R" data-letter="R" class="page-letter-R">R</a></li><li data-letter="S"><a href="#S" data-letter="S" class="page-letter-S">S</a></li><li data-letter="T"><a href="#T" data-letter="T" class="page-letter-T">T</a></li><li data-letter="U"><span>U</span></li><li data-letter="V"><a href="#V" data-letter="V" class="page-letter-V">V</a></li><li data-letter="W"><span>W</span></li><li data-letter="X"><span>X</span></li><li data-letter="Y"><span>Y</span></li><li data-letter="Z"><span>Z</span></li></ul>
+	<hr>
+	<div class="m-t-60 m-b-60">
+		<h2 class="uppercase m-b-60 text-sky-blue larger"><span class="text-core-blue">Section:</span> Forms</h2>
+		{{> form}}
+	</div>
+	<br><br>
+	<hr>
+	<h2 class="h1 bl m-b-30">Course list</h2>
+	<div class="uls-course-listing">
+	  <div class="course m-b-10">
+	    <h3 class="h2 bl">
+	      <a href="https://www.ulster.ac.uk/courses/202021/artificial-intelligence-19482">Artificial Intelligence - BEng (Hons)</a>
+	    </h3>
+	    <div class="grid-x grid-margin-x m-small-b-20">
+	      <div class="cell small-12 medium-12 large-6">
+	          <p class="m-b-10">Gain the skills to design and develop the next generation of Artificial Intelligence (Al) systems and services.</p>
+	      </div>
+	      <div class="cell small-12 medium-12 large-6 meta">
+	        <p>
+	          <span><span aria-hidden="true" class="fa fa-graduation-cap"></span></span>
+	            Full-time
+	          Undergraduate
+	           course
+	        </p>
+	        <p>
+	          <span><span aria-hidden="true" class="fa fa-calendar-alt"></span></span>
+	          Year of entry: 2020/21
+	        </p>
+	          <p>
+	            <span><span aria-hidden="true" class="fa fa-map-marker"></span></span>
+	                  <a href="https://www.ulster.ac.uk/campuses/magee">Magee campus</a>
+	          </p>
+	          <p>
+	            <span><span aria-hidden="true" class="fa fa-folder"></span></span>
+	            UCAS code: GA50
+	          </p>
+	      </div>
+	    </div>
+	      <div class="grid-x grid-margin-x">
+	        <div class="cell small-12 large-12">
+	          <a href="https://www.ulster.ac.uk/courses/202021/artificial-intelligence-19482" class="button rounded course-link" id="artificial-intelligence">View course&nbsp;&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>
+	        </div>
+	      </div>
+	  </div>
+	</div>
+
+</div>

@@ -62,3 +62,5 @@ PATHS:
     - "src/assets/js/course.js"
     - "src/assets/js/qa.js"
     - "src/assets/js/form.js"
+    - "src/assets/js/submit-prospectus.js"
+    - "src/assets/js/site-message-legacy.js"

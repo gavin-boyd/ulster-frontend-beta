@@ -229,7 +229,9 @@ jQuery(document).ready(function() {
     var options = {
         'utilsScript': '//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/js/utils.js?v=1.2',
         'formatOnDisplay': 'true',
-        'hiddenInput': 'metadata_field_text_272286_value'
+        'hiddenInput': 'metadata_field_text_272286_value',
+        'initialCountry': 'gb',
+        'preferredCountries': ['gb', 'ie']
     };
     jQuery(this).intlTelInput(options);
   });

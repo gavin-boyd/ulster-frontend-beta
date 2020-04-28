@@ -36,4 +36,7 @@ jQuery(document).ready(function() {
 
   // https://www.ulster.ac.uk/accept/offer/visa-history
   initShowHide('q533749_q7_0,q533749_q7_1', 'q533749_q8,q533749_q9');
+
+  // covid-19 form
+  initShowHide('q549097_q6_0,q549097_q6_1', 'q549097_q7');
 });

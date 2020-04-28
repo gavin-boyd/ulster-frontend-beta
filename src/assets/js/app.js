@@ -9,6 +9,11 @@ import 'what-input';
 window.jQuery = $;
 require('foundation-sites');
 
+//sticky fix - https://github.com/foundation/foundation-sites/issues/9892#issuecomment-401360310
+if (Foundation.MediaQuery.current == 'small') {
+  $('.ulsguide.sticky').removeAttr('data-sticky');
+}
+
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
 //import './lib/foundation-explicit-pieces';
@@ -90,12 +95,8 @@ require('./plugins/imagealternator/init');
 require('slick-carousel');
 require('./plugins/slickslider/init');
 
-//clearing site message
-//require('./plugins/clearing-audiences/site-message');
-
 //site message
-require('./plugins/site-message/init-site-message');
-//require('./plugins/site-message/init-graduation');
+require('./plugins/site-message/init-for-ulster');
 
 //people list hide last hr
 require('./plugins/peoplelist/init');
