@@ -40,7 +40,7 @@ foundation new --framework sites --template zurb
 
 The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
 
-Now `cd` to your project name and to start your project run 
+Now `cd` to your project name and to start your project run
 
 ```bash
 foundation watch
@@ -68,3 +68,28 @@ http://localhost:8000
 ```
 
 To create compressed, production-ready assets, run `yarn run build`.
+
+- "src/assets/js/app-test.js"
+- "src/assets/js/homepage.js"
+- "src/assets/js/homepage-2.js"
+- "src/assets/js/legacy-app.js"
+- "src/assets/js/app-with-day-night.js"
+- "src/assets/js/global.js"
+- "src/assets/js/welcomeweek.js"
+- "src/assets/js/countdown.js"
+- "src/assets/js/clearing.js"
+- "src/assets/js/phds.js"
+- "src/assets/js/coursefinder.js"
+- "src/assets/js/course-atoz.js"
+- "src/assets/js/coursefinder-upgrade.js"
+- "src/assets/js/coursefinder-upgrade-2.js"
+- "src/assets/js/event.js"
+- "src/assets/js/policy-checker.js"
+- "src/assets/js/sports-fixtures.js"
+- "src/assets/js/fb-geo-test.js"
+- "src/assets/js/course.js"
+- "src/assets/js/qa.js"
+- "src/assets/js/form.js"
+- "src/assets/js/submit-prospectus.js"
+- "src/assets/js/site-message-legacy.js"
+- "src/assets/js/live-chat.js"

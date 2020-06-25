@@ -1,0 +1,25 @@
+/*.uls-social-wall
+{
+  * { box-sizing: border-box; }
+
+  .uls-social-wall-grid {
+    background: none;
+    max-width: none;
+  }
+
+  .uls-social-wall-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .uls-item {
+    float: left;
+    width: 200px;
+    height: 200px;
+  }
+
+  .uls-item--width2 { width: 400px; }
+  .uls-item--height2 { height: 400px; }
+}
+*/

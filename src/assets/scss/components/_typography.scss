@@ -278,9 +278,25 @@ ul.large,
 /* tables */
 table
 {
-  thead
+  caption
   {
-    background: $deep-blue;
+    text-align: left;
+    color: $core-blue;
+
+    &::before
+    {
+      font-family: 'Font Awesome 5 Pro';
+      content:"\f107";
+      opacity: .5;
+      margin-right: 5px;
+      color: $core-blue;
+    }
+  }
+
+  thead,
+  tbody th
+  {
+    background: $core-blue;
     color:#fff;
   }
 
@@ -429,8 +445,8 @@ h1
       {
         line-height:1;
         display: block;
-        background: #eee;
-        color: #ccc;
+        background: #f4f4f4 !important;
+        color: #4f4f4f !important;
         text-align: center;
       }
 
@@ -459,7 +475,7 @@ h1
 /* accessibility for links focus */
 a
 {
-  &:not(.button):not(.accordion-title):not(.brand)
+  &:not(.button):not(.accordion-title):not(.brand):not(.hover):not(.breadcrumbs a):not(.breadcrumbs a span):not(.uls-side a)
   {
     &:focus
     {
@@ -473,6 +489,21 @@ a
       {
         color: #000 !important;
       }
+    }
+
+    &:active
+    {
+      color: #0b0c0c;
+    }
+
+    &:hover
+    {
+      color: #003078;
+    }
+
+    &:visited
+    {
+      color:#4c2c92;
     }
   }
 }

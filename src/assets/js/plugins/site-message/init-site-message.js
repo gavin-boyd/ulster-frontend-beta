@@ -3,7 +3,7 @@ jQuery.fn.extend({
     var api = apiURL;
 
     //default message
-    jQuery.ajax({
+    /*jQuery.ajax({
       dataType: "json",
       url: api,
       success: function(data) {
@@ -11,14 +11,21 @@ jQuery.fn.extend({
           addBanner(
             data[0].markup
           );
-          //// DEBUG:
-          //console.log('show banner');
         }
       },
-      error: function(error){
-        //console.log(error);
+      error: function(error){}
+    });*/
+
+    //init with local json
+    var dataContainer = jQuery('#uls-site-message-data');
+    if (dataContainer) {
+      if (dataContainer.length > 0) {
+        var data = JSON.parse(dataContainer.html());
+        if (data.display == 'True') {
+          addBanner(data.markup);
+        }
       }
-    });
+    }
 
     function addBanner(markup) {
       var display = jQuery.cookie('uls_site_msgf');

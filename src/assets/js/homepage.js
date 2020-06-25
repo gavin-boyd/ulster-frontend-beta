@@ -56,7 +56,7 @@ require('./plugins/last-search/init');
 //require('./plugins/clickable-div/init');
 
 //site message
-require('./plugins/site-message/init-site-message');
+require('./plugins/site-message/init-for-ulster');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */

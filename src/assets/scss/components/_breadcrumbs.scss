@@ -106,7 +106,15 @@ ul.breadcrumbs
 
       *
       {
-        color: #fff;
+        color: #fff !important;
+      }
+
+      a
+      {
+        &:hover
+        {
+          color: #fff !important;
+        }
       }
     }
   }

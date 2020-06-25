@@ -9,7 +9,7 @@
           width: 768,
           src: 'data-src-medium'
       }],
-      offset: 100
+      offset: 0
     });
 })();
 

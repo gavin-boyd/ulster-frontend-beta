@@ -37,3 +37,16 @@ if (jQuery('.ulster-isotope-grid-filter').length > 0) {
     })();
   });
 }
+/*function initSocialWall() {
+  if (jQuery('.uls-social-wall').length > 0) {
+    $('.uls-social-wall .uls-social-wall-grid').isotope({
+      itemSelector: '.uls-item',
+      masonry: {
+        columnWidth: 200
+      }
+    });
+  }
+}
+$(window).load(function() {
+  initSocialWall();
+});*/

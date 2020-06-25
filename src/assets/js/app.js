@@ -146,6 +146,12 @@ require('./plugins/universal-nav/init');
 //form preloader
 require('./plugins/form-preloader/init');
 
+//add class - dev for study
+//require('./plugins/addclass/init');
+
+//imagefill
+require('./plugins/imagefill/init');
+
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 

@@ -976,6 +976,16 @@ ol.rounded
   box-shadow: none !important;
 }
 
+img.zoom
+{
+  transition: transform .2s;
+
+  &:hover
+  {
+    transform: scale(1.1);
+  }
+}
+
 a.zoom
 {
   overflow: hidden;
@@ -1010,6 +1020,12 @@ a.zoom
       overflow: visible;
       height: auto;
     }
+  }
+
+  &.no-height
+  {
+    height: auto;
+    overflow: visible;
   }
 }
 
