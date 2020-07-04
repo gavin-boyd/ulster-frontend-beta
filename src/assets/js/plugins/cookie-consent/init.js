@@ -16,7 +16,7 @@ jQuery.fn.extend({
         var consentCookie = jQuery.cookie('uls_cc');
         var cookieHTML = '<div id="uls_cc" role="region" aria-label="cookie banner" class="action-sheet">' +
                            '<div class="grid-container">' +
-                             '<div class="grid-x grid-margin-x bordered dark-grey-bg m-b-10 m-small-b-0 p-t-10 p-b-10 shadow">' +
+                             '<div class="grid-x grid-margin-x dark-grey-bg m-b-10 m-small-b-0 p-t-10 p-b-10 shadow">' +
                                '<div class="cell small-9 medium-10 large-10">' +
                                  '<p class="text-white m-b-0">' + domain + ' uses cookies to give users the best experience possible.</p>' +
                                  '<p class="m-b-0"><a href="https://www.ulster.ac.uk/about/cookies" class="bl text-white">Find out more&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a></p>' +

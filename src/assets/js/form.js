@@ -1,6 +1,7 @@
 require('./app');
 require('./plugins/intl-tel-input/init');
 require('./plugins/form-dependent-selections/init');
+require('./plugins/stafflookup/init');
 
 //init tel inputs
 jQuery(document).ready(function() {

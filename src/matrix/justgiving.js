@@ -24,6 +24,14 @@ function authenticateUser(user, password)
 var res = _REST.response.body;
 if (res) {
   res = eval('(' + _REST.response.body + ')');
+  var fallback = '<div class="cell large-4">';
+  fallback += '<div class="bordered radius text-center p-t-30 p-b-30 p-r-20 p-l-20">';
+  fallback += '<div data-equalizer-watch="true">';
+  fallback += '<h2 class="h4 uppercase">Amount raised</h2>';
+  fallback += '<p>Check out our fundraising total.</p><p class="m-b-0"><a href="#" class="button expanded">View on justgiving.com</a></p>';
+  fallback += '</div>';
+  fallback += '</div>';
+  fallback += '</div>';
   var output = '';
   if (res.CampaignTotals) {
     if (res.CampaignTotals.DirectDonationAmount) {
@@ -39,6 +47,8 @@ if (res) {
       output += '</div>';
       output += '</div>';
       print(output);
+    } else {
+      print(fallback);
     }
   }
 }

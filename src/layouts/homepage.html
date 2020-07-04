@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulster University</title>
+    <style>
+        body
+        {
+          -webkit-transition: opacity 500ms ease-in-out;
+          -moz-transition: opacity 500ms ease-in-out;
+          -o-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
+          opacity: 0;
+        }
+    </style>
+    <link rel="preload" as="font" href="https://cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="https://cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="https://cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts/fa-regular-400.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="style" href="{{root}}assets/css/app.css" type="text/css" />
+    <noscript>
+      <link href="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/css/app.css?v=8.0.5" media="screen" rel="stylesheet" type="text/css">
+    </noscript>
+  </head>
+  <body>
+    {{> body}}
+    <script src="{{root}}assets/js/homepage.js" async></script>
+  </body>
+</html>

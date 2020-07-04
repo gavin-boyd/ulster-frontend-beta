@@ -473,37 +473,62 @@ h1
 }
 
 /* accessibility for links focus */
-a
+.wysiwyg a,
+h2 a,
+h3 a,
+h4 a,
+p a
 {
-  &:not(.button):not(.accordion-title):not(.brand):not(.hover):not(.breadcrumbs a):not(.breadcrumbs a span):not(.uls-side a)
+  //border-bottom: 1px dotted #ccc;
+}
+
+
+p,
+li,
+td,
+h3,
+h4,
+h5,
+.callout,
+.footer
+{
+  &:not(.menu-item):not(.is-active)
   {
-    &:focus
+    a
     {
-      outline: 3px solid transparent;
-      background-color: #ffdd00 !important;
-      box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
-      text-decoration: none;
-      color: #000 !important;
-
-      *
+      &:not(.button):not(.mega-menu-link):not(.hover):not(.menu-item)
       {
-        color: #000 !important;
+        text-decoration: underline;
+
+        &:focus
+        {
+          outline: 3px solid transparent;
+          background-color: #ffdd00 !important;
+          box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+          text-decoration: none;
+          color: #000 !important;
+
+          *
+          {
+            color: #000 !important;
+          }
+        }
+
+        &:active
+        {
+          color: #0b0c0c;
+        }
+
+        &:hover
+        {
+          color: #003078;
+        }
+
+        &:visited
+        {
+          color:#4c2c92;
+        }
       }
-    }
-
-    &:active
-    {
-      color: #0b0c0c;
-    }
-
-    &:hover
-    {
-      color: #003078;
-    }
-
-    &:visited
-    {
-      color:#4c2c92;
     }
   }
 }
@@ -517,3 +542,17 @@ a
     box-shadow: none;
   }
 }
+
+/* accessibility link fixes */
+/*.breadcrumbs a,
+p a.text-white,
+.white-text p a,
+.white-text li a
+{
+  text-decoration: underline dotted #fff 1px !important;
+
+  &.button
+  {
+    text-decoration: none !important;
+  }
+}*/

@@ -1,10 +1,13 @@
 @charset 'utf-8';
-//v4 fontawesome
-//@import './node_modules/font-awesome/scss/font-awesome.scss';
-//@import 'components/font-awesome-paths';
+
+*
+{
+  font-display: swap !important;
+}
 
 //v5 fontawesome
 $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !default;
+$fa-font-display: swap !default;
 @import './node_modules/@fortawesome/fontawesome-pro/scss/fontawesome';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/v4-shims';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/solid';
@@ -13,8 +16,8 @@ $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts" !d
 @import './node_modules/@fortawesome/fontawesome-pro/scss/brands';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/duotone';
 @import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/colours';
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/fonts';
-@import 'settings-home';
+@import 'components/fonts';
+@import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
