@@ -12,8 +12,8 @@ $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts/5.1
 @import './node_modules/@fortawesome/fontawesome-pro/scss/light';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/brands';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/duotone';
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/colours';
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/fonts';
+@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/colours';
+@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/fonts';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -68,11 +68,11 @@ $fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts/5.1
 @import "./node_modules/angled-edges/angled-edges"; //https://www.npmjs.com/package/angled-edges
 
 //custom
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/variables';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/video-promo';
-//@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/videowall';
-@import '/Applications/Mamp/htdocs/ulster-frontend/app/scss/components/mixins';
+@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/variables';
+//@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
+//@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/video-promo';
+//@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/videowall';
+@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/mixins';
 @import 'components/colours';
 @import 'components/mega-menu';
 @import 'components/multilevel-offcanvas-menu';

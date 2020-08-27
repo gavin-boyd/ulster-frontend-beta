@@ -80,6 +80,9 @@ require('./plugins/prettycheckable/init');
 //Cookies
 require('./plugins/cookie/init');
 
+//site message
+require('./plugins/site-message/init-for-ulster');
+
 //ww favs
 require('./plugins/welcomeweek-favourites/init');
 

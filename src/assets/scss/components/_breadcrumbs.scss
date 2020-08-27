@@ -90,15 +90,29 @@ ul.breadcrumbs
   }
 }
 
+.grid-container.with-overlay.overlay
+{
+  @include breakpoint(medium up) {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    @include clearfix;
+ }
+}
+
 .spi-breadcrumb
 {
-  @include breakpoint(medium) {
-    position: absolute;
-    z-index: 9999;
+  @include breakpoint(medium up) {
     background: rgba(0,0,0,.6);
+    //position: absolute;
+    //z-index: 9999;
+    //background: rgba(0,0,0,.6);
     padding: 0 10px;
-    width: 100%;
-    max-width: 1120px;
+    //width: 100%;
+    //border:1px solid red;
+    //max-width: 1120px;
 
     ul.breadcrumbs
     {

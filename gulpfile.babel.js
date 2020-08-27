@@ -103,7 +103,7 @@ function sass() {
     //'src/assets/scss/application-form.scss',
     //'src/assets/scss/course.scss'
     //'src/assets/scss/courseprintpdf.scss',
-    'src/assets/scss/form.scss',
+    'src/assets/scss/form.scss'
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({

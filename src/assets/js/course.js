@@ -95,6 +95,9 @@ require('./plugins/last-search/init');
 //require('./plugins/clearing-audiences/site-message');
 
 //site message
+require('./plugins/site-message/init-for-ulster');
+
+//site message
 //require('./plugins/site-message/init');
 
 //people list hide last hr

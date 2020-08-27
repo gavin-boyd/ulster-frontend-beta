@@ -1,2 +1,37 @@
 @import 'app';
 @import 'components/intl-tel';
+@import 'components/flatpicker';
+
+//fix styles for foundation date picker
+.db-show
+{
+  .button
+  {
+    border-radius:0 !important;
+    padding: .25rem .5rem !important;
+  }
+
+  .dbCalGrid
+  {
+    margin-bottom: 0 !important;;
+  }
+}
+.button.dbOpenButton
+{
+  min-width: 0 !important;
+  height: 47px;
+  margin: 6px 0;
+
+  &::after
+  {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f783";
+    font-size: 20px;
+  }
+
+
+  svg
+  {
+    display: none;
+  }
+}

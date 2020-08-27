@@ -914,7 +914,7 @@ ol.rounded
   list-style: none;
   padding-left: 40px;
 
-  li
+  > li
   {
     margin: 0 0 0.5rem 0;
     counter-increment: my-awesome-counter;
@@ -936,7 +936,7 @@ ol.rounded
       text-align: center;
       position: absolute;
       left: -60px;
-      top: -4px;
+      top: 0;
     }
   }
 }
