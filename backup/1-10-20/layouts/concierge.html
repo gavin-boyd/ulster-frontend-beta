@@ -1,0 +1,88 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulster University</title>
+    <!--<link rel="stylesheet" href="{{root}}assets/css/critical.css" media="screen">-->
+    <link rel="stylesheet" href="{{root}}assets/css/app.css" media="screen">
+    <!--<link rel="stylesheet" href="{{root}}assets/css/print.css" media="print">-->
+  </head>
+  <body>
+    {{> body}}
+    <!--<script src="{{root}}assets/js/app.js" async></script>-->
+    <script src="https://ulster.funnelback.co.uk/stencils/resources/thirdparty/jquery/v3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="https://ulster.funnelback.co.uk/stencils/resources/autocompletion/js/typeahead.bundle-0.11.1.min.js"></script>
+    <script src="https://ulster.funnelback.co.uk/stencils/resources/autocompletion/js/handlebars.min-v4.0.5.js"></script>
+    <script src="https://ulster.funnelback.co.uk/s/resources/ulster-he-meta/_default/js/typeahead.fb-2.6.js"></script>
+    <script id="auto-completion-courses" type="text/x-handlebar-template">
+      <div>
+      {{extra.disp}}
+        <h6>{{extra.disp.title}} <small class="text-muted">{{extra.disp.metaData.coursetype}}-{{extra.disp.metaData.courseNumber}}</small></h6>
+        <div class="details">
+          <small>{{extra.disp.metaData.entryyear}}</small>
+        </div>
+      </div>
+    </script>
+    <script id="auto-completion-people" type="text/x-handlebar-template">
+      <div class="media">
+      <h6>Person</h6>
+        {{#if extra.disp.metaData.image}}
+          <img class="d-flex mr-3 rounded-circle" src="{{extra.disp.metaData.image}}" alt="{{extra.disp.title}}" />
+        {{/if}}
+        <div class="media-body">
+
+          <h6>{{extra.disp.metaData.firstname}} {{extra.disp.metaData.surname}}</h6>
+          <div>{{extra.disp.metaData.jobtitle}}</div>
+          <div class="details text-muted">
+            {{#if extra.disp.metaData.peopleDepartment}}<div><small><span class="fas fa-fw fa-university text-muted" aria-hidden="true"></span> {{extra.disp.metaData.peopleDepartment}}</small></div>{{/if}}
+            {{#if extra.disp.metaData.peoplePhone}}<div><small><span class="fas fa-fw fa-phone text-muted" aria-hidden="true"></span> {{extra.disp.metaData.peoplePhone}}</small></div>{{/if}}
+            {{#if extra.disp.metaData.peopleEmail}}<div><small><span class="far fa-fw fa-envelope text-muted" aria-hidden="true"></span> {{extra.disp.metaData.peopleEmail}}</small></div>{{/if}}
+          </div>
+        </div>
+      </div>
+    </script>
+    <script>
+      jQuery(document).ready( function() {
+
+      jQuery('input#student-concierge').qc({
+          program: '//ulster.funnelback.co.uk/s/suggest.json',
+          alpha: '0.5',
+          show: '10',
+          sort: '0',
+          length: '3',
+          datasets: {
+              organic: {
+                  name: 'Suggestions',
+                  collection: 'ulster-he-meta',
+                  profile: '_default',
+                  show: '10',
+              },
+              people: {
+                  name: 'People',
+                  collection: 'ulster-people',
+                  profile: 'auto-completion',
+                  show: '3',
+                  template: {
+                    suggestion: document.querySelector('#auto-completion-people').text
+                  },
+              },
+              courses: {
+                  name: 'Courses',
+                  collection: 'ulster-dev',
+                  profile: 'he-auto-completion',
+                  show: '5',
+                  template: {
+                    suggestion: document.querySelector('#auto-completion-courses').text
+                  },
+              },
+          }
+      });
+      });
+    </script>
+
+  </body>
+</html>

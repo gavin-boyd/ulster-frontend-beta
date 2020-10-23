@@ -103,7 +103,7 @@ require('./plugins/smooth-scroll/init');
 require('./plugins/cookie-consent/init');
 //init ulsterCookieConsent
 jQuery(document).ready(function() {
-    jQuery('body').ulsterCookieConsent('ulsteruniversity.qa');
+    jQuery('body').ulsterCookieConsent('ulsteruniversity.edu.qa');
 });
 
 //responsive content

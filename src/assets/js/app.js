@@ -155,6 +155,9 @@ require('./plugins/imagefill/init');
 //circle-graph - building block
 require('./plugins/circle-graph/init');
 
+//reading progress indicator
+require('./plugins/readingProgressIndicator/init');
+
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 

@@ -11,20 +11,15 @@ import $ from 'jquery';
 
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
-import './lib/foundation-explicit-pieces';
+//import './lib/foundation-explicit-pieces';
 window.jQuery = $;
-$(document).foundation();
+//$(document).foundation();
 
 /*
  * Run jQuery as jQuery
  */
 import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
-
-/*
- * APIs
- */
-
 
 /*
  * Plugins
@@ -52,9 +47,6 @@ require('./plugins/last-search/init');
 //slick init
 require('slick-carousel');
 require('./plugins/slickslider/init');
-
-//clickable div
-//require('./plugins/clickable-div/init');
 
 //site message
 require('./plugins/site-message/init-for-ulster');

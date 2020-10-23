@@ -13,6 +13,19 @@ if (jQuery('.ulster-isotope-grid').length > 0) {
   });
 }
 
+if (jQuery('.ulster-masonry-grid').length > 0) {
+  //$(window).on('load', function() {
+     $('.ulster-masonry-grid').isotope({
+       layoutMode: 'packery',
+       packery: {
+         gutter: '.ulster-masonry-grid-gutter-sizer'
+       },
+       itemSelector: '.ulster-masonry-grid-item',
+       percentPosition: true
+     });
+  //});
+}
+
 if (jQuery('.ulster-isotope-grid-vert').length > 0) {
   var $grid = $('.ulster-isotope-grid-vert').isotope({
     itemSelector: '.course',

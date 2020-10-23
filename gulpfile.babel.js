@@ -95,7 +95,7 @@ function sass() {
     'src/assets/scss/app.scss',
     //'src/assets/scss/app-edit-plus.scss',
     //'src/assets/scss/ready.scss',
-    //'src/assets/scss/homepage-live.scss'
+    //'src/assets/scss/homepage.scss'
     'src/assets/scss/critical.scss',
     //'src/assets/scss/legacy-app.scss',
     //'src/assets/scss/legacy-app-microsite.scss',
@@ -103,7 +103,7 @@ function sass() {
     //'src/assets/scss/application-form.scss',
     //'src/assets/scss/course.scss'
     //'src/assets/scss/courseprintpdf.scss',
-    'src/assets/scss/form.scss'
+    //'src/assets/scss/form.scss'
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({

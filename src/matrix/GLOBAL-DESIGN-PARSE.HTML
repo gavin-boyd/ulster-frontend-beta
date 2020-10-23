@@ -1,0 +1,157 @@
+<MySource_AREA id_name="edit_plus_exit_area" design_area="exit" print="no"></MySource_AREA><MySource_AREA id_name="edit_plus_nested_content" design_area="nest_content" print="no" /><MySource_AREA id_name="edit_plus_show_if" design_area="show_if"><MySource_SET name="condition" value="simple_edit_mode" /><MySource_THEN><!DOCTYPE html><html lang="en-GB"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8" /><title>Loading Edit Mode...</title><MySource_PRINT id_name="edit_plus_nested_content" /></head><body></body></html><MySource_PRINT id_name="edit_plus_exit_area" /></MySource_THEN></MySource_AREA>%globals_asset_contents_raw:256435%
+<MySource_AREA id_name="global_header" design_area="nest_content" print="yes" />
+<script runat="server">var breadcrumbArray = [];</script>
+
+<!--@@ Additional Content @@-->
+<MySource_AREA id_name="additional_content" design_area="nest_content" print="no" />
+<!--@@ Additional Content @@-->
+
+<!--@@ Breadcrumb @@-->
+<div class="grid-container with-overlay">
+  <nav aria-label="You are here:" role="navigation" class="hide-for-print">
+    <ul class="breadcrumbs">
+      <MySource_AREA id_name="breadcrumb" design_area="asset_lineage">
+        <MySource_SET name="levels_to_print" value="0" />
+        <MySource_SET name="start_at_level" value="0" />
+        <MySource_SET name="suffix_with_current_link" value="true" />
+        <MySource_ASSET>
+          <li><a href="<MySource_PRINT var='asset_url' />"><span><MySource_PRINT var="asset_short_name" /></span></a></li>
+          <script runat="server">breadcrumbArray.push({title: '<MySource_PRINT var="asset_short_name^escapequotes" />', url: '<MySource_PRINT var="asset_url" />' });</script>
+        </MySource_ASSET>
+        <MySource_DIVIDER></MySource_DIVIDER>
+      </MySource_AREA>
+    </ul>
+  </nav>
+</div>
+<!--@@ Breadcrumb @@-->
+
+<!--@@ Mobile sub nav @@-->
+<div class="grid-container show-for-small-only hide-for-print">
+  <p class="m-b-0" id="uls-mobile-side-button">
+      <button data-toggle="uls-mobile-side-container-show" class="m-t-10 m-b-0 uls-mob-side-container cell large-12" aria-hidden="true">
+      <span class="fa fa-ellipsis-v flt-l"></span>&nbsp;&nbsp;%globals_asset_name%
+      <span class="fa fa-angle-down text-right m-r-10 m-t-5 flt-r" aria-hidden="true" id="uls-mobile-side-button-angle"></span>
+    </button>
+  </p>
+  <div class="show-for-small-only">
+    <div class="shadow hide" data-toggler=".hide" id="uls-mobile-side-container-show">
+      <ul class="uls-side vertical menu" id="uls-mobile-side-container"></ul>
+    </div>
+  </div>
+</div>
+<!--@@ Mobile sub nav @@-->
+
+<MySource_AREA id_name="page_header" design_area="nest_content" print="no" />
+
+<!--@@ Contents and desktop side nav @@-->
+<div class="grid-container">
+  <div class="grid-x grid-padding-x grid-padding-y">
+    <MySource_AREA id_name="open_side_nav" design_area="show_if">
+    <MySource_SET name="condition" value="asset_type"/>
+    <MySource_SET name="condition_types" value="calendar_event" />
+    <MySource_SET name="condition" value="keyword_regexp"/>
+    <MySource_SET name="condition_keyword" value="asset_paint_layout_id"/>
+    <MySource_SET name="condition_keyword_match" value="[457380|463411]" />
+    <MySource_THEN></MySource_THEN>
+    <MySource_ELSE>
+      <div class="cell small-12 medium-3 large-3 small-order-3 hide-for-small-only hide-for-print">
+      <div class="radius bordered shadow card">
+        <ul class="uls-side vertical menu" id="section-nav" role="navigation" aria-label="Secondary menu">
+    </MySource_ELSE>
+    </MySource_AREA>
+          <MySource_AREA id_name="section_link" design_area="asset_lineage" print="yes">
+            <MySource_SET name="levels_to_print" value="1" />
+            <MySource_SET name="start_at_level" value="1" />
+            <MySource_SET name="suffix_with_current_link" value="false" />
+            <MySource_SET name="prefix_with_divider" value="false" />
+            <MySource_SET name="suffix_with_divider" value="false" />
+            <MySource_ASSET>
+              <li>
+                <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
+                  <MySource_PRINT var="asset_short_name" />
+                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                </a>
+              </li>
+            </MySource_ASSET>
+          </MySource_AREA>
+          <MySource_AREA id_name="sub_section_link" design_area="asset_lineage" print="yes">
+            <MySource_SET name="levels_to_print" value="1" />
+            <MySource_SET name="start_at_level" value="2" />
+            <MySource_SET name="suffix_with_current_link" value="true" />
+            <MySource_SET name="prefix_with_divider" value="false" />
+            <MySource_SET name="suffix_with_divider" value="false" />
+            <MySource_ASSET>
+              <li class="sub-section-link">
+                <a href="<MySource_PRINT var="asset_link" />" class="off-white-bg">
+                  <MySource_PRINT var="asset_short_name" />
+                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                </a>
+              </li>
+            </MySource_ASSET>
+          </MySource_AREA>
+          <MySource_AREA id_name="menu" design_area="menu_normal">
+            <MySource_SET name="wanted_asset_types" value="page_standard,page_redirect" />
+            <MySource_SET name="level" value="top"/>
+            <MySource_SET name="settings.class.normal" value="is-not-active" />
+            <MySource_SET name="settings.class.current" value="is-active" />
+            <MySource_SET name="show_subs" value="always"/>
+            <MySource_ASSET>
+              <li class="<MySource_PRINT var="settings.class" />">
+                <a href="<MySource_PRINT var="asset_link" />">
+                  <MySource_PRINT var="asset_short_name" />
+                  <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                </a>
+                <MySource_DIVIDER></MySource_DIVIDER>
+                <MySource_SUB design_area="menu_normal">
+                  <MySource_SET name="settings.class.normal" value="" />
+                  <MySource_SET name="settings.class.current" value="is-active" />
+                  <MySource_SET name="show_subs" value="always"/>
+                    <ul class="menu vertical nested" role="navigation" aria-label="Secondary menu">
+                      <MySource_ASSET>
+                        <li class="<MySource_PRINT var="settings.class" />">
+                          <a href="<MySource_PRINT var="asset_link" />">
+                            <MySource_PRINT var="asset_short_name" />
+                            <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                          </a>
+                          <MySource_SUB design_area="menu_normal">
+                            <MySource_SET name="settings.class.normal" value="" />
+                            <MySource_SET name="settings.class.current" value="is-active" />
+                            <ul class="menu vertical nested">
+                              <MySource_ASSET>
+                                <li class="<MySource_PRINT var="settings.class" />">
+                                  <a href="<MySource_PRINT var="asset_link" />">
+                                    <MySource_PRINT var="asset_short_name" />
+                                    <span class="show-for-sr"> - view the <MySource_PRINT var="asset_short_name" /> webpages</span>
+                                  </a>
+                                </li>
+                              </MySource_ASSET>
+                            </ul>
+                          </MySource_SUB>
+                        </li>
+                      </MySource_ASSET>
+                    </ul>
+                  </MySource_SUB>
+                </li>
+              </MySource_ASSET>
+          </MySource_AREA>
+    <MySource_AREA id_name="close_side_nav" design_area="show_if">
+    <MySource_SET name="condition" value="asset_type"/>
+    <MySource_SET name="condition_types" value="calendar_event" />
+    <MySource_SET name="condition" value="keyword_regexp"/>
+    <MySource_SET name="condition_keyword" value="asset_paint_layout_id"/>
+    <MySource_SET name="condition_keyword_match" value="[457380|463411]" />
+    <MySource_THEN></MySource_THEN>
+    <MySource_ELSE>
+          </ul>
+        </div>
+      </div>
+    </MySource_ELSE>
+    </MySource_AREA>
+    <MySource_AREA id_name="body" design_area="body" />
+  </div>
+</div>
+<!--@@ Contents and desktop side nav @@-->
+
+<MySource_AREA id_name="actions_menu" design_area="nest_content" print="no" />
+%globals_asset_contents_raw:256526%
+<MySource_AREA id_name="footer_scripts" design_area="nest_content" print="no" />

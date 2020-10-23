@@ -3,12 +3,11 @@ require('./plugins/intl-tel-input/init');
 require('./plugins/form-dependent-selections/init');
 require('./plugins/stafflookup/init');
 require('./plugins/staff-lookup-v2/init');
+require('./plugins/studentlookup/init');
 import flatpickr from "flatpickr";
-
 jQuery(document).ready(function() {
   flatpickr(".uls-datepicker");
 });
-
 //init tel inputs
 jQuery(document).ready(function() {
   jQuery('form.application-form input[type=tel]').each(function() {

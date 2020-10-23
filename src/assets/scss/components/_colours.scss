@@ -86,6 +86,7 @@ $opacity: .9;
   $c-navy-accent-light: lighten(#D81B7A, 35%);
   $c-navy-trans-accent: rgba($c-navy-accent, $opacity);
   $c-navy-trans-shade: rgba($c-navy, $opacity);
+  $orange:#e74f11;
   .cl-navy
   {
     color:$c-navy;
@@ -181,6 +182,13 @@ $sky-blue-light: #00b5e2;
 $sky-blue:#005c97;
 $fresh-teal: #00968C;
 $pink:#B30047;
+
+.bg-dynamic-grad-with-opacity
+{
+  background: $core-blue;
+  background:linear-gradient(140.65deg,#ff0072 0,#010c4e 100%);
+  opacity:.86;
+}
 
 .bg-faded-grey
 {
@@ -320,6 +328,32 @@ $pink:#B30047;
   color: #f39521 !important;
 }
 
+.text-orange
+{
+  color: $orange !important;
+}
+
+.bg-orange
+{
+  background-color: $orange;
+}
+
+.bg-yellow
+{
+  background-color: #ffd200;
+
+  hr
+  {
+    border-bottom: 1px solid #000 !important;
+    background: none !important;
+  }
+}
+
+.text-yellow
+{
+  color: #ffd200 !important;
+}
+
 .no-bg
 {
   background-color: transparent !important;
@@ -441,6 +475,14 @@ a.text-black
   &::after
   {
     border-bottom-color: rgba(255,255,255,.5);
+  }
+}
+
+.separator-center.white
+{
+  &::after
+  {
+    border-bottom-color: rgba(255,255,255,.5) !important;
   }
 }
 

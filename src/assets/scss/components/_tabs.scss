@@ -156,9 +156,11 @@
     {
       a
       {
-        &:hover
+        &:hover,
+        &:focus,
+        &:visited
         {
-          background: $accessible-blue;
+          background: darken($accessible-blue, 10%);
         }
       }
     }
