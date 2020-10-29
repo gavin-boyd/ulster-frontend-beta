@@ -619,6 +619,14 @@ a.button
   }
 }
 
+.flt-small-l
+{
+  @include breakpoint(small only)
+  {
+    float: left;
+  }
+}
+
 .clr
 {
   @include clearfix;
