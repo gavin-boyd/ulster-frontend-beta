@@ -84,6 +84,7 @@ require('./plugins/selected-radios/init');
 
 //cookies
 require('./plugins/cookie/init');
+require('./plugins/cookie/create');
 
 //last search display for olp
 require('./plugins/last-search/init');
