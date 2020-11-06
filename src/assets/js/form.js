@@ -4,6 +4,9 @@ require('./plugins/form-dependent-selections/init');
 require('./plugins/stafflookup/init');
 require('./plugins/staff-lookup-v2/init');
 require('./plugins/studentlookup/init');
+require('./plugins/programme-lookup/init');
+//prettyCheckable
+require('./plugins/prettycheckable/init-checkboxes');
 import flatpickr from "flatpickr";
 jQuery(document).ready(function() {
   flatpickr(".uls-datepicker");
