@@ -13,6 +13,8 @@ jQuery.fn.extend({
     ulsterCalcEventDays: function() {
         jQuery(this).each(function() {
             var thisEvent = jQuery(this);
+            var thisStartLabel = jQuery(this).data('start-label');
+            var thisStartGeneralLabel = jQuery(this).data('start-general-label');
             var thisEventDate = jQuery(this).find('.uls-date-data').data('event-date');
             var today = moment();
             var endTime = jQuery(this).find('.uls-date-data').data('event-end-date');
@@ -41,21 +43,53 @@ jQuery.fn.extend({
                       label = '<span><span class="fas fa-hourglass-end"></span></span> This event has started.';
                   } else {
                       if (calcDiff.indexOf('days') >= 0 || calcDiff.indexOf('day') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-half"></span></span> Event starts ' + calcDiff;
+                          if (thisStartLabel) {
+                            label = '<span><span class="fas fa-hourglass-half"></span></span> ' + thisStartLabel + ' ' + calcDiff;
+                          } else {
+                            label = '<span><span class="fas fa-hourglass-half"></span></span> Event starts ' + calcDiff;
+                          }
                       } else if (calcDiff.indexOf('months') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-start"></span></span> Only ' + calcDiffRaw + ' until this event.';
+                          if (thisStartGeneralLabel) {
+                              label = '<span><span class="fas fa-hourglass-start"></span></span> Only ' + calcDiffRaw + ' until this event ' + thisStartGeneralLabel + '.';
+                          } else {
+                              label = '<span><span class="fas fa-hourglass-start"></span></span> Only ' + calcDiffRaw + ' until this event.';
+                          }
                       } else if (calcDiff.indexOf('month') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-start"></span></span> One month until this event.';
+                          if (thisStartGeneralLabel) {
+                              label = '<span><span class="fas fa-hourglass-start"></span></span> One month until this event ' + thisStartGeneralLabel + '.';
+                          } else {
+                              label = '<span><span class="fas fa-hourglass-start"></span></span> One month until this event.';
+                          }
                       } else if (calcDiff.indexOf('hours') >= 0 && calcDiff.indexOf('in') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-half"></span></span> Event starts soon, ' + calcDiffRaw + ' to go!';
+                          if (thisStartGeneralLabel) {
+                              label = '<span><span class="fas fa-hourglass-half"></span></span> Event ' + thisStartGeneralLabel + ' soon, ' + calcDiffRaw + ' to go!';
+                          } else {
+                              label = '<span><span class="fas fa-hourglass-half"></span></span> Event starts soon, ' + calcDiffRaw + ' to go!';
+                          }
                       } else if (calcDiff.indexOf('minutes') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-half"></span></span> Only ' + calcDiffRaw + ' until this event.';
+                          if (thisStartGeneralLabel) {
+                              label = '<span><span class="fas fa-hourglass-half"></span></span> Only ' + calcDiffRaw + ' until this event ' + thisStartGeneralLabel + '.';
+                          } else {
+                              label = '<span><span class="fas fa-hourglass-half"></span></span> Only ' + calcDiffRaw + ' until this event.';
+                          }
                       } else if (calcDiff.indexOf('year') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-start"></span></span> Event starts ' + calcDiff;
+                          if (thisStartLabel) {
+                            label = '<span><span class="fas fa-hourglass-start"></span></span> ' + thisStartLabel + ' ' + calcDiff;
+                          } else {
+                            label = '<span><span class="fas fa-hourglass-start"></span></span> Event starts ' + calcDiff;
+                          }
                       } else if (calcDiff.indexOf('an hour') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-half"></span></span> Event starts ' + calcDiff;
+                          if (thisStartLabel) {
+                              label = '<span><span class="fas fa-hourglass-half"></span></span> ' + thisStartLabel + ' ' + calcDiff;
+                          } else {
+                              label = '<span><span class="fas fa-hourglass-half"></span></span> Event starts ' + calcDiff;
+                          }
                       } else if (calcDiff.indexOf('seconds') >= 0) {
-                          label = '<span><span class="fas fa-hourglass-end"></span></span> Event starts ' + calcDiff;
+                          if (thisStartLabel) {
+                              label = '<span><span class="fas fa-hourglass-end"></span></span> ' + thisStartLabel + ' ' + calcDiff;
+                          } else {
+                              label = '<span><span class="fas fa-hourglass-end"></span></span> Event starts ' + calcDiff;
+                          }
                       }
                   }
                 }

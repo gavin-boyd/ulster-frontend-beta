@@ -96,7 +96,7 @@ function sass() {
     //'src/assets/scss/app-edit-plus.scss',
     //'src/assets/scss/ready.scss',
     //'src/assets/scss/homepage.scss'
-    'src/assets/scss/critical.scss',
+    //'src/assets/scss/critical.scss',
     //'src/assets/scss/legacy-app.scss',
     //'src/assets/scss/legacy-app-microsite.scss',
     //'src/assets/scss/homepage-critical.scss',

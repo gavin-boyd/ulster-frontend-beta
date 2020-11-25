@@ -98,6 +98,8 @@ function initStudentAutoFill() {
             var course_title = data.prog_title;
             var course_code = data.programme;
             var mode = data.moa;
+            var cdname = data.cdname;
+            var cdemail = data.cdemail;
             fillField(dob, '.stu-dob', 'text');
             fillField(school, '.stu-school', 'text');
             fillField(course_title, '.stu-course-title', 'text');
@@ -107,6 +109,8 @@ function initStudentAutoFill() {
             fillField(campus, '.stu-campus', 'radio');
             fillField(faculty, '.stu-faculty', 'radio');
             fillField(telno, '.stu-telno', 'text');
+            fillField(cdname, '.stu-cdname', 'text');
+            fillField(cdemail, '.stu-cdemail', 'text');
           }
         }
       });

@@ -1,6 +1,6 @@
-//init hqy-lazy
-;(function() {
-    // Initialize
+//function hqyLazyInit () {
+  //init hqy-lazy
+  ;(function() {
     var hqyLazy = new HqyLazyload({
       breakpoints: [{
           width: 420,
@@ -13,16 +13,18 @@
       }],
       offset: 0
     });
-})();
+  })();
 
-//custom load image backgrounds - this is not hqy-lazy
-function lazyImageBackground() {
+  //custom load image backgrounds - this is not hqy-lazy
+  function lazyImageBackground() {
   var imgDefer = document.querySelectorAll('div[data-bg]');
   var style = "background-image: url({url})";
   for (var i = 0; i < imgDefer.length; i++) {
     imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-bg')));
   }
-}
-window.onload = function(){
+  }
+  window.onload = function(){
   lazyImageBackground();
-}
+  }
+//}
+//export {hqyLazyInit};

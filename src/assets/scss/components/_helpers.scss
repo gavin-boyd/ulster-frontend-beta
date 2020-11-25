@@ -14,6 +14,22 @@
     }
 }
 
+small
+{
+  line-height: 1rem !important;
+  display: inline-block;
+}
+
+.hero-full-screen
+{
+  min-height: 100vh;
+}
+.shiny
+{
+  background: rgb(255,255,255);
+  background: linear-gradient(121deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.6978992280505952) 50%, rgba(255,255,255,1) 100%);
+}
+
 .vertical-align
 {
   @include vertical-align;
@@ -1418,11 +1434,4 @@ $widthamounts: (400,450,500,550,600,650,700,750,800,850);
       display: none;
     }
   }
-}
-
-
-small
-{
-  line-height: 1rem !important;
-  display: inline-block;
 }

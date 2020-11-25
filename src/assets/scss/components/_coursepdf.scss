@@ -1,4 +1,9 @@
 /* additional styles for print */
+*
+{
+  font-family:"futura-pt" !important;
+}
+
 div.break
 {
   page-break-after: always !important;
@@ -25,4 +30,26 @@ table
 .hide-on-cma-output
 {
   display: none !important;
+}
+
+.callout.warning
+{
+  border-color: #ccc !important;
+}
+
+ul.angle-right li::before, .wysiwyg ul li::before
+{
+    font-family: 'Font Awesome 5 Pro';
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none !important;
+}
+
+ul,
+ul.angle-right,
+.wysiwyg ul
+{
+  list-style-type: circle !important;
 }
