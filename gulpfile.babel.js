@@ -31,8 +31,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
-gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, styleGuide));
+gulp.task('build',gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -87,12 +86,13 @@ function sass() {
     autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
 
     // UnCSS - Uncomment to remove unused styles in production
-    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+    PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   //app.css
   return gulp.src([
-    'src/assets/scss/app.scss',
+    //'src/assets/scss/app.scss',
+    'src/assets/scss/app-minimal.scss',
     //'src/assets/scss/app-edit-plus.scss',
     //'src/assets/scss/ready.scss',
     //'src/assets/scss/homepage.scss'
@@ -111,9 +111,8 @@ function sass() {
       //addition - 1211
       outputStyle: 'compressed'
     })
-      .on('error', $.sass.logError))
+    .on('error', $.sass.logError))
     .pipe($.postcss(postCssPlugins))
-    //.pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
@@ -121,16 +120,18 @@ function sass() {
 }
 
 let webpackConfig = {
-  mode: (PRODUCTION ? 'production' : 'development'),
+  //mode: (PRODUCTION ? 'production' : 'development'),
+  mode: 'production',
   module: {
     rules: [
       {
         test: /\.js$/,
+        exclude: /\/node_modules\//,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ "@babel/preset-env" ],
-            compact: false
+            presets: ['@babel/preset-env'],
+            babelrc: true
           }
         }
       }
@@ -146,9 +147,27 @@ function javascript() {
     .pipe(named())
     .pipe($.sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
-    .pipe($.if(PRODUCTION, $.uglify()
+    /*.pipe($.if(PRODUCTION, $.uglify({
+      mangle: true,
+      compress: {
+        sequences: true,
+    		dead_code: true,
+    		conditionals: true,
+        evaluate: true,
+    		booleans: true,
+    		unused: true,
+    		if_return: true,
+    		join_vars: true,
+    		drop_console: true,
+        toplevel: true,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_Function: true,
+        unused: true
+      }
+    })
       .on('error', e => { console.log(e); })
-    ))
+    ))*/
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
 }

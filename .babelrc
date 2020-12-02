@@ -1,4 +1,9 @@
 {
-  "presets": [ "@babel/preset-env" ],
-  "compact": false
+  "presets": ["@babel/preset-env"],
+  "compact": false,
+  "plugins": [
+    ["babel-plugin-minify-dead-code-elimination"],
+    ["babel-plugin-minify-guarded-expressions"],
+    ["@babel/plugin-proposal-class-properties"]
+  ]
 }

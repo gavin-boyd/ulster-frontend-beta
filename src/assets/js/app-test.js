@@ -84,6 +84,7 @@ require('./plugins/selected-radios/init');
 
 //cookies
 require('./plugins/cookie/init');
+require('./plugins/cookie/create');
 
 //last search display for olp
 require('./plugins/last-search/init');
@@ -145,6 +146,21 @@ require('./plugins/universal-nav/init');
 
 //form preloader
 require('./plugins/form-preloader/init');
+
+//add class - dev for study
+//require('./plugins/addclass/init');
+
+//imagefill
+require('./plugins/imagefill/init');
+
+//circle-graph - building block
+require('./plugins/circle-graph/init');
+
+//reading progress indicator
+require('./plugins/readingProgressIndicator/init');
+
+//reading progress indicator
+require('./plugins/clickable-div/init');
 
 //hgy lazy
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */

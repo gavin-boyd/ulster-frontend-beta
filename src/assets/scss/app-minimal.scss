@@ -9,7 +9,7 @@ $fa-font-display: swap !default;
 @import './node_modules/@fortawesome/fontawesome-pro/scss/brands';
 @import './node_modules/@fortawesome/fontawesome-pro/scss/duotone';
 @import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/colours';
-//@import 'components/fonts';
+@import 'components/fonts';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -65,12 +65,15 @@ $fa-font-display: swap !default;
 
 //custom
 @import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/variables';
+//@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
+//@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/video-promo';
+//@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/videowall';
 @import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/mixins';
 @import 'components/colours';
 @import 'components/mega-menu';
 @import 'components/multilevel-offcanvas-menu';
 @import 'components/custom';
-////@import 'components/fancy-box';
+@import 'components/fancy-box';
 @import 'components/timeline';
 @import 'components/image-hover-wrapper';
 @import 'components/sticky-video';
@@ -98,41 +101,12 @@ $fa-font-display: swap !default;
 @import 'components/slick';
 @import 'components/slick-theme';
 @import 'components/animation';
-//@import 'components/hero-full-screen';
-//@import 'components/clean-hero-slider';
-//@import 'components/video-custom';
-//cli installed building blocks
-//@import 'components/building-blocks/card-user-profile';
+@import 'components/universal-nav';
+@import 'components/social-wall';
+@import 'components/typography';
+@import 'components/funnelback-autocomplete';
 
 body
 {
   opacity:1 !important;
 }
-
-.mobSearchBtn
-{
-  display: none !important;
-}
-
-/*.fa, .fas {
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 900;
-}
-.fa, .fas, .far, .fal, .fad, .fab {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-}
-
-.fa-search:before { content: '\e800'; }
-.fa-twitter:before { content: '\f099'; }
-.fa-facebook:before { content: '\f09a'; }
-.fa-menu:before { content: '\f0c9'; }
-.fa-angle-right:before { content: '\f105'; }
-.fa-youtube-play:before { content: '\f16a'; }
-.fa-instagram:before { content: '\f16d'; }
-.fa-flickr:before { content: '\f16e'; } */

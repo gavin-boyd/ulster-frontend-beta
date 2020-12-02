@@ -1,3 +1,5 @@
+/* student lookup js */
+
 function stuDobDateConvert(dob) {
   //convert 08-JUN-00 to yyyy-MM-dd
   if (dob) {
@@ -27,7 +29,7 @@ function stuDobDateConvert(dob) {
 function initStudentAutoFill() {
   if (jQuery('form[data-uuid-af="true"]').length > 0) {
     function fillField(data, selector, type) {
-      if (data !== '' || data !== null) {
+      if (data) {
         if (jQuery(selector).length > 0) {
           if (jQuery(selector).val() == '') {
             if (type == 'text') {
@@ -53,13 +55,13 @@ function initStudentAutoFill() {
               };
             }
             if (selector == '.stu-faculty') {
-              if (data.toLowerCase().indexOf("art") != -1) {
+              if (data.toString().toLowerCase().indexOf("art") != -1) {
                 data = "AHSS";
-              } else if (data.toLowerCase().indexOf("computing") != -1) {
+              } else if (data.toString().toLowerCase().indexOf("computing") != -1) {
                 data = "CEBE";
-              } else if (data.toLowerCase().indexOf("life") != -1) {
+              } else if (data.toString().toLowerCase().indexOf("life") != -1) {
                 data = "LHS";
-              } else if (data.toLowerCase().indexOf("ulster") != -1) {
+              } else if (data.toString().toLowerCase().indexOf("ulster") != -1) {
                 data = "UUBS";
               } else { }
               var options = {
@@ -84,7 +86,7 @@ function initStudentAutoFill() {
     jQuery(document).ready(function() {
       jQuery.ajax({
         url: 'https://www.ulster.ac.uk/_sl/_web_services/response/_nocache?uid=' + uid + '',
-        //url: 'http://localhost:8888/test-json/response.json',
+        //url: 'http://localhost:8888/test.json',
         dataType: 'json',
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: function(data) {

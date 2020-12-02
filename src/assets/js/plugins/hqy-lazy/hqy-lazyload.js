@@ -1,3 +1,575 @@
 /* hqy-lazyload@v1.0.1 | https://github.com/Rockcookies/hqy-lazyload | A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more. */
 
-!function(){function t(e){var o=n[e];return"object"==typeof o?o:(o.exports||(o.exports={},o.exports=o.call(o.exports,t,o.exports,o)||o.exports),o.exports)}function e(t,e){n[t]=e}var n={};e("./defaults.js",function(t,e,n){n.exports={root:document,container:!1,elements:".hqy-lazy",success:!1,error:!1,offset:2,separator:",",loadingClass:"hqy-loading",successClass:"hqy-loaded",errorClass:"hqy-error",breakpoints:!1,loadInvisible:!1,validateDelay:25,saveViewportOffsetDelay:50,srcset:"data-srcset",src:"data-src"}}),e("./dom.js",function(t,e,n){var o=t("./utils.js"),i=e.setAttr=function(t,e,n){t.setAttribute(e,n)},s=e.getAttr=function(t,e){return t.getAttribute(e)},r=(e.removeAttr=function(t,e){t.removeAttribute(e)},{}),a=e.hasClass=function(t,e){return r[e]||(r[e]=new RegExp("(\\s|^)"+e+"(\\s|$)")),r[e].test(s(t,"class")||"")&&r[e]};e.addClass=function(t,e){a(t,e)||i(t,"class",o.trim(s(t,"class")||"")+" "+e)},e.removeClass=function(t,e){var n;(n=a(t,e))&&i(t,"class",(s(t,"class")||"").replace(n," "))},e.toElements=function(t){if(o.isString(t))return e.querySelectorAll(t);if(t&&t.length){for(var n=[],i=t.length;i--;n.unshift(t[i]));return n}return t?[t]:[]},e.querySelectorAll=function(t,e){if(document.querySelectorAll)e=document.querySelectorAll(t);else{var n=document,o=n.styleSheets[0]||n.createStyleSheet();o.addRule(t,"f:b");for(var i=n.all,s=0,r=[],a=i.length;s<a;s++)i[s].currentStyle.f&&r.push(i[s]);o.removeRule(0),e=r}return e},e.contains=function(t,e,n){if(t==e)return!0;if(!e||!e.nodeType||1!=e.nodeType)return!1;if(t.contains)return t.contains(e);if(t.compareDocumentPosition)return!!(16&t.compareDocumentPosition(e));for(var o=e.parentNode;o&&o!=n;){if(o==t)return!0;o=o.parentNode}return!1},e.equal=function(t,e){return t.nodeName.toLowerCase()===e},e.bindEvent=function(t,e,n){t.attachEvent?t.attachEvent&&t.attachEvent("on"+e,n):t.addEventListener(e,n,{capture:!1,passive:!0})},e.unbindEvent=function(t,e,n){t.detachEvent?t.detachEvent&&t.detachEvent("on"+e,n):t.removeEventListener(e,n,{capture:!1,passive:!0})}}),e("./index.js",function(t,e,n){function o(t){this.init(t)}var i=t("./utils.js"),s=t("./defaults.js"),r=t("./dom.js"),a=t("./loadElement.js");n.exports=o;var l=(window.devicePixelRatio||window.screen.deviceXDPI/window.screen.logicalXDPI)>1,c=function(t,e){t.bottom=(window.innerHeight||document.documentElement.clientHeight)+e,t.right=(window.innerWidth||document.documentElement.clientWidth)+e};i.assign(o.prototype,a,{init:function(t){t=t||{},this.options={};for(var e in s)this.options[e]=t[e]||s[e];this.initContext(),this.render()},initContext:function(){var t=this.options,e=this.context={attrSrc:"src",attrSrcset:"srcset",source:t.src,elements:[],container:r.toElements(t.container)[0]||!1,destroyed:!0,isRetina:l,viewport:{top:0-t.offset,left:0-t.offset},validateT:i.throttle(function(){this.validate()},t.validateDelay,this),saveViewportOffsetT:i.throttle(function(){c(e.viewport,t.offset)},t.validateDelay,this)};c(e.viewport,t.offset),i.each(t.breakpoints,function(t){if(t.width>=window.screen.width)return e.source=t.src,!1})},render:function(){var t=this.options,e=this.context;e.elements=r.toElements(t.elements),e.destroyed&&(e.destroyed=!1,e.container&&r.bindEvent(e.container,"scroll",e.validateT),r.bindEvent(window,"resize",e.saveViewportOffsetT),r.bindEvent(window,"resize",e.validateT),r.bindEvent(window,"scroll",e.validateT)),this.validate()},destroy:function(){this.options;var t=this.context;t.container&&r.unbindEvent(t.container,"scroll",t.validateT),r.unbindEvent(window,"scroll",t.validateT),r.unbindEvent(window,"resize",t.validateT),r.unbindEvent(window,"resize",t.saveViewportOffsetT),t.elements=[],t.destroyed=!0},validate:function(){var t=this.options,e=this.context,n=e.elements,o=n.length;i.each(n,function(n){if(!(r.hasClass(n,e.loadingClass)||r.hasClass(n,t.successClass)||r.hasClass(n,t.errorClass)))return this.elementInView(n)?(this.loadElement(n),void o--):void 0;o--},this),o<=0&&this.destroy()},elementInView:function(t){var e=this.options,n=this.context,o=n.viewport,s=n.container,a=t.getBoundingClientRect();if(r.container&&r.contains(s,t)){var l=s.getBoundingClientRect();if(inView(l,o)){var c=l.top-e.offset,d=l.right+e.offset,u=l.bottom+e.offset,f=l.left-e.offset,h={top:c>o.top?c:o.top,right:d<o.right?d:o.right,bottom:u<o.bottom?u:o.bottom,left:f>o.left?f:o.left};return i.inView(a,h)}return!1}return i.inView(a,o)},load:function(t,e){this.context.elements=r.toElements(t),i.each(t,function(t){this.loadElement(element,e)},this)}})}),e("./loadElement.js",function(t,e,n){function o(t,e,n,o){var r=this,a=s.equal(t,"img"),l=e.split(n.separator),c=l[o.isRetina&&l.length>1?1:0],d=s.getAttr(t,n.srcset),u=t.parentNode,f=u&&s.equal(u,"picture");if(!a&&!i.isUndefined(t.src))return t.src=c,void this.loadElementSuccess(t);var h=new Image,v=function(){r.loadElementError(t,"invalid"),s.unbindEvent(h,"error",v),s.unbindEvent(h,"load",m)},m=function(){a?f||r.handleSrcsetElement(t,c,d):t.style.backgroundImage='url("'+c+'")',r.loadElementSuccess(t),s.unbindEvent(h,"error",v),s.unbindEvent(h,"load",m)};f&&(h=t,i.each(u.getElementsByTagName("source"),function(t){this.handleSourceElement(t,o.attrSrcset,n.srcset)},this)),s.addClass(t,n.loadingClass),s.bindEvent(h,"error",v),s.bindEvent(h,"load",m),this.handleSrcsetElement(h,c,d)}var i=t("./utils.js"),s=t("./dom.js");n.exports={handleSourceElement:function(t,e,n){var o=s.getAttr(t,n);o&&s.setAttr(t,e,o)},handleSrcsetElement:function(t,e,n){n&&s.setAttr(t,this.context.attrSrcset,n),t.src=e},loadElementSuccess:function(t){var e=this.options;s.addClass(t,e.successClass),s.removeClass(t,e.loadingClass),e.success&&e.success(t)},loadElementError:function(t,e){var n=this.options;n.error&&n.error(t,e),s.addClass(t,n.errorClass),s.removeClass(t,n.loadingClass)},loadElement:function(t,e){var n=this.options,r=this.context;if(e||n.loadInvisible||t.offsetWidth>0&&t.offsetHeight>0){var a=s.getAttr(t,r.source)||s.getAttr(t,n.src);a?o.call(this,t,a,n,r):(s.addClass(t,n.loadingClass),s.equal(t,"video")?(i.each(t.getElementsByTagName("source"),function(t){this.handleSourceElement(t,r.attrSrc,n.src)},this),t.load(),this.loadElementSuccess(t)):this.loadElementError(t,"missing"))}}}}),e("./utils.js",function(t,e,n){var o=e.hasOwnProperty=Object.prototype.hasOwnProperty,i=e.toString=Object.prototype.toString,s=e.each=function(t,e,n){if(t&&e)for(var o=t.length,i=0;i<o&&!1!==e.call(n,t[i],i);i++);};e.trim=function(t){return t.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,"")},e.assign=function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];if(null!=n)for(var i in n)o.call(n,i)&&(t[i]=n[i])}return t},e.isUndefined=function(t){return void 0===t},s(["Arguments","Function","String","Number","Date","RegExp","Error"],function(t){e["is"+t]=function(e){return i.call(e)==="[object "+t+"]"}}),e.throttle=function(t,e,n){var o=0;return function(){var i=+new Date;i-o<e||(o=i,t.apply(n,arguments))}},e.inView=function(t,e){return t.right>=e.left&&t.bottom>=e.top&&t.left<=e.right&&t.top<=e.bottom}}),"function"==typeof define&&define.amd?define(t("./index.js")):"object"==typeof exports?module.exports=t("./index.js"):window.HqyLazyload=t("./index.js")}();
+function hqyLazyInit() {
+var __modules__ = {};
+
+function __include__ (id) {
+    var mod = __modules__[id];
+    var exports = 'exports';
+
+    if (typeof mod === 'object') {
+        return mod;
+    }
+
+    if (!mod[exports]) {
+        mod[exports] = {};
+        mod[exports] = mod.call(mod[exports], __include__, mod[exports], mod) || mod[exports];
+    }
+
+    return mod[exports];
+}
+
+function __namespace__ (path, fn) {
+    __modules__[path] = fn;
+}
+
+__namespace__('./defaults.js', function (__include__, exports, module) {
+
+module.exports = {
+	root: document,
+	container: false,
+	elements: '.hqy-lazy',
+	success: false,
+	error: false,
+	offset: 2,
+	separator: ',',
+	loadingClass: 'hqy-loading',
+	successClass: 'hqy-loaded',
+	errorClass: 'hqy-error',
+	breakpoints: false,
+	loadInvisible: false,
+	validateDelay: 25,
+	saveViewportOffsetDelay: 50,
+	srcset: 'data-srcset',
+	src: 'data-src'
+};
+
+});
+__namespace__('./dom.js', function (__include__, exports, module) {
+
+var utils = __include__("./utils.js");
+
+
+var setAttr = exports.setAttr = function (ele, attr, value){
+	ele.setAttribute(attr, value);
+};
+
+var getAttr = exports.getAttr = function (ele, attr) {
+	return ele.getAttribute(attr);
+};
+
+var removeAttr = exports.removeAttr = function (ele, attr){
+	ele.removeAttribute(attr);
+};
+
+var regClassCache = {};
+
+var hasClass = exports.hasClass = function (ele, cls) {
+	if(!regClassCache[cls]){
+		regClassCache[cls] = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+	}
+	return regClassCache[cls].test(getAttr(ele, 'class') || '') && regClassCache[cls];
+};
+
+exports.addClass = function(ele, cls) {
+	if (!hasClass(ele, cls)){
+		setAttr(ele, 'class', utils.trim(getAttr(ele, 'class') || '') + ' ' + cls);
+	}
+};
+
+exports.removeClass = function (ele, cls) {
+	var reg;
+	if ((reg = hasClass(ele,cls))) {
+		setAttr(ele, 'class', (getAttr(ele, 'class') || '').replace(reg, ' '));
+	}
+};
+
+exports.toElements = function (elements) {
+	if (utils.isString(elements)) {
+		return exports.querySelectorAll(elements);
+	} else if (elements && elements.length) {
+		var nodelist = [];
+		for (var i = elements.length; i--; nodelist.unshift(elements[i])) {}
+		return nodelist;
+	} else if (elements) {
+		return [elements];
+	} else {
+		return [];
+	}
+};
+
+
+exports.querySelectorAll = function (q, res) {
+	if (document.querySelectorAll) {
+		res = document.querySelectorAll(q);
+	} else {
+		var d=document
+		, a=d.styleSheets[0] || d.createStyleSheet();
+		a.addRule(q,'f:b');
+		for(var l=d.all,b=0,c=[],f=l.length;b<f;b++)
+			l[b].currentStyle.f && c.push(l[b]);
+
+		a.removeRule(0);
+		res = c;
+	}
+	return res;
+};
+
+exports.contains = function (parentEl, el, _undef) {
+	// 第一个节点是否包含第二个节点
+	//contains 方法支持情况：chrome+ firefox9+ ie5+, opera9.64+(估计从9.0+),safari5.1.7+
+	if (parentEl == el) {
+		return true;
+	}
+	if (!el || !el.nodeType || el.nodeType != 1) {
+		return false;
+	}
+	if (parentEl.contains) {
+		return parentEl.contains(el);
+	}
+	if (parentEl.compareDocumentPosition) {
+		return !!(parentEl.compareDocumentPosition(el) & 16);
+	}
+	var prEl = el.parentNode;
+	while(prEl && prEl != _undef) { // _undef 在这里是 undefined 的值
+		if (prEl == parentEl)
+			return true;
+		prEl = prEl.parentNode;
+	}
+	return false;
+};
+
+exports.equal = function (ele, str) {
+	return ele.nodeName.toLowerCase() === str;
+};
+
+exports.bindEvent = function  (ele, type, fn) {
+	if (ele.attachEvent) {
+		ele.attachEvent && ele.attachEvent('on' + type, fn);
+	} else {
+		ele.addEventListener(type, fn, { capture: false, passive: true });
+	}
+};
+
+exports.unbindEvent = function  (ele, type, fn) {
+	if (ele.detachEvent) {
+		ele.detachEvent && ele.detachEvent('on' + type, fn);
+	} else {
+		ele.removeEventListener(type, fn, { capture: false, passive: true });
+	}
+};
+
+
+});
+__namespace__('./index.js', function (__include__, exports, module) {
+
+var Utils = __include__("./utils.js");
+var Defaults = __include__("./defaults.js");
+var Dom = __include__("./dom.js");
+var loadElement = __include__("./loadElement.js");
+
+function HqyLazyload (options) {
+	this.init(options);
+};
+
+module.exports = HqyLazyload;
+
+// device pixel ratio
+// not supported in IE10 - https://msdn.microsoft.com/en-us/library/dn265030(v=vs.85).aspx
+var isRetina = (window.devicePixelRatio || window.screen.deviceXDPI / window.screen.logicalXDPI) > 1;
+
+var saveViewportOffset = function(viewport, offset) {
+	viewport.bottom = (window.innerHeight || document.documentElement.clientHeight) + offset;
+	viewport.right = (window.innerWidth || document.documentElement.clientWidth) + offset;
+};
+
+Utils.assign(HqyLazyload.prototype, loadElement, {
+	init: function (options) {
+		options = options || {};
+
+		this.options = {};
+		for (var key in Defaults) {
+			this.options[key] = options[key] || Defaults[key];
+		}
+
+		// initialize context
+		this.initContext();
+
+		// setup
+		this.render();
+	},
+
+	initContext: function () {
+		var options = this.options;
+
+		var context = this.context = {
+			attrSrc: 'src',
+			attrSrcset: 'srcset',
+			source: options.src,
+			elements: [],
+			container: Dom.toElements(options.container)[0] || false,
+			destroyed: true,
+			isRetina: isRetina,
+			viewport: {
+				top: 0 - options.offset,
+				left: 0 - options.offset
+			},
+			validateT: Utils.throttle(function() {
+				this.validate();
+			}, options.validateDelay, this),
+			saveViewportOffsetT: Utils.throttle(function() {
+				saveViewportOffset(context.viewport, options.offset);
+			}, options.validateDelay, this)
+		};
+
+		// init viewport
+		saveViewportOffset(context.viewport, options.offset);
+
+		// handle multi-served image src (obsolete)
+		Utils.each(options.breakpoints, function (object) {
+			if (object.width >= window.screen.width) {
+				context.source = object.src;
+				return false;
+			}
+		});
+	},
+
+	render: function () {
+		var options = this.options;
+		var context = this.context;
+
+		// First we create an array of elements to lazy load
+		context.elements = Dom.toElements(options.elements);
+
+		// Then we bind resize and scroll events if not already binded
+		if (context.destroyed) {
+			context.destroyed = false;
+
+			if (context.container) {
+				Dom.bindEvent(context.container, 'scroll', context.validateT);
+			}
+
+			Dom.bindEvent(window, 'resize', context.saveViewportOffsetT);
+			Dom.bindEvent(window, 'resize', context.validateT);
+			Dom.bindEvent(window, 'scroll', context.validateT);
+		}
+
+		// And finally, we start to lazy load.
+		this.validate();
+	},
+
+	destroy: function () {
+		var options = this.options;
+		var context = this.context;
+
+		if (context.container) {
+			Dom.unbindEvent(context.container, 'scroll', context.validateT);
+		}
+
+		Dom.unbindEvent(window, 'scroll', context.validateT);
+		Dom.unbindEvent(window, 'resize', context.validateT);
+		Dom.unbindEvent(window, 'resize', context.saveViewportOffsetT);
+
+		context.elements = [];
+		context.destroyed = true;
+	},
+
+	validate: function () {
+		var options = this.options;
+		var context = this.context;
+		var elements = context.elements;
+		var count = elements.length;
+
+		Utils.each(elements, function (ele) {
+			if (
+				Dom.hasClass(ele, context.loadingClass) ||
+				Dom.hasClass(ele, options.successClass) ||
+				Dom.hasClass(ele, options.errorClass)
+			) {
+				count--;
+				return;
+			}
+
+			if (this.elementInView(ele)) {
+				this.loadElement(ele);
+				count--;
+				return;
+			}
+		}, this);
+
+		if (count <= 0) {
+			this.destroy();
+		}
+	},
+
+	elementInView: function (ele) {
+		var options = this.options;
+		var context = this.context;
+		var viewport = context.viewport;
+		var container = context.container;
+		var rect = ele.getBoundingClientRect();
+
+
+		// Is element inside a container?
+		if (Dom.container && Dom.contains(container, ele)) {
+			var containerRect = container.getBoundingClientRect();
+
+			// Is container in view?
+			if (inView(containerRect, viewport)) {
+				var top = containerRect.top - options.offset;
+				var right = containerRect.right + options.offset;
+				var bottom = containerRect.bottom + options.offset;
+				var left = containerRect.left - options.offset;
+				var containerRectWithOffset = {
+					top: top > viewport.top ? top : viewport.top,
+					right: right < viewport.right ? right : viewport.right,
+					bottom: bottom < viewport.bottom ? bottom : viewport.bottom,
+					left: left > viewport.left ? left : viewport.left
+				};
+
+				// Is element in view of container?
+				return Utils.inView(rect, containerRectWithOffset);
+			} else {
+				return false;
+			}
+		} else {
+			return Utils.inView(rect, viewport);
+		}
+	},
+
+	load: function (elements, force) {
+		var context = this.context;
+
+		context.elements = Dom.toElements(elements);
+		Utils.each(elements, function(el) {
+			this.loadElement(element, force);
+		}, this);
+	}
+});
+
+
+});
+__namespace__('./loadElement.js', function (__include__, exports, module) {
+
+var Utils = __include__("./utils.js");
+var Dom = __include__("./dom.js");
+
+function process (el, dataSrc, options, context) {
+	var that = this;
+	var isImage = Dom.equal(el, 'img');
+	var dataSrcSplitted = dataSrc.split(options.separator);
+	var src = dataSrcSplitted[context.isRetina && dataSrcSplitted.length > 1 ? 1 : 0];
+	var srcset = Dom.getAttr(el, options.srcset);
+	var parent = el.parentNode;
+	var isPicture = parent && Dom.equal(parent, 'picture');
+
+	// An item with src like iframe, unity games, simpel video etc
+	if (!isImage && !Utils.isUndefined(el.src)) {
+		el.src = src;
+		this.loadElementSuccess(el);
+		return;
+	}
+
+
+	var img = new Image();
+	// using EventListener instead of onerror and onload
+	// due to bug introduced in chrome v50
+	// (https://productforums.google.com/forum/#!topic/chrome/p51Lk7vnP2o)
+	var onErrorHandler = function () {
+		that.loadElementError(el, 'invalid');
+		Dom.unbindEvent(img, 'error', onErrorHandler);
+		Dom.unbindEvent(img, 'load', onSuccessHandler);
+	};
+
+	var onSuccessHandler = function () {
+		// Is element an image
+		if (isImage) {
+			if(!isPicture) {
+				that.handleSrcsetElement(el, src, srcset);
+			}
+		// or background-image
+		} else {
+			el.style.backgroundImage = 'url("' + src + '")';
+		}
+		that.loadElementSuccess(el);
+		Dom.unbindEvent(img, 'error', onErrorHandler);
+		Dom.unbindEvent(img, 'load', onSuccessHandler);
+	};
+
+	// Picture element
+	if (isPicture) {
+		img = el; // Image tag inside picture element wont get preloaded
+		Utils.each(parent.getElementsByTagName('source'), function(source) {
+			this.handleSourceElement(source, context.attrSrcset, options.srcset);
+		}, this);
+	}
+
+	Dom.addClass(el, options.loadingClass);
+	Dom.bindEvent(img, 'error', onErrorHandler);
+	Dom.bindEvent(img, 'load', onSuccessHandler);
+	this.handleSrcsetElement(img, src, srcset); // Preload
+};
+
+
+module.exports = {
+	handleSourceElement: function (el, attr, dataAttr) {
+		var dataSrc = Dom.getAttr(el, dataAttr);
+
+		if (dataSrc) {
+			Dom.setAttr(el, attr, dataSrc);
+		}
+	},
+
+	handleSrcsetElement: function (el, src, srcset) {
+		if(srcset) {
+			Dom.setAttr(el, this.context.attrSrcset, srcset); //srcset
+		}
+		el.src = src; //src
+	},
+
+	loadElementSuccess: function (el) {
+		var options = this.options;
+
+		Dom.addClass(el, options.successClass);
+		Dom.removeClass(el, options.loadingClass);
+		if (options.success) options.success(el);
+	},
+
+	loadElementError: function (el, msg) {
+		var options = this.options;
+
+		if (options.error) options.error(el, msg);
+		Dom.addClass(el, options.errorClass);
+		Dom.removeClass(el, options.loadingClass);
+	},
+
+	loadElement: function (el, force) {
+		var options = this.options;
+		var context = this.context;
+		var that = this;
+
+		// if element is visible, not loaded or forced
+		if (force || options.loadInvisible || (el.offsetWidth > 0 && el.offsetHeight > 0)) {
+			// fallback to default 'data-src'
+			var dataSrc = Dom.getAttr(el, context.source) || Dom.getAttr(el, options.src);
+
+			if (dataSrc) {
+				process.call(this, el, dataSrc, options, context);
+			// video and others
+			} else {
+				Dom.addClass(el, options.loadingClass);
+				// video with child source
+				if (Dom.equal(el, 'video')) {
+					Utils.each(el.getElementsByTagName('source'), function(source) {
+						this.handleSourceElement(source, context.attrSrc, options.src);
+					}, this);
+					el.load();
+					this.loadElementSuccess(el);
+				} else {
+					this.loadElementError(el, 'missing');
+				}
+			}
+		}
+	}
+};
+
+
+});
+__namespace__('./utils.js', function (__include__, exports, module) {
+
+var hasOwnProperty = exports.hasOwnProperty = Object.prototype.hasOwnProperty;
+var toString = exports.toString = Object.prototype.toString;
+
+var each = exports.each = function (object, fn, context) {
+	if (object && fn) {
+		var l = object.length;
+		for (var i = 0; i < l && fn.call(context, object[i], i) !== false; i++) {}
+	}
+};
+
+exports.trim = function (str) {
+	return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+};
+
+exports.assign = function (target) {
+	for (var i=1; i<arguments.length; i++) {
+		var nextSource = arguments[i];
+
+		if (nextSource != null) { // Skip over if undefined or null
+			for (var nextKey in nextSource) {
+				if (hasOwnProperty.call(nextSource, nextKey)) {
+					target[nextKey] = nextSource[nextKey];
+				}
+			}
+		}
+	}
+
+	return target;
+};
+
+exports.isUndefined = function (obj) { return obj === void 0; }
+
+each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function (type) {
+	exports['is' + type] = function (o) {
+		return toString.call(o) === '[object ' + type + ']';
+	};
+});
+
+exports.throttle = function (fn, minDelay, scope) {
+	var lastCall = 0;
+	return function() {
+		var now = +new Date();
+		if (now - lastCall < minDelay) {
+			return;
+		}
+		lastCall = now;
+		fn.apply(scope, arguments);
+	};
+};
+
+exports.inView = function (rect, viewport) {
+	// Intersection
+	return rect.right >= viewport.left &&
+		rect.bottom >= viewport.top &&
+		rect.left <= viewport.right &&
+		rect.top <= viewport.bottom;
+};
+
+
+});
+
+if (typeof define === 'function' && define.amd) {
+    // AMD. Register lazyload as an anonymous module
+    define(__include__('./index.js'));
+} else if (typeof exports === 'object') {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = __include__('./index.js');
+} else {
+    // Browser globals. Register lazyload on window
+    window.HqyLazyload = __include__('./index.js');
+}
+
+
+}
+
+function ulsLazyLoadInit () {
+  ;(function() {
+    var hqyLazy = new HqyLazyload({
+      breakpoints: [{
+          width: 420,
+          src: 'data-src-small',
+          offset: 0
+      }, {
+          width: 768,
+          src: 'data-src-medium',
+          offset: 0
+      }],
+      offset: 0
+    });
+  })();
+}
+
+
+export {hqyLazyInit, ulsLazyLoadInit}

@@ -4,8 +4,8 @@ PORT: 8000
 # Autoprefixer will make sure your CSS works with these browsers
 COMPATIBILITY:
   - "last 2 versions"
-  - "ie >= 9"
-  - "ios >= 7"
+  - "ie >= 11"
+  - "ios >= 9"
 
 # UnCSS will use these settings
 UNCSS_OPTIONS:
@@ -42,10 +42,12 @@ PATHS:
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
     #- "src/assets/js/app.js"
+    #- "src/assets/js/app-test.js"
     #- "src/assets/js/event.js"
     #- "src/assets/js/concierge.js"
-    - "src/assets/js/form.js"
+    #- "src/assets/js/form.js"
     #- "src/assets/js/welcomeweek.js"
     #- "src/assets/js/qa.js"
     #- "src/assets/js/homepage.js"
     #- "src/assets/js/course.js"
+    - "src/assets/js/app-minimal.js"

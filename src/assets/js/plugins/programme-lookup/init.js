@@ -1,3 +1,4 @@
+/* programme lookup */
 function fillField(data, selector, type) {
   if (data !== '' || data !== null) {
     if (jQuery(selector).length > 0) {
@@ -68,8 +69,10 @@ function initProgrammeButtons() {
     });
   });
 }
-initProgrammeButtons();
-jQuery('#programme-search').submit(function(e) {
-  jQuery("#results").load("https://www.ulster.ac.uk/programmes/_web_services/lookup?query=" + encodeURIComponent(jQuery("#programme-query").val()), function( response, status, xhr ) {initProgrammeButtons();});
-  e.preventDefault();
-});
+if (jQuery('#uls-programme-lookup').length > 0) {
+  initProgrammeButtons();
+  jQuery('#programme-search').submit(function(e) {
+    jQuery("#results").load("https://www.ulster.ac.uk/programmes/_web_services/lookup?query=" + encodeURIComponent(jQuery("#programme-query").val()), function( response, status, xhr ) {initProgrammeButtons();});
+    e.preventDefault();
+  });
+}

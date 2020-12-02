@@ -7,7 +7,8 @@ function megaMenuInit () {
 
   //setup mobile search menu
   jQuery(document).ready(function() {
-    if (jQuery('#global-search-form').length > 0) {
+    if (jQuery('#global-search-form').length != 0) {
+      console.log('Tester');
       jQuery('#global-search-form').clone().appendTo('#mobileSearch');
     }
   });

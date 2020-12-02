@@ -8,6 +8,4 @@ function setLastSearch() {
     jQuery('.course-finder #query').val(cookie);
   }
 }
-jQuery(document).ready(function() {
-  setLastSearch();
-});
+export {setLastSearch}

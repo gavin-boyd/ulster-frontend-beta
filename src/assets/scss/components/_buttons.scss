@@ -28,6 +28,18 @@ form
   }
 }
 
+.button
+{
+  &.hollow
+  {
+    &.white
+    {
+      border-color: #fff !important;
+      color: #fff !important;
+    }
+  }
+}
+
 .bg-bright-blue,
 .bg-sky-blue
 {

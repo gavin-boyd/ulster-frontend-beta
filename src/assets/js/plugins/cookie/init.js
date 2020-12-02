@@ -5,7 +5,7 @@
  * Copyright 2006, 2014 Klaus Hartl
  * Released under the MIT license
  */
-(function (factory) {
+function jqueryCookieInit() { (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD (Register as an anonymous module)
 		define(['jquery'], factory);
@@ -112,3 +112,5 @@
 	};
 
 }));
+}
+export {jqueryCookieInit}

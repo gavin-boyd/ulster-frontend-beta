@@ -1,5 +1,4 @@
-//function hqyLazyInit () {
-  //init hqy-lazy
+function ulsLazyLoadInit () {
   ;(function() {
     var hqyLazy = new HqyLazyload({
       breakpoints: [{
@@ -14,17 +13,5 @@
       offset: 0
     });
   })();
-
-  //custom load image backgrounds - this is not hqy-lazy
-  function lazyImageBackground() {
-  var imgDefer = document.querySelectorAll('div[data-bg]');
-  var style = "background-image: url({url})";
-  for (var i = 0; i < imgDefer.length; i++) {
-    imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-bg')));
-  }
-  }
-  window.onload = function(){
-  lazyImageBackground();
-  }
-//}
-//export {hqyLazyInit};
+}
+export {ulsLazyLoadInit}
