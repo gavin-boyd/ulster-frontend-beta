@@ -86,13 +86,13 @@ function sass() {
     autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
 
     // UnCSS - Uncomment to remove unused styles in production
-    PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   //app.css
   return gulp.src([
-    //'src/assets/scss/app.scss',
-    'src/assets/scss/app-minimal.scss',
+    'src/assets/scss/app.scss',
+    //'src/assets/scss/app-minimal.scss',
     //'src/assets/scss/app-edit-plus.scss',
     //'src/assets/scss/ready.scss',
     //'src/assets/scss/homepage.scss'
@@ -119,9 +119,11 @@ function sass() {
     .pipe(browser.reload({ stream: true }));
 }
 
+const TerserPlugin = require("terser-webpack-plugin");
+const { UnusedFilesWebpackPlugin } = require("unused-files-webpack-plugin");
+
 let webpackConfig = {
-  //mode: (PRODUCTION ? 'production' : 'development'),
-  mode: 'production',
+  mode: (PRODUCTION ? 'production' : 'development'),
   module: {
     rules: [
       {
@@ -136,6 +138,18 @@ let webpackConfig = {
         }
       }
     ]
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+       parallel: true,
+       terserOptions: {
+         mangle: true,
+         format: {
+            comments: false,
+          }
+       }
+    })],
   },
   devtool: !PRODUCTION && 'source-map'
 }

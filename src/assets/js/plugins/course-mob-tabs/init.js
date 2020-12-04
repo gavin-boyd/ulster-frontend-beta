@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+function ulsCourseMobTabs() {
   if (jQuery('#course-tabs').length > 0) {
     jQuery('#course-tabs').clone().appendTo('#mobile-content');
     jQuery('#mobile-content li a').click(function() {
@@ -13,4 +13,5 @@ jQuery(document).ready(function() {
       return false;
     });
   }
-});
+}
+export {ulsCourseMobTabs};

@@ -3,6 +3,7 @@
 // Copyright Funnelback, 2012
 // $Id: jquery.funnelback-completion.js 40466 2014-09-04 05:58:49Z lbutters $
 
+function funnelbackCompletion() {
 (function($) {
 
 
@@ -471,3 +472,5 @@
       return $('<div/>').html(value).text();
     }
  })(jQuery);
+}
+export {funnelbackCompletion};
