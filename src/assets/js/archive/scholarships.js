@@ -58,7 +58,7 @@ ulsBreadcrumbInit();
 //fancyBox();
 //fancyBoxInit();
 prettyCheckableInit();
-initCourseFinderFavs();
+initCourseFinderFavs('https://www.ulster.ac.uk/scholarships-dev/scholarships/search');
 mobileFacets();
 //setLastSearch();
 removeModalElements();
