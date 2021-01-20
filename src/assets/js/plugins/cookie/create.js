@@ -16,6 +16,4 @@ function ulsSetC(assetid, name, value) {
     }
   }
 }
-jQuery(document).ready(function() {
-  ulsSetC('691272', 'uls_campaign_video_wgt', 'y');
-});
+export {ulsSetC};

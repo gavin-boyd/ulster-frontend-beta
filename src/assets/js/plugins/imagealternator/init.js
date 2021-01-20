@@ -11,9 +11,7 @@ function imageAlternator() {
     var images = images.split(',');
     selector.append('<img src="' + images[Math.floor(Math.random() * images.length)] + '" alt="" />');
     var imageclasses = selector.data('image-classes');
-    selector.children('img').addClass(imageclasses);    
+    selector.children('img').addClass(imageclasses);
   }
 }
-jQuery(document).ready(function() {
-  imageAlternator();
-});
+export {imageAlternator};

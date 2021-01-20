@@ -8,4 +8,4 @@ function serviceLogoMob() {
     jQuery('.multilevel-offcanvas > ul > li:first').append(mobHTMLTwo);
   }
 }
-serviceLogoMob();
+export {serviceLogoMob};

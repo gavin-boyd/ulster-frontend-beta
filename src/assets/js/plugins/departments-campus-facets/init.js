@@ -11,4 +11,4 @@ function initCampusFiltersOnDepartments() {
     });
   });
 }
-initCampusFiltersOnDepartments();
+export {initCampusFiltersOnDepartments};

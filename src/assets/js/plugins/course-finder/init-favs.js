@@ -1,4 +1,4 @@
-function initCourseFinderFavs() {
+function initCourseFinderFavs(searchPageURL) {
   const ww_setCookieExpiry = 800;
   //Live
   const ww_setCookieDomain = 'ulster.ac.uk';
@@ -147,7 +147,7 @@ function initCourseFinderFavs() {
           jQuery('.open-favourites').click(function(e) {
               e.preventDefault();
               var favCookie = jQuery.cookie('uls_courses_f');
-              var path = 'https://www.ulster.ac.uk/courses'; // update this for production
+              var path = searchPageURL; // update this for production
               if (favCookie) {
                   var favouritesArray = favCookie.split(',');
                   var url = path + '?favourites=true';

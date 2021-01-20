@@ -22,4 +22,4 @@ function initMobileSideNav() {
     }
   });
 }
-initMobileSideNav();
+export {initMobileSideNav};

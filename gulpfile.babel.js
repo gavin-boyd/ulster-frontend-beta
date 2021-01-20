@@ -122,7 +122,7 @@ function sass() {
 const TerserPlugin = require("terser-webpack-plugin");
 const { UnusedFilesWebpackPlugin } = require("unused-files-webpack-plugin");
 
-let webpackConfig = {
+/*let webpackConfig = {
   mode: (PRODUCTION ? 'production' : 'development'),
   module: {
     rules: [
@@ -152,7 +152,81 @@ let webpackConfig = {
     })],
   },
   devtool: !PRODUCTION && 'source-map'
+}*/
+
+let webpackConfig = {
+  mode: (PRODUCTION ? 'production' : 'development'),
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ "@babel/preset-env" ],
+            compact: false
+          }
+        }
+      }
+    ]
+  },
+  devtool: !PRODUCTION && 'source-map'
 }
+
+/*let webpackConfig = {
+  mode: (PRODUCTION ? 'production' : 'development'),
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /\/node_modules\//,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ "@babel/preset-env" ],
+            compact: false
+          }
+        }
+      }
+    ]
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 20000,
+      minRemainingSize: 0,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        },
+        homepage: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'home',
+          filename: 'home/bundle.js',
+          chunks (chunk) {
+            // exclude `my-excluded-chunk`
+            return chunk.name !== 'my-excluded-chunk';
+          }
+        }
+      }
+    }
+  },
+  devtool: !PRODUCTION && 'source-map'
+}*/
+
 
 // Combine JavaScript into one file
 // In production, the file is minified
@@ -161,7 +235,7 @@ function javascript() {
     .pipe(named())
     .pipe($.sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
-    /*.pipe($.if(PRODUCTION, $.uglify({
+    .pipe($.if(PRODUCTION, $.uglify({
       mangle: true,
       compress: {
         sequences: true,
@@ -181,7 +255,7 @@ function javascript() {
       }
     })
       .on('error', e => { console.log(e); })
-    ))*/
+    ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
 }

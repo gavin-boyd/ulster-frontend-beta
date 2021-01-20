@@ -1,3 +1,4 @@
+'use strict';
 function checkForContent() {
   jQuery(document).ready(function() {
     if (jQuery('.js-check-for-content').length > 0) {
@@ -9,4 +10,4 @@ function checkForContent() {
     }
   });
 }
-checkForContent();
+export {checkForContent}

@@ -65,5 +65,8 @@ function ulsterCookieConsentInit () {
           });
       }
   });
+  jQuery(document).ready(function() {
+      jQuery('body').ulsterCookieConsent('ulster.ac.uk');
+  });
 }
 export {ulsterCookieConsentInit};

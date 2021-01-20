@@ -1,4 +1,4 @@
-function megaMenuInit () {
+function ulsMegaMenuInit() {
   jQuery(document).ready(function() {
     jQuery('.mega-menu-link').click(function(e) {
       e.preventDefault();
@@ -12,4 +12,4 @@ function megaMenuInit () {
     }
   });
 }
-export {megaMenuInit};
+export {ulsMegaMenuInit};
