@@ -54,7 +54,6 @@ import {ulsFormInit} from './plugins/form-preloader/init';
 import imagefill from 'imagefill';
 import {ulsDashboardCircleGraphInit} from './plugins/circle-graph/init';
 import {ulsReadingProgressIndicatorInit} from './plugins/readingProgressIndicator/init';
-import {ulsAppFavouritesSet, ulsAppFavouritesActions} from './plugins/favourites/init';
 fancyBox();
 fancyBoxInit();
 hqyLazyInit();
@@ -97,29 +96,3 @@ jQuery(document).ready(function() {
 });
 ulsDashboardCircleGraphInit();
 ulsReadingProgressIndicatorInit();
-
-ulsAppFavouritesSet(
-  'uls_appwk_favs', //cookieName
-  'localhost', //domain
-  '/', //path
-  800, //cookieExpiry
-  'a.ulsAddFav.alert', //favBtnClass
-  '.ulsFavCount' //favCount
-);
-
-ulsAppFavouritesActions(
-  'uls_appwk_favs', //cookieName
-  'localhost', //domain
-  '/', //path
-  800, //cookieExpiry
-  '.event-cell', //rowClass
-  'a.ulsAddFav', //favBtnClass
-  '.ulsFavCount', //favCount
-  'alert', //activeClass
-  '#open-favourites', //openFavsTarget
-  'https://www.ulster.ac.uk/welcome/favourites', //favsPagePath
-  '?events=', //queryVar
-  '#events-listing', //containerID
-  ulsAppFavouritesSet, //callback,
-  'a.ulsAddFav.alert' //favBtnClassSelected
-);

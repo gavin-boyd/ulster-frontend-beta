@@ -218,3 +218,19 @@
     box-shadow:0 -2px 19px 0 rgba(51,62,72,.08), 0 12px 19px 0 rgba(51,62,72,.25);
   }
 }
+
+.global-nav.alt > li > a
+{
+  background: $redtwo !important;
+  color: #fff !important;
+
+  &:hover
+  {
+    background: #F49522 !important;;
+  }
+
+  &.hover
+  {
+    background-color: $c-purple-two !important;
+  }
+}

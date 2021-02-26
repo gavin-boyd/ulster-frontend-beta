@@ -9,3 +9,8 @@
 .shake {
   animation-name: shake;
 }
+
+.animate-fade-in
+{
+  @include mui-animation(fade);
+}

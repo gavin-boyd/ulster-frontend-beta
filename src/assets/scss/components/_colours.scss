@@ -17,9 +17,11 @@ $c-navy-accent: darken(#D81B7A, 15%);
 $c-navy-accent-light: lighten(#D81B7A, 35%);
 $c-navy-trans-accent: rgba($c-navy-accent, $opacity);
 $c-navy-trans-shade: rgba($c-navy, $opacity);
-$orange:#e74f11;
+$orange:#9C350D;
 $red: #b01800;
+$redtwo:#B10245;
 $core-blue: #041e42;
+$core-blue-two: #05062a;
 $deep-blue: #151f6d;
 $bright-blue:#005c97;
 $sky-blue-light: #00b5e2;
@@ -35,6 +37,7 @@ $c-teal: #6ABCAB;
 $c-green: #386400;
 $c-dark-grey: #1B1C1E;
 $c-off-white: #fffefd;
+$c-purple-two: #1C184E;
 
 
 //########## BACKGROUND COLOUR ##########
@@ -49,6 +52,10 @@ $c-off-white: #fffefd;
 .bg-purple-trans
 {
   background: $c-purple-trans;
+}
+.bg-gradient-teal-to-pink
+{
+  @include linear-gradient(#00968c, #e56c93);
 }
 .bg-purple-trans-gradient-one
 {
@@ -118,6 +125,11 @@ $c-off-white: #fffefd;
   background:linear-gradient(140.65deg,#ff0072 0,#010c4e 100%);
   opacity:.86;
 }
+.bg-dynamic-grad-with-opacity-two
+{
+  background: $core-blue;
+  background:linear-gradient(45deg,$core-blue 70%,$fresh-teal 100%);
+}
 .bg-faded-grey
 {
   background-color: #f4f4f4 !important;
@@ -130,6 +142,10 @@ $c-off-white: #fffefd;
 {
   background-color: $core-blue !important;
 }
+.bg-core-blue-two
+{
+  background-color: $core-blue-two !important;
+}
 .bg-core-blue-sm
 {
   @include breakpoint(small down) {
@@ -140,6 +156,13 @@ $c-off-white: #fffefd;
 {
   background-color: $pink !important;
 }
+
+.bg-white-radial
+{
+    background:none;
+    background: radial-gradient(circle, #fff, rgba(0,0,0,0) 600px);
+}
+
 .bg-deep-blue
 {
   background-color: $deep-blue !important;
@@ -539,4 +562,9 @@ body .colour-navy-accent *
   {
     border-bottom-color: #fff;
   }
+}
+.gradient-l-white-r-trans
+{
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 76%, rgba(255,255,255,0) 100%);
 }

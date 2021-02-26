@@ -25,11 +25,12 @@
 .uls-overlay-link
 {
   position: static;
+  outline: none !important;
 
   &::before
   {
     bottom: 0;
-    content: "";
+    content: " ";
     left: 0;
     overflow: hidden;
     position: absolute;
@@ -59,6 +60,7 @@ small
 {
   min-height: 100vh;
 }
+
 .shiny
 {
   background: rgb(255,255,255);
@@ -157,6 +159,16 @@ ul.columns-2,
   {
     min-height: 200px;
     margin-bottom: 0;
+  }
+}
+
+.min-banner-height
+{
+  min-height: 380px !important;
+
+  @include breakpoint(small down)
+  {
+    min-height: initial !important;
   }
 }
 
@@ -916,6 +928,11 @@ a.zoom
   border-right:10px solid #fff;
 }
 
+.bg-no-repeat
+{
+  background-repeat: no-repeat;
+}
+
 .responsive-promo
 {
   background-size: cover;
@@ -1159,6 +1176,12 @@ a.zoom
     height: auto;
     overflow: visible;
   }
+}
+
+.no-shadow
+{
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .wysiwyg-imgs
@@ -1469,4 +1492,118 @@ $widthamounts: (400,450,500,550,600,650,700,750,800,850);
       display: none;
     }
   }
+}
+
+.image-branded-overlay
+{
+  position:absolute;
+  z-index:2;
+  left:0;
+  top:0;
+}
+
+.image-underlay
+{
+  position:relative;
+  z-index:1;
+  left:0;
+  top:0;
+}
+
+.bg-265
+{
+  background-size: 265px;
+}
+
+.bg-80
+{
+  background-size: 80px;
+}
+
+.bg-60
+{
+  background-size: 60px;
+}
+
+.bg-600
+{
+  background-size: 600px;
+}
+
+.circle-crop {
+  -webkit-clip-path: circle(50%);
+  clip-path: circle(50%);
+}
+.filtered img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.square-40
+{
+  width:40px;
+  height:40px;
+}
+
+.square-60
+{
+  width:60px;
+  height:60px;
+}
+
+.square-80
+{
+  width:80px;
+  height:80px;
+}
+
+.square-400
+{
+  width:400px;
+  height:400px;
+}
+
+.hqy-loading
+{
+   //display: inline-block;
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+   background-color: #DDDBDD !important;
+
+   &::after {
+     position: relative;
+     z-index: 1;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     transform: translateX(-100%);
+     background-image: linear-gradient(
+       90deg,
+       rgba(#fff, 0) 0,
+       rgba(#fff, 0.2) 20%,
+       rgba(#fff, 0.5) 60%,
+       rgba(#fff, 0)
+     );
+     animation: shimmer 5s infinite;
+     content: '';
+   }
+
+   @keyframes shimmer {
+     100% {
+       transform: translateX(100%);
+     }
+   }
+}
+
+.hqy-lazy.opacity.hqy-loaded
+{
+  opacity: 0.6 !important;
+}
+
+.p-hide
+{
+  display: none;
 }

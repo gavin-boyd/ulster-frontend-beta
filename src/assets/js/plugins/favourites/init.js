@@ -1,14 +1,53 @@
+function ulsAppFavButtonConfig(
+  favBtnClass,
+  activeClass,
+  favouriteslistid,
+  rowClass
+) {
+  //<span class="uls-fav-config show-for-sr" data-icon="far fa-heart" data-sel-icon="fas fa-heart" data-text="Add to playlist" data-sel-text="Remove from playlist">Add to playlist</span>
+  jQuery(favBtnClass).each(function() {
+      var icon = jQuery(this).children('.uls-fav-config').data("icon");
+      var iconsel = jQuery(this).children('.uls-fav-config').data("sel-icon");
+      var text = jQuery(this).children('.uls-fav-config').data("text");
+      var textsel = jQuery(this).children('.uls-fav-config').data("sel-text");
+      jQuery(this).children('.uls-fa-content').remove();
+      if (jQuery(this).hasClass(activeClass)) {
+        jQuery(this).children('.uls-fav-config').before('<span class="uls-fa-content"><span class="' + iconsel +' aria-hidden="true"></span>&nbsp;&nbsp;' + textsel + '</span>');
+      } else {
+        jQuery(this).children('.uls-fav-config').before('<span class="uls-fa-content"><span class="' + icon +' aria-hidden="true"></span>&nbsp;&nbsp;' + text + '</span>');
+      }
+  });
+  if (jQuery('#' + favouriteslistid).length > 0) {
+    jQuery('#' + favouriteslistid).each(function() {
+      jQuery(favBtnClass + '.' + activeClass).click(function(e) {
+        var thisrow = jQuery(this).data('id');
+        thisrow = '#' + thisrow + '-row';
+        jQuery(thisrow).fadeOut("slow");
+      });
+    })
+  }
+}
+
 /*
  * cookieName - uls_appwk_favs
  * domain - ulster.ac.uk
  * path '/'
  * cookieExpiry - 800
- * favBtnClass - 'a.ww_event_fav_btn.alert'
+ * favBtnClassSelected - 'a.ulsAddFav.alert'
  * favCount - '.fav-count'
+ * favBtnClass - a.ulsAddFav
+ * activeClass - alert
  */
-function ulsAppFavouritesSet(cookieName, domain, path, cookieExpiry, favBtnClass, favCount) {
-  //debug
-  console.log('first function init!');
+function ulsAppFavouritesSet(
+  cookieName,
+  domain,
+  path,
+  cookieExpiry,
+  favBtnClassSelected,
+  favCount,
+  favBtnClass,
+  activeClass
+) {
   var setCookieExpiry = cookieExpiry;
   var setCookieDomain = domain;
   var setCookiePath = path;
@@ -26,7 +65,7 @@ function ulsAppFavouritesSet(cookieName, domain, path, cookieExpiry, favBtnClass
   } else {
       var eventsArray = [];
   }
-  jQuery(favBtnClass).each(function() {
+  jQuery(favBtnClassSelected).each(function() {
       var id = jQuery(this).data('id');
       id = parseInt(id);
       eventsArray.push(id);
@@ -80,7 +119,24 @@ function ulsAppFavouritesSet(cookieName, domain, path, cookieExpiry, favBtnClass
  * containerID = #events-listing
  * cookieExpiry = 800
  */
-function ulsAppFavouritesActions(cookieName, domain, path, cookieExpiry, rowClass, favBtnClass, favCount, activeClass, openFavsTarget, favsPagePath, queryVar, containerID, callback, favBtnClassSelected) {
+function ulsAppFavouritesActions(
+  cookieName,
+  domain,
+  path,
+  cookieExpiry,
+  rowClass,
+  favBtnClass,
+  favCount,
+  activeClass,
+  openFavsTarget,
+  favsPagePath,
+  queryVar,
+  queryVarSimple,
+  containerID,
+  favBtnClassSelected,
+  callback,
+  callback2
+) {
   //favourite button actions
   jQuery(containerID).find(rowClass).each(function(e) {
     var favouriteBtn = jQuery(this).find(favBtnClass);
@@ -134,9 +190,11 @@ function ulsAppFavouritesActions(cookieName, domain, path, cookieExpiry, rowClas
             jQuery(inputID).attr('value', inputContent);*/
             //debug
             //console.log('######remove fav');
+            callback2(favBtnClass, activeClass);
         } else {
             jQuery(this).addClass(activeClass);
             callback(cookieName, domain, path, cookieExpiry, favBtnClassSelected, favCount);
+            callback2(favBtnClass, activeClass);
             //debug
             //console.log('######add fav');
         }
@@ -174,6 +232,31 @@ function ulsAppFavouritesActions(cookieName, domain, path, cookieExpiry, rowClas
         window.location.href = url;
     }
   });
+
+  jQuery.urlParam = function(name){
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results==null){
+         return 'notset';
+      }
+      else{
+         return results[1] || 'notset';
+      }
+  }
+
+  //set favourites by url
+  //debug
+  if (jQuery('#favourites-list').length > 0) {
+    var query_param = jQuery.urlParam(queryVarSimple);
+    if (query_param !== 'notset') {
+      jQuery.cookie(cookieName, query_param, {
+          expires: cookieExpiry,
+          path: path,
+          domain: domain
+      });
+      callback(cookieName, domain, path, cookieExpiry, favBtnClassSelected, favCount);
+      callback2(favBtnClass, activeClass);
+    }
+  }
 }
 
-export {ulsAppFavouritesSet, ulsAppFavouritesActions}
+export {ulsAppFavouritesSet, ulsAppFavouritesActions, ulsAppFavButtonConfig}
