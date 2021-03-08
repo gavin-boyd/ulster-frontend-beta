@@ -17,32 +17,22 @@ function lanyardsPersonalisation() {
     //user cookie conditionals (events)
     if (u_cookie) {
       var u_cookie_array = u_cookie;
-
-      /*{
-        "firm_offer": "%ds__firm_flag%",
-        "ins": "%ds__ins_flag%",
-        "declared_disability": "%ds__declared_disability%",
-        "talented_athlete": "%ds__talented_athlete%",
-        "first_name": "%ds__spriden_first_name^json_encode%"
-      }*/
+      /*
+      "h": "",
+      "first_name": "",
+      "city": "",
+      "declared_disability": "",
+      "talented_athlete": "",
+      "community_scholarship_available": ""
+      */
 
       //1. define what these are - done
-      var data_firm_offer = u_cookie_array[0];
-      var data_ins = u_cookie_array[1];
-      var data_declared_disability = u_cookie_array[2];
-      var data_talented_athlete = u_cookie_array[3];
-      var data_first_name = u_cookie_array[4];
-      var data_city = u_cookie_array[5];
-
-      if (data_firm_offer == 'Y') {
-        jQuery('.p-firm-offer').each(function() {
-          jQuery(this).show();
-        });
-
-        jQuery('.p-firm-offer-hidden').each(function() {
-          jQuery(this).hide();
-        });
-      }
+      var data_hash = u_cookie_array[0];
+      var data_first_name = u_cookie_array[1];
+      var data_city = u_cookie_array[2];
+      var data_declared_disability = u_cookie_array[3];
+      var data_talented_athlete = u_cookie_array[4];
+      var data_ins = u_cookie_array[5];
 
       if (data_ins == 'Y') {
         jQuery('.p-ins').each(function() {
@@ -108,6 +98,57 @@ function lanyardsPersonalisation() {
     //console.log('cookie set! ' + jQuery.cookie('uls_lyrd'));
   }
 
+  //https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript/901144#901144
+  function getParameterByName(name, url = window.location.href) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  function cookieQuery() {
+    //debug
+    //console.log('cookie not set, get data from database.');
+    //set user cookie
+    jQuery.ajax({
+      url: 'https://www.ulster.ac.uk/destinationulster/_web_services/res?q=' + getParameterByName('q') + '&r=' + getParameterByName('r'),
+      dataType: 'json',
+      success: function(data) {
+        //debug
+        //console.log( "SUCCESS:  " + data );
+        console.log('q = ' + getParameterByName('q'));
+        console.log('r = ' + getParameterByName('r'));
+        data.forEach(function(key, value) {
+          var data_hash = key.h;
+          var data_ins = key.community_scholarship_available;
+          var data_declared_disability = key.declared_disability;
+          var data_talented_athlete = key.talented_athlete;
+          var data_first_name = key.first_name;
+          var data_city = key.city;
+          //debug
+          personalisationCookie(data_hash, data_first_name, data_city, data_declared_disability, data_talented_athlete, data_ins);
+          if (jQuery.cookie('uls_lyrd')) {
+            var cookie = jQuery.cookie('uls_lyrd');
+            cookie = cookie.split(',');
+            personalisation(cookie);
+          } else {
+            var values_array = [data_hash, data_first_name, data_city, data_declared_disability, data_talented_athlete, data_ins];
+            personalisation(values_array);
+          }
+        });
+      },
+      error: function(xhr, status, error) {
+        //debug
+        //console.log('ajax error');
+        //var errorMessage = xhr.status + ': ' + xhr.statusText
+        //console.log('Error - ' + errorMessage);
+        //console.log(error);
+      }
+    });
+  }
+
   jQuery(document).ready(function() {
 
     (function() {
@@ -132,48 +173,26 @@ function lanyardsPersonalisation() {
       });
 
       //set cookies
-      if (jQuery('#uls-lanyards').data('url')) {
+      var q = getParameterByName('q');
+      var r = getParameterByName('r');
+      if (q !== null && r !== null) {
         if (jQuery.cookie('uls_lyrd')) {
           var cookie = jQuery.cookie('uls_lyrd');
           cookie = cookie.split(',');
-          personalisation(cookie);
+          var hash = getParameterByName('q');
+          if (hash == cookie[0]) {
+            //debug
+            console.log('1 - read from cookie.');
+            personalisation(cookie);
+          } else {
+            //debug
+            console.log('2 - db and set new cookie.');
+            cookieQuery();
+          }
         } else {
           //debug
-          //console.log('cookie not set, get data from database.');
-          //set user cookie
-          jQuery.ajax({
-            url: jQuery('#uls-lanyards').data('url'),
-            dataType: 'json',
-            success: function(data) {
-              //debug
-              //console.log( "SUCCESS:  " + data );
-              data.forEach(function(key, value) {
-                var data_firm_offer = key.firm_offer;
-                var data_ins = key.ins;
-                var data_declared_disability = key.declared_disability;
-                var data_talented_athlete = key.talented_athlete;
-                var data_first_name = key.first_name;
-                var data_city = key.city;
-                //debug
-                personalisationCookie(data_firm_offer, data_ins, data_declared_disability, data_talented_athlete, data_first_name, data_city);
-                if (jQuery.cookie('uls_lyrd')) {
-                  var cookie = jQuery.cookie('uls_lyrd');
-                  cookie = cookie.split(',');
-                  personalisation(cookie);
-                } else {
-                  var values_array = [data_firm_offer, data_ins, data_declared_disability, data_talented_athlete, data_first_name, data_city];
-                  personalisation(values_array);
-                }
-              });
-            },
-            error: function(xhr, status, error) {
-              //debug
-              //console.log('ajax error');
-              //var errorMessage = xhr.status + ': ' + xhr.statusText
-              //console.log('Error - ' + errorMessage);
-              //console.log(error);
-            }
-          });
+          console.log('2 - db and set new cookie.');
+          cookieQuery();
         }
       } else {
         if (jQuery.cookie('uls_lyrd')) {
@@ -181,6 +200,8 @@ function lanyardsPersonalisation() {
           //console.log('cookie found, get data from cookie.');
           var cookie = jQuery.cookie('uls_lyrd');
           cookie = cookie.split(',');
+          //debug
+          console.log('4 - cookie.');
           personalisation(cookie);
         }
       }
