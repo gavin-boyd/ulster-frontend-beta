@@ -8,9 +8,9 @@ jQuery(document).ready(function() {
     e.preventDefault();
     var valid = jQuery("#page_asset_builder_841661").valid();
     if (valid === true) {
-      jQuery('body').prepend('<div class="preloader-container" id="loading"><div class="preloader"><img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/><p id="loading-text" class="m-t-20">Creating your prospectus</p></div></div>');
+      jQuery('body').prepend('<div id="loading" style="width:100%; height:100%; position:fixed; background: rgba(0,0,0,.8); z-index:9999; display:table;"><div style="display:table-cell;vertical-align:middle;text-align:center;"><img src="//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/cool-preloader.gif" alt="Loading" /><p style="color:#fff;" id="loading-text">Creating your prospectus</p></div></div>');
       jQuery.ajax({
-          url: 'https://www.ulster.ac.uk/personalisedprospectus/_dev/pg',
+          url: '%globals_asset_url%',
           type: 'POST',
           data: jQuery(this).serialize(),
           success: function(result) {
@@ -57,6 +57,7 @@ jQuery(document).ready(function() {
   /*jQuery('#selections label').each(function() {
     jQuery(this).attr('id', 'id-' + convertToSlug(jQuery(this).text()));
   });*/
+  //1211
   jQuery('#selections input:radio').change(function() {
     var urlPartTwo = '';
     var labelHTML = '<ul class="angle-right">';
@@ -112,7 +113,7 @@ jQuery(document).ready(function() {
       if (total == 0) {
         message = '<p class="callout warning" id="uls_validation">Please refine your search, try changing either type, attendance or campus.</p>';
       }
-      var cta = '<p><a href="#" id="build" class="build button large rounded shadow expanded"><span class="fa fa-wrench" aria-hidden="true"></span>&nbsp;&nbsp;Build my prospectus</a></p>';
+      var cta = '<p><a href="#" id="build" class="button large expanded"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Build my prospectus</a></p>';
       jQuery('#course-counter').html('<div class="card bordered radius shadow card-section"' +
         '<p>We found</p>' +
         '<div class="stat">' + total + ' <small>' + coursesLabel + '</small></div><br><p>Matching your selections:</p>' +
@@ -120,37 +121,31 @@ jQuery(document).ready(function() {
         message +
         cta +
         '</div>');
-        jQuery('#mobile-course-counter').html('<div class="card bordered radius shadow card-section m-b-0">' +
-          '<div class="stat">' + total + ' <small>' + coursesLabel + '</small></div><p class="m-b-0">Matching your selections:</p>' +
-          labelHTML +
-          message +
-          '<p><a href="#" id="build" class="build button large rounded shadow expanded"><span class="fa fa-wrench" aria-hidden="true"></span>&nbsp;&nbsp;Build my prospectus</a></p>' +
-          '</div>');
       //add click event to build button
       if (total == 0) {
-        jQuery('.build').addClass('uls-disabled');
-        jQuery('.build').click(function(e) {
+        jQuery('#build').addClass('uls-disabled');
+        jQuery('#build').click(function(e) {
           e.preventDefault();
           jQuery('#uls_validation').css('border', '2px solid red');
         })
       } else {
         jQuery('#uls_validation').remove();
-        jQuery('.build').removeClass('uls-disabled');
-        jQuery('.build').click(function(e) {
+        jQuery('#build').removeClass('uls-disabled');
+        jQuery('#build').click(function(e) {
           e.preventDefault();
           //console.log('submit!');
-          var valid = jQuery("#page_asset_builder_841661").valid();
+          var valid = jQuery("#page_asset_builder_272204").valid();
           if (jQuery(this).hasClass('uls-disabled')) {
           } else {
             if (valid === true) {
               //console.log('form is valid');
-              jQuery('#page_asset_builder_841661').submit();
+              jQuery('#page_asset_builder_272204').submit();
               jQuery('button[type=submit], input[type=submit]').prop('disabled',true);
               jQuery('button[type=submit], input[type=submit]').addClass('disabled');
               jQuery(this).addClass('disabled');
             } else {
               jQuery("html,body").animate({
-                  scrollTop: jQuery("#page_asset_builder_841661").offset().top
+                  scrollTop: jQuery("#page_asset_builder_272204").offset().top
               }, "500");
               return false;
             }
@@ -229,9 +224,7 @@ jQuery(document).ready(function() {
     var options = {
         'utilsScript': '//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/js/utils.js?v=1.2',
         'formatOnDisplay': 'true',
-        'hiddenInput': 'metadata_field_text_272286_value',
-        'initialCountry': 'gb',
-        'preferredCountries': ['gb', 'ie']
+        'hiddenInput': 'metadata_field_text_272286_value'
     };
     jQuery(this).intlTelInput(options);
   });

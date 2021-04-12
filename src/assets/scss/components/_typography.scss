@@ -257,6 +257,24 @@ ul.large,
   }
 }
 
+.extra-large-small
+{
+  font-size: 62px;
+  line-height: 66px;
+
+  @include breakpoint(medium down)
+  {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  @include breakpoint(small down)
+  {
+    font-size: 42px;
+    line-height: 46px;
+  }
+}
+
 .wysiwyg
 {
   table

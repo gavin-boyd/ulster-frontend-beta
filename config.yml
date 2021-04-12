@@ -53,4 +53,5 @@ PATHS:
     #- "src/assets/js/app-minimal.js"
     #- "src/assets/js/campaign.js"
     #- "src/assets/js/scholarships.js"
-    - "src/assets/js/lanyards.js"
+    #- "src/assets/js/lanyards.js"
+    - "src/assets/js/submit-prospectus.js"

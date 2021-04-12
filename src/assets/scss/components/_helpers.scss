@@ -412,6 +412,20 @@ ul.columns-2,
   }
 }
 
+.pos-bottom
+{
+  position: absolute;
+  bottom: 0;
+}
+
+.no-pos-small
+{
+  @include breakpoint (small down) {
+    position: relative;
+    bottom: auto;
+  }
+}
+
 /*
  * hide native click4assistance button
  */
@@ -705,6 +719,14 @@ a.button
   @include breakpoint(small only)
   {
     float: left;
+  }
+}
+
+.flt-small-r
+{
+  @include breakpoint(small only)
+  {
+    float: right;
   }
 }
 
