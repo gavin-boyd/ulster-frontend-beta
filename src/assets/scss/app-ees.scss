@@ -1,3 +1,121 @@
+@charset 'utf-8';
+//v4 fontawesome
+//@import './node_modules/font-awesome/scss/font-awesome.scss';
+//@import 'components/font-awesome-paths';
+
+//v5 fontawesome
+$fa-font-path: "//cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/webfonts/5.13.0" !default;
+@import './node_modules/@fortawesome/fontawesome-pro/scss/fontawesome';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/v4-shims';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/solid';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/regular';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/light';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/brands';
+@import './node_modules/@fortawesome/fontawesome-pro/scss/duotone';
+@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/colours';
+@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/fonts';
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
 .ees-content-template {
-  @import './app.scss';
+  @include foundation-global-styles;
+  //@include foundation-grid;
+  @include foundation-flex-grid;
+  //
+  @include foundation-xy-grid-classes;
+  @include foundation-typography;
+  @include foundation-button;
+  @include foundation-forms;
+  // @include foundation-range-input;
+  @include foundation-accordion;
+  @include foundation-accordion-menu;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  @include foundation-button-group;
+  @include foundation-callout;
+  @include foundation-card;
+  @include foundation-close-button;
+  @include foundation-menu;
+  @include foundation-menu-icon;
+  @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  @include foundation-dropdown-menu;
+  @include foundation-responsive-embed;
+  @include foundation-label;
+  @include foundation-media-object;
+  @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  @include foundation-thumbnail;
+  @include foundation-title-bar;
+  @include foundation-tooltip;
+  @include foundation-top-bar;
+  @include foundation-visibility-classes;
+  //@include foundation-float-classes;
+  @include foundation-flex-classes;
+  @include foundation-prototype-classes;
+  @include motion-ui-transitions;
+  @include motion-ui-animations;
+
+  //dependencies
+  @import "./node_modules/angled-edges/angled-edges"; //https://www.npmjs.com/package/angled-edges
+
+  //custom
+  @import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/variables';
+  //@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/magnific-popup-custom';
+  //@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/video-promo';
+  //@import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/videowall';
+  @import '/Volumes/my-passport/Backup/htdocs/ulster-frontend/app/scss/components/mixins';
+  @import 'components/colours';
+  @import 'components/mega-menu';
+  @import 'components/multilevel-offcanvas-menu';
+  @import 'components/custom';
+  @import 'components/fancy-box';
+  @import 'components/timeline';
+  @import 'components/image-hover-wrapper';
+  @import 'components/sticky-video';
+  @import 'components/image-link';
+  @import 'components/side-nav';
+  @import 'components/featured-testimonials';
+  @import 'components/angled-edges';
+  @import 'components/home';
+  @import 'components/image-promos';
+  @import 'components/funnelback';
+  @import 'components/forms';
+  @import 'components/preloader';
+  @import 'components/accordion';
+  @import 'components/global-fixes';
+  @import 'components/wysiwyg';
+  @import 'components/breadcrumbs';
+  @import 'components/spacing-utilities';
+  @import 'components/max-width-utilities';
+  @import 'components/magellan';
+  @import 'components/isotope';
+  @import 'components/service-logo';
+  @import 'components/prettycheckable';
+  @import 'pickadate/classic';
+  @import 'pickadate/classic-date';
+  @import 'components/slick';
+  @import 'components/slick-theme';
+  @import 'components/animation';
+  @import 'components/universal-nav';
+  @import 'components/social-wall';
+  @import 'components/typography';
+  @import 'components/funnelback-autocomplete';
+  @import 'components/reading-progress-indicator';
+  //@import 'components/hero-full-screen';
+  @import 'components/circle-graph';
+  //@import 'components/clean-hero-slider';
+  //@import 'components/video-custom';
+  //cli installed building blocks
+  //@import 'components/building-blocks/card-user-profile';
+
 }
