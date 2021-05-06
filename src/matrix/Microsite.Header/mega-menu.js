@@ -1,5 +1,7 @@
 function activeState(url, pos) {
     var current_url = '%frontend_asset_url%';
+    var count_slashes = current_url.split("/").length;
+    var slashes = parseInt(count_slashes);
     var check = '%frontend_asset_linking_lineage^contains:{frontend_asset_assetid}%';
     var site_index_url = '%globals_site_index_id^as_asset:asset_url%';
     var site_url = '%globals_site_url%';
@@ -7,7 +9,7 @@ function activeState(url, pos) {
       return ' hover';
     }
     if (current_url.includes(url)) {
-        if (pos == '0' && url == site_url) {
+        if (pos == '0') {
             return ' hover-r';
         } else {
             return ' hover';

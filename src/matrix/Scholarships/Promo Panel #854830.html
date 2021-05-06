@@ -1,0 +1,20 @@
+%begin_nested_get_content^striphtml^neq:%
+<div class="grid-container p-t-60 p-small-t-20 p-small-b-20" id="%nested_get_id%">
+   <div class="grid-x grid-margin-x">
+      %begin_nested_get_image^as_asset:asset_url^eq:%
+      <div class="cell large-12">
+         %nested_get_title^eq:::<h2>{nested_get_title}</h2>%
+         %nested_get_content^tagif:div class="wysiwyg"%
+      </div>
+      %else_nested_get_image^as_asset:asset_url^eq:%
+      <div class="cell small-12 medium-6 large-6">
+         %nested_get_title^eq:::<h2>{nested_get_title}</h2>%
+         %nested_get_content^tagif:div class="wysiwyg"%
+      </div>
+      <div class="cell small-12 medium-6 large-6 hide-for-small-only">
+         <img src="https://cdn.ulster.ac.uk/home/ulster-frontend/img/blank.gif" data-src="%nested_get_image^as_asset:image_v_width-800_url%" data-src-small="%nested_get_image^as_asset:image_v_thumb-larger_url%" alt="Image for %nested_get_title%" class="hqy-lazy" />
+      </div>
+      %end_nested_get_image^as_asset:asset_url^eq:%
+   </div>
+</div>
+%end_nested_get_content^striphtml^neq:%

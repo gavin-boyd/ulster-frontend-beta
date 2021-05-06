@@ -50,12 +50,11 @@ ulsMegaMenuInit();
 ulsterCookieConsentInit();
 hqyLazyInit();
 ulsLazyLoadInit();
-
 ulsSliderInit();
 ulsBreadcrumbInit();
 
 ulsAppFavouritesSet(
-  'uls_appwk_favs', //cookieName
+  'uls_skillsweek_favs', //cookieName
   'ulster.ac.uk', //domain
   '/', //path
   800, //cookieExpiry
@@ -66,7 +65,7 @@ ulsAppFavouritesSet(
 );
 
 ulsAppFavouritesActions(
-  'uls_appwk_favs', //cookieName
+  'uls_skillsweek_favs', //cookieName
   'ulster.ac.uk', //domain
   '/', //path
   800, //cookieExpiry
@@ -75,9 +74,9 @@ ulsAppFavouritesActions(
   '.ulsFavCount', //favCount
   'alert', //activeClass
   '#open-favourites', //openFavsTarget
-  'https://www.ulster.ac.uk/applicant-weekend/playlist', //favsPagePath
-  '?talks=', //queryVar
-  'talks', //queryVarSimple
+  'https://www.ulster.ac.uk/skillsweek/schedule', //favsPagePath
+  '?events=', //queryVar
+  'events', //queryVarSimple
   '#events-listing', //containerID
   'a.ulsAddFav.alert', //favBtnClassSelected
   ulsAppFavouritesSet, //callback,

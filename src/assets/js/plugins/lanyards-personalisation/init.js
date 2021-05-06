@@ -68,6 +68,9 @@ function lanyardsPersonalisation() {
         jQuery('.p-firstname').each(function() {
           jQuery(this).show();
         });
+        jQuery('.p-text').each(function() {
+          jQuery(this).show();
+        });
         jQuery('.p-firstname').text(data_first_name);
       }
 
@@ -166,6 +169,9 @@ function lanyardsPersonalisation() {
         jQuery(this).hide();
       });
       jQuery('.p-firstname').each(function() {
+        jQuery(this).hide();
+      });
+      jQuery('.p-text').each(function() {
         jQuery(this).hide();
       });
       jQuery('.p-city').each(function() {

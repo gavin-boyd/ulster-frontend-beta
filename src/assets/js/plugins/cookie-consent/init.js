@@ -20,7 +20,7 @@ function ulsterCookieConsentInit () {
                                '<div class="grid-x grid-margin-x dark-grey-bg m-b-10 m-small-b-0 p-t-10 p-b-10 shadow">' +
                                  '<div class="cell small-9 medium-10 large-10">' +
                                    '<p class="text-white m-b-0">' + domain + ' uses cookies to give users the best experience possible.</p>' +
-                                   '<p class="m-b-0"><a href="https://www.ulster.ac.uk/about/cookies" class="bl text-white">Find out more&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a></p>' +
+                                   '<p class="m-b-0"><a href="https://www.ulster.ac.uk/about/cookies" class="bl text-white">Find out more<span class="show-for-sr"> about our use of cookies</span>&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a></p>' +
                                   '</div>' +
                                   '<div class="cell small-3 medium-2 large-2">' +
                                     '<ul class="m-t-10 m-b-0 flt-r m-l-20 m-small-l-0 m-small-t-0">' +
