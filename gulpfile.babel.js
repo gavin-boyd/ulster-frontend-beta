@@ -91,8 +91,8 @@ function sass() {
 
   //app.css
   return gulp.src([
-    //'src/assets/scss/app.scss',
-    'src/assets/scss/app-ees.scss',
+    'src/assets/scss/app.scss',
+    //'src/assets/scss/app-ees.scss',
     //'src/assets/scss/app-minimal.scss',
     //'src/assets/scss/app-edit-plus.scss',
     //'src/assets/scss/ready.scss',

@@ -15,16 +15,15 @@ function ulsterCookieConsentInit () {
   jQuery.fn.extend({
       ulsterCookieConsent: function(domain) {
           var consentCookie = jQuery.cookie('uls_cc');
-          var cookieHTML = '<div id="uls_cc" role="region" aria-label="cookie banner" class="action-sheet">' +
+          var cookieHTML = '<div id="uls_cc" role="region" aria-label="cookie banner" class="action-sheet opacity-effect">' +
                              '<div class="grid-container">' +
                                '<div class="grid-x grid-margin-x dark-grey-bg m-b-10 m-small-b-0 p-t-10 p-b-10 shadow">' +
-                                 '<div class="cell small-9 medium-10 large-10">' +
-                                   '<p class="text-white m-b-0">' + domain + ' uses cookies to give users the best experience possible.</p>' +
-                                   '<p class="m-b-0"><a href="https://www.ulster.ac.uk/about/cookies" class="bl text-white">Find out more<span class="show-for-sr"> about our use of cookies</span>&nbsp;<span class="fas fa-angle-right" aria-hidden="true"></span></a></p>' +
+                                 '<div class="cell small-11 medium-10 large-10 position-relative">' +
+                                   '<p class="text-white m-b-0 flt-small-l vertical-align">' + domain + ' uses cookies to give users the best experience possible.  <a href="https://www.ulster.ac.uk/about/cookies" class="bl text-white">Find out more<span class="show-for-sr"> about our use of cookies</span></a></p>' +
                                   '</div>' +
-                                  '<div class="cell small-3 medium-2 large-2">' +
-                                    '<ul class="m-t-10 m-b-0 flt-r m-l-20 m-small-l-0 m-small-t-0">' +
-                                      '<li><a href="#" class="bl m-b-0 m-l-20 m-small-l-0 text-white text-right-small" id="uls_cc_close"><span class="fas fa-times-circle m-r-5" aria-hidden="true"></span><span class="hide-for-small-only">&nbsp;Dismiss</span></a></li>' +
+                                  '<div class="cell small-1 medium-2 large-2">' +
+                                    '<ul class="m-b-0 flt-r m-l-20 m-small-l-0 m-small-t-0">' +
+                                      '<li class="text-right"><a href="#" class="button small hollow white expanded flt-r" id="uls_cc_close"><span class="fas fa-times-circle" aria-hidden="true"></span><span class="hide-for-small-only">&nbsp;Dismiss</span></a></li>' +
                                     '</ul>' +
                                   '</div>' +
                                '</div>' +
