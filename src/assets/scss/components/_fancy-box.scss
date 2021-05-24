@@ -750,3 +750,11 @@ li.fancybox-thumbs-loading {
     right: 110px; }
   .fancybox-thumbs > ul > li {
     max-width: calc(100% - 10px); } }
+
+.fancybox-button.fancybox-close-small
+{
+  svg
+  {
+    display: none !important;
+  }
+}

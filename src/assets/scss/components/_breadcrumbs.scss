@@ -74,6 +74,20 @@ ul.breadcrumbs
     }
   }
 
+  li:not(:first-child)
+  {
+    &:not(:nth-child(2))
+    {
+      &:last-child
+      {
+        @include breakpoint(small down)
+        {
+          display: none;
+        }
+      }
+    }
+  }
+
   li:not(:first-child)::before
   {
     font-family: 'Font Awesome 5 Pro';
