@@ -20,3 +20,5 @@ import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
 
 import {hqyLazyInit, ulsLazyLoadInit} from './plugins/hqy-lazy/hqy-lazyload';
+hqyLazyInit();
+ulsLazyLoadInit();
