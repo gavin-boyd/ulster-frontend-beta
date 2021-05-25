@@ -20,5 +20,9 @@ import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
 
 import {hqyLazyInit, ulsLazyLoadInit} from './plugins/hqy-lazy/hqy-lazyload';
+import {jqueryCookieInit} from './plugins/cookie/init';
+import {ulsterCookieConsentInit} from './plugins/cookie-consent/init';
 hqyLazyInit();
 ulsLazyLoadInit();
+jqueryCookieInit();
+ulsterCookieConsentInit();
