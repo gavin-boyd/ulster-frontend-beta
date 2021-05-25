@@ -1,0 +1,289 @@
+@mixin border-radius( $radius: 3px ){
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin outline-radius( $radius: 3px ){
+	-webkit-outline-radius: $radius;
+	   -moz-outline-radius: $radius;
+	        outline-radius: $radius;
+}
+
+@mixin box-shadow(
+	$x : 2px,
+	$y : 2px,
+	$blur : 5px,
+	$spread : 0,
+	$color : rgba(0,0,0,.6)
+) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	   -moz-box-shadow: $x $y $blur $spread $color;
+			box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin transition(
+	$what : all,
+	$length : 1s,
+	$easing : ease-in-out
+) {
+	-webkit-transition: $what $length $easing;
+	   -moz-transition: $what $length $easing;
+	     -o-transition: $what $length $easing;
+		  	transition: $what $length $easing;
+}
+
+@mixin transform(
+	$params
+) {
+	-webkit-transform: $params;
+  	   -moz-transform: $params;
+  	        transform: $params;
+}
+
+@mixin box(
+	$orient : horizontal,
+	$pack : center,
+	$align : center
+) {
+	display: -webkit-box;
+	   display: -moz-box;
+	        display: box;
+
+	-webkit-box-orient: $orient;
+	   -moz-box-orient: $orient;
+	   		box-orient: $orient;
+
+	-webkit-box-pack: $pack;
+	   -moz-box-pack: $pack;
+	        box-pack: $pack;
+
+	-webkit-box-align: $align;
+	   -moz-box-align: $align;
+			box-align: $align;
+}
+
+@mixin flex( $val : 1 ){
+	-webkit-box-flex: $val;
+	   -moz-box-flex: $val;
+	        box-flex: $val;
+}
+
+@mixin resize( $direction ){
+	-webkit-resize: $direction;
+	   -moz-resize: $direction;
+	        resize: $direction;
+}
+
+//https://github.com/ryanburgess/SASS-Useful-Mixins/blob/master/mixins/_linear-gradient.scss
+@mixin linear-gradient($top, $bottom) {
+  background: #{$top}; /* Old browsers */
+  background:    -moz-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* FF3.6+ */
+  background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%, #{$top}), color-stop(100%, #{$bottom})); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* Chrome10+,Safari5.1+ */
+  background:      -o-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* Opera 11.10+ */
+  background:     -ms-linear-gradient(top, #{$top} 0%, #{$bottom} 100%); /* IE10+ */
+  background:         linear-gradient(to bottom, #{$top} 0%, #{$bottom} 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0 ); /* IE6-9 */
+}
+
+@mixin double-borders(
+	$colorOne : green,
+	$colorTwo : red,
+	$radius : 0
+) {
+	border: 1px solid $colorOne;
+
+	-webkit-box-shadow: 0 0 0 1px $colorTwo;
+	   -moz-box-shadow: 0 0 0 1px $colorTwo;
+	   		box-shadow: 0 0 0 1px $colorTwo;
+
+	@include border-radius( $radius );
+}
+
+@mixin triple-borders(
+	$colorOne : green,
+	$colorTwo : red,
+	$colorThree : blue,
+	$radius : 0
+) {
+	border: 1px solid $colorOne;
+
+	@include border-radius( $radius );
+
+	-webkit-box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+	   -moz-box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+	   		box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+}
+
+@mixin columns(
+	$count : 3,
+	$gap : 10
+) {
+	-webkit-column-count: $count;
+	   -moz-column-count: $count;
+	        column-count: $count;
+
+	-webkit-column-gap: $gap;
+	   -moz-column-gap: $gap;
+	        column-gap: $gap;
+}
+
+@mixin box-sizing( $type : border-box ){
+	-webkit-box-sizing: $type;
+	   -moz-box-sizing: $type;
+	        box-sizing: $type;
+}
+
+@mixin news-events-embedded
+{
+	width: 30%;
+	margin-right: 3%;
+	float: left;
+
+	@media #{$small}
+	{
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+@mixin news-events-description
+{
+	float: left;
+	width: 67%;
+
+	@media #{$small}
+	{
+		width: 100%;
+	}
+}
+
+@mixin button-3d($colour: #ddd){
+  position: relative;
+  top: 0;
+  -webkit-box-shadow: 0 7px 0 $colour, 0 8px 3px $colour;
+          box-shadow: 0 7px 0 $colour, 0 8px 3px $colour;
+
+	&:hover, &:focus
+	{
+	    -webkit-box-shadow: 0 7px 0 $colour, 0 8px 3px $colour;
+	            box-shadow: 0 7px 0 $colour, 0 8px 3px $colour;
+	}
+
+	&:active
+	{
+	    top: 5px;
+	    -webkit-transition-property: all;
+	            transition-property: all;
+	    -webkit-transition-duration: .15s;
+	            transition-duration: .15s;
+	    -webkit-box-shadow: 0 2px 0 $colour, 0 3px 3px $colour;
+	            box-shadow: 0 2px 0 $colour, 0 3px 3px $colour;
+	}
+}
+
+@mixin grow
+{
+	transition: all .2s ease-in-out;
+}
+
+@mixin grow-hover
+{
+	transform: scale(1.1);
+	position: relative;
+	z-index: 9999;
+}
+
+@mixin apple-style-hover-tile
+{
+	-webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1),margin 0.15s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1),margin 0.15s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover
+	{
+		box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+	}
+}
+
+@mixin apple-style-ds
+{
+	@include box-shadow(
+		$x : 0,
+		$y : 0,
+		$blur : 5px,
+		$spread : 0,
+		$color : rgba(0,0,0,0.3)
+	);
+}
+
+@mixin drop-s
+{
+	-webkit-box-shadow: 0px -4px 2px -1px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px -4px 2px -1px rgba(0,0,0,0.55);
+	box-shadow: 0px -4px 2px -1px rgba(0,0,0,0.55);
+}
+
+@mixin drop-s-light
+{
+	-webkit-box-shadow: 0px -4px 2px -1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px -4px 2px -1px rgba(0,0,0,0.1);
+	box-shadow: 0px -4px 2px -1px rgba(0,0,0,0.1);
+}
+
+@mixin drop-s-b
+{
+	-webkit-box-shadow: 0px 4px 2px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 2px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 2px -1px rgba(0,0,0,0.75);
+}
+
+@mixin hidden
+{
+	position: absolute;
+	left: -9999px;
+}
+
+@mixin clearfix
+{
+  &:after
+  {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin row-correction
+{
+	margin-left: $row-gutter-margin;
+	margin-right: $row-gutter-margin;
+}
+
+@mixin row-correction-left
+{
+	margin-left: $row-gutter-margin;
+}
+
+@mixin row-correction-right
+{
+	margin-right: $row-gutter-margin;
+}
+
+@mixin calc($property, $expression)
+{
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin standardlink
+{
+	color: $headinglinkcolour;
+	@include transition-color;
+
+	&:hover
+	{
+		text-decoration: underline;
+		color: $headinglinkcolourhover;
+	}
+}

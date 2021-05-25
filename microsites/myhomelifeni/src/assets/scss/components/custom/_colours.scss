@@ -1,7 +1,13 @@
 /*
- * Ulster.Colours
+ * Colours
  * useful guidance: https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
  */
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
 
 //########## GLOBAL VARS ##########
 $opacity: .9;
@@ -32,7 +38,7 @@ $c-grey-trans: rgba(#111, .85);
 $c-pink: #D81B7A;
 $c-pink-trans: rgba($c-pink, $opacity);
 $c-grey-trans-light: rgba(#111, .45);
-$c-corp-gold-trans: rgba($corp-gold, .85);
+$c-corp-gold-trans: rgba($c-navy, .85);
 $c-teal: #6ABCAB;
 $c-green: #386400;
 $c-dark-grey: #1B1C1E;
@@ -109,7 +115,7 @@ $c-purple-two: #1C184E;
 }
 .bg-gold-trans-gradient-one
 {
-  @include linear-gradient(rgba(#000, .6), rgba($corp-gold, .1));
+  @include linear-gradient(rgba(#000, .6), rgba($c-navy, .1));
 }
 .bg-navy-trans-accent
 {
@@ -215,7 +221,7 @@ $c-purple-two: #1C184E;
 }
 .bg-corp-gold
 {
-  background: $corp-gold;
+  background: $c-navy;
 }
 .white-bg
 {
@@ -417,12 +423,7 @@ a.text-black
     border-bottom-color: rgba(255,255,255,.5) !important;
   }
 }
-.angled-dark-grey-top
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-dark-grey);
-  padding-bottom: 100px;
-}
+
 .icon
 {
   opacity:.2;
@@ -437,24 +438,8 @@ a.text-black
 {
   a.is-active
   {
-    background: $corp-gold;
+    background: $c-navy;
   }
-}
-.desaturate
-{
-  @include desaturate;
-}
-.hue
-{
-  @include hue;
-}
-.sepia
-{
-  @include sepia;
-}
-.brightness
-{
-  @include brightness;
 }
 .callout.secondary
 {
@@ -467,12 +452,7 @@ a.text-black
     border-bottom-color: $c-teal;
   }
 }
-.angled-purple-top
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-purple);
-  padding-bottom: 100px;
-}
+
 .separator-left.purple,
 .title.purple .separator-left
 {
@@ -497,12 +477,7 @@ body .colour-navy-accent *
 {
   color: $c-navy-accent-light;
 }
-.angled-navy-top
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-navy);
-  padding-bottom: 100px;
-}
+
 .separator-left.navy,
 .title.navy .separator-left
 {
