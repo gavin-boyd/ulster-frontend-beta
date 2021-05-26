@@ -1614,3 +1614,8 @@ $widthamounts: (400,450,500,550,600,650,700,750,800,850);
 {
   z-index:9999;
 }
+
+.radius
+{
+  @include border-radius(20px);
+}
