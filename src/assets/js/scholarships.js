@@ -38,7 +38,7 @@ import {ulsMegaMenuInit} from './plugins/megamenu/init';
 import {ulsBreadcrumbInit} from './plugins/breadcrumb-style/init';
 import {prettyCheckableInit} from './plugins/prettycheckable/init';
 //import {initSiteMessage, initSiteMsgDismiss} from './plugins/site-message/init-site-message';
-import {ulsCourseMobTabs} from './plugins/course-mob-tabs/init';
+//import {ulsCourseMobTabs} from './plugins/course-mob-tabs/init';
 //import {fancyBox, fancyBoxInit} from './plugins/fancybox/dist';
 import {initCourseFinderFavs} from './plugins/course-finder/init-favs';
 //import {tinysort} from 'tinysort';
