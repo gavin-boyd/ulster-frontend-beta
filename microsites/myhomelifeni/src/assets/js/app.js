@@ -19,9 +19,12 @@ $(document).foundation();
 import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
 
+import {fancyBox, fancyBoxInit} from './plugins/fancybox/dist';
 import {hqyLazyInit, ulsLazyLoadInit} from './plugins/hqy-lazy/hqy-lazyload';
 import {jqueryCookieInit} from './plugins/cookie/init';
 import {ulsterCookieConsentInit} from './plugins/cookie-consent/init';
+fancyBox();
+fancyBoxInit();
 hqyLazyInit();
 ulsLazyLoadInit();
 jqueryCookieInit();
