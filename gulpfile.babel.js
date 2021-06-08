@@ -97,7 +97,7 @@ function sass() {
     //'src/assets/scss/app-edit-plus.scss',
     //'src/assets/scss/ready.scss',
     //'src/assets/scss/homepage.scss'
-    //'src/assets/scss/critical.scss',
+    'src/assets/scss/critical.scss',
     //'src/assets/scss/legacy-app.scss',
     //'src/assets/scss/legacy-app-microsite.scss',
     //'src/assets/scss/homepage-critical.scss',
@@ -266,7 +266,8 @@ function javascript() {
 function images() {
   return gulp.src('src/assets/img/**/*')
     .pipe($.if(PRODUCTION, $.imagemin([
-      $.imagemin.jpegtran({ progressive: true }),
+      //$.imagemin.jpegtran({ progressive: true }),
+      $.imagemin.mozjpeg({progressive: true,}),
     ])))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }

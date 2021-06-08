@@ -400,11 +400,19 @@ h1
 
 .wysiwyg
 {
-/*  h2
+
+p
+{
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+h2
   {
     &:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6)
     {
-      font-size: rem-calc(34);
+      margin-top:45px;
+      font-size: rem-calc(27);
       font-weight: 600;
 
       @include breakpoint(small down)
@@ -418,7 +426,7 @@ h1
   {
     &:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6)
     {
-      font-size: rem-calc(26);
+      font-size: rem-calc(19);
       font-weight: 600;
 
       @include breakpoint(small down)
@@ -433,14 +441,14 @@ h1
     &:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6)
     {
       font-weight: 600;
-      font-size: rem-calc(22);
+      font-size: rem-calc(16);
 
       @include breakpoint(small down)
       {
         font-size: rem-calc(18);
       }
     }
-  }*/
+  }
 }
 
 .page_letters
