@@ -1,105 +1,87 @@
-.angle-pad
-{
-  margin-bottom: 60px;
+.angle-pad {
+    margin-bottom: 60px;
 }
 
-.angled-title-purple
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-purple-trans-shade);
-  padding-bottom: 100px;
+.angled-title-purple {
+    margin-top: 60px;
+    @include angled-edge('outside top', 'upper left', $c-purple-trans-shade);
+    padding-bottom: 100px;
 }
 
-.angled-navy-top-trans
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', $c-navy-trans);
-  padding-bottom: 100px;
+.angled-navy-top-trans {
+    margin-top: 60px;
+    @include angled-edge('outside top', 'upper left', $c-navy-trans);
+    padding-bottom: 100px;
 }
 
-.angled-teal-top
-{
-  @include angled-edge('outside top', 'upper left', $c-teal);
-  padding-bottom: 100px;
+.angled-teal-top {
+    @include angled-edge('outside top', 'upper left', $c-teal);
+    padding-bottom: 100px;
 }
 
-.angled-navy-left-trans
-{
-  margin-top: 60px;
-  @include angled-edge('outside top', 'upper left', rgba($c-navy,$opacity));
-  padding-bottom: 100px;
+.angled-navy-left-trans {
+    margin-top: 60px;
+    @include angled-edge('outside top', 'upper left', rgba($c-navy,$opacity));
+    padding-bottom: 100px;
 }
 
-.angled-white-section
-{
-  position: relative;
-  z-index: 4;
-  @include angled-edge('outside top', 'upper left', #fff);
-
-  @include breakpoint(small down)
-  {
-    @include angled-edge('outside top', 'upper left', transparent);
-  }
-}
-
-
-.triangle-topright
-{
-  position: relative;
-  min-height: 200px;
-
-  &::before
-  {
-    content: ' ';
-    position: absolute;
-    right: -60px;
-    z-index: 9000;
-    width: 0;
-    height: 0;
-    border-top: 100px solid #fff;
-    border-right: 100px solid transparent;
-  }
-
-  > div
-  {
+.angled-white-section {
     position: relative;
-    z-index: 9001;
-  }
+    z-index: 4;
+    @include angled-edge('outside top', 'upper left', #fff);
+
+    @include breakpoint(small down) {
+        @include angled-edge('outside top', 'upper left', transparent);
+    }
 }
 
+.triangle-topright {
+    position: relative;
+    min-height: 200px;
 
-.angled-black-trans-section
-{
-  position: relative;
-  z-index: 4;
-  @include angled-edge('outside top', 'upper left', rgba(0,0,0,.6));
+    &::before {
+        content: ' ';
+        position: absolute;
+        right: -60px;
+        z-index: 9000;
+        width: 0;
+        height: 0;
+        border-top: 100px solid #fff;
+        border-right: 100px solid transparent;
+    }
 
-  @include breakpoint(small down)
-  {
-    @include angled-edge('outside top', 'upper left', transparent);
-  }
+    > div {
+        position: relative;
+        z-index: 9001;
+    }
 }
 
-.angled-white-section-bottom-trans
-{
-  position: relative;
-  z-index: 4;
-  @include angled-edge('outside bottom', 'lower left', rgba(255,255,255,.6));
+.angled-black-trans-section {
+    position: relative;
+    z-index: 4;
+    @include angled-edge('outside top', 'upper left', rgba(0,0,0,.6));
+
+    @include breakpoint(small down) {
+        @include angled-edge('outside top', 'upper left', transparent);
+    }
 }
 
-.angled-purple-section
-{
-  @include angled-edge('outside top', 'upper left', $c-purple);
+.angled-white-section-bottom-trans {
+    position: relative;
+    z-index: 4;
+    @include angled-edge('outside bottom', 'lower left', rgba(255,255,255,.6));
 }
 
-.angled-purple-bottom-trans
-{
-  @include angled-edge('outside bottom', 'lower right', $c-purple-trans);
-  padding-bottom: 150px;
-  margin-bottom: 100px;
+.angled-purple-section {
+    @include angled-edge('outside top', 'upper left', $c-purple);
 }
 
-.angled-off-white-section
-{
-  @include angled-edge('outside top', 'upper left', $c-off-white);
+.angled-purple-bottom-trans {
+    @include angled-edge('outside bottom', 'lower right', $c-purple-trans);
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+}
+
+.angled-off-white-section {
+    @include angled-edge('outside top', 'upper left', $c-off-white);
 }

@@ -1,16 +1,29 @@
 @keyframes shake {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-20deg); }
-  100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .shake {
-  animation-name: shake;
+    animation-name: shake;
 }
 
-.animate-fade-in
-{
-  @include mui-animation(fade);
+.animate-fade-in {
+    @include mui-animation(fade);
 }

@@ -1,16 +1,13 @@
-.element-with-video-bg
-{
-  p.lead
-  {
-    @include breakpoint(small only)
-    {
-      font-size: 16px;
-      text-align: left;
+.element-with-video-bg {
+    p.lead {
+        @include breakpoint(small only) {
+            font-size: 16px;
+            text-align: left;
+        }
     }
-  }
 }
-.hero-lead
-{
-  margin: 0 auto 30px auto;
-  max-width: 650px;
+
+.hero-lead {
+    margin: 0 auto 30px auto;
+    max-width: 650px;
 }

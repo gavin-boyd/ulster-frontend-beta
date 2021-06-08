@@ -7,57 +7,50 @@
  * Date: 27/2/18
 */
 
-//video overides
-div.video-promo
-{
-  height: 100%;
+/*video overides*/
 
-  @include breakpoint(large) {
-    min-height: 400px;
-  }
+div.video-promo {
+    height: 100%;
 
-  @include breakpoint(small down)
-  {
-    margin-bottom: 0;
-  }
+    @include breakpoint(large) {
+        min-height: 400px;
+    }
+
+    @include breakpoint(small down) {
+        margin-bottom: 0;
+    }
 }
 
-.video-promo-container
-{
-  z-index:1;
-  min-height: 750px;
+.video-promo-container {
+    z-index: 1;
+    min-height: 750px;
 
-  @include breakpoint(small down)
-  {
-    min-height: none;
-  }
+    @include breakpoint(small down) {
+        min-height: none;
+    }
 }
 
-div.video-promo .content
-{
-  padding: 0;
-  text-align: center;
-  display: table;
+div.video-promo .content {
+    padding: 0;
+    text-align: center;
+    display: table;
 }
 
-div.video-promo .content a.cta
-{
-  margin: 0 auto;
-  left: auto;
-  right: auto;
-  top: auto;
-  display: table-cell;
-  vertical-align: middle;
-  background: none;
-  border: none !important;
+div.video-promo .content a.cta {
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    display: table-cell;
+    vertical-align: middle;
+    background: none;
+    border: none !important;
 
-  @include breakpoint(small down)
-  {
-    display: none;
-  }
+    @include breakpoint(small down) {
+        display: none;
+    }
 
-  &:hover
-  {
-    background: rgba(0,0,0,.2);
-  }
+    &:hover {
+        background: rgba(0, 0, 0, .2);
+    }
 }

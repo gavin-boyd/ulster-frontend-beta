@@ -1,147 +1,124 @@
 $image-promo-uls-opacity: .4;
-$colour-one: rgba(#C21047, $image-promo-uls-opacity);
+$colour-one: rgba(#c21047, $image-promo-uls-opacity);
 $colour-two: rgba(#192546, $image-promo-uls-opacity);
-$colour-three: rgba(#40264A, $image-promo-uls-opacity);
-$colour-four: rgba(#2B481A, $image-promo-uls-opacity);
+$colour-three: rgba(#40264a, $image-promo-uls-opacity);
+$colour-four: rgba(#2b481a, $image-promo-uls-opacity);
 $colour-five: rgba(#009fe3, $image-promo-uls-opacity);
 
-.bg-generic-pink-opacity
-{
-  background: $colour-one;
+.bg-generic-pink-opacity {
+    background: $colour-one;
 }
 
-.bg-generic-navy-opacity
-{
-  background: $colour-two;
+.bg-generic-navy-opacity {
+    background: $colour-two;
 }
 
-.bg-generic-dark-purple-opacity
-{
-  background: $colour-three;
+.bg-generic-dark-purple-opacity {
+    background: $colour-three;
 }
 
-.bg-generic-dark-green-opacity
-{
-  background: $colour-four;
+.bg-generic-dark-green-opacity {
+    background: $colour-four;
 }
 
-.bg-generic-light-blue-opacity
-{
-  background: $colour-five;
+.bg-generic-light-blue-opacity {
+    background: $colour-five;
 }
 
-//used on global homepage
-.image-promos-uls
-{
-  position: relative;
-  width: 100%;
-  height: 65px;
+/*used on global homepage*/
 
-  @include breakpoint(small only)
-  {
+.image-promos-uls {
     position: relative;
-    height: auto;
-    margin-top: 15px;
-  }
+    width: 100%;
+    height: 65px;
 
-  > div
-  {
-    position: relative;
-    z-index: 9000;
-
-    .shadow
-    {
-      @include transition-all();
-
-    }
-  }
-
-  .pull-up
-  {
-    position: relative;
-    top: -160px;
-    display: block;
-    padding-top:20px;
-  }
-
-  .column
-  {
-    padding: 0;
-
-    @include breakpoint(medium down)
-    {
-      width: 50%;
-    }
-  }
-
-  .button
-  {
-    background: #fff;
-    color: $corp-navy;
-  }
-}
-//fixes for global
-.primary-links
-{
-  .cover-background
-  {
-    overflow: hidden;
-    margin:5px;
-    min-height:none;
-
-    @include breakpoint(medium)
-    {
-      min-height: 0;
-    }
-  }
-
-  &.is-stuck
-  {
-    .pull-up
-    {
-      top: auto;
-      padding-top: 0;
+    @include breakpoint(small only) {
+        position: relative;
+        height: auto;
+        margin-top: 15px;
     }
 
-    .white-bg
-    {
-      background: none;
+    > div {
+        position: relative;
+        z-index: 9000;
+
+        .shadow {
+            @include transition-all();
+        }
     }
 
-    a.button
-    {
-      display:none;
-    }
-
-    h2
-    {
-      margin-bottom: 0;
-
-      a
-      {
-        font-size: 16px;
-        line-height: 16px;
-        padding: 10px;
+    .pull-up {
+        position: relative;
+        top: -160px;
         display: block;
-        width: 100%;
-        height: 52px;
-      }
+        padding-top: 20px;
     }
 
-    .white-text
-    {
-      height:auto !important;
+    .column {
+        padding: 0;
 
-      br
-      {
-        display: none;
-      }
+        @include breakpoint(medium down) {
+            width: 50%;
+        }
     }
 
-    .cover-background
-    {
-      background-image:none !important;
-      background: #565b90;
+    .button {
+        background: #fff;
+        color: $corp-navy;
     }
-  }
+}
+
+/*fixes for global*/
+
+.primary-links {
+    .cover-background {
+        overflow: hidden;
+        margin: 5px;
+        min-height: none;
+
+        @include breakpoint(medium) {
+            min-height: 0;
+        }
+    }
+
+    &.is-stuck {
+        .pull-up {
+            top: auto;
+            padding-top: 0;
+        }
+
+        .white-bg {
+            background: none;
+        }
+
+        a.button {
+            display: none;
+        }
+
+        h2 {
+            margin-bottom: 0;
+
+            a {
+                font-size: 16px;
+                line-height: 16px;
+                padding: 10px;
+                display: block;
+                width: 100%;
+                height: 52px;
+            }
+        }
+
+        .white-text {
+            height: auto !important;
+
+            br {
+                display: none;
+            }
+        }
+
+        .cover-background {
+            background-image: none !important;
+            background: #565b90;
+        }
+    }
 }

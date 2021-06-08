@@ -1,23 +1,19 @@
 /*
  * courses atoz
  */
-.back-to-top,
-.toggler,
-#open
-{
-  display: none;
-}
-.is-stuck
-{
-  .back-to-top
-  {
-    display: block;
-  }
 
-  .toggler
-  {
-    display: block;
-  }
+.back-to-top, .toggler, #open {
+    display: none;
+}
+
+.is-stuck {
+    .back-to-top {
+        display: block;
+    }
+
+    .toggler {
+        display: block;
+    }
 }
 
 /*.page_letters

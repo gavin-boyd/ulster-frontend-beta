@@ -1,80 +1,68 @@
 /* additional styles for print */
-*
-{
-  font-family: Arial, sans-serif !important;
+
+* {
+    font-family: Arial, sans-serif !important;
 }
 
-a::after{
-  content: " (" attr(href) ") ";
+a::after {
+    content: " (" attr(href) ") ";
 }
 
-div.break
-{
-  page-break-after: always !important;
+div.break {
+    page-break-after: always !important;
 }
 
-@page
-{
-  size: auto; /* auto is the initial value */
-  margin: 10mm 10mm 20mm 10mm !important; /* this affects the margin in the printer settings */
+@page {
+    size: auto; /* auto is the initial value */
+    margin: 10mm 10mm 20mm 10mm !important; /* this affects the margin in the printer settings */
 }
 
-ul
-{
-  list-style-type: circle !important;
+ul {
+    list-style-type: circle !important;
 }
 
-body
-{
-  margin: 25mm 25mm 25mm 25mm !important;
+body {
+    margin: 25mm 25mm 25mm 25mm !important;
 }
 
-h1
-{
-  font-size: 18pt !important;
-  margin-top: 20mm;
+h1 {
+    font-size: 18pt !important;
+    margin-top: 20mm;
 }
 
-h2
-{
-  font-size: 16pt !important;
-  text-transform: uppercase !important;
+h2 {
+    font-size: 16pt !important;
+    text-transform: uppercase !important;
 }
 
-h3
-{
-  font-size: 14pt !important;
+h3 {
+    font-size: 14pt !important;
 }
 
 /* Removes header */
-#printfriendly #pf-src
-{
-  display:none;
+
+#printfriendly #pf-src {
+    display: none;
 }
 
-table
-{
-  width: 100% !important;
+table {
+    width: 100% !important;
 }
 
-.hide-on-cma-output
-{
-  display: none !important;
+.hide-on-cma-output {
+    display: none !important;
 }
 
-.callout
-{
-  border: 5px solid #000;
-  padding: 20px;
+.callout {
+    border: 5px solid #000;
+    padding: 20px;
 }
 
-.callout.warning
-{
-  border-color: #ccc !important;
+.callout.warning {
+    border-color: #ccc !important;
 }
 
-ul.angle-right li::before, .wysiwyg ul li::before
-{
+ul.angle-right li::before, .wysiwyg ul li::before {
     font-family: 'Font Awesome 5 Pro';
     content: "";
     position: absolute;
@@ -83,51 +71,42 @@ ul.angle-right li::before, .wysiwyg ul li::before
     display: none !important;
 }
 
-ul,
-ul.angle-right,
-.wysiwyg ul
-{
-  list-style-type: circle !important;
+ul, ul.angle-right, .wysiwyg ul {
+    list-style-type: circle !important;
 }
 
-.bl
-{
-  font-weight: bold !important;
+.bl {
+    font-weight: bold !important;
 }
-
 $base-spacing-unit: 24px;
 $half-spacing-unit: $base-spacing-unit / 2;
-
-$color-alpha: #1772FF;
+$color-alpha: #1772ff;
 $color-form-highlight: #f4f4f4;
 
 *, *:before, *:after {
-	box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-.table
-{
-	width:100% !important;
-	border:1px solid $color-form-highlight;
-  background: #000;
-  width:100%;
-  table-layout: fixed;
-  overflow-wrap: break-word;
+.table {
+    width: 100% !important;
+    border: 1px solid $color-form-highlight;
+    background: #000;
+    width: 100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
 }
 
-th
-{
-  color: #fff !important;
-  background-color: #000 !important;
-  font-weight: bold;
+th {
+    color: #fff !important;
+    background-color: #000 !important;
+    font-weight: bold;
 }
 
-tr
-{
-	padding:15px;
-  border-bottom: 1px solid #ccc;
+tr {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
 
-	&:nth-of-type(even) {
-		background:$color-form-highlight;
-	}
+    &:nth-of-type(even) {
+        background: $color-form-highlight;
+    }
 }

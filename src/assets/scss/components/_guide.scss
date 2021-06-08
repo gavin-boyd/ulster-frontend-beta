@@ -1,38 +1,34 @@
 /*
  * menu for guide page contents
  */
-.page-contents.menu
-{
-  a
-  {
-    position: relative;
-    padding: 12px 10px 12px 25px;
-    border-left: 5px solid #eee;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight:700;
-    @include transition-all;
 
-    &:hover
-    {
-      border-left-color:darken(#eee, 5%);
+.page-contents.menu {
+    a {
+        position: relative;
+        padding: 12px 10px 12px 25px;
+        border-left: 5px solid #eee;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        @include transition-all;
+
+        &:hover {
+            border-left-color: darken(#eee, 5%);
+        }
     }
-  }
 
-  a.is-active
-  {
-    border-left-color:$core-blue;
-    background: $sky-blue;
-    color: #fff;
+    a.is-active {
+        border-left-color: $core-blue;
+        background: $sky-blue;
+        color: #fff;
 
-    &::before
-    {
-      font-family: 'Font Awesome 5 Pro';
-      content: "\f105";
-      margin-right: 5px;
-      position: absolute;
-      left: 10px;
-      top: 10px;
+        &::before {
+            font-family: 'Font Awesome 5 Pro';
+            content: "\f105";
+            margin-right: 5px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
     }
-  }
 }

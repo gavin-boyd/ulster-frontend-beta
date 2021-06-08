@@ -1,119 +1,130 @@
 $hero-height: 100vh;
 $animated-gradient-seconds: 15s;
 
-.full-viewport-height
-{
-  height: $hero-height;
-  min-height: 760px;
+.full-viewport-height {
+    height: $hero-height;
+    min-height: 760px;
 
-  @include breakpoint(medium down)
-  {
-    height: auto;
-    min-height: 750px;
-  }
-
-  @include breakpoint(small down)
-  {
-    height: auto;
-    min-height: 0;
-  }
-}
-
-.course-finder
-{
-  border-top: 1px solid rgba(255,255,255,.2);
-  border-bottom: 1px solid rgba(255,255,255,.2);
-
-  &.is-stuck
-  {
-    border-top: 0;
-  }
-
-  input[type=text],
-  select
-  {
-    &:focus
-    {
-      outline: 3px solid $corp-gold;
+    @include breakpoint(medium down) {
+        height: auto;
+        min-height: 750px;
     }
 
     @include breakpoint(small down) {
-      width: 100%;
+        height: auto;
+        min-height: 0;
     }
-  }
-
-  select
-  {
-    max-width: 400px;
-
-    @include breakpoint(small down) {
-      max-width: none;
-    }
-  }
 }
 
-.animated-gradient
-{
-  &::before
-  {
-    content: ' ';
+.course-finder {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+    &.is-stuck {
+        border-top: 0;
+    }
+
+    input[type=text], select {
+        &:focus {
+            outline: 3px solid $corp-gold;
+        }
+
+        @include breakpoint(small down) {
+            width: 100%;
+        }
+    }
+
+    select {
+        max-width: 400px;
+
+        @include breakpoint(small down) {
+            max-width: none;
+        }
+    }
+}
+
+.animated-gradient {
+    &::before {
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+        background: linear-gradient(270deg, rgba($corp-navy, .1), rgba($corp-navy, .4));
+        background-size: 400% 400%;
+        -webkit-animation: AnimationName $animated-gradient-seconds ease infinite;
+           -moz-animation: AnimationName $animated-gradient-seconds ease infinite;
+                animation: AnimationName $animated-gradient-seconds ease infinite;
+
+        @-webkit-keyframes AnimationName {
+            0% {
+                background-position: 0% 31%;
+            }
+
+            50% {
+                background-position: 100% 70%;
+            }
+
+            100% {
+                background-position: 0% 31%;
+            }
+        }
+
+        @-moz-keyframes AnimationName {
+            0% {
+                background-position: 0% 31%;
+            }
+
+            50% {
+                background-position: 100% 70%;
+            }
+
+            100% {
+                background-position: 0% 31%;
+            }
+        }
+
+        @keyframes AnimationName {
+            0% {
+                background-position: 0% 31%;
+            }
+
+            50% {
+                background-position: 100% 70%;
+            }
+
+            100% {
+                background-position: 0% 31%;
+            }
+        }
+    }
+}
+
+.scroll-fixed {
+    position: fixed;
+    display: block;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    opacity:1;
-    background: linear-gradient(270deg, rgba($corp-navy, .1), rgba($corp-navy,.4));
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName $animated-gradient-seconds ease infinite;
-    -moz-animation: AnimationName $animated-gradient-seconds ease infinite;
-    animation: AnimationName $animated-gradient-seconds ease infinite;
+    height: $hero-height;
 
-    @-webkit-keyframes AnimationName {
-        0%{background-position:0% 31%}
-        50%{background-position:100% 70%}
-        100%{background-position:0% 31%}
+    @include breakpoint(small down) {
+        height: auto;
+        position: relative;
     }
-    @-moz-keyframes AnimationName {
-        0%{background-position:0% 31%}
-        50%{background-position:100% 70%}
-        100%{background-position:0% 31%}
-    }
-    @keyframes AnimationName {
-        0%{background-position:0% 31%}
-        50%{background-position:100% 70%}
-        100%{background-position:0% 31%}
-    }
-  }
 }
 
-.scroll-fixed
-{
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: $hero-height;
-
-  @include breakpoint(small down)
-  {
-    height: auto;
+.scroll-section {
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: top center;
     position: relative;
-  }
-}
+    top: $hero-height;
+    z-index: 2;
+    display: block;
 
-.scroll-section
-{
-  background-size: contain;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-position: top center;
-  position: relative;
-  top: $hero-height;
-  z-index: 2;
-  display: block;
-
-  @include breakpoint(small down)
-  {
-    height: auto;
-    top: auto;
-  }
+    @include breakpoint(small down) {
+        height: auto;
+        top: auto;
+    }
 }

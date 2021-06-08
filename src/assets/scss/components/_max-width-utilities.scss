@@ -1,8 +1,10 @@
-$spaceamounts: (100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600); // Adjust this to include the pixel amounts you need.
+$spaceamounts: (100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600);
+
+/* Adjust this to include the pixel amounts you need.*/
 
 @each $space in $spaceamounts {
-  .max-w-#{$space} {
-    max-width: #{$space}px;
-    width: 100%;
-  }
+    .max-w-#{$space} {
+        max-width: #{$space}px;
+        width: 100%;
+    }
 }

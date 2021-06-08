@@ -1,59 +1,48 @@
-#nav
-{
-  > div
-  {
-    background: $accessible-blue;
-  }
-
-  .dark-grey-bg
-  {
-    background: $accessible-blue;
-  }
-
-  ul.menu
-  {
-    display:table;
-    width: 100%;
-
-    li
-    {
-      display: table-cell;
-      text-align: center;
-      border-right: 1px solid lighten($accessible-blue, 10%);
-
-      &:last-child
-      {
-        border-right:none !important;
-      }
-
-      a
-      {
-        font-size: 16px;
-        @include boldfont;
-        @include transition-background;
-
-        &.is-active
-        {
-          background: #fff!important;
-          color: $accessible-blue !important;
-
-          .fa
-          {
-            color: $accessible-blue !important;
-          }
-        }
-
-        &:hover
-        {
-          background: darken($accessible-blue,4%);
-          text-decoration: none;
-        }
-      }
-
-      &:last-child
-      {
-        border-right: 1px solid lighten($c-navy, 5%);
-      }
+#nav {
+    > div {
+        background: $accessible-blue;
     }
-  }
+
+    .dark-grey-bg {
+        background: $accessible-blue;
+    }
+
+    ul.menu {
+        display: table;
+        width: 100%;
+
+        li {
+            display: table-cell;
+            text-align: center;
+            border-right: 1px solid lighten($accessible-blue, 10%);
+
+            &:last-child {
+                border-right: none !important;
+            }
+
+            a {
+                font-size: 16px;
+                @include boldfont;
+                @include transition-background;
+
+                &.is-active {
+                    background: #fff !important;
+                    color: $accessible-blue !important;
+
+                    .fa {
+                        color: $accessible-blue !important;
+                    }
+                }
+
+                &:hover {
+                    background: darken($accessible-blue, 4%);
+                    text-decoration: none;
+                }
+            }
+
+            &:last-child {
+                border-right: 1px solid lighten($c-navy, 5%);
+            }
+        }
+    }
 }

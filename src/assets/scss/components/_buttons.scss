@@ -1,55 +1,42 @@
-.button
-{
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 5000px !important;
+.button {
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5000px !important;
 }
 
-.square
-{
-  border-radius: 0 !important;
-}
-
-form
-{
-  .button
-  {
+.square {
     border-radius: 0 !important;
-  }
 }
 
-.mega-menu
-{
-  .button
-  {
-    border-radius: 0 !important;
-    text-transform: none;
-    font-weight:500;
-  }
-}
-
-.button
-{
-  &.hollow
-  {
-    &.white
-    {
-      border-color: #fff !important;
-      color: #fff !important;
+form {
+    .button {
+        border-radius: 0 !important;
     }
-  }
 }
 
-.bg-bright-blue,
-.bg-sky-blue
-{
-    a.button:not(.success):not(.secondary):not(.alert)
-    {
-      background-color: $core-blue !important;
+.mega-menu {
+    .button {
+        border-radius: 0 !important;
+        text-transform: none;
+        font-weight: 500;
+    }
+}
 
-      &:hover
-      {
-        background-color: lighten($core-blue, 10%) !important;
-      }
+.button {
+    &.hollow {
+        &.white {
+            border-color: #fff !important;
+            color: #fff !important;
+        }
+    }
+}
+
+.bg-bright-blue, .bg-sky-blue {
+    a.button:not(.success):not(.secondary):not(.alert) {
+        background-color: $core-blue !important;
+
+        &:hover {
+            background-color: lighten($core-blue, 10%) !important;
+        }
     }
 }

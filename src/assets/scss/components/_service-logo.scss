@@ -1,98 +1,82 @@
-.brand.service
-{
-  position: relative;
-  max-width: none;
-
-  img
-  {
-    width: 160px;
-  }
-
-  > span
-  {
+.brand.service {
     position: relative;
-    display: inline-block;
-    top: 23px;
-    margin-left: 20px;
-    border-left: 2px solid $core-blue;
-    padding-left: 20px;
-    color: #1a2a4f;
-    font-size: 22px;
-    line-height: 22px;
-    white-space: nowrap;
-    background-color: none;
-    font-weight: 700;
+    max-width: none;
 
-    > span
-    {
-      display: block;
-      font-weight:400;
-    }
-  }
-
-  &.small
-  {
-    margin:0;
-
-    img
-    {
-      width: 90px;
+    img {
+        width: 160px;
     }
 
-    > span
-    {
-      top:14px;
-      font-size: 18px;
-      line-height: 18px;
-    }
-  }
+    > span {
+        position: relative;
+        display: inline-block;
+        top: 23px;
+        margin-left: 20px;
+        border-left: 2px solid $core-blue;
+        padding-left: 20px;
+        color: #1a2a4f;
+        font-size: 22px;
+        line-height: 22px;
+        white-space: nowrap;
+        background-color: none;
+        font-weight: 700;
 
-  &.white
-  {
-    > span
-    {
-      color: #fff !important;
-      border-left: 2px solid #fff !important;
+        > span {
+            display: block;
+            font-weight: 400;
+        }
     }
-  }
+
+    &.small {
+        margin: 0;
+
+        img {
+            width: 90px;
+        }
+
+        > span {
+            top: 14px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+
+    &.white {
+        > span {
+            color: #fff !important;
+            border-left: 2px solid #fff !important;
+        }
+    }
 }
 
-.service.mob
-{
-  background: $core-blue;
-  padding: 10px 15px;
-  color: #fff;
+.service.mob {
+    background: $core-blue;
+    padding: 10px 15px;
+    color: #fff;
 
-  p
-  {
-    display: block;
-    font-weight: 600;
-    padding: 0;
-    font-size: 18px;
+    p {
+        display: block;
+        font-weight: 600;
+        padding: 0;
+        font-size: 18px;
 
-    > span
-    {
-      display: block;
-      font-weight: 600;
+        > span {
+            display: block;
+            font-weight: 600;
 
-      > span
-      {
-        font-weight:400;
-      }
-    }
-
-    /*&::after
+            > span {
+                font-weight: 400;
+            }
+        }/*&::after
     {
       content: ' website';
     }*/
-  }
+    }
 }
-.off-canvas
-{
-  .service.mob
-  {
-    background: none;
-    border-bottom: 2px solid $sky-blue;
-    padding-left: 10px;
-  }
+
+.off-canvas {
+    .service.mob {
+        background: none;
+        border-bottom: 2px solid $sky-blue;
+        padding-left: 10px;
+    }
 }

@@ -1,60 +1,52 @@
-//brand
-a.brand
-{
-  margin: 20px 0;
-  display: block;
-  max-width: 160px;
+/*brand*/
+
+a.brand {
+    margin: 20px 0;
+    display: block;
+    max-width: 160px;
 }
 
-//global search box
-#searchform
-{
-  margin-top: 20px;
+/*global search box*/
+
+#searchform {
+    margin-top: 20px;
 }
 
-//megamenu
-.dropdown-pane.full
-{
-  width: 100% !important;
-  left: 0 !important;
+/*megamenu*/
+
+.dropdown-pane.full {
+    width: 100% !important;
+    left: 0 !important;
 }
 
-//search box button in header
-button
-{
-  i
-  {
-    color: #fff !important;
-  }
-}
+/*search box button in header*/
 
-.nav-bar
-{
-  .offcanvas-trigger
-  {
-    background: transparent;
-
-    &:focus,
-    &:active
-    {
-      background: transparent !important;
+button {
+    i {
+        color: #fff !important;
     }
-  }
-
 }
 
-//utility (alpha)
-.utility
-{
-  padding: 0;
-  margin-top: 10px;
-  margin-bottom: 10px !important;
-  @include clearfix;
+.nav-bar {
+    .offcanvas-trigger {
+        background: transparent;
 
-  li
-  {
+        &:focus, &:active {
+            background: transparent !important;
+        }
+    }
+}
 
-    /*&:first-child
+/*utility (alpha)*/
+
+.utility {
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+    @include clearfix;
+
+    li {
+        /*&:first-child
     {
       padding-left: 0;
 
@@ -64,93 +56,82 @@ button
       }
     }*/
 
-    a
-    {
-      background-color: #fff;
-      border-right: 0;
-      padding: 0 10px;
-      border-right: 1px solid #eee;
-      display: block;
-    }
+        a {
+            background-color: #fff;
+            border-right: 0;
+            padding: 0 10px;
+            border-right: 1px solid #eee;
+            display: block;
+        }
 
-    &:last-child
-    {
-      a
-      {
-        border-right:0;
-        padding-right: 0;
-      }
+        &:last-child {
+            a {
+                border-right: 0;
+                padding-right: 0;
+            }
+        }
     }
-  }
 }
 
-//main-content spacing fix for ulster-alpha
-body .main-content
-{
-  margin-top: 0;
-  top: 0 !important;
+/*main-content spacing fix for ulster-alpha*/
+
+body .main-content {
+    margin-top: 0;
+    top: 0 !important;
 }
-.resp-pull-left
-{
-  position: relative;
+
+.resp-pull-left {
+    position: relative;
 }
 
 /*
  * top bar background color
  */
-.top-bar
-{
-  background: none repeat scroll 0 0 transparent;
 
-  ul
-  {
+.top-bar {
     background: none repeat scroll 0 0 transparent;
-  }
+
+    ul {
+        background: none repeat scroll 0 0 transparent;
+    }
 }
 
 /*
  * no sticky magellan menus on medium size screens
  */
-#nav
-{
-  .sticky.is-stuck
-  {
-    @include breakpoint(medium down)
-    {
-      position: relative !important;
+
+#nav {
+    .sticky.is-stuck {
+        @include breakpoint(medium down) {
+            position: relative !important;
+        }
     }
-  }
 }
 
-.nav-bar.uls-mob
-{
-  background: #fff;
+.nav-bar.uls-mob {
+    background: #fff;
 
-  li
-  {
-    background: transparent;
-  }
+    li {
+        background: transparent;
+    }
 
-  .offcanvas-trigger:hover
-  {
-    background: transparent;
-  }
+    .offcanvas-trigger:hover {
+        background: transparent;
+    }
 }
 
-#mobileSearch
-{
-  padding: 10px 15px 10px 15px;
-  background: #eee;
+#mobileSearch {
+    padding: 10px 15px 10px 15px;
+    background: #eee;
 }
 
-.uls-mob-side-container
-{
-  text-align:left !important;
-  font-size:18px;
-  border-top:1px solid #000;
-  border-bottom:1px solid #000;
-  display:block;
-  padding:10px 0;
-  color: #000;
-  background-color: #fff;
+.uls-mob-side-container {
+    text-align: left !important;
+    font-size: 18px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    background-color: #fff;
 }

@@ -1,570 +1,472 @@
-.course-tabs
-{
-  li
-  {
-    a
-    {
-      span
-      {
-        display: block;
-      }
-    }
-  }
-}
-
-.uls-course-listing
-{
-  span.callout
-  {
-    display: block;
-
-    span
-    {
-      display: block;
-    }
-  }
-
-  div.course
-  {
-    padding: 15px 0 20px 0;
-    border-bottom: 1px solid #ddd;
-
-    @include last-child {
-      border: none;
-    }
-
-    .button
-    {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.meta
-{
-  p
-  {
-    margin-bottom: 5px;
-    position: relative;
-    padding-left: 34px;
-
-    > span
-    {
-      width: 30px;
-      position: absolute;
-      left: 0;
-      text-align: center;
-      display: block;
-    }
-
-    span.fa
-    {
-      &::before
-      {
-        color: #555;
-      }
-    }
-  }
-}
-
-.bestbet
-{
-  border:5px solid $sky-blue;
-  padding: 20px;
-  margin-bottom: 20px;
-
-  h4
-  {
-    font-size: 26px;
-  }
-
-  a.btn
-  {
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-top: 0;
-
-    &::before
-    {
-      font-family: 'Font Awesome 5 Pro';
-      content:"\f105";
-      margin-right: 5px;
-    }
-  }
-
-  p
-  {
-    &:last-child
-    {
-      margin-bottom: 0;
-    }
-  }
-}
-
-#course-finder-new
-{
-  background: #fff;
-  padding: 20px;
-
-  @include breakpoint(small down)
-  {
-    padding: 10px 0 0 0;
-  }
-
-  div.search
-  {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-
-    #submitsearch
-    {
-      @include button();
-      position: absolute;
-      right: 0;
-      top: 86px;
-      right:30px;
-      text-indent:-9999px;
-      width:60px;
-      height: 60px;
-      background-image: url('https://cdn.ulster.ac.uk/home/ulster-frontend/img/icons/olp-search-icon.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      box-shadow: 0 20px 16px 0 rgba(0,0,0,0.1),0 10px 10px 0 rgba(0,0,0,0.19) !important;
-
-      @include breakpoint(small down)
-      {
-        position: relative;
-        top:auto;
-        right:auto;
-        width: 100%;
-        height: 42px;
-        margin-bottom: 0;
-        background-size: 28px;
-      }
-    }
-
-    input#query
-    {
-      font-size: 22px;
-      font-weight:600;
-      height: 60px;
-      width: unquote("-webkit-calc(100% - 60px)");
-      width: unquote("-moz-calc(100% - 60px)");
-      width: unquote("calc(100% - 60px)");
-      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-
-      @include breakpoint(small down)
-      {
-        width: 100%;
-        font-size: 16px;
-        height: 42px;
-      }
-    }
-  }
-
-  .accordion
-  {
-    h3
-    {
-      background:#eee;
-      padding: 8px 10px;
-      margin-bottom: 0;
-      cursor:pointer;
-
-      &:before
-      {
-        font-family: 'Font Awesome 5 Pro';
-        content:"\f105";
-        margin-right:5px;
-        color:#555;
-      }
-
-      &.ui-state-active
-      {
-        background-color: $core-blue;
-        color:#fff;
-
-        &:before
-        {
-          content:"\f107";
-          color:#fff;
+.course-tabs {
+    li {
+        a {
+            span {
+                display: block;
+            }
         }
-      }
+    }
+}
 
-      &.Faculty_u,
-      &.School_u
-      {
-        display: none !important;
-      }
+.uls-course-listing {
+    span.callout {
+        display: block;
+
+        span {
+            display: block;
+        }
     }
 
-    div.facetcategory
-    {
-      &.Faculty_u,
-      &.School_u
-      {
-        display: none !important;
-      }
+    div.course {
+        padding: 15px 0 20px 0;
+        border-bottom: 1px solid #ddd;
+
+        @include last-child {
+            border: none;
+        }
+
+        .button {
+            margin-bottom: 0;
+        }
     }
+}
 
-    ul
-    {
-      margin-left: 0;
-      margin-bottom: 0;
-
-      li
-      {
-        line-height: 0;
+.meta {
+    p {
         margin-bottom: 5px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 34px;
 
-        &:last-child
-        {
-          border-bottom: 0;
+        > span {
+            width: 30px;
+            position: absolute;
+            left: 0;
+            text-align: center;
+            display: block;
         }
 
-        label
-        {
-          font-size: 18px;
-          padding-top: 0;
-          margin: 0 0 0 5px;
-          max-width: 200px;
-
-          @include breakpoint(small down)
-          {
-            max-width: none;
-          }
-        }
-
-        .prettycheckbox > a, .prettyradio > a
-        {
-          top:1px;
-        }
-      }
-    }
-
-    .Attendance
-    {
-      div.category
-      {
-        &:first-child
-        {
-          ul
-          {
-            li
-            {
-              border-bottom: 1px solid #eee;
+        span.fa {
+            &::before {
+                color: #555;
             }
-          }
         }
-      }
     }
-  }
-
-  #filters
-  {
-    > div
-    {
-      > h2
-      {
-        text-transform:uppercase;
-        font-size: 16px;
-        color:#555;
-      }
-    }
-
-    p.filters
-    {
-      &:before
-      {
-        content: 'Selected filters';
-        text-transform: uppercase;
-        font-weight: 700;
-        color:#555;
-        font-size: 16px;
-      }
-
-      a
-      {
-        @include button();
-        @include button-expand(true);
-        font-weight:600;
-        margin-bottom: 1px;
-        text-align: left;
-
-        span
-        {
-          display: none;
-        }
-
-        .fa
-        {
-          margin-left: 10px;
-          float: right;
-          opacity:.8;
-        }
-      }
-    }
-  }
 }
 
-#course_list
-{
-  padding: 20px;
+.bestbet {
+    border: 5px solid $sky-blue;
+    padding: 20px;
+    margin-bottom: 20px;
 
-  @include breakpoint(small down)
-  {
-    padding-top: 0;
-  }
-
-  > div
-  {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 30px;
-  }
-
-  .pagination
-  {
-    ul
-    {
-      li
-      {
-        font-size: 18px;
-        width: 42px;
-        height:42px;
-        font-weight:600;
-        color: #555;
-        padding:0;
-        text-align: center;
-
-        @include breakpoint(small down)
-        {
-          font-size: 28px;
-          width: 48%;
-        }
-
-        span
-        {
-          display: none;
-        }
-
-        a
-        {
-          color: $accessible-blue !important;
-          padding: 0;
-          display: block;
-          width: 42px;
-          height:37px;
-          @include transition-all();
-
-          &:hover
-          {
-            background:#eee;
-          }
-        }
-
-        &.current
-        {
-          background:none;
-
-          a
-          {
-            color: #fff !important;
-            background: $accessible-blue;
-
-            &:hover
-            {
-              background: $accessible-blue;
-            }
-          }
-        }
-      }
+    h4 {
+        font-size: 26px;
     }
-  }
 
-  .course
-  {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-
-    .button
-    {
-      font-weight:600;
-    }
-  }
-
-  .showingmsg
-  {
-    h2
-    {
-      font-size:18px;
-      font-weight:400;
-      margin-bottom: 0;
-
-      b
-      {
-        font-size: 24px;
-      }
-    }
-  }
-}
-
-.course-finder-new-container
-{
-  position: relative;
-}
-
-#main-content
-{
-  background-repeat: no-repeat;
-
-  @include breakpoint(small down)
-  {
-    background-position: 40% 0;
-  }
-}
-
-#filters
-{
-  @include breakpoint(small down)
-  {
-    @include transition-all;
-    display: none;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background: #fff;
-    padding: 20px 120px 20px 20px;
-    height: 100%;
-    z-index: 9999;
-    overflow-y: scroll;
-  }
-}
-
-#course-finder-mobile
-{
-  position: fixed;
-  left: 0;
-  bottom:0;
-  z-index: 9998;
-  background: #000;
-  width:100%;
-  padding: 10px;
-}
-
-#close-facets
-{
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-form.course-finder
-{
-  button
-  {
-    max-height: 41px;
-  }
-
-  h2
-  {
-    margin-top: 3px;
-  }
-
-  select
-  {
-    background-color: #fff;
-
-    option
-    {
-      background-color: #fff;
-    }
-  }
-}
-
-.results-group.courses-az
-{
-  padding: 0 !important;
-
-  h2
-  {
-    font-weight: 600;
-    font-size:30px;
-    background: $sky-blue;
-    color: #fff;
-    padding: 10px 20px;
-    margin-top: 60px;
-
-    &:first-child
-    {
-      margin-top: 0;
-    }
-  }
-
-  p
-  {
-    border-bottom: 1px solid #ccc;
-    padding: 0 0 10px 0;
-    margin-bottom: 10px;
-
-    a
-    {
-      display: block;
-      position: relative;
-
-      span.title
-      {
-        display: block;
+    a.btn {
         font-weight: 600;
-        font-size: 24px;
-        color: #000;
-      }
-
-      span.sub
-      {
-        display: block;
-        color: #555;
-
-        span.sub-label
-        {
-          margin-right: 10px;
-          padding-right: 10px;
-          border-right: 1px solid #ccc;
-
-          &:last-child
-          {
-            border-right: 0;
-          }
-        }
-      }
-
-      span.cta
-      {
-        @include button();
-        display: block;
-        position: absolute;
-        right:0;
-        top: 15px;
         margin-bottom: 0;
-      }
+        margin-top: 0;
+
+        &::before {
+            font-family: 'Font Awesome 5 Pro';
+            content: "\f105";
+            margin-right: 5px;
+        }
     }
-  }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
+#course-finder-new {
+    background: #fff;
+    padding: 20px;
 
-input[type="search"]::-webkit-search-cancel-button
-{
-  -webkit-appearance: none;
-  height: 14px;
-  width: 14px;
-  display: block;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAn0lEQVR42u3UMQrDMBBEUZ9WfQqDmm22EaTyjRMHAlM5K+Y7lb0wnUZPIKHlnutOa+25Z4D++MRBX98MD1V/trSppLKHqj9TTBWKcoUqffbUcbBBEhTjBOV4ja4l4OIAZThEOV6jHO8ARXD+gPPvKMABinGOrnu6gTNUawrcQKNCAQ7QeTxORzle3+sDfjJpPCqhJh7GixZq4rHcc9l5A9qZ+WeBhgEuAAAAAElFTkSuQmCC);
-  background-repeat: no-repeat;
-  background-size: 14px;
+    @include breakpoint(small down) {
+        padding: 10px 0 0 0;
+    }
+
+    div.search {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        #submitsearch {
+            @include button();
+            position: absolute;
+            right: 0;
+            top: 86px;
+            right: 30px;
+            text-indent: -9999px;
+            width: 60px;
+            height: 60px;
+            background-image: url('https://cdn.ulster.ac.uk/home/ulster-frontend/img/icons/olp-search-icon.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: 0 20px 16px 0 rgba(0, 0, 0, .1), 0 10px 10px 0 rgba(0, 0, 0, .19) !important;
+
+            @include breakpoint(small down) {
+                position: relative;
+                top: auto;
+                right: auto;
+                width: 100%;
+                height: 42px;
+                margin-bottom: 0;
+                background-size: 28px;
+            }
+        }
+
+        input#query {
+            font-size: 22px;
+            font-weight: 600;
+            height: 60px;
+            width: unquote("-webkit-calc(100% - 60px)");
+            width: unquote("-moz-calc(100% - 60px)");
+            width: unquote("calc(100% - 60px)");
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !important;
+
+            @include breakpoint(small down) {
+                width: 100%;
+                font-size: 16px;
+                height: 42px;
+            }
+        }
+    }
+
+    .accordion {
+        h3 {
+            background: #eee;
+            padding: 8px 10px;
+            margin-bottom: 0;
+            cursor: pointer;
+
+            &:before {
+                font-family: 'Font Awesome 5 Pro';
+                content: "\f105";
+                margin-right: 5px;
+                color: #555;
+            }
+
+            &.ui-state-active {
+                background-color: $core-blue;
+                color: #fff;
+
+                &:before {
+                    content: "\f107";
+                    color: #fff;
+                }
+            }
+
+            &.Faculty_u, &.School_u {
+                display: none !important;
+            }
+        }
+
+        div.facetcategory {
+            &.Faculty_u, &.School_u {
+                display: none !important;
+            }
+        }
+
+        ul {
+            margin-left: 0;
+            margin-bottom: 0;
+
+            li {
+                line-height: 0;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                border-bottom: 1px solid #eee;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                label {
+                    font-size: 18px;
+                    padding-top: 0;
+                    margin: 0 0 0 5px;
+                    max-width: 200px;
+
+                    @include breakpoint(small down) {
+                        max-width: none;
+                    }
+                }
+
+                .prettycheckbox > a, .prettyradio > a {
+                    top: 1px;
+                }
+            }
+        }
+
+        .Attendance {
+            div.category {
+                &:first-child {
+                    ul {
+                        li {
+                            border-bottom: 1px solid #eee;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #filters {
+        > div {
+            > h2 {
+                text-transform: uppercase;
+                font-size: 16px;
+                color: #555;
+            }
+        }
+
+        p.filters {
+            &:before {
+                content: 'Selected filters';
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #555;
+                font-size: 16px;
+            }
+
+            a {
+                @include button();
+                @include button-expand(true);
+                font-weight: 600;
+                margin-bottom: 1px;
+                text-align: left;
+
+                span {
+                    display: none;
+                }
+
+                .fa {
+                    margin-left: 10px;
+                    float: right;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+#course_list {
+    padding: 20px;
+
+    @include breakpoint(small down) {
+        padding-top: 0;
+    }
+
+    > div {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+    }
+
+    .pagination {
+        ul {
+            li {
+                font-size: 18px;
+                width: 42px;
+                height: 42px;
+                font-weight: 600;
+                color: #555;
+                padding: 0;
+                text-align: center;
+
+                @include breakpoint(small down) {
+                    font-size: 28px;
+                    width: 48%;
+                }
+
+                span {
+                    display: none;
+                }
+
+                a {
+                    color: $accessible-blue !important;
+                    padding: 0;
+                    display: block;
+                    width: 42px;
+                    height: 37px;
+                    @include transition-all();
+
+                    &:hover {
+                        background: #eee;
+                    }
+                }
+
+                &.current {
+                    background: none;
+
+                    a {
+                        color: #fff !important;
+                        background: $accessible-blue;
+
+                        &:hover {
+                            background: $accessible-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .course {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+
+        .button {
+            font-weight: 600;
+        }
+    }
+
+    .showingmsg {
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 0;
+
+            b {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.course-finder-new-container {
+    position: relative;
+}
+
+#main-content {
+    background-repeat: no-repeat;
+
+    @include breakpoint(small down) {
+        background-position: 40% 0;
+    }
+}
+
+#filters {
+    @include breakpoint(small down) {
+        @include transition-all;
+        display: none;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: #fff;
+        padding: 20px 120px 20px 20px;
+        height: 100%;
+        z-index: 9999;
+        overflow-y: scroll;
+    }
+}
+
+#course-finder-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 9998;
+    background: #000;
+    width: 100%;
+    padding: 10px;
+}
+
+#close-facets {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+form.course-finder {
+    button {
+        max-height: 41px;
+    }
+
+    h2 {
+        margin-top: 3px;
+    }
+
+    select {
+        background-color: #fff;
+
+        option {
+            background-color: #fff;
+        }
+    }
+}
+
+.results-group.courses-az {
+    padding: 0 !important;
+
+    h2 {
+        font-weight: 600;
+        font-size: 30px;
+        background: $sky-blue;
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 60px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        border-bottom: 1px solid #ccc;
+        padding: 0 0 10px 0;
+        margin-bottom: 10px;
+
+        a {
+            display: block;
+            position: relative;
+
+            span.title {
+                display: block;
+                font-weight: 600;
+                font-size: 24px;
+                color: #000;
+            }
+
+            span.sub {
+                display: block;
+                color: #555;
+
+                span.sub-label {
+                    margin-right: 10px;
+                    padding-right: 10px;
+                    border-right: 1px solid #ccc;
+
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+
+            span.cta {
+                @include button();
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 15px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    display: block;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAn0lEQVR42u3UMQrDMBBEUZ9WfQqDmm22EaTyjRMHAlM5K+Y7lb0wnUZPIKHlnutOa+25Z4D++MRBX98MD1V/trSppLKHqj9TTBWKcoUqffbUcbBBEhTjBOV4ja4l4OIAZThEOV6jHO8ARXD+gPPvKMABinGOrnu6gTNUawrcQKNCAQ7QeTxORzle3+sDfjJpPCqhJh7GixZq4rHcc9l5A9qZ+WeBhgEuAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-size: 14px;
 }
