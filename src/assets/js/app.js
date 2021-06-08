@@ -86,6 +86,7 @@ funnelbackCompletionInit("input#qatar-search", "ulster-qatar");
 funnelbackCompletionInit("input#sport-search", "ulster-sport");
 funnelbackCompletionInit("input#covid-search-inside", "ulster-important-update-site");
 funnelbackCompletionInit("input#uls-lip", "ulster-familycourtinfo");
+funnelbackCompletionInit("input#student-search", "ulster-student");
 initCampusFiltersOnDepartments();
 serviceLogoMob();
 initMobileSideNav();
