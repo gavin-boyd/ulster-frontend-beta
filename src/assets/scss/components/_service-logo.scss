@@ -30,6 +30,23 @@
     }
   }
 
+  &.small
+  {
+    margin:0;
+
+    img
+    {
+      width: 90px;
+    }
+
+    > span
+    {
+      top:14px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
   &.white
   {
     > span
