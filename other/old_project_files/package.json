@@ -20,7 +20,7 @@
     "isotope-layout": "^3.0.6",
     "jquery": ">=3.0.0",
     "jquery-background-video": "^1.0.0",
-    "jquery-validation": "^1.17.0",
+    "jquery-validation": "^1.19.3",
     "magnific-popup": "^1.1.0",
     "moment": "^2.24.0",
     "motion-ui": "~1.2.2",
