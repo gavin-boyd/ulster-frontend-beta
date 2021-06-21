@@ -6,7 +6,7 @@ function ulsNestedFacets() {
       jQuery('.uls-faceted-embed').each(function() {
         var uid = Math.floor(Math.random() * 100001);
         var uid = 'output-courses-' + uid;
-        var preloader = '<div class="preloader-container" id="loading"><div class="preloader"><img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/><p id="loading-text" class="m-t-20">Loading results</p></div></div>';
+        var preloader = '<div class="preloader-container" id="loading"><div class="preloader"><img src="https://cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/><p id="loading-text" class="m-t-20">Loading results</p></div></div>';
         var queryURL = jQuery(this).data('query');
         queryURL = queryURL.replace('https://www.ulster.ac.uk/courses?','https://ulster.funnelback.co.uk/s/search.html?collection=ulster-dev&profile=_default&form=tabs&');
         var content = jQuery(this).find('#output-courses').attr('id', uid);

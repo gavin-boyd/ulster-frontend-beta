@@ -10,10 +10,12 @@
         font-size: 16px;
         line-height: 20px;
         font-weight: 700;
+        text-decoration: none !important;
         @include transition-all;
 
         &:hover {
             border-left-color: darken(#eee, 5%);
+            text-decoration: underline !important;
         }
     }
 

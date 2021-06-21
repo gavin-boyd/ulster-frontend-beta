@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
     e.preventDefault();
     var valid = jQuery("#page_asset_builder_841661").valid();
     if (valid === true) {
-      jQuery('body').prepend('<div class="preloader-container" id="loading"><div class="preloader"><img src="https://www.ulster.ac.uk/__data/assets/git_bridge/0010/256429/dist/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/><p id="loading-text" class="m-t-20">Creating your prospectus</p></div></div>');
+      jQuery('body').prepend('<div class="preloader-container" id="loading"><div class="preloader"><img src="https://cdn.ulster.ac.uk/home/ulster-frontend/beta/assets/img/ulster-pre-loader.gif" width="169" height="169" alt="Loading results"/><p id="loading-text" class="m-t-20">Creating your prospectus</p></div></div>');
       jQuery.ajax({
           url: 'https://www.ulster.ac.uk/personalisedprospectus/_dev/pg',
           type: 'POST',

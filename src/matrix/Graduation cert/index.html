@@ -1,0 +1,61 @@
+<!--@@
+
+% globals_user_metadata_upn %
+% asset_name %
+
+% begin_asset_name^contains:{globals_user_metadata_upn} %
+
+REAL CONDITIONAL
+
+begin_asset_name^contains:{globals_user_metadata_upn}
+
+B00339967
+
+% begin_asset_name^contains:B00339967 %
+
+TEST CONDITIONAL
+% begin_asset_name^lowercase^explode:.^index:0^eq:{globals_user_metadata_upn^lowercase} %
+
+
+@@-->
+%begin_asset_name^contains:B00339967%
+    <script runat="server">
+        document_found = true;
+    </script>
+
+    <p class="lead">Congratulations</p>
+
+    <p>You are graduating from Ulster University</p>
+
+    <p>with a degree in</p>
+
+    <p class="h3">%ds__program_title%</p>
+
+    <p>from</p>
+
+    <p class="h3">%ds__school%</p>
+
+
+<!--@@
+    <p class="bl">Variables:</p>
+    <ul>
+        <li>%ds__ac_year% Record Set Attribute : ac_year</li>
+        <li>%ds__surname% Record Set Attribute : surname</li>
+        <li>%ds__forename% Record Set Attribute : forename</li>
+        <li>%ds__middle_name% Record Set Attribute : middle_name</li>
+        <li>%ds__b_number% Record Set Attribute : b_number</li>
+        <li>%ds__prog_code% Record Set Attribute : prog_code</li>
+        <li>%ds__school% Record Set Attribute : school</li>
+        <li>%ds__award_desc% 	Record Set Attribute : award_desc</li>
+        <li>%ds__award_seq% 	Record Set Attribute : award_seq</li>
+        <li>%ds__program_title% 	Record Set Attribute : program_title</li>
+        <li>%ds__classification% 	Record Set Attribute : classification</li>
+        <li>%ds__hons_code% 	Record Set Attribute : hons_code</li>
+        <li>%ds__supplementary_award% 	Record Set Attribute : supplementary_award</li>
+        <li>%ds__specialism% 	Record Set Attribute : specialism</li>
+        <li>%ds__ceremony_code% 	Record Set Attribute : ceremony_code</li>
+    </ul>
+
+@@-->
+
+%end_asset_name^contains:{globals_user_metadata_upn}%

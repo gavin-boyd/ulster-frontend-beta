@@ -86,7 +86,7 @@ function sass() {
     autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
 
     // UnCSS - Uncomment to remove unused styles in production
-    //PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+    PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   //app.css
@@ -102,9 +102,9 @@ function sass() {
     //'src/assets/scss/legacy-app-microsite.scss',
     //'src/assets/scss/homepage-critical.scss',
     //'src/assets/scss/application-form.scss',
-    //'src/assets/scss/course.scss'
+    'src/assets/scss/course.scss'
     //'src/assets/scss/courseprintpdf.scss',
-    'src/assets/scss/form.scss'
+    //'src/assets/scss/form.scss'
   ])
     .pipe($.sourcemaps.init())
     .pipe($.sass({
